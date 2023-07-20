@@ -1,0 +1,86 @@
+@use '../abstract/variables' as v;
+@use '../abstract/mixins' as m;
+
+.item {
+  position: relative;
+  cursor: pointer;
+  margin: 0;
+
+  &:hover,
+  &:active {
+    transform: translateY(-0.2rem);
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.3);
+  }
+
+  &:hover::before,
+  &--active::before {
+    transform: scaleY(1);
+    width: 100%;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0.5rem;
+    background-color: rgba(131, 11, 164, 0.213);
+    transform: scaleY(0);
+    transition: transform .2s, width .4s cubic-bezier(1, 0, 0, 1) .1s, background-color .1s;
+    border-radius: 1rem;
+    z-index: -1;
+  }
+
+  &:active::before {
+    background-color: rgb(rgba(1, 1, 15, 0.5), .8); //!
+    width: 100%;
+  }
+
+
+  @include m.respond(tab-port) {
+
+    &:hover,
+    &:active {
+      transition: all .4s;
+      transform: translateY(-0.2rem);
+      box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  &__link {
+
+    &:link,
+    &:visited {
+      display: block;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: all .4s;
+    }
+
+    &:hover,
+    &:active {
+
+      @include m.respond(tab-port) {
+        transform: translateY(0);
+        box-shadow: none;
+      }
+    }
+
+    &--small {
+      padding: .2rem .8rem;
+      font-size: 1.2rem;
+    }
+
+    &--medium {
+      padding: .5rem 1.2rem;
+      font-size: 1.6rem;
+    }
+
+    &--large {
+      padding: .8rem 1.7rem;
+      font-size: 1.8rem;
+    }
+  }
+}

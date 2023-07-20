@@ -1,0 +1,22 @@
+export const items = [
+  {
+    id:1,
+    href:'/',
+    label:'home'
+  },
+  {
+    id:2,
+    href:'/buttons',
+    label:'buttons'
+  },
+  {
+    id:3,
+    href:'/modal',
+    label:'modal'
+  },
+  {
+    id:4,
+    href:'/alerts',
+    label:'alerts'
+  }
+]

@@ -1,0 +1,75 @@
+.card {
+  border-radius: 1rem;
+  border: 1px solid transparent;
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  outline: 3px solid transparent;
+  transition: transform .2s ease-in;
+
+  &:hover {
+    transform: scale(1.01);
+    cursor: pointer;
+    outline: 3px solid rgb(119, 121, 119);
+  }
+
+  &__head {
+    border-radius: 1rem 1rem 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1.5rem;
+  }
+
+  &__media {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+
+    &--controls {
+      flex: 1;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+
+    &--controls {
+      padding: 2rem;
+      flex: 1;
+    }
+  }
+
+  &__actions {
+    border-radius: 0 0 1rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1.5rem;
+  }
+}
+
+.title-card {
+  height: 3rem;
+  font-size: 2rem;
+  align-self: center;
+  text-transform: uppercase;
+}
+
+.control {
+  padding: 1.5rem;
+  display: flex;
+  font-size: 1.6rem;
+}
+
+.control label, .control select {
+  margin-left: 2rem ;
+}
+
+.control select{
+  border: 1px solid white;
+  padding: 0.5rem;
+  color: white;
+  border-radius: 1rem;
+}
