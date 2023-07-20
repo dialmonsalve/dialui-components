@@ -1,12 +1,11 @@
 import { FullCard } from "../Card/FullCard"
 
-
 export const Buttons = () => {
 
   return (
     <div className="content-buttons">
       <FullCard
-        isButtonAnimated={false}
+        isButtonAnimated={true}
         colorBackground="green"
         sizeButton="small"
         hasButtonBackground={false}
@@ -15,9 +14,26 @@ export const Buttons = () => {
         isButtonAnimated={true}
         colorBackground="blue"
         sizeButton="medium"
+        hasButtonBackground
       />
       <FullCard 
         sizeButton="large"
+        hasButtonBackground
+      />
+      <FullCard
+        isButtonAnimated={false}
+        colorBackground="green"
+        sizeButton="small"
+        hasButtonBackground={false}
+      />
+      <FullCard 
+        sizeButton="large"
+      />
+      <FullCard
+        isButtonAnimated={true}
+        colorBackground="blue"
+        sizeButton="large"
+        hasButtonBackground
       />
     </div>
   )

@@ -1,50 +1,37 @@
-import { useState } from "react";
-import { Button } from "../Button";
-import { Card } from "../Card/Card";
-import { CardContent } from "../Card/CardContent";
-import { CardHead } from "../Card/CardHead";
-import { CardMedia } from "../Card/CardMedia";
 
-interface Props {
+import { useHandleCheckbox, useHandlerSelects } from "../hooks";
+
+import { Card, CardContent, CardHead, CardMedia } from "./";
+import { Button } from "../Button";
+
+import { CheckboxData, Color, SelectData, Size } from "../../type";
+
+interface FullCardProps {
   isButtonAnimated?: boolean
   hasButtonBackground?: boolean
   colorBackground?: Color
   sizeButton?: Size
 }
 
-type Color = 'blue' | 'green' | 'red';
-
-type Size = 'small' | 'medium' | 'large';
-
 export const FullCard = ({
-  colorBackground ='red',
+  colorBackground = 'red',
   hasButtonBackground = false,
-  isButtonAnimated=false,
+  isButtonAnimated = false,
   sizeButton = 'medium',
-}: Props) => {
+}: FullCardProps) => {
 
-  const [isAnimated, setIsAnimated] = useState(isButtonAnimated);
-  const [hasBackground, setHasBackground] = useState(hasButtonBackground);
-  const [backgroundColor, setBackgroundColor] = useState(colorBackground);
-  const [size, setSize] = useState(sizeButton);
-
-  const handleAnimation = () => {
-    setIsAnimated(!isAnimated)
-
+  const checkboxesData: CheckboxData = {
+    isAnimated: isButtonAnimated,
+    hasBackground: hasButtonBackground,
   };
 
-  const handleHasBackground = () => {
-    setHasBackground(!hasBackground)
-  };
+  const selectData: SelectData<Color | Size> = {
+    bg: colorBackground,
+    size: sizeButton
+  }
 
-  const handleBackgroundChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setBackgroundColor(e.target.value as Color)
-
-  };
-
-  const handleSizeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setSize(e.target.value as Size)
-  };
+  const [checkboxState, handleCheckboxChange] = useHandleCheckbox(checkboxesData);
+  const { selectState, handleChange } = useHandlerSelects(selectData);
 
   return (
     <Card
@@ -54,15 +41,17 @@ export const FullCard = ({
       degrees={120}
     >
       <CardHead >
-        <h3 className="title-card" >Choice properties</h3>
+        <h3
+          className="title-card" >Choice properties to Button</h3>
       </CardHead>
 
       <CardMedia>
         <div className="control">
           <input
             type="checkbox"
-            checked={isAnimated}
-            onChange={handleAnimation}
+            name="isAnimated"
+            checked={checkboxState.isAnimated}
+            onChange={() => handleCheckboxChange("isAnimated")}
           />
           <label>Has Animation?</label>
         </div>
@@ -70,17 +59,19 @@ export const FullCard = ({
         <div className="control">
           <input
             type="checkbox"
-            checked={hasBackground}
-            onChange={handleHasBackground}
+            name="hasBackground"
+            checked={checkboxState.hasBackground}
+            onChange={() => handleCheckboxChange("hasBackground")}
           />
           <label>Has Background?</label>
         </div>
         <div className="control">
           <label style={{ alignSelf: 'center' }} >Color:</label>
           <select
-            value={backgroundColor}
-            onChange={handleBackgroundChange}
-            style={{ backgroundColor }}
+            name="bg"
+            value={selectState.bg}
+            onChange={handleChange}
+            style={{ backgroundColor: selectState.bg }}
           >
             <option value='red' >Red</option>
             <option value='blue' >Blue</option>
@@ -91,9 +82,10 @@ export const FullCard = ({
         <div className="control">
           <label style={{ alignSelf: 'center' }} >Size:</label>
           <select
-            value={size}
-            onChange={handleSizeChange}
-            style={{ backgroundColor }}
+            name="size"
+            value={selectState.size}
+            onChange={handleChange}
+            style={{ backgroundColor: selectState.bg }}
           >
             <option value='small' >Small</option>
             <option value='medium' >Medium</option>
@@ -106,10 +98,10 @@ export const FullCard = ({
       >
         <Button
           label="OK"
-          hasBackground={hasBackground}
-          isAnimated={isAnimated}
-          backgroundColor={backgroundColor}
-          size={size}
+          hasBackground={checkboxState.hasBackground}
+          isAnimated={checkboxState.isAnimated}
+          backgroundColor={selectState.bg as Color}
+          size={selectState.size as Size}
         />
       </CardContent>
     </Card >

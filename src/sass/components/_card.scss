@@ -9,13 +9,14 @@
   outline: 3px solid transparent;
   transition: transform .2s ease-in;
   width: 30rem;
-  height: 35rem;
+  height: 37rem;
 
-  @include m.respond(tab-port){
+  @include m.respond(tab-port) {
     width: 25rem;
   }
-  @include m.respond(phone){
-    width: 20rem;
+
+  @include m.respond(phone) {
+    width: 25rem;
   }
 
   &:hover {
@@ -73,15 +74,23 @@
   padding: 1.5rem;
   display: flex;
   font-size: 1.6rem;
+  width: 100%;
 }
 
-.control label, .control select {
-  margin-left: 2rem ;
+.control label {
+  margin-left: 2rem;
+  width: 50%;
+
+  @include m.respond(tab-port) {
+    width: 100%;
+  }
 }
 
-.control select{
+.control select {
   border: 1px solid white;
   padding: 0.5rem;
   color: white;
   border-radius: 1rem;
+  margin-right: 3rem;
+  text-align: center;
 }

@@ -1,6 +1,5 @@
 import { MouseEvent, ReactNode } from 'react';
 
-
 interface Props {
   background?: string;
   color?: string
