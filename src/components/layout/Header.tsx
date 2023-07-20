@@ -22,23 +22,20 @@ export const Header = ({
   alignContent = 'flex-start',
   backgroundColor = 'white',
   borderRadius = '1rem',
-  drawerWidth = 240,
+
   justifyContent = 'flex-end',
   padding = '2rem',
-  space = 1,
+
   children,
   ...props
 }: Props) => {
 
-  if (space < -24) space = -24;
-
-  const finalSpace = 100 - space;
 
   return (
     <header
       className='header'
       style={{
-        backgroundColor, width: `calc(${finalSpace}% - ${drawerWidth}px)`, justifyContent, alignContent, padding, borderRadius
+        backgroundColor, justifyContent, alignContent, padding, borderRadius
       }}      
       {...props}
     >

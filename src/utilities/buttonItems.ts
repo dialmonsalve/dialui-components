@@ -29,13 +29,4 @@ export const buttons: Button[] = [
     backgroundColor: 'red',
     size: 'large'
   },
-  {
-    id: 4,
-    label: 'ok',
-    hasBackground: true,
-    isAnimated: true,
-    backgroundColor: 'green',
-    size: 'medium'
-  },
-
 ]

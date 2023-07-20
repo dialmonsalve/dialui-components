@@ -22,17 +22,13 @@ export const Card = ({
   degrees = 135,
   finalBg = '#ffffff',
   hasGradient = true,
-  height = 35,
   hover = 'rgba(0,0,0,.8)',
   initialBg = ' #7a7777',
   margin,
-  width = 30,
   middleBg = ' #d4c6c6',
   children,
   ...props
 }: Props) => {
-  const isMobile = window.innerWidth < 600;
-  const widthForm = isMobile ? 27 : width;
 
   const backgroundColor = (degrees: number) => {
     if (hasGradient) {
@@ -65,9 +61,7 @@ export const Card = ({
       style={{
         background: backgroundColor(degrees),
         color,
-        height: `${height}rem`,
         margin,
-        width: `${widthForm}rem`,
       }}
       onMouseEnter={handleFocus}
       onMouseLeave={handleBlur}

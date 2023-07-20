@@ -29,9 +29,7 @@ export const Layout = () => {
       </Sidebar>
 
       <div className="right-layout" >
-        <Header
-          drawerWidth={drawerWidth}
-        >
+        <Header >
         </Header>
         <Outlet />
       </div>
