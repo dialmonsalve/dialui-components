@@ -18,5 +18,10 @@ export const items = [
     id:4,
     href:'/alerts',
     label:'alerts'
-  }
+  },
+  {
+    id:5,
+    href:'/notification',
+    label:'notifications'
+  },
 ]

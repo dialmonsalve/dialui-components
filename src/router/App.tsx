@@ -3,6 +3,7 @@ import { RouteObject, createBrowserRouter } from 'react-router-dom'
 
 import { Layout } from "../components/layout/Layout";
 import { Alerts, Buttons, Home, Modals, NotFound } from '../pages';
+import { Notifications } from '../pages/Notifications';
 
 
 const routes: RouteObject[] = [
@@ -26,6 +27,10 @@ const routes: RouteObject[] = [
       {
         path: 'alerts',
         element: <Alerts />
+      },
+      {
+        path: 'notification',
+        element: <Notifications />
       },
 
     ]
