@@ -69,7 +69,7 @@ export const Modals = () => {
           middleBg='#414b34'
           finalBg='#000000'
           degrees={120}
-          margin="4rem 0 0 0"
+          margin="-2rem 0 0 0"
         >
           <CardHead >
             <h3 className="title-card" >Choice a Modal type</h3>
