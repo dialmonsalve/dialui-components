@@ -32,6 +32,7 @@ export const Modals = () => {
                   backgroundColor={button.backgroundColor}
                   hasBackground={button.hasBackground}
                   onClick={() => openModal(button.onShowModal!)}
+                  size="medium"
                 />
               ))
             }
@@ -57,6 +58,7 @@ export const Modals = () => {
                   backgroundColor={button.backgroundColor}
                   hasBackground={button.hasBackground}
                   onClick={() => openModal(button.onShowModal!)}
+                  size="medium"
                 />
               ))
             }
