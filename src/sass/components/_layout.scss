@@ -43,6 +43,7 @@
   display: flex;
   justify-content: space-evenly;
   padding: 4rem;
+  margin-bottom: 5rem;
 
   @include m.respond(phone) {
     flex-direction: column-reverse;
@@ -52,6 +53,5 @@
     overflow-y: auto;
     margin: 0rem auto;
     width: 100%;
-    margin-bottom: 5rem;
   }
 }
