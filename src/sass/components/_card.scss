@@ -6,9 +6,8 @@
   box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
-  outline: 3px solid transparent;
   transition: transform .2s ease-in;
-  width: 30rem;
+  width: 33rem;
 
   @include m.respond(tab-port) {
     width: 25rem;
@@ -64,7 +63,7 @@
 
 .title-card {
   height: 3rem;
-  font-size: 2rem;
+  font-size: 1rem;
   text-transform: uppercase;
   text-align: center;
   width: 100%;
