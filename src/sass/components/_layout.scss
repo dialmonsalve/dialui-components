@@ -45,6 +45,7 @@
   padding: 4rem;
   margin-bottom: 5rem;
   overflow-y: scroll;
+  height: 80%;
 
   @include m.respond(phone) {
     flex-direction: column-reverse;
