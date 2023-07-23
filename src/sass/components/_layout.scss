@@ -44,7 +44,7 @@
   justify-content: space-evenly;
   padding: 4rem;
   margin-bottom: 5rem;
-  overflow-y: auto;
+  overflow-y: scroll;
 
   @include m.respond(phone) {
     flex-direction: column-reverse;
