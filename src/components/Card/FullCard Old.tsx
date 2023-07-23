@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { buttons } from "../../utilities/buttonItems";
+import { simpleButtons } from "../../utilities/buttonItems";
 import { Button } from "../ui/Button";
 import { Card } from "../Card/Card";
 import { CardContent } from "../Card/CardContent";
@@ -12,22 +12,22 @@ type Color = 'blue' | 'green' | 'red'
 type Size = 'small' | 'medium' | 'large'
 
 const initialBgStates: { [id: number]: Color | undefined } = {};
-buttons.forEach((button) => {
+simpleButtons.forEach((button) => {
   initialBgStates[button.id] = button.backgroundColor;
 });
 
 const initialSizeStates: { [id: number]: Size | undefined } = {};
-buttons.forEach((button) => {
+simpleButtons.forEach((button) => {
   initialSizeStates[button.id] = button.size;
 });
 
 const initialAnimatedStates: { [id: number]: boolean | undefined } = {};
-buttons.forEach((button) => {
+simpleButtons.forEach((button) => {
   initialAnimatedStates[button.id] = button.isAnimated;
 });
 
 const initialHasBackgroundStates: { [id: number]: boolean | undefined } = {};
-buttons.forEach((button) => {
+simpleButtons.forEach((button) => {
   initialHasBackgroundStates[button.id] = button.hasBackground;
 });
 export const FullCard = () => {
@@ -74,14 +74,14 @@ export const FullCard = () => {
   return (
     <div className="content-buttons">
       {
-        buttons.map(button => (
+        simpleButtons.map(button => (
           <Card
             key={button.id}
             initialBg="#131212"
             middleBg='#414b34'
             finalBg='#000000'
             degrees={120}
-            height={45}
+            height={'45rem'}
           >
             <CardHead />
             <h3 className="title-card" >Choice properties</h3>
