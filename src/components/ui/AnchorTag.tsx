@@ -1,9 +1,8 @@
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
 
-import { useContext } from "react";
-import { NavLink } from "react-router-dom";
-import { ContextHandlerAnimations } from "../context/ui/ContextHandlerAnimations";
 
+import { NavLink } from "react-router-dom";
+import { useHandlerAnimations } from '../../hooks';
 
 interface AnchorTagProps {
   backgroundColor?: string;
@@ -40,7 +39,7 @@ export const AnchorTag = ({
   ...props
 }: AnchorTagProps) => {
 
-  const { onToggleSidebar } = useContext(ContextHandlerAnimations);
+  const { onToggleSidebar } = useHandlerAnimations()
 
   const border = `${hasBackground ? 'none' : `1px solid ${color}`}`;
   const bg = `${!hasBackground ? 'transparent' : backgroundColor}`;

@@ -10,8 +10,8 @@
 }
 
 .menu {
-  background-color: rgb(0, 0, 0);
-  background-image: url('assets/arrow-left.svg');
+  background-color: rgb(100, 29, 221);
+  background-image: url('arrow-left.svg');
   background-position: 70% center;
   background-repeat: no-repeat;
   background-size: 50%;
@@ -25,12 +25,12 @@
 
   &:hover {
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.6);
+    // background-color: rgba(0, 0, 0, 0.6);
   }
 }
 
 .menu-hide {
-  background-image: url('assets/arrow-right.svg');
+  background-image: url('arrow-right.svg');
 }
 
 .hide-sidebar{

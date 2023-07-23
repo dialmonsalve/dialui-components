@@ -1,5 +1,6 @@
-import { ContextHandlerAnimations } from '../../context/ui/ContextHandlerAnimations';
-import { ReactNode, useContext } from 'react';
+
+import { ReactNode } from 'react';
+import { useHandlerAnimations } from '../../hooks';
 
 interface Props {
   backgroundColor?: string;
@@ -15,7 +16,7 @@ export const Sidebar = ({
   children,
 }: Props) => {
 
-  const { onToggleSidebar, toggleSidebar } = useContext(ContextHandlerAnimations)
+  const { onToggleSidebar, toggleSidebar } = useHandlerAnimations()
 
   const initial = `${isAnimated ? 'animation-sidebar' : 'sidebar'}`;
   const animation = `${isAnimated ? 'animation-hide-sidebar' : 'hide-sidebar'}`;

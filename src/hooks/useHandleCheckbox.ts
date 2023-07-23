@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { CheckboxData } from "../../type";
+import { CheckboxData } from "../type";
 
 type CheckHandlerResult = [CheckboxData, (name: string) => void]
 
@@ -10,7 +10,7 @@ export const useHandleCheckbox = (checkboxesData: CheckboxData): CheckHandlerRes
   const handleChange = (name: string) => {
     setCheckboxState((prevState) => ({
       ...prevState,
-      [name]: !prevState[name]
+      [name]: !prevState[name] 
     }));
   };
 

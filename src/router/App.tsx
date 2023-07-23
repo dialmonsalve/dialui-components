@@ -1,12 +1,8 @@
 
-import { RouteObject,  createBrowserRouter } from 'react-router-dom'
+import { RouteObject, createBrowserRouter } from 'react-router-dom'
 
 import { Layout } from "../components/layout/Layout";
-import { NotFound } from "../components/pages/NotFound";
-import { Buttons } from '../components/pages/Buttons';
-import { Home } from '../components/pages/Home';
-import { Modals } from '../components/pages/Modals';
-import { Alerts } from '../components/pages/Alerts';
+import { Alerts, Buttons, Home, Modals, NotFound } from '../pages';
 
 
 const routes: RouteObject[] = [
@@ -16,7 +12,7 @@ const routes: RouteObject[] = [
     errorElement: <NotFound />,
     children: [
       {
-        index:true,
+        index: true,
         element: <Home />
       },
       {

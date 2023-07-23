@@ -11,7 +11,7 @@ interface Props {
   margin?: string;
   middleBg?: string;
   width?: number;
-  height?: number;
+  height?: string;
   children?: ReactNode | ReactNode[];
 }
 
@@ -21,6 +21,7 @@ export const Card = ({
   degrees = 135,
   finalBg = '#ffffff',
   hasGradient = true,
+  height,
   hover = 'rgba(0,0,0,.8)',
   initialBg = ' #7a7777',
   margin,
@@ -61,6 +62,7 @@ export const Card = ({
         background: backgroundColor(degrees),
         color,
         margin,
+        height,
       }}
       onMouseEnter={handleFocus}
       onMouseLeave={handleBlur}

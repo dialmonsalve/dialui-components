@@ -1,10 +1,15 @@
 
+type Hide =
+  | 'fadeout' | 'toUp' | 'toDown' | 'toRight' | 'toLeft'
+  | 'jumpToLeft' | 'jumpToUp' | 'jumpToRight' | 'jumpToDown'
+
 export interface ButtonProps {
   backgroundColor?: 'blue' | 'red' | 'green';
   hasBackground?: boolean;
   isAnimated?: boolean;
   label: string;
   margin?: string
+  onShowModal?:Hide 
   size?: 'small' | 'medium' | 'large';
   type?: 'button' | 'submit';
   width?: number;

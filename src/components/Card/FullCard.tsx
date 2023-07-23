@@ -1,8 +1,8 @@
 
-import { useHandleCheckbox, useHandlerSelects } from "../hooks";
+import { useHandleCheckbox, useHandlerSelects } from "../../hooks";
 
-import { Card, CardContent, CardHead, CardMedia } from "./";
-import { Button } from "../Button";
+import { Card, CardActions, CardHead, CardMedia } from "./";
+import { Button } from "../ui/Button";
 
 import { CheckboxData, Color, SelectData, Size } from "../../type";
 
@@ -39,6 +39,7 @@ export const FullCard = ({
       middleBg='#414b34'
       finalBg='#000000'
       degrees={120}
+      height="37rem"
     >
       <CardHead >
         <h3
@@ -46,14 +47,16 @@ export const FullCard = ({
       </CardHead>
 
       <CardMedia>
+        
         <div className="control">
           <input
             type="checkbox"
             name="isAnimated"
             checked={checkboxState.isAnimated}
             onChange={() => handleCheckboxChange("isAnimated")}
+
           />
-          <label>Has Animation?</label>
+          <label >Has Animation?</label>
         </div>
 
         <div className="control">
@@ -94,7 +97,8 @@ export const FullCard = ({
         </div>
       </CardMedia>
 
-      <CardContent
+      <CardActions
+      justifyContent="center"
       >
         <Button
           label="OK"
@@ -103,7 +107,7 @@ export const FullCard = ({
           backgroundColor={selectState.bg as Color}
           size={selectState.size as Size}
         />
-      </CardContent>
+      </CardActions>
     </Card >
   )
 }

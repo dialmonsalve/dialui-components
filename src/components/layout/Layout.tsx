@@ -3,7 +3,7 @@ import { Sidebar } from './Sidebar';
 
 import { items } from '../../utilities/navItems';
 
-import { AnchorTag } from '../AnchorTag';
+import { AnchorTag } from '../ui/AnchorTag';
 import { Outlet } from 'react-router-dom';
 
 

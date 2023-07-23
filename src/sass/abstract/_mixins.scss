@@ -116,3 +116,38 @@
     box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.3) inset;
   }
 }
+
+//! Modal
+@mixin showModal($transform) {
+  opacity: 1;
+  visibility: visible;
+  transform: $transform;
+}
+
+@mixin typeModal ($url) {
+  animation: spin .2s linear forwards 1.2s;
+  background-image: $url;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  padding: 8rem;
+  position: sticky;
+
+  @include respond(phone){
+    padding: 9rem;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(720deg);
+  }
+}

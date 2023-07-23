@@ -1,4 +1,4 @@
-import { FullCard } from "../Card/FullCard"
+import { FullCard } from "../components/Card";
 
 export const Buttons = () => {
 
@@ -16,7 +16,7 @@ export const Buttons = () => {
         sizeButton="medium"
         hasButtonBackground
       />
-      <FullCard 
+      <FullCard
         sizeButton="large"
         hasButtonBackground
       />
@@ -26,7 +26,7 @@ export const Buttons = () => {
         sizeButton="small"
         hasButtonBackground={false}
       />
-      <FullCard 
+      <FullCard
         sizeButton="large"
       />
       <FullCard
