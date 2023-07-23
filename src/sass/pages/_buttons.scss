@@ -7,16 +7,14 @@
   &:link,
   &:visited {
     border-radius: 1rem;
-    font-weight: 500;
-    letter-spacing: 2px;
-    line-height: 1;
+    letter-spacing: 1.5px;
     position: relative;
     transition: all .1s ease-in-out;
   }
 
   &:focus,
   &:focus-visible {
-    outline: 4px auto -webkit-focus-ring-color;
+    outline: 2px auto -webkit-focus-ring-color;
   }
 
   &::after {
@@ -65,12 +63,12 @@
   }
 
   &--medium {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     padding: .7rem 1.2rem;
   }
 
   &--large {
-    font-size: 2.2rem;
+    font-size: 1.9rem;
     padding: .8rem 1.7rem;
   }
 
