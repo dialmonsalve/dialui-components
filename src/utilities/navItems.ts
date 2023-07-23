@@ -6,17 +6,17 @@ export const items = [
   },
   {
     id:2,
-    href:'/buttons',
+    href:'buttons',
     label:'buttons'
   },
   {
     id:3,
-    href:'/modal',
+    href:'modal',
     label:'modal'
   },
   {
     id:4,
-    href:'/alerts',
+    href:'alerts',
     label:'alerts'
   }
 ]
