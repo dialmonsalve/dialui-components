@@ -17,7 +17,7 @@
     left: 30%;
   }
   @include m.respond(phone){
-    left: -1%;
+    left: 5%;
   }
 
   &__person {
