@@ -6,7 +6,7 @@ export const items = [
   },
   {
     id:2,
-    href:'/buttons/',
+    href:'/buttons',
     label:'buttons'
   },
   {
