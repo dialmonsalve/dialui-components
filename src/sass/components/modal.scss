@@ -64,17 +64,17 @@
 
 
 .danger {
-  @include m.typeModal(url('/modal/danger.svg'));
+  @include m.typeModal(url('modal/danger.svg'));
 }
 
 .success {
-  @include m.typeModal(url('/modal/success.svg'));
+  @include m.typeModal(url('modal/success.svg'));
 }
 
 .warning {
-  @include m.typeModal(url('/modal/warning.svg'));
+  @include m.typeModal(url('modal/warning.svg'));
 }
 
 .info {
-  @include m.typeModal(url('/modal/info.svg'));
+  @include m.typeModal(url('modal/info.svg'));
 }
