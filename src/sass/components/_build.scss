@@ -1,0 +1,67 @@
+@use '../abstract/mixins' as m;
+
+.img-build {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  display: flex;
+  height: 17rem;
+
+  @include m.respond(tab-land){
+    height: 20rem;
+    left: 30%;
+  }
+
+  @include m.respond(tab-port){
+    height: 20rem;
+    left: 30%;
+  }
+  @include m.respond(phone){
+    left: 5%;
+  }
+
+  &__person {
+    display: inline-block;
+    position: relative;
+    width: 30rem;
+    left: -1%;
+
+    @include m.respond(tab-land){
+      left: 1%;
+    }
+
+    @include m.respond(tab-port){
+      left: -2%;
+      top: 4%;
+    }
+
+  }
+
+  &__hammer {
+    background-image: url("/assets/built/hammer.svg");
+    width: 8rem;
+    position: relative;
+    background-repeat: no-repeat;
+    left: 41%;
+    animation: left-right .8s linear infinite 0.5s;
+
+    @include m.respond(tab-port){
+      left: 35%;
+    }
+
+  }
+}
+
+@keyframes left-right {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(45deg);
+  }
+
+  100% {
+    transform: rotate(-95deg);
+  }
+}
