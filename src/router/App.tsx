@@ -16,15 +16,15 @@ const routes: RouteObject[] = [
         element: <Home />
       },
       {
-        path: '/buttons',
+        path: 'buttons',
         element: <Buttons />
       },
       {
-        path: '/modal',
+        path: 'modal',
         element: <Modals />
       },
       {
-        path: '/alerts',
+        path: 'alerts',
         element: <Alerts />
       },
 
