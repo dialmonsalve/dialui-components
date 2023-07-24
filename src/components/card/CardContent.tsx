@@ -1,10 +1,11 @@
 import { ReactNode } from 'react';
+import { FlexDirection } from '../../type';
 
 interface Props {
   color?: string
   children?: ReactNode | ReactNode[];
   display?: string;
-  flexDirection?: | 'row' | 'row-reverse' | 'column' | 'column-reverse'
+  flexDirection?: FlexDirection
   justifyContent?: string
 }
 

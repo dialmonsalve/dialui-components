@@ -1,17 +1,12 @@
 import { ReactNode } from 'react';
-// import '../../sass/components/header.scss';
-
-
-type Content =
-  'center' | 'flex-end' | 'flex-start' |
-  'space-around' | 'space-between' | 'space-evenly'
+import { Content, FlexWrap } from '../../type';
 
 interface Props {
   alignContent?: Content;
   backgroundColor?: string;
   borderRadius?: string;
   drawerWidth?: number;
-  flexWrap?: 'wrap' | 'nowrap' | 'wrap-reverse';
+  flexWrap?: FlexWrap;
   justifyContent?: Content;
   padding?: string;
   space?: number;

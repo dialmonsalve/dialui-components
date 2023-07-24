@@ -1,36 +1,41 @@
 
 import { RouteObject, createBrowserRouter } from 'react-router-dom'
 
-import { Layout } from "../components/layout/Layout";
-import { Alerts, Buttons, Home, Modals, NotFound } from '../pages';
-import { Notifications } from '../pages/Notifications';
 
+import Alerts from '../pages/alerts';
+import ButtonsPage from '../pages/buttons';
+import HomePage from '../pages/index';
+import ModalsPage from '../pages/modalsPage';
+import NotFoundPage from '../pages/notFound';
+import NotificationsPage from '../pages/Notifications';
+
+import { Layout } from "../components/layout/Layout";
 
 const routes: RouteObject[] = [
   {
     path: '/',
     element: <Layout />,
-    errorElement: <NotFound />,
+    errorElement: <NotFoundPage />,
     children: [
       {
         index: true,
-        element: <Home />
-      },
-      {
-        path: 'buttons',
-        element: <Buttons />
-      },
-      {
-        path: 'modal',
-        element: <Modals />
+        element: <HomePage />
       },
       {
         path: 'alerts',
         element: <Alerts />
       },
       {
+        path: 'buttons',
+        element: <ButtonsPage />
+      },
+      {
+        path: 'modal',
+        element: <ModalsPage />
+      },
+      {
         path: 'notification',
-        element: <Notifications />
+        element: <NotificationsPage />
       },
 
     ]

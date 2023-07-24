@@ -1,21 +1,20 @@
 import { createContext } from 'react';
+import { ClassModal, ModalMessageType } from '../../type';
 
-type Hide =
-  | 'fadeout' | 'toUp' | 'toDown' | 'toRight' | 'toLeft'
-  | 'jumpToLeft' | 'jumpToUp' | 'jumpToRight' | 'jumpToDown' | ''
 
 interface ContextProps {
+  //Properties
   toggleSidebar: boolean;
-  onToggleSidebar: () => void
-
   handleModal: boolean;
-  openModal: (hide: Hide) => void
-  closeModal: () => void
-  classModal: Hide
+  classModal: ClassModal
+  modalMessageType: ModalMessageType;
 
-  onRadioChange:(e: React.ChangeEvent<HTMLInputElement>)=>void
-  radioButton: 'success' | 'danger' | 'warning' | 'info';
+  // Functions
+  onToggleSidebar: () => void
+  openModal: (showModalClass: ClassModal) => void
+  closeModal: () => void
+  onRadioChange: (e: React.ChangeEvent<HTMLInputElement>) => void
 
 }
 
-export const HandlerAnimationsContext = createContext({} as ContextProps)
+export const HandlerAnimationContext = createContext({} as ContextProps)

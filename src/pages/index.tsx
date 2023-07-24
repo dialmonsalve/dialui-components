@@ -1,9 +1,11 @@
 import { Building } from "../components/ui/Building"
 
-export const Home = () => {
+function HomePage () {
   return (
     <div className="content-home">
     <Building/>
     </div>
   )
 }
+
+export default HomePage

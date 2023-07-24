@@ -1,12 +1,12 @@
 import { Button } from "../components/ui/Button"
-import { Card, CardContent, CardHead } from "../components/Card"
+import { Card, CardContent, CardHead } from "../components/card"
 import { simpleButtons, animatedButtons } from "../utilities/buttonItems"
 import { Modal } from "../components/ui/Modal"
 import { useHandlerAnimations } from "../hooks"
 
-export const Modals = () => {
+function ModalsPage () {
 
-  const { radioButton, openModal, onRadioChange } = useHandlerAnimations();
+  const { modalMessageType, openModal, onRadioChange } = useHandlerAnimations();
 
   return (
     <>
@@ -83,41 +83,41 @@ export const Modals = () => {
                 value="success"
                 onChange={onRadioChange}
                 id="success"
-                checked={radioButton === 'success'}
+                checked={modalMessageType === 'success'}
               />
               <label htmlFor="success">success</label>
             </div>
 
             <div className="control" >
-              <input 
-              type="radio" 
-              name="type" 
-              value="warning" 
-              onChange={onRadioChange}
-              id="warning"
+              <input
+                type="radio"
+                name="type"
+                value="warning"
+                onChange={onRadioChange}
+                id="warning"
               />
               <label htmlFor="warning">warning</label>
             </div>
 
             <div className="control" >
-              <input 
-              type="radio" 
-              name="type" 
-              value="info" 
-              onChange={onRadioChange}
-              id="info"
-              />              
-              <label 
-              htmlFor="info">info</label>
+              <input
+                type="radio"
+                name="type"
+                value="info"
+                onChange={onRadioChange}
+                id="info"
+              />
+              <label
+                htmlFor="info">info</label>
             </div>
 
             <div className="control" >
-              <input 
-              type="radio" 
-              name="type" 
-              value="danger"
-              onChange={onRadioChange}
-              id="danger"
+              <input
+                type="radio"
+                name="type"
+                value="danger"
+                onChange={onRadioChange}
+                id="danger"
               />
               <label htmlFor="danger">danger</label>
             </div>
@@ -128,3 +128,5 @@ export const Modals = () => {
     </>
   )
 }
+
+export default ModalsPage

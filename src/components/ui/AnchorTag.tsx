@@ -1,8 +1,7 @@
-/* eslint-disable @typescript-eslint/restrict-template-expressions */
-
 
 import { NavLink } from "react-router-dom";
 import { useHandlerAnimations } from '../../hooks';
+import { Size, TextAlign } from "../../type";
 
 interface AnchorTagProps {
   backgroundColor?: string;
@@ -17,8 +16,8 @@ interface AnchorTagProps {
   marginRight?: string;
   marginTop?: string;
   padding?: string;
-  size?: 'small' | 'medium' | 'large';
-  textAlign?: | 'center' | 'justify' | 'left' | 'right' | 'start' | 'end';
+  size?: Size
+  textAlign?: TextAlign
   onClick?: () => void;
 }
 export const AnchorTag = ({

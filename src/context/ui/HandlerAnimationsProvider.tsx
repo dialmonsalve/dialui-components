@@ -1,69 +1,52 @@
-import { ReactNode, useState } from 'react';
-import { HandlerAnimationsContext } from './HandlerAnimationsContext';
+import { ReactNode, useReducer } from 'react';
+import { HandlerAnimationContext, handlerAnimationReducer } from './';
+import { ClassModal, ModalMessageType } from '../../type';
 
 export interface Props {
   children: ReactNode;
 
 }
-type RadioButton= 'success' | 'danger' | 'warning' | 'info';
 
-type Hide =
-  | 'fadeout' | 'toUp' | 'toDown' | 'toRight' | 'toLeft'
-  | 'jumpToLeft' | 'jumpToUp' | 'jumpToRight' | 'jumpToDown' | ''
+export interface HandlerAnimationState {
+  toggleSidebar: boolean;
+  handleModal: boolean
+  modalMessageType: ModalMessageType
+  classModal: ClassModal
+}
+
+const HANDLER_ANIMATIONS_INITIAL_STATE: HandlerAnimationState = {
+  toggleSidebar: false,
+  handleModal: false,
+  modalMessageType: "success",
+  classModal: "fadeout"
+}
 
 export const ProviderHandlerAnimations = ({ children }: Props) => {
 
-  const [toggleSidebar, setToggleSidebar] = useState(false);
-  const [handleModal, setHandleModal] = useState(false);
-  const [classModal, setClassModal] = useState<Hide>("fadeout");
-  const [radioButton, setRadioButton] = useState<RadioButton>("success");
+  const [state, dispatch] = useReducer(handlerAnimationReducer, HANDLER_ANIMATIONS_INITIAL_STATE);
+
+  const { toggleSidebar, handleModal, modalMessageType, classModal } = state
+
 
   const onToggleSidebar = () => {
-    setToggleSidebar(!toggleSidebar)
+    dispatch({ type: '[HandlerAnimations] - Toggle sidebar', payload: !toggleSidebar });
   }
 
-  const openModal = (hide: Hide) => {
-    setHandleModal(true)
-
-    setClassModal(sideHide(hide))
+  const openModal = (showModalClass: ClassModal) => {
+    dispatch({ type: '[HandlerAnimations] - Open modal', payload: showModalClass });
   }
 
-  function closeModal() {    
-    setHandleModal(false)
+  function closeModal() {
+    dispatch({ type: '[HandlerAnimations] - Close modal' });
   }
 
   const onRadioChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setRadioButton(e.target.value as RadioButton)
-  }
-
-
-
-  const sideHide = (hide: Hide): Hide => {
-
-    switch (hide) {
-      case 'toUp':
-        return 'toUp';
-      case 'toDown':
-        return 'toDown';
-      case 'toLeft':
-        return 'toLeft';
-      case 'toRight':
-        return 'toRight';
-      case 'jumpToUp':
-        return 'jumpToUp';
-      case 'jumpToLeft':
-        return 'jumpToLeft';
-      case 'jumpToDown':
-        return 'jumpToDown';
-      case 'jumpToRight':
-        return 'jumpToRight';
-      default:
-        return 'fadeout';
-    }
-  }
+    dispatch({ type: '[HandlerAnimations] - Type message modal', payload: e.target.value as ModalMessageType })
+  };
 
   return (
-    <HandlerAnimationsContext.Provider value={{
+    <HandlerAnimationContext.Provider value={{
+      ...state,
       toggleSidebar,
       onToggleSidebar,
       handleModal,
@@ -72,9 +55,9 @@ export const ProviderHandlerAnimations = ({ children }: Props) => {
       openModal,
       closeModal,
       onRadioChange,
-      radioButton
+      modalMessageType
     }}>
       {children}
-    </HandlerAnimationsContext.Provider>
+    </HandlerAnimationContext.Provider>
   )
 }

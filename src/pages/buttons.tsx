@@ -1,6 +1,6 @@
-import { FullCard } from "../components/Card";
+import { FullCard } from "../components/card";
 
-export const Buttons = () => {
+function ButtonsPage() {
 
   return (
     <div className="content-buttons">
@@ -38,3 +38,5 @@ export const Buttons = () => {
     </div>
   )
 }
+
+export default ButtonsPage

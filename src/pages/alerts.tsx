@@ -1,7 +1,10 @@
 import { Building } from "../components/ui/Building"
 
-export const Alerts = () => {
+function Alerts() {
   return (
     <Building />
   )
 }
+
+
+export default Alerts;

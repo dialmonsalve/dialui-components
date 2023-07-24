@@ -1,16 +1,13 @@
 
 import { Button } from './Button';
 import { useHandlerAnimations } from '../../hooks';
-
-type Hide =
-  | 'fadeout' | 'toUp' | 'toDown' | 'toRight' | 'toLeft'
-  | 'jumpToLeft' | 'jumpToUp' | 'jumpToRight' | 'jumpToDown'
+import { ClassModal, ModalMessageType } from '../../type';
 
 interface Props {
   content?: string;
-  hide?: Hide;
+  classModal?: ClassModal;
   title?: string;
-  type?: 'success' | 'danger' | 'warning' | 'info';
+  type?: ModalMessageType;
 }
 
 export const Modal = ({
@@ -19,11 +16,11 @@ export const Modal = ({
   ...props
 }: Props) => {
 
-  const { classModal, handleModal, radioButton, closeModal } = useHandlerAnimations();
+  const { classModal, handleModal, modalMessageType, closeModal } = useHandlerAnimations();
 
   const color = () => {
 
-    switch (radioButton) {
+    switch (modalMessageType) {
       case 'danger':
         return '#ff0000';
       case 'info':
@@ -37,7 +34,7 @@ export const Modal = ({
 
   const backgroundColor = () => {
 
-    switch (radioButton) {
+    switch (modalMessageType) {
       case 'danger':
         return 'red';
       case 'info':
@@ -71,7 +68,7 @@ export const Modal = ({
           <p className='modal-content__frame--message'
             style={{ color: color() }}
           >{content}</p>
-          <div className={`${radioButton}`} ></div>
+          <div className={`${modalMessageType}`} ></div>
         </div>
         <div className='modal-content__buttons'>
           <Button

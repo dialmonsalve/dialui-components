@@ -1,16 +1,13 @@
-
-type Hide =
-  | 'fadeout' | 'toUp' | 'toDown' | 'toRight' | 'toLeft'
-  | 'jumpToLeft' | 'jumpToUp' | 'jumpToRight' | 'jumpToDown'
+import { ClassModal, Color, Size } from "../../type";
 
 export interface ButtonProps {
-  backgroundColor?: 'blue' | 'red' | 'green';
+  backgroundColor?: Color;
   hasBackground?: boolean;
   isAnimated?: boolean;
   label: string;
   margin?: string
-  onShowModal?:Hide 
-  size?: 'small' | 'medium' | 'large';
+  onShowModal?:ClassModal 
+  size?: Size;
   type?: 'button' | 'submit';
   width?: number;
   onClick?: () => void;

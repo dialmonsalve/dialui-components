@@ -1,7 +1,9 @@
 import { Building } from "../components/ui/Building"
 
-export const Notifications = () => {
+function NotificationsPage  ()  {
   return (
     <Building/>
   )
 }
+
+export default  NotificationsPage

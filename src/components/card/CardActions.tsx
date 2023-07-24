@@ -1,11 +1,8 @@
 import { ReactNode } from 'react';
-
-type Content =
-  'center' | 'flex-end' | 'flex-start' |
-  'space-around' | 'space-between' | 'space-evenly'
+import { AlignItems, Content } from '../../type';
 
 interface Props {
-  alignItems?: 'center' | 'flex-start' | 'flex-end' | 'stretch' | 'baseline';
+  alignItems?: AlignItems;
   color?: string,
   justifyContent?: Content;
   children?: ReactNode | ReactNode[]

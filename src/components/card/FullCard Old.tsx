@@ -6,7 +6,7 @@ import { CardContent } from "../Card/CardContent";
 import { CardHead } from "../Card/CardHead";
 import { CardMedia } from "../Card/CardMedia";
 
-
+// ! This file isn't used for the app, only is an example
 type Color = 'blue' | 'green' | 'red'
 
 type Size = 'small' | 'medium' | 'large'
