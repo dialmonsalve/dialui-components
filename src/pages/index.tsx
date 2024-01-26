@@ -1,4 +1,4 @@
-import { Building } from "../components/ui/Building"
+import { Building } from "@/components/ui/Building"
 
 function HomePage () {
   return (

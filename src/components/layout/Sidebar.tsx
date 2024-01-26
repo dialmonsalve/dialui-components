@@ -1,6 +1,6 @@
 
 import { ReactNode } from 'react';
-import { useHandlerAnimations } from '../../hooks';
+import { useSidebar } from '@/hooks/context';
 
 interface Props {
   backgroundColor?: string;
@@ -16,21 +16,24 @@ export const Sidebar = ({
   children,
 }: Props) => {
 
-  const { onToggleSidebar, toggleSidebar } = useHandlerAnimations()
-
+const { isOpenSidebar, openSidebar, closeSidebar } = useSidebar()
   const initial = `${isAnimated ? 'animation-sidebar' : 'sidebar'}`;
   const animation = `${isAnimated ? 'animation-hide-sidebar' : 'hide-sidebar'}`;
+
+  const onToggleSidebar = ()=>{
+    isOpenSidebar ? closeSidebar() : openSidebar()
+  }
   
   return (
     <>
-      <nav className={`show-sidebar ${initial} ${toggleSidebar ? '' : `${animation}`} `}
+      <nav className={`show-sidebar ${initial} ${isOpenSidebar ? '' : `${animation}`} `}
         style={{ backgroundColor, width: `${drawerWidth}px` }}
       >
         <ul className='sidebar__container'>
           {children}
         </ul>
         <div
-          className={`menu ${toggleSidebar ? '' : 'menu-hide'}`}
+          className={`menu ${isOpenSidebar ? '' : 'menu-hide'}`}
           onClick={onToggleSidebar}
           style={{ left: `calc(-2rem + ${drawerWidth}px)` }}
         >

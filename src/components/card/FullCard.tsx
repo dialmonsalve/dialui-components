@@ -1,10 +1,10 @@
 
-import { useHandleCheckbox, useHandlerSelects } from "../../hooks";
+import { useHandleCheckbox, useHandlerSelects } from "@/hooks";
 
 import { Card, CardActions, CardHead, CardMedia } from "./";
-import { Button } from "../ui/Button";
+import { Button } from "@/components/ui/Button";
 
-import { CheckboxData, Color, SelectData, Size } from "../../type";
+import { CheckboxData, Color, SelectData, Size } from "@/types";
 
 interface FullCardProps {
   isButtonAnimated?: boolean

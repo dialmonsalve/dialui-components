@@ -1,0 +1,26 @@
+.btn {
+
+  &__radius-0 {
+    border-radius: 0rem;
+  }
+
+  &__radius-1 {
+    border-radius: .2rem;
+  }
+
+  &__radius-2 {
+    border-radius: .4rem;
+  }
+
+  &__radius-3 {
+    border-radius: .6rem;
+  }
+
+  &__radius-4 {
+    border-radius: .8rem;
+  }
+
+  &__radius-5 {
+    border-radius: 1rem;
+  }
+}

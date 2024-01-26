@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { Content, FlexWrap } from '../../type';
+import { Content, FlexWrap } from '@/types';
 
 interface Props {
   alignContent?: Content;

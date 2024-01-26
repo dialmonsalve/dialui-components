@@ -1,5 +1,4 @@
 import { MouseEvent, ReactNode } from 'react';
-import {CardActions} from "../card"
 
 interface Props {
   background?: string;

@@ -1,0 +1,48 @@
+@use "../abstract/mixins/globalMixins" as Gm;
+@use "../abstract/variables/globalVariables" as Gv;
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+body {
+	box-sizing: border-box;
+	background-color: rgb(222, 222, 223);
+	margin: 0;
+	font-family: Gv.$font-family;
+  
+	@include Gm.respond(tab-port) {
+		padding: 0
+	}
+}
+
+.container {
+	display: flex;
+	height: 100vh;
+	border-radius: 1rem;
+}
+
+
+// html {
+// 	// *This defines what 1rem is
+// 	font-size: 62.5%; // ? 1rem = 10px; 10px/16px = 62.5%
+
+// 	@include Gm.respond(tab-land) {
+// 		//width <1200
+// 		font-size: 56.25%; // ? 1rem = 9px; 9px/16px = 56.25%
+// 	}
+
+// 	@include Gm.respond(tab-port) {
+// 		//width <900
+// 		font-size: 50%; // ? 1rem = 8px; 8px/16px = 50%
+// 	}
+
+// 	@include Gm.respond(big-desktop) {
+// 		font-size: 75%; // ? 1rem = 12px; 12px/16px = 75%
+
+// 	}
+// }

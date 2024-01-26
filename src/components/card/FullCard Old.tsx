@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { simpleButtons } from "../../utilities/buttonItems";
+import { simpleButtons } from "../../helpers/buttonItems";
 import { Button } from "../ui/Button";
 import { Card } from "../Card/Card";
 import { CardContent } from "../Card/CardContent";

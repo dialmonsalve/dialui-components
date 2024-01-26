@@ -1,0 +1,136 @@
+@use '../../abstract/variables/globalVariables' as Gv;
+@use '../../abstract/mixins/globalMixins' as Gm;
+
+.spinner {
+  align-items: center;
+  backdrop-filter: blur(4px);
+  background-color: Gv.$color-black-200;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+  width: 100%;
+  z-index: 999998;
+
+  &__content {
+    display: flex;
+    width: 440px;
+    height: 440px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    & .icon-spinner {
+
+      &__fleas {
+        width: 85px;
+        height: 120px;
+
+        &>div {
+          background: linear-gradient(90deg, black 0%, black 60%, red 100%);
+          width: 30px;
+          height: 10px;
+        }
+
+      }
+
+      &__circles {
+        width: 85px;
+        height: 120px;
+
+        &>div {
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      &__moon {
+        &>div {
+          background: linear-gradient(45deg, Gv.$color-yellow-200 0%,
+              Gv.$color-green-100 50%,
+              Gv.$color-yellow-200 70%,
+              Gv.$color-blue-100 100%);
+          width: 140px;
+          height: 140px;
+          
+
+          @include Gm.respond(tab-port) {
+            width: 180px;
+            height: 180px;
+
+          }
+        }
+      }
+
+      &__mouses {
+        width: 120px;
+
+        &--1,
+        &--2 {
+          background: linear-gradient(45deg, Gv.$color-black-400 0%,
+              Gv.$color-gray-100 50%,
+              Gv.$color-gray-400 100%);
+          width: 30px;
+          height: 60px;
+        }
+
+        @include Gm.respond(tab-port) {
+          width: 150px;
+
+        }
+      }
+
+      &__squares {
+        width: 80px;
+        height: 100px;
+
+        &--1,
+        &--2 {
+          width: 30px;
+          height: 30px;
+          background: linear-gradient(135deg, Gv.$color-yellow-600 0%,
+              transparent 50%,
+              Gv.$color-green-600 100%);
+        }
+      }
+    }
+
+    &--loading {
+      font-size: 20px;
+      color: white;
+      text-align: center;
+    }
+  }
+
+  &__half-spinner {
+    padding: 35px;
+    position: absolute;
+    animation: left-right .8s linear infinite;
+    width: 300px;
+    height: 150px;
+  }
+
+  &__loading {
+    font-size: 25px;
+    color: Gv.$color-white-200;
+  }
+
+}
+
+@keyframes left-right {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(100deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}

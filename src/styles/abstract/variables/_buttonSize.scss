@@ -1,0 +1,127 @@
+@use '../mixins/button' as bm;
+@use '../mixins/globalMixins' as Gm;
+
+.btn {
+
+  &__sm-100 {
+    @include bm.size(8px, 40px, 20px);
+
+    @include Gm.respond(tab-port) {
+      @include bm.size(10px, 60px, 20px);
+    }
+  }
+
+  &__sm-200 {
+    @include bm.size(9px, 60px, 20px);
+
+    @include Gm.respond(tab-port) {
+      @include bm.size(12px, 85px, 20px);
+    }
+  }
+
+  &__sm-300 {
+    @include bm.size(10px, 80px, 20px);
+
+    @include Gm.respond(tab-port) {
+      @include bm.size(14px, 110px, 20px);
+    }
+  }
+
+
+  &__md-100 {
+    @include bm.size(11px, 100px, 30px);
+
+    @include Gm.respond(tab-port) {
+      @include bm.size(14px, 135px, 35px);
+    }
+  }
+
+  &__md-200 {
+    @include bm.size(12px, 120px, 30px);
+
+    @include Gm.respond(tab-port) {
+      @include bm.size(16px, 155px, 35px);
+    }
+  }
+
+  &__md-300 {
+    @include bm.size(16px, 140px, 30px);
+
+    @include Gm.respond(tab-port) {
+      @include bm.size(18px, 175px, 35px);
+    }
+  }
+
+  &__lg-100 {
+    @include bm.size(18px, 160px, 40px);
+
+    @include Gm.respond(tab-port) {
+      @include bm.size(21px, 195px, 45px);
+    }
+  }
+
+  &__lg-200 {
+    @include bm.size(18px, 180px, 40px);
+
+    @include Gm.respond(tab-port) {
+      @include bm.size(22px, 215px, 45px);
+    }
+  }
+
+  &__lg-300 {
+    @include bm.size(22px, 200px, 40px);
+
+    @include Gm.respond(tab-port) {
+      @include bm.size(24px, 235px, 45px);
+    }
+  }
+
+  &__wf-25 {
+    width: 25%;
+    padding: 6px 20px;
+    font-size: 10px;
+    height: 25px;
+
+    @include Gm.respond(tab-port) {
+      font-size: 14px;
+      height: 30px;
+    }
+  }
+
+  &__wf-50 {
+    width: 50%;
+    font-size: 10px;
+    padding: 6px 20px;
+    height: 25px;
+
+    @include Gm.respond(tab-port) {
+      font-size: 14px;
+      height: 30px;
+    }
+  }
+
+  &__wf-75 {
+    width: 75%;
+    padding: 6px 20px;
+    font-size: 10px;
+    height: 25px;
+
+    @include Gm.respond(tab-port) {
+      font-size: 14px;
+      height: 30px;
+    }
+  }
+
+  &__wf-100 {
+    width: 100%;
+    font-size: 10px;
+    padding: 6px 20px;
+    height: 25px;
+
+    @include Gm.respond(tab-port) {
+      font-size: 14px;
+      height: 40px;
+    }
+  }
+
+}

@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { AlignItems, Content } from '../../type';
+import type { AlignItems, Content } from '@/types';
 
 interface Props {
   alignItems?: AlignItems;

@@ -1,13 +1,14 @@
 
 import { RouteObject, createBrowserRouter } from 'react-router-dom'
 
-
-import Alerts from '../pages/alerts';
-import ButtonsPage from '../pages/buttons';
+import IconSpinner from '../pages/iconSpinner';
+import ButtonPage from '../pages/button';
 import HomePage from '../pages/index';
-import ModalsPage from '../pages/modalsPage';
+import ModalPage from '../pages/modal';
 import NotFoundPage from '../pages/notFound';
-import NotificationsPage from '../pages/Notifications';
+import NotificationPage from '../pages/notifications';
+import NavigationLinkPage from '../pages/navigationLink'
+import SpinnerPage  from '@/pages/spinner';
 
 import { Layout } from "../components/layout/Layout";
 
@@ -22,22 +23,30 @@ const routes: RouteObject[] = [
         element: <HomePage />
       },
       {
-        path: 'alerts',
-        element: <Alerts />
+        path: 'icon-spinner',
+        element: <IconSpinner />
       },
       {
         path: 'buttons',
-        element: <ButtonsPage />
+        element: <ButtonPage />
       },
       {
         path: 'modal',
-        element: <ModalsPage />
+        element: <ModalPage />
       },
       {
         path: 'notification',
-        element: <NotificationsPage />
+        element: <NotificationPage />
       },
 
+      {
+        path: 'navigation-link',
+        element: <NavigationLinkPage />
+      },
+      {
+        path: 'spinner',
+        element: <SpinnerPage />
+      },
     ]
   }
 ];

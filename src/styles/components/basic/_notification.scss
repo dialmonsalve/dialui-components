@@ -1,0 +1,53 @@
+@use "../../abstract/mixins/globalMixins" as Gm;
+@use "../../abstract/variables/globalVariables" as Gv;
+
+.notification {
+  color: Gv.$color-white-100;
+  padding: .8rem;
+  border-radius: 2rem;
+  position: fixed;  
+  z-index: 999997;
+  box-shadow: 1px 1px 3px rgb($color: Gv.$color-black-400, $alpha: .8);
+  transition: all .3s cubic-bezier(.68, -.55, .27, 1.55);
+
+  &__message {
+    font-weight: 700;
+    font-size: 10px;
+
+    @include Gm.respond(phone) {
+      font-size: 12px;
+    }
+  }
+
+  &__up {
+    top: 10%;
+  }
+
+  &__down {
+    bottom: 10%;
+  }
+
+  &__left {
+    left: 2%;
+  }
+
+  &__right {
+    right: 2%;
+  }
+}
+
+.success {
+  background-color: Gv.$color-green-400;
+}
+
+.info {
+  background-color: Gv.$color-blue-400;
+}
+
+.warning {
+  background-color: Gv.$color-yellow-400;
+}
+
+.error {
+  background-color: Gv.$color-red-400;
+}

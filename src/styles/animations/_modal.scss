@@ -1,0 +1,141 @@
+@use '../abstract/mixins/globalMixins' as Gm;
+
+@mixin status($opacity: 0, $visibility: hidden) {
+  opacity: $opacity;
+  visibility: $visibility;
+}
+
+.modal-show-fade-in-out {
+  @include status(1, visible);
+}
+
+.modal-hide-fade-in-out {
+  @include status();
+}
+
+.modal-show-toUp {
+  transform: translateY(0);
+}
+
+.modal-hide-toUp {
+  @include status();
+  transform: translateY(100%);
+}
+
+.modal-show-toDown {
+  transform: translateY(0);
+}
+
+.modal-hide-toDown {
+  @include status();
+  transform: translateY(-100%);
+}
+
+.modal-show-toRight {
+  transform: translateX(0);
+}
+
+.modal-hide-toRight {
+  @include status();
+  transform: translateX(-100%);
+}
+
+.modal-show-toLeft {
+  transform: translateX(0);
+}
+
+.modal-hide-toLeft {
+  @include status();
+  transform: translateX(100%);
+}
+
+.modal-show-jumpToUp {
+  animation: modalAnimationUp 0.8s cubic-bezier(0.42, 0, 0.58, 5);
+}
+
+.modal-hide-jumpToUp {
+  @include status();
+  transform: translateY(100%);
+}
+
+.modal-show-jumpToDown {
+  animation: modalAnimationDown .3s cubic-bezier(0.42, 0, 0.58, 5);
+}
+
+.modal-hide-jumpToDown {
+  @include status();
+  transform: translateY(-100%);
+}
+
+.modal-show-jumpToRight {
+  animation: modalAnimationRight .3s cubic-bezier(0.42, 0, 0.58, 5);
+}
+
+.modal-hide-jumpToRight {
+  @include status();
+  transform: translateX(-100%);
+}
+
+.modal-show-jumpToLeft {
+  animation: modalAnimationLeft .7s cubic-bezier(0.42, 0, 0.58, 5);
+}
+
+.modal-hide-jumpToLeft {
+  @include status();
+  transform: translateX(100%);
+}
+
+@keyframes modalAnimationDown {
+  0% {
+    transform: translateY(-50%);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes modalAnimationRight {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  50% {
+    transform: translateX(-20px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes modalAnimationLeft {
+  0% {
+    transform: translateX(50%);
+  }
+
+  50% {
+    transform: translateX(20px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes modalAnimationUp {
+  0% {
+    transform: translateY(50%);
+  }
+
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

@@ -1,3 +1,2 @@
-export * from './HandlerAnimationsContext';
-export * from './HandlerAnimationsProvider';
-export * from './handlerAnimationsReducer';
+export * from './HandlerUIContext';
+export * from './HandlerUIProvider';

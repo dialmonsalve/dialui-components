@@ -1,0 +1,37 @@
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes ripple {
+  0% {
+    width: 0px;
+    height: 0px;
+    opacity: 0.5;
+  }
+
+  100% {
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+  }
+}
+
+
+@keyframes filled {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    bottom: 100px;
+    transform: rotate(360deg);
+  }
+}

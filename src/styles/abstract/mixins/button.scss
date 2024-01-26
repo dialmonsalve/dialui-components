@@ -1,0 +1,54 @@
+@use '../variables/globalVariables' as Gv;
+@use '../mixins/globalMixins' as Gm;
+
+//! Button with background
+@mixin btnColor($color) {
+  color: Gv.$color-white-100;
+  background-color: $color;
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.3);
+  letter-spacing: 1px;
+  border: 2px solid $color;
+
+  @include hoverAnimations($color);
+
+  @if $color ==Gv.$color-white-100 or $color ==Gv.$color-white-200 {
+    color: rgb(0 0 0 / .7);
+  }
+}
+
+//! Button without background
+@mixin outlined($color) {
+  background-color: transparent;
+  border: 2px solid $color;
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.3);
+  color: $color;
+  @include hoverAnimations($color);
+}
+
+//! Button sizes
+@mixin size($font-size, $width, $height) {
+  font-size: $font-size;
+  width: $width;
+  height: $height;
+
+}
+
+//! Little beat in buttons
+@mixin hoverAnimations($color) {
+  @include Gm.respond(tab-port){
+
+    &:hover {
+      background-color: rgba($color: $color, $alpha: 0.55);
+      color: Gv.$color-white-200;
+      border: 2px solid $color;
+  
+      @if $color ==Gv.$color-white-200 {
+        color: Gv.$color-black-300;
+      }
+    }
+  }
+
+  &:active {
+    box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.3) inset;
+  }
+}

@@ -1,3 +1,3 @@
 export * from './useHandleCheckbox';
-export * from './useHandlerAnimation';
+export * from './useHandlerUI';
 export * from './useHandlerSelects';

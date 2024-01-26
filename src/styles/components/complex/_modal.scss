@@ -1,0 +1,118 @@
+@use '../../abstract/mixins/globalMixins' as Gm;
+@use '../../abstract/variables/globalVariables' as Gv;
+
+.modal {
+  align-items: center;
+  backdrop-filter: blur(4px);
+  background-color: Gv.$color-black-200;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+  width: 100%;
+  z-index: 999998;
+
+  &__container {
+    position: relative;
+    width: 70%;
+    padding: 1.2rem;
+    border-radius: .5rem;
+
+    @include Gm.respond(tab-port) {
+      border-radius: 1.2rem;
+      width: 50%;
+    }
+  }
+
+  &__content {
+    border-radius: .5rem;
+    background: linear-gradient(135deg, Gv.$color-blue-100 0%, transparent 50% ,Gv.$color-black-200 100%);
+    box-shadow: 2px 2px 5px Gv.$color-black-200;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    align-items: center;
+    border: 1px solid inherit;
+
+    @include Gm.respond(tab-port) {
+      border-radius: 1.2rem;
+      padding: 2rem;
+    }
+
+    >*:not(:nth-child(1)) {
+      margin-bottom: 1rem;
+
+      @include Gm.respond(tab-port) {
+        margin-bottom: 2rem;
+      }
+    }
+
+    &--cont-img {
+      align-self: flex-start;
+    }
+
+    &--img {
+      display: flex;
+      width: 40%;
+      height: 40%;
+
+      @include Gm.respond(tab-port) {
+        width: 50%;
+        height: 50%;
+      }
+    }
+
+    &--title {
+      font-size: 10px;
+      text-transform: uppercase;
+      color: Gv.$color-white-200;
+
+      @include Gm.respond(tab-port) {
+        font-size: 30px;
+      }
+    }
+
+    &--description {
+      color: Gv.$color-white-100;
+      font-size: 12px;
+
+      @include Gm.respond(tab-port) {
+        // font-size: 2rem;
+        font-size: 24px;
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    justify-content: center;
+
+    @include Gm.respond(tab-port) {
+      gap: 2rem;
+    }
+
+  }
+
+  &__success {
+    background: linear-gradient(135deg, Gv.$color-green-200 0%, Gv.$color-green-300 100%);
+
+  }
+
+  &__warning {
+    background: linear-gradient(135deg, Gv.$color-yellow-200 0%, Gv.$color-yellow-300 100%);
+  }
+
+  &__danger {
+    background: linear-gradient(135deg, Gv.$color-red-200 0%, Gv.$color-red-300 100%);
+  }
+
+  &__info {
+    background: linear-gradient(135deg, Gv.$color-blue-200 0%, Gv.$color-blue-200 100%);
+
+  }
+}
