@@ -25,11 +25,7 @@
   }
 }
 
-
 @keyframes filled {
-  0% {
-    transform: rotate(0deg);
-  }
   100% {
     bottom: 100px;
     transform: rotate(360deg);

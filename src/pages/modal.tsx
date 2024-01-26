@@ -12,7 +12,7 @@ function ModalPage() {
   return (
     <>
       <Modal
-        animation="fade-in-out"
+        animation="jumpToDown"
         type="danger"
         description="Esto es una descripción de prueba"
         title="Desea eliminar?"

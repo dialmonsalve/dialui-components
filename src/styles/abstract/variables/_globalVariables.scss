@@ -1,56 +1,72 @@
 $font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
+$green : rgb(109, 188, 13);
+
+$yellow: rgb(189, 188, 13);
+
+$purple: rgb(75, 54, 212);
+
+$red: rgb(180, 19, 0);
+
+$blue: rgb(0, 61, 254);
+
+$pink: rgb(254, 61, 254);
+
+$gray: rgb(70, 68, 68);
+
+$black: rgb(0, 0, 0);
+
 $color-white-100: #f5f5f5;
 $color-white-200: white;
 
-$color-gray-100: #46444420;
-$color-gray-200: #4644445c;
-$color-gray-300: #464444a2;
-$color-gray-400: #464444;
+$color-gray-100: rgba($color: $gray, $alpha: .125);
+$color-gray-200: rgba($color: $gray, $alpha: .361);
+$color-gray-300: rgba($color: $gray, $alpha: .635);
+$color-gray-400: rgba($color: $gray, $alpha: 1);
 
-$color-black-100: #0000003b;
-$color-black-200: #0000006b;
-$color-black-300: #00000080;
-$color-black-400: black;
+$color-black-100: rgba($color: $black,$alpha: 0.231);
+$color-black-200: rgba($color: $black,$alpha: 0.42);
+$color-black-300: rgba($color: $black,$alpha: 0.502);
+$color-black-400: rgba($color: $black,$alpha: 1);
 
-$color-blue-100: rgba(0, 59, 254, .15);
-$color-blue-200: rgba(0, 59, 254, .3);
-$color-blue-300: rgba(0, 59, 254, .4);
-$color-blue-400: rgba(0, 59, 254, .65);
-$color-blue-500: rgba(0, 59, 254, .8);
-$color-blue-600: rgb(0, 61, 254);
+$color-blue-100: rgba($color: $blue, $alpha: .15);
+$color-blue-200: rgba($color: $blue, $alpha: .3);
+$color-blue-300: rgba($color: $blue, $alpha: .4);
+$color-blue-400: rgba($color: $blue, $alpha: .65);
+$color-blue-500: rgba($color: $blue, $alpha: .8);
+$color-blue-600: rgba($color: $blue, $alpha: 1);
 
-$color-red-100: rgba(180, 19, 0, .15);
-$color-red-200: rgba(180, 19, 0, .3);
-$color-red-300: rgba(180, 19, 0, .40);
-$color-red-400: rgba(180, 19, 0, .65);
-$color-red-500: rgba(180, 19, 0, .8);
-$color-red-600: rgb(180, 19, 0);
+$color-red-100: rgba($color: $red, $alpha: .15);
+$color-red-200: rgba($color: $red, $alpha: .3);
+$color-red-300: rgba($color: $red, $alpha: .4);
+$color-red-400: rgba($color: $red, $alpha: .65);
+$color-red-500: rgba($color: $red, $alpha: .8);
+$color-red-600: rgba($color: $red, $alpha: 1);
 
-$color-pink-100: rgba(254, 59, 254, .15);
-$color-pink-200: rgba(254, 59, 254, .3);
-$color-pink-300: rgba(254, 59, 254, .40);
-$color-pink-400: rgba(254, 59, 254, .65);
-$color-pink-500: rgba(254, 59, 254, .8);
-$color-pink-600: rgb(254, 61, 254);
+$color-pink-100: rgba($color: $pink, $alpha: .15);
+$color-pink-200: rgba($color: $pink, $alpha: .3);
+$color-pink-300: rgba($color: $pink, $alpha: .4);
+$color-pink-400: rgba($color: $pink, $alpha: .65);
+$color-pink-500: rgba($color: $pink, $alpha: .8);
+$color-pink-600: rgba($color: $pink, $alpha: 1);
 
-$color-purple-100: rgba(75, 54, 212, .15);
-$color-purple-200: rgba(75, 54, 212, .3);
-$color-purple-300: rgba(75, 54, 212, .4);
-$color-purple-400: rgba(75, 54, 212, .65);
-$color-purple-500: rgba(75, 54, 212, .8);
-$color-purple-600: rgba(75, 54, 212);
+$color-purple-100: rgba($color: $purple, $alpha: .15);
+$color-purple-200: rgba($color: $purple, $alpha: .3);
+$color-purple-300: rgba($color: $purple, $alpha: .4);
+$color-purple-400: rgba($color: $purple, $alpha: .65);
+$color-purple-500: rgba($color: $purple, $alpha: .8);
+$color-purple-600: rgba($color: $purple, $alpha: 1);
 
-$color-yellow-100: rgba(189, 188, 13, .15);
-$color-yellow-200: rgba(189, 188, 13, .3);
-$color-yellow-300: rgba(189, 188, 13, .4);
-$color-yellow-400: rgba(189, 188, 13, .65);
-$color-yellow-500: rgba(189, 188, 13, .8);
-$color-yellow-600: rgba(189, 188, 13);
+$color-yellow-100: rgba($color: $yellow, $alpha: .15);
+$color-yellow-200: rgba($color: $yellow, $alpha: .3);
+$color-yellow-300: rgba($color: $yellow, $alpha: .4);
+$color-yellow-400: rgba($color: $yellow, $alpha: .65);
+$color-yellow-500: rgba($color: $yellow, $alpha: .8);
+$color-yellow-600: rgba($color: $yellow, $alpha: 1);
 
-$color-green-100: rgba(109, 188, 13, .15);
-$color-green-200: rgba(109, 188, 13, .3);
-$color-green-300: rgba(109, 188, 13, .4);
-$color-green-400: rgba(109, 188, 13, .65);
-$color-green-500: rgba(109, 188, 13, .8);
-$color-green-600: rgba(109, 188, 13);
+$color-green-100: rgba($color: $green, $alpha: .15);
+$color-green-200: rgba($color: $green, $alpha: .3);
+$color-green-300: rgba($color: $green, $alpha: .4);
+$color-green-400: rgba($color: $green, $alpha: .65);
+$color-green-500: rgba($color: $green, $alpha: .8);
+$color-green-600: rgba($color: $green, $alpha: 1);

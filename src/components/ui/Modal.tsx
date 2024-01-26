@@ -41,6 +41,7 @@ export const Modal = ({
 
     <div {...props} onClick={() => setCloseModal()} className={`modal ${openModal}`} >
       <div onClick={handleContentClick} className={`modal__container modal__${type}`} >
+      <button className='modal__close' onClick={() => setCloseModal()} >X</button>
         <div className='modal__content'  >
           <div className='modal__content--cont-img' >
             {

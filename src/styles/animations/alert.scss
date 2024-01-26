@@ -1,14 +1,14 @@
-.show-notification {
+.show-alert {
   opacity: 1;
   transform: translateX(0);
 }
 
-.hide-notification-right {
+.hide-alert-right {
   opacity: 0;
   transform: translateX(110%);
 }
 
-.hide-notification-left {
+.hide-alert-left {
   opacity: 0;
   transform: translateX(-110%);
 }

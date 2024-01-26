@@ -6,9 +6,9 @@ import ButtonPage from '../pages/button';
 import HomePage from '../pages/index';
 import ModalPage from '../pages/modal';
 import NotFoundPage from '../pages/notFound';
-import NotificationPage from '../pages/notifications';
+import AlertPage from '../pages/alert';
 import NavigationLinkPage from '../pages/navigationLink'
-import SpinnerPage  from '@/pages/spinner';
+import SpinnerPage from '@/pages/spinner';
 
 import { Layout } from "../components/layout/Layout";
 
@@ -35,8 +35,8 @@ const routes: RouteObject[] = [
         element: <ModalPage />
       },
       {
-        path: 'notification',
-        element: <NotificationPage />
+        path: 'alert',
+        element: <AlertPage />
       },
 
       {

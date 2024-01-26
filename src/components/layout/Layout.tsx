@@ -43,8 +43,8 @@ export const Layout = () => {
         </li>
 
         <li className={`item item--active`} onClick={closeSidebar}>
-          <NavigationLink to="/notification" style={{ fontSize: "20px", height: "45px" }} color={"white"} size='wf-100'>
-            Notification
+          <NavigationLink to="/alert" style={{ fontSize: "20px", height: "45px" }} color={"white"} size='wf-100'>
+            alert
 
           </NavigationLink>
         </li>

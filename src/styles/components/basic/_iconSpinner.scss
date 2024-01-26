@@ -9,7 +9,7 @@
   &__mouses {
     display: flex;
     justify-content: space-between;
-    animation: classic 1s linear infinite;
+    animation: mouses 1s linear infinite;
     gap: 2px;
 
     &--1,
@@ -116,12 +116,12 @@
 .icon-spinner {
   &__moon {
     justify-content: space-between;
-    animation: left-right 1.5s linear infinite;
+    animation: left-right 1s linear infinite;
 
     &--1 {
       width: 16px;
       height: 16px;
-      background: linear-gradient(135deg, white 0%, transparent 50%, yellow 100%);
+      background: linear-gradient(135deg, white 0%, transparent 50%, blue 100%);
       display: block;
       border-radius: 50%;
       border: 1px solid yellow;

@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 import { HandlerUIContext } from '.';
 
 import { ModalProvider } from '../modal';
-import { NotificationProvider } from '../notification';
+import { AlertProvider } from '../alert';
 import { ProviderSidebar } from '../sidebar';
 
 export interface Props {
@@ -15,9 +15,9 @@ export const ProviderHandlerUI = ({ children }: Props) => {
     <HandlerUIContext.Provider value={{ }}>
       <ProviderSidebar>
         <ModalProvider >
-          <NotificationProvider>
+          <AlertProvider>
             {children}
-          </NotificationProvider>
+          </AlertProvider>
         </ModalProvider>
       </ProviderSidebar>
     </HandlerUIContext.Provider>

@@ -12,6 +12,7 @@
   padding: 12px 20px;
   transition: all 0.3s ease;
   text-align: center;
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.3);
 
   &,
   &:link,
@@ -27,8 +28,7 @@
   }
 
   &__animated {
-    animation: moveInBottom .2s ease-out 0.5s;
-    animation-fill-mode: backwards;
+    animation: moveInBottom .2s ease-out 0.5s backwards;
   }
 }
 

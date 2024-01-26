@@ -7,6 +7,7 @@
   background-color: Gv.$color-black-200;
   display: flex;
   height: 100vh;
+  flex-direction: column;
   justify-content: center;
   position: fixed;
   right: 0;
@@ -17,19 +18,46 @@
 
   &__container {
     position: relative;
-    width: 70%;
     padding: 1.2rem;
     border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
 
     @include Gm.respond(tab-port) {
       border-radius: 1.2rem;
-      width: 50%;
+      min-width: 50%;
     }
+  }
+
+  &__close {
+    align-self: flex-end;
+    background-color: white;
+    color: Gv.$color-red-600;
+    padding: 4px;
+    border: 1px solid white;
+    border-radius: 50%;
+    font-weight: 900;
+    width: 25px;
+    transition: background-color, transform .5s ease;
+    box-shadow: 5px 3px 5px Gv.$color-black-200;
+    
+    @include Gm.respond(tab-port){
+      background-color: transparent;
+      color: white;
+      &:hover{
+        background-color: white;
+        color: Gv.$color-red-600;
+        transform: scale(1.15);
+      }
+    }
+
   }
 
   &__content {
     border-radius: .5rem;
-    background: linear-gradient(135deg, Gv.$color-blue-100 0%, transparent 50% ,Gv.$color-black-200 100%);
+    background: linear-gradient(135deg, Gv.$color-blue-100 0%, transparent 50%, Gv.$color-black-200 100%);
     box-shadow: 2px 2px 5px Gv.$color-black-200;
     display: flex;
     flex-direction: column;
@@ -56,12 +84,12 @@
 
     &--img {
       display: flex;
-      width: 40%;
-      height: 40%;
+      width: 80%;
+      height: 80%;
 
       @include Gm.respond(tab-port) {
-        width: 50%;
-        height: 50%;
+        width: 90%;
+        height: 90%;
       }
     }
 

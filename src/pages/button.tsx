@@ -23,7 +23,7 @@ function ButtonPage() {
       <br />
       <Button
         buttonStyle="slide-down"
-        backgroundColor="blue-400"
+        backgroundColor="green-400"
         size="sm-200"
         radius="radius-3"
         spinnerType="squares"
@@ -33,7 +33,7 @@ function ButtonPage() {
       <br />
       <Button
         spinnerType="squares"
-        backgroundColor="blue-600"
+        backgroundColor="outline-blue"
         size="sm-300"
         radius="radius-3"
         buttonStyle="beat"
@@ -46,7 +46,7 @@ function ButtonPage() {
         buttonStyle="filled"
         backgroundColor="red-200"
         size="md-100"
-        radius="radius-3"
+        radius="radius-1"
         spinnerType="moon"
         isLoading
         >
@@ -68,7 +68,7 @@ function ButtonPage() {
         spinnerType="mouses"
         backgroundColor="red-600"
         size="md-300"
-        radius="radius-3"
+        radius="radius-5"
         >
         Enviar
       </Button>
@@ -95,10 +95,11 @@ function ButtonPage() {
       <br />
       <Button
         buttonStyle="squares"
-        spinnerType="squares"
+        spinnerType="mouses"
         backgroundColor="purple-400"
         size="lg-300"
         radius="radius-3"
+        isLoading
         
         >
         Enviar
@@ -115,7 +116,7 @@ function ButtonPage() {
       </Button>
       <br />
       <Button
-        disabled
+
         buttonStyle="ripple"
         backgroundColor="black-300"
         size="wf-50"

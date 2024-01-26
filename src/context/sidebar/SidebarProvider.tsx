@@ -1,6 +1,6 @@
 import { ReactNode, useReducer } from 'react';
 import { SidebarContext, sidebarReducer } from '.';
-import { NotificationProvider } from '../notification';
+import { AlertProvider } from '../alert';
 
 export interface Props {
   children: ReactNode;
@@ -32,9 +32,9 @@ export const ProviderSidebar = ({ children }: Props) => {
       openSidebar,
       closeSidebar
     }}>
-      <NotificationProvider>
+      <AlertProvider>
         {children}
-      </NotificationProvider>
+      </AlertProvider>
     </SidebarContext.Provider>
   )
 }

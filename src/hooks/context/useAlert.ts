@@ -1,9 +1,9 @@
 import { useContext } from "react"
-import { NotificationContext } from "../../context/notification"
+import { AlertContext } from "../../context/alert"
 
-export const useNotification = () => {
+export const useAlert = () => {
 
-  const context = useContext(NotificationContext)
+  const context = useContext(AlertContext)
 
   if(context === undefined) throw new Error("Context is not used inside the parent components")
 
