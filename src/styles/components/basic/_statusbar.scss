@@ -1,0 +1,16 @@
+.statusbar {
+  width: 0%;
+  height: 10px;
+  background-color: red;
+  animation: progress-grow auto linear;
+  animation-timeline: scroll(root block);
+  position: fixed;
+  border-radius: 0 7px 7px 0;
+}
+
+@keyframes progress-grow {
+  100% {
+    width: 100%;
+    border-radius: 0;
+  }
+}
