@@ -1,9 +1,13 @@
-import { SpinnerType } from "@/types"
 import { IconSpinner } from "./IconSpinner"
+
 import { HalfRounded } from "../icons/HalfRounded"
+import { Needle } from "../icons/Needle"
+import { LP } from "../icons/LP"
+
+import { SpinnerType } from "@/types"
 
 interface Props {
-  type?: SpinnerType | 'half-spinner'
+  type?: SpinnerType | 'half-spinner' | 'lp'
 }
 
 export const Spinner = ({ type }: Props) => {
@@ -12,12 +16,33 @@ export const Spinner = ({ type }: Props) => {
 
     return (
       <div className='spinner' >
-      <HalfRounded className="spinner__half-spinner"></HalfRounded>
+        <HalfRounded className="spinner__half-spinner"></HalfRounded>
 
-      <p className="spinner__loading" > Loading...</p>
-    </div>
+        <p className="spinner__loading" > Loading...</p>
+      </div>
     )
-  } else {
+
+  }
+
+  else if (type === 'lp') {
+    return (
+      <div className="spinner" >
+        <div className="spinner__lp">
+          <div className="spinner__needle" >
+            <Needle />
+          </div>
+          <div className="icon-spinner__mouses" >
+            <LP />
+          </div>
+          <p>
+            Loading...
+          </p>
+        </div>
+      </div>
+    )
+  }
+
+  else {
 
     return (
       <div className="spinner">

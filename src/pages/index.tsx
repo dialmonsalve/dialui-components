@@ -1,9 +1,9 @@
-import { Building } from "@/components/ui/Building"
 
-function HomePage () {
+function HomePage() {
   return (
-    <div className="content-home">
-    <Building/>
+
+    <div>
+      Home
     </div>
   )
 }

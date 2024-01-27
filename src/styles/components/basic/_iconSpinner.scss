@@ -114,7 +114,7 @@
 }
 
 .icon-spinner {
-  &__moon {
+  &__eclipse {
     justify-content: space-between;
     animation: left-right 1s linear infinite;
 
@@ -124,7 +124,7 @@
       background: linear-gradient(135deg, white 0%, transparent 50%, blue 100%);
       display: block;
       border-radius: 50%;
-      border: 1px solid yellow;
+      border: 1px solid Gv.$color-yellow-500;
     }
   }
 }
@@ -138,8 +138,8 @@
     &--2 {
       width: 12px;
       height: 12px;
-      background: linear-gradient(135deg, Gv.$color-purple-400 0%, transparent 50%, Gv.$color-pink-600 100%);
       display: block;
+      background: linear-gradient(135deg, Gv.$color-purple-400 0%, transparent 50%, Gv.$color-pink-600 100%);
 
     }
 

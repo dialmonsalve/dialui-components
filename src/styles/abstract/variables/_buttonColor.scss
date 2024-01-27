@@ -2,7 +2,7 @@
 @use "../mixins/button.scss" as bm;
 
 // ! Button Colors
-.btn {
+.btn, .notification {
 
   //! Blue
   &__blue-100 {

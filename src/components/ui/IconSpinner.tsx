@@ -43,12 +43,12 @@ export const IconSpinner = ({ type = 'mouses' }: Props) => {
       </div>
     )
   }
-  if (type === 'moon')
+  if (type === 'eclipse')
 
     return (
       <div className="icon-spinner">
-        <div className="icon-spinner__moon" >
-          <div className="icon-spinner__moon--1" ></div>
+        <div className="icon-spinner__eclipse" >
+          <div className="icon-spinner__eclipse--1" ></div>
         </div>
       </div>
     )

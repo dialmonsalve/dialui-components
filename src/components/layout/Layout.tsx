@@ -60,7 +60,13 @@ export const Layout = () => {
             spinner
           </NavigationLink>
         </li>
+        
+        <li className={`item item--active`} onClick={closeSidebar}>
 
+          <NavigationLink to="/notification" color={"white"} style={{ fontSize: "20px", height: "45px" }} size='wf-100'>
+           Notification 
+          </NavigationLink>
+        </li>
       </Sidebar>
 
       <div className="right-layout" >

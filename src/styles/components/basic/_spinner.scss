@@ -48,15 +48,15 @@
         }
       }
 
-      &__moon {
+      &__eclipse {
         &>div {
           background: linear-gradient(45deg, Gv.$color-yellow-200 0%,
-              Gv.$color-green-100 50%,
-              Gv.$color-yellow-200 70%,
-              Gv.$color-blue-100 100%);
+              Gv.$color-green-100 40%,
+              Gv.$color-yellow-200 60%,
+              Gv.$color-white-100 100%);
           width: 140px;
           height: 140px;
-          
+
 
           @include Gm.respond(tab-port) {
             width: 180px;
@@ -92,6 +92,16 @@
         &--2 {
           width: 30px;
           height: 30px;
+        }
+
+        &--1 {
+          background: linear-gradient(45deg, Gv.$color-yellow-600 0%,
+              transparent 50%,
+              Gv.$color-green-600 100%);
+        }
+
+        &--2 {
+
           background: linear-gradient(135deg, Gv.$color-yellow-600 0%,
               transparent 50%,
               Gv.$color-green-600 100%);
@@ -119,4 +129,21 @@
     color: Gv.$color-white-200;
   }
 
+  &__lp {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+
+    &>p {
+      color: white;
+      font-size: 20px;
+    }
+  }
+
+  &__needle {
+    position: absolute;
+    right: 3%;
+    z-index: 1;
+  }
 }

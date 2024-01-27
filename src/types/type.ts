@@ -36,4 +36,4 @@ export type TextAlign = 'center' | 'justify' | 'left' | 'right' | 'start' | 'end
 
 export type Position = "static" | "relative" | "absolute" | "sticky" | "fixed"; 
 
-export type SpinnerType = 'fleas' | 'squares' | 'moon' | 'mouses' | 'circles'
+export type SpinnerType = 'fleas' | 'squares' | 'eclipse' | 'mouses' | 'circles'

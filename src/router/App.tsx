@@ -9,8 +9,8 @@ import NotFoundPage from '../pages/notFound';
 import AlertPage from '../pages/alert';
 import NavigationLinkPage from '../pages/navigationLink'
 import SpinnerPage from '@/pages/spinner';
-
 import { Layout } from "../components/layout/Layout";
+import NotificationPage from '@/pages/notification';
 
 const routes: RouteObject[] = [
   {
@@ -46,6 +46,11 @@ const routes: RouteObject[] = [
       {
         path: 'spinner',
         element: <SpinnerPage />
+      },
+
+      {
+        path: 'notification',
+        element: <NotificationPage />
       },
     ]
   }
