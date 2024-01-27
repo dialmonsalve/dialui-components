@@ -4,6 +4,7 @@ import { HandlerUIContext } from '.';
 import { ModalProvider } from '../modal';
 import { AlertProvider } from '../alert';
 import { ProviderSidebar } from '../sidebar';
+import { ProviderCheckbox } from '../form/checkbox';
 
 export interface Props {
   children: ReactNode;
@@ -12,11 +13,13 @@ export interface Props {
 export const ProviderHandlerUI = ({ children }: Props) => {
 
   return (
-    <HandlerUIContext.Provider value={{ }}>
+    <HandlerUIContext.Provider value={{}}>
       <ProviderSidebar>
         <ModalProvider >
           <AlertProvider>
-            {children}
+            <ProviderCheckbox>
+              {children}
+            </ProviderCheckbox>
           </AlertProvider>
         </ModalProvider>
       </ProviderSidebar>
