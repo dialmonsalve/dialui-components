@@ -1,32 +1,34 @@
-import { IconSpinner } from "./";
+import { IconSpinner } from './';
 
-import { HalfRounded } from "../icons/HalfRounded";
-import { Needle } from "../icons/Needle";
-import { LP } from "../icons/LP";
+import { HalfRounded } from '../icons/HalfRounded';
+import { Needle } from '../icons/Needle';
+import { LP } from '../icons/LP';
 
-import { SpinnerType } from "@/types";
+import { HASH } from '@/const';
+
+import { SpinnerType } from '@/types';
 
 interface Props {
-	type?: SpinnerType | "half-spinner" | "lp";
+	spinnerType?: SpinnerType | 'half-spinner' | 'lp';
 }
 
-const Spinner = ({ type }: Props) => {
-	if (type === "half-spinner") {
+const Spinner = ({ spinnerType }: Props) => {
+	if (spinnerType === 'half-spinner') {
 		return (
-			<div className="spinner">
-				<HalfRounded className="spinner__half-spinner" />
+			<div className={`spinner${HASH}`}>
+				<HalfRounded className={`spinner${HASH}__half-spinner`} />
 
-				<p className="spinner__loading"> Loading...</p>
+				<p className={`spinner${HASH}__loading`}> Loading...</p>
 			</div>
 		);
-	} else if (type === "lp") {
+	} else if (spinnerType === 'lp') {
 		return (
-			<div className="spinner">
-				<div className="spinner__lp">
-					<div className="spinner__needle">
+			<div className={`spinner${HASH}`}>
+				<div className={`spinner${HASH}__lp`}>
+					<div className={`spinner${HASH}__needle`}>
 						<Needle />
 					</div>
-					<div className="icon-spinner__mouses">
+					<div className={`icon-spinner${HASH}__mouses`}>
 						<LP />
 					</div>
 					<p>Loading...</p>
@@ -35,10 +37,10 @@ const Spinner = ({ type }: Props) => {
 		);
 	} else {
 		return (
-			<div className="spinner">
-				<div className="spinner__content">
-					<IconSpinner type={type} />
-					<p className="spinner__content--loading">Loading ...</p>
+			<div className={`spinner${HASH}`}>
+				<div className={`spinner${HASH}__content`}>
+					<IconSpinner spinnerType={spinnerType} />
+					<p className={`spinner${HASH}__content--loading`}>Loading ...</p>
 				</div>
 			</div>
 		);

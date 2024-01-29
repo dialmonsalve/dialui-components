@@ -1,59 +1,61 @@
-import type { SpinnerType } from "@/types";
+import { HASH } from '@/const';
+import type { SpinnerType } from '@/types';
 
 interface Props {
-	type?: SpinnerType;
+	spinnerType?: SpinnerType;
 }
-const IconSpinner = ({ type = "mouses" }: Props) => {
-	if (type === "mouses")
+const IconSpinner = ({ spinnerType = 'mouses' }: Props) => {
+	if (spinnerType === 'mouses')
 		return (
-			<div className="icon-spinner">
-				<div className="icon-spinner__mouses">
-					<div className="icon-spinner__mouses--1"></div>
-					<div className="icon-spinner__mouses--2"></div>
+			<div className={`icon-spinner${HASH}`}>
+				<div className={`icon-spinner${HASH}__mouses`}>
+					<div className={`icon-spinner${HASH}__mouses--1`} />
+					<div className={`icon-spinner${HASH}__mouses--2`} />
 				</div>
 			</div>
 		);
 
-	if (type === "fleas")
+	if (spinnerType === 'fleas') {
 		return (
-			<div className="icon-spinner">
-				<div className="icon-spinner__fleas">
-					<div className="icon-spinner__fleas--1"></div>
-					<div className="icon-spinner__fleas--2"></div>
-					<div className="icon-spinner__fleas--3"></div>
-					<div className="icon-spinner__fleas--4"></div>
-					<div className="icon-spinner__fleas--5"></div>
-					<div className="icon-spinner__fleas--6"></div>
-				</div>
-			</div>
-		);
-
-	if (type === "circles") {
-		return (
-			<div className="icon-spinner">
-				<div className="icon-spinner__circles">
-					<div className="icon-spinner__circles--1"></div>
-					<div className="icon-spinner__circles--2"></div>
-					<div className="icon-spinner__circles--3"></div>
+			<div className={`icon-spinner${HASH}`}>
+				<div className={`icon-spinner${HASH}__fleas`}>
+					<div className={`icon-spinner${HASH}__fleas--1`} />
+					<div className={`icon-spinner${HASH}__fleas--2`} />
+					<div className={`icon-spinner${HASH}__fleas--3`} />
+					<div className={`icon-spinner${HASH}__fleas--4`} />
+					<div className={`icon-spinner${HASH}__fleas--5`} />
+					<div className={`icon-spinner${HASH}__fleas--6`} />
 				</div>
 			</div>
 		);
 	}
-	if (type === "eclipse")
+
+	if (spinnerType === 'circles') {
 		return (
-			<div className="icon-spinner">
-				<div className="icon-spinner__eclipse">
-					<div className="icon-spinner__eclipse--1"></div>
+			<div className={`icon-spinner${HASH}`}>
+				<div className={`icon-spinner${HASH}__circles`}>
+					<div className={`icon-spinner${HASH}__circles--1`} />
+					<div className={`icon-spinner${HASH}__circles--2`} />
+					<div className={`icon-spinner${HASH}__circles--3`} />
+				</div>
+			</div>
+		);
+	}
+	if (spinnerType === 'eclipse')
+		return (
+			<div className={`icon-spinner${HASH}`}>
+				<div className={`icon-spinner${HASH}__eclipse`}>
+					<div className={`icon-spinner${HASH}__eclipse--1`} />
 				</div>
 			</div>
 		);
 
-	if (type === "squares")
+	if (spinnerType === 'squares')
 		return (
-			<div className="icon-spinner">
-				<div className="icon-spinner__squares">
-					<div className="icon-spinner__squares--1"></div>
-					<div className="icon-spinner__squares--2"></div>
+			<div className={`icon-spinner${HASH}`}>
+				<div className={`icon-spinner${HASH}__squares`}>
+					<div className={`icon-spinner${HASH}__squares--1`} />
+					<div className={`icon-spinner${HASH}__squares--2`} />
 				</div>
 			</div>
 		);

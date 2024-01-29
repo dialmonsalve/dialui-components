@@ -1,9 +1,9 @@
-import { type ChangeEvent, useState } from "react";
+import { type ChangeEvent, useState } from 'react';
 
-import { TextArea } from "@/components/ui/form";
+import { TextArea } from '@/components/ui/form';
 
 function HomePage() {
-	const [value, setValue] = useState("");
+	const [value, setValue] = useState('');
 
 	const handleChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
 		setValue(e.target.value);
@@ -14,7 +14,7 @@ function HomePage() {
 			<div>Home</div>
 			<TextArea
 				onChange={handleChange}
-				characters={value}
+				characterState={value}
 				totalCharacter={15}
 			/>
 		</>

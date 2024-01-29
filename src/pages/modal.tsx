@@ -1,22 +1,20 @@
-import { Modal } from "@/components/ui";
-import { useModal } from "@/hooks/context";
+import { Modal } from '@/components/ui';
+import { useModal } from '@/hooks/context';
 
 function ModalPage() {
-	const { setOpenModal } = useModal();
-
-	const openModal = () => {
-		setOpenModal();
-	};
+	const { openModal } = useModal();
 
 	return (
 		<>
 			<Modal
-				animation="jumpToDown"
-				type="info"
-				description="Esto es una descripción de prueba"
-				title="Desea eliminar?"
+				animation='jumpToDown'
+				type='error'
+				description='Esto es una descripción de prueba'
+				title='Desea eliminar?'
 			/>
-			<button onClick={openModal}>Open</button>
+			<button type='button' onClick={openModal}>
+				Open
+			</button>
 		</>
 	);
 }

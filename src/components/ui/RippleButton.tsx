@@ -1,16 +1,16 @@
-import { useRippleButton } from "@/hooks/useRippleButton";
+import { useRippleButton } from '@/hooks/useRippleButton';
 
-import type { ReactNode, ButtonHTMLAttributes } from "react";
+import type { ReactNode, ButtonHTMLAttributes } from 'react';
 
-export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+export interface Button extends ButtonHTMLAttributes<HTMLButtonElement> {
 	className: string;
 	children?: string | ReactNode;
 }
-const RippleButton = ({ children, ...props }: ButtonProps) => {
+const RippleButton = ({ children, ...props }: Button) => {
 	const { buttonRef } = useRippleButton();
 
 	return (
-		<button ref={buttonRef} {...props}>
+		<button ref={buttonRef} type='button' {...props}>
 			{children}
 		</button>
 	);

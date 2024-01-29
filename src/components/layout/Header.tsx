@@ -1,5 +1,5 @@
-import { ReactNode } from "react";
-import { Content, FlexWrap } from "@/types";
+import { ReactNode } from 'react';
+import { Content, FlexWrap } from '@/types';
 
 interface Props {
 	alignContent?: Content;
@@ -14,19 +14,19 @@ interface Props {
 }
 
 export const Header = ({
-	alignContent = "flex-start",
-	backgroundColor = "white",
-	borderRadius = "1rem",
+	alignContent = 'flex-start',
+	backgroundColor = 'white',
+	borderRadius = '1rem',
 
-	justifyContent = "flex-end",
-	padding = "2rem",
+	justifyContent = 'flex-end',
+	padding = '2rem',
 
 	children,
 	...props
 }: Props) => {
 	return (
 		<header
-			className="header"
+			className='header'
 			style={{
 				backgroundColor,
 				justifyContent,

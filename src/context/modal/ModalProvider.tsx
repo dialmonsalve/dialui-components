@@ -20,11 +20,11 @@ const MODAL_INITIAL_STATE: ModalState = {
 export const ModalProvider = ({ children }: Props) => {
 	const [state, dispatch] = useReducer(modalReducer, MODAL_INITIAL_STATE);
 
-	const setOpenModal = () => {
+	const openModal = () => {
 		dispatch({ type: "[Modal] - open modal" });
 	};
 
-	const setCloseModal = () => {
+	const closeModal = () => {
 		dispatch({ type: "[Modal] - close modal" });
 	};
 
@@ -41,8 +41,8 @@ export const ModalProvider = ({ children }: Props) => {
 
 	const value = {
 		...state,
-		setOpenModal,
-		setCloseModal,
+		openModal,
+		closeModal,
 		setBtnOk,
 		setBtnYesNo,
 	};

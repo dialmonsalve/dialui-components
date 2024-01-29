@@ -1,7 +1,7 @@
-import { Notification } from "@/components/ui";
-import { Checkbox } from "@/components/ui/form";
+import { Notification } from '@/components/ui';
+import { Checkbox } from '@/components/ui/form';
 
-import { useCheckbox } from "@/hooks/context/form";
+import { useCheckbox } from '@/hooks/form';
 
 const form = {
 	respA: true,
@@ -9,35 +9,33 @@ const form = {
 };
 
 function NotificationPage() {
-	const notal = [];
+	const notal = [55];
 
 	const { isChecked, handleCheck } = useCheckbox(form);
-
-	console.log({ isChecked: navigator.languages[1] });
 
 	return (
 		<>
 			<Notification
 				hasNotification={notal.length > 0}
-				size="sm"
-				backgroundColor="blue-500"
+				size='sm'
+				backgroundColor='blue-500'
 			>
-				{notal.length === 0 ? "+99" : notal.length.toString()}
+				{notal.length === 0 ? '+99' : notal.length.toString()}
 			</Notification>
 			<br />
 			<br />
 
-			<Notification hasNotification backgroundColor="outline-white" size="md">
-				{notal.length === 0 ? "+99" : notal.length.toString()}
+			<Notification hasNotification backgroundColor='outline-white' size='md'>
+				{notal.length === 0 ? '+99' : notal.length.toString()}
 			</Notification>
-			<br />
 
+			<br />
 			<Notification
 				hasNotification={notal.length > 0}
-				backgroundColor="outline-white"
-				size="lg"
+				backgroundColor='red-600'
+				size='lg'
 			>
-				{notal.length === 0 ? "+99" : notal.length.toString()}
+				{notal.length === 0 ? '+99' : notal.length.toString()}
 			</Notification>
 			<br />
 
@@ -45,20 +43,18 @@ function NotificationPage() {
 			<br />
 
 			<br />
-			<div style={{ width: "380px" }}>
+			<div style={{ width: '380px' }}>
 				<Checkbox
 					handleCheck={handleCheck}
 					isChecked={isChecked}
-					name="respA"
-					label="monsalve sadfasdfsadf asd"
+					name='respA'
 				/>
 
 				<br />
 				<Checkbox
 					isChecked={isChecked}
 					handleCheck={handleCheck}
-					name="respB"
-					label="diego"
+					name='respB'
 				/>
 			</div>
 		</>

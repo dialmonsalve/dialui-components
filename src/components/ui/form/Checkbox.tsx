@@ -1,47 +1,46 @@
-import type { DetailedHTMLProps, HTMLAttributes, ChangeEvent } from "react"
+import type { DetailedHTMLProps, HTMLAttributes, ChangeEvent } from 'react';
 
-interface Props extends DetailedHTMLProps<HTMLAttributes<HTMLInputElement>, HTMLInputElement> {
-  name: string,
-  handleCheck: (e: ChangeEvent<HTMLInputElement>) => void
-  label?: string
-  isChecked: Record<string, boolean> | boolean
+import { HASH } from '@/const';
+
+interface Props
+	extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
+	name: string;
+	isChecked: Record<string, boolean> | boolean;
+	className?: string;
+	handleCheck: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
 const Checkbox = ({
-  name,
-  isChecked,
-  label,
-  handleCheck,
-  ...props }: Props) => {
+	name,
+	isChecked,
+	className,
+	handleCheck,
+	...props
+}: Props) => {
+	const checked = typeof isChecked === 'boolean' ? isChecked : isChecked[name];
 
-
-  const checked =
-    typeof isChecked === "boolean"
-      ? isChecked
-      : isChecked[name];
-
-  console.log({ checked });
-  return (
-
-    <div className="checkbox" >
-      <label htmlFor={name}  >{label}</label>
-      <div
-        {...props}
-        className={`checkbox__checked ${checked ? "checkbox__active" : ""}`}
-        id=""
-      ><label >
-          {/* {checked ? "ES" : "EN"} */}
-          <input
-            className={`checkbox__pulse`}
-            onChange={handleCheck} type="checkbox" name={name} checked={checked} id={name}
-          />
-
-        </label>
-      </div>
-
-    </div>
-  )
-}
+	return (
+		<div className={`checkbox${HASH}`}>
+			<div
+				className={`checkbox${HASH}__checked ${
+					checked ? `checkbox${HASH}__active` : ''
+				} ${className}`}
+				{...props}
+			>
+				<label>
+					<input
+						className={`checkbox${HASH}__pulse`}
+						onChange={handleCheck}
+						type='checkbox'
+						name={name}
+						checked={checked}
+						id={name}
+					/>
+				</label>
+			</div>
+		</div>
+	);
+};
 
 export default Checkbox;
 

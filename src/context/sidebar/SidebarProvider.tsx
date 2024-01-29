@@ -1,6 +1,6 @@
-import { ReactNode, useReducer } from "react";
-import { SidebarContext, sidebarReducer } from ".";
-import { AlertProvider } from "../alert";
+import { ReactNode, useReducer } from 'react';
+import { SidebarContext, sidebarReducer } from '.';
+import { AlertProvider } from '../alert';
 
 export interface Props {
 	children: ReactNode;
@@ -18,11 +18,11 @@ export const SidebarProvider = ({ children }: Props) => {
 	const [state, dispatch] = useReducer(sidebarReducer, SIDEBAR_INITIAL_STATE);
 
 	const openSidebar = () => {
-		dispatch({ type: "[Sidebar] - open sidebar" });
+		dispatch({ type: '[Sidebar] - open sidebar' });
 	};
 
 	const closeSidebar = () => {
-		dispatch({ type: "[Sidebar] - close sidebar" });
+		dispatch({ type: '[Sidebar] - close sidebar' });
 	};
 
 	return (

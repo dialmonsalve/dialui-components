@@ -1,4 +1,6 @@
-import { Colors } from "@/types";
+import { HASH } from "@/const";
+
+import type { Colors } from "@/types";
 
 interface Props {
 	children?: string;
@@ -16,12 +18,12 @@ const Notification = ({
 	size = "md",
 }: Props) => {
 	const animation = hasNotification
-		? `notification-animation notification__${backgroundColor}`
-		: "notification__gray-200";
+		? `notification-animation${HASH} notification${HASH}__${backgroundColor}`
+		: `notification${HASH}__gray-200`;
 
 	return (
 		<div
-			className={`notification notification__${size} ${animation} ${className}`}
+			className={`notification${HASH} notification${HASH}__${size} ${animation} ${className}`}
 		>
 			<p>{children}</p>
 		</div>

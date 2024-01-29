@@ -1,7 +1,7 @@
 @use '../../abstract/mixins/globalMixins' as Gm;
 @use '../../abstract/variables/globalVariables' as Gv;
 
-.modal {
+.modal-508065-203010 {
   align-items: center;
   backdrop-filter: blur(4px);
   background-color: Gv.$color-black-200;
@@ -23,10 +23,15 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
+    min-width: 90%;
 
-
-    @include Gm.respond(tab-port) {
+    @include Gm.respond(phone) {
       border-radius: 1.2rem;
+
+      min-width: 80%;
+    }
+    
+    @include Gm.respond(tab-port){
       min-width: 50%;
     }
   }
@@ -39,17 +44,20 @@
     border: 1px solid white;
     border-radius: 50%;
     font-weight: 900;
-    width: 25px;
-    transition: background-color, transform .5s ease;
+    transition: color, transform .5s ease;
     box-shadow: 5px 3px 5px Gv.$color-black-200;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
     @include Gm.respond(tab-port){
       background-color: transparent;
       color: white;
       &:hover{
         background-color: white;
-        color: Gv.$color-red-600;
-        transform: scale(1.15);
+        color: Gv.$color-red-600
       }
     }
 
@@ -57,7 +65,7 @@
 
   &__content {
     border-radius: .5rem;
-    background: linear-gradient(135deg, Gv.$color-blue-100 0%, transparent 50%, Gv.$color-black-200 100%);
+    background: linear-gradient(135deg, Gv.$color-black-100 0%, Gv.$color-black-400 100%);
     box-shadow: 2px 2px 5px Gv.$color-black-200;
     display: flex;
     flex-direction: column;
@@ -98,8 +106,11 @@
       text-transform: uppercase;
       color: Gv.$color-white-200;
 
+      @include Gm.respond(phone) {
+        font-size: 26px;
+      }
       @include Gm.respond(tab-port) {
-        font-size: 30px;
+        font-size: 28px;
       }
     }
 
@@ -107,8 +118,10 @@
       color: Gv.$color-white-100;
       font-size: 12px;
 
+      @include Gm.respond(phone) {
+        font-size: 18px;
+      }
       @include Gm.respond(tab-port) {
-        // font-size: 2rem;
         font-size: 24px;
       }
     }
@@ -135,7 +148,7 @@
     background: linear-gradient(135deg, Gv.$color-yellow-200 0%, Gv.$color-yellow-300 100%);
   }
 
-  &__danger {
+  &__error {
     background: linear-gradient(135deg, Gv.$color-red-200 0%, Gv.$color-red-300 100%);
   }
 

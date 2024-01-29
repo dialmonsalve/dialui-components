@@ -2,7 +2,7 @@
 @use '../../abstract/mixins/globalMixins' as Gm;
 @use '../../animations';
 
-.btn {
+.btn-508065-203010 {
 
   display: flex;
   align-items: center;
@@ -37,7 +37,7 @@
 }
 
 //! Button beat
-.beat {
+.beat-508065-203010 {
   @include Gm.respond(tab-port) {
     &:hover {
       transform: translateY(-.3rem);
@@ -70,7 +70,7 @@
 }
 
 //! Button squares
-.squares {
+.squares-508065-203010 {
 
   @include Gm.respond(tab-port) {
     &:hover {
@@ -120,7 +120,7 @@
 }
 
 //! Button ripple
-.ripple {
+.ripple-508065-203010 {
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -138,7 +138,7 @@
 }
 
 //! Button filled
-.filled {
+.filled-508065-203010 {
 
   @include Gm.respond(tab-port) {
 
@@ -173,7 +173,7 @@
   }
 }
 
-.btn-disabled {
+.btn-disabled-508065-203010 {
 
   background-color: Gv.$color-gray-100;
   color: Gv.$color-gray-400;
@@ -181,7 +181,7 @@
 
 }
 
-.slide-down {
+.slide-down-508065-203010 {
 
   @include Gm.respond(tab-port) {
     z-index: 0;

@@ -4,7 +4,7 @@ import { useAlert } from "@/hooks/context";
 function AlertPage() {
 	const { openAlert } = useAlert();
 	const click = () => {
-		openAlert(2);
+		openAlert(20);
 	};
 
 	return (
@@ -12,12 +12,12 @@ function AlertPage() {
 			<Alert
 				message="El usuario ha sido creado exitosamente"
 				type="error"
-				sideX="right"
+				sideX="left"
 				sideY="up"
-				id="hola"
+					
 			/>
 
-			<button onClick={click}>click</button>
+			<button type="button" onClick={click}>click</button>
 		</>
 	);
 }

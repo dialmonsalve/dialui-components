@@ -1,6 +1,6 @@
-import { ReactNode, useState } from "react";
+import { ReactNode, useState } from 'react';
 
-import { AlertContext } from ".";
+import { AlertContext } from '.';
 
 export interface Props {
 	children: ReactNode;

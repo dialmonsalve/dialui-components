@@ -1,7 +1,7 @@
 @use '../mixins/button' as bm;
 @use '../mixins/globalMixins' as Gm;
 
-.btn {
+.btn-508065-203010 {
 
   &__sm-100 {
     @include bm.size(8px, 40px, 20px);
@@ -26,7 +26,6 @@
       @include bm.size(14px, 110px, 20px);
     }
   }
-
 
   &__md-100 {
     @include bm.size(11px, 100px, 30px);

@@ -1,11 +1,11 @@
 @use "../../abstract/mixins/globalMixins" as Gm;
 @use "../../abstract/variables/globalVariables" as Gv;
 
-.alert {
+.alert-508065-203010 {
   color: Gv.$color-white-100;
   padding: .8rem;
   border-radius: 2rem;
-  position: fixed;  
+  position: fixed;
   z-index: 999997;
   box-shadow: 1px 1px 3px rgb($color: Gv.$color-black-400, $alpha: .8);
   transition: all .3s cubic-bezier(.68, -.55, .27, 1.55);
@@ -34,20 +34,20 @@
   &__right {
     right: 2%;
   }
-}
 
-.success {
-  background-color: Gv.$color-green-400;
-}
+  &__success {
+    background-color: Gv.$color-green-400;
+  }
 
-.info {
-  background-color: Gv.$color-blue-400;
-}
+  &__info {
+    background-color: Gv.$color-blue-400;
+  }
 
-.warning {
-  background-color: Gv.$color-yellow-400;
-}
+  &__warning {
+    background-color: Gv.$color-yellow-400;
+  }
 
-.error {
-  background-color: Gv.$color-red-400;
+  &__error {
+    background-color: Gv.$color-red-400;
+  }
 }

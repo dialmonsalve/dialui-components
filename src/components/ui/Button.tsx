@@ -1,20 +1,14 @@
-import type { ReactNode, ButtonHTMLAttributes } from "react";
+import type { ReactNode, ButtonHTMLAttributes } from 'react';
 
-import { IconSpinner } from "./";
-import { RippleButton } from "./";
+import { IconSpinner } from './';
+import { RippleButton } from './';
 
-import type { Colors, Size, Radius, SpinnerType } from "@/types";
+import { HASH } from '@/const';
+import type { Colors, Size, Radius, SpinnerType, ButtonStyle } from '@/types';
 
-export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+export interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
 	backgroundColor?: Colors;
-	buttonStyle?:
-		| "normal"
-		| "squares"
-		| "slide-down"
-		| "ripple"
-		| "beat"
-		| "filled"
-		| "bright";
+	buttonStyle?: ButtonStyle;
 	children?: string | ReactNode;
 	disabled?: boolean;
 	hasInitialAnimation?: boolean;
@@ -23,29 +17,31 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 	size?: Size;
 	spinnerType?: SpinnerType;
 	className?: string;
+	type?: 'submit' | 'button' | 'reset';
 }
 
 const Button = ({
-	backgroundColor = "blue-200",
-	buttonStyle = "normal",
+	backgroundColor = 'blue-200',
+	buttonStyle = 'normal',
 	children,
 	disabled,
 	hasInitialAnimation = false,
 	isLoading = false,
-	radius = "radius-0",
-	size = "md-100",
-	spinnerType = "eclipse",
+	radius = 'radius-0',
+	size = 'md-100',
+	spinnerType = 'eclipse',
 	className,
+	type,
 	...props
-}: ButtonProps) => {
+}: Props) => {
 	const isDisabled =
 		disabled || isLoading
-			? "btn-disabled"
-			: `btn__${backgroundColor} ${buttonStyle}`;
+			? `btn${HASH}-disabled`
+			: `btn${HASH}__${backgroundColor} ${buttonStyle}${HASH}`;
 
-	const isAnimated = hasInitialAnimation ? "btn__animated" : "";
+	const isAnimated = hasInitialAnimation ? `btn${HASH}__animated` : '';
 
-	const ownClassName = `btn btn__${size} btn__${radius} ${isDisabled} ${className} ${isAnimated}`;
+	const ownClassName = `btn${HASH} btn${HASH}__${size} btn${HASH}__${radius} ${isDisabled} ${isAnimated} ${className}`;
 
 	const properties = {
 		disabled: disabled || isLoading,
@@ -53,24 +49,23 @@ const Button = ({
 		...props,
 	};
 
-	if (buttonStyle !== "ripple") {
+	if (buttonStyle !== 'ripple') {
 		return (
-			<button
-       {...properties}>
-				{buttonStyle === "squares" && (
+			<button type={type} {...properties}>
+				{buttonStyle === 'squares' && (
 					<>
-						<span></span>
-						<span></span>
+						<span />
+						<span />
 					</>
 				)}
-				{!isLoading ? children : <IconSpinner type={spinnerType} />}
+				{!isLoading ? children : <IconSpinner spinnerType={spinnerType} />}
 			</button>
 		);
 	}
-	if (buttonStyle === "ripple") {
+	if (buttonStyle === 'ripple') {
 		return (
 			<RippleButton {...properties}>
-				{!isLoading ? children : <IconSpinner type={spinnerType} />}
+				{!isLoading ? children : <IconSpinner spinnerType={spinnerType} />}
 			</RippleButton>
 		);
 	}

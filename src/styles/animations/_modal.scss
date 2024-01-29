@@ -5,82 +5,82 @@
   visibility: $visibility;
 }
 
-.modal-show-fade-in-out {
+.modal-show-fade-in-out-508065-203010 {
   @include status(1, visible);
 }
 
-.modal-hide-fade-in-out {
+.modal-hide-fade-in-out-508065-203010 {
   @include status();
 }
 
-.modal-show-toUp {
+.modal-show-toUp-508065-203010 {
   transform: translateY(0);
 }
 
-.modal-hide-toUp {
+.modal-hide-toUp-508065-203010 {
   @include status();
   transform: translateY(100%);
 }
 
-.modal-show-toDown {
+.modal-show-toDown-508065-203010 {
   transform: translateY(0);
 }
 
-.modal-hide-toDown {
+.modal-hide-toDown-508065-203010 {
   @include status();
   transform: translateY(-100%);
 }
 
-.modal-show-toRight {
+.modal-show-toRight-508065-203010 {
   transform: translateX(0);
 }
 
-.modal-hide-toRight {
+.modal-hide-toRight-508065-203010 {
   @include status();
   transform: translateX(-100%);
 }
 
-.modal-show-toLeft {
+.modal-show-toLeft-508065-203010{
   transform: translateX(0);
 }
 
-.modal-hide-toLeft {
+.modal-hide-toLeft-508065-203010 {
   @include status();
   transform: translateX(100%);
 }
 
-.modal-show-jumpToUp {
+.modal-show-jumpToUp-508065-203010 {
   animation: modalAnimationUp 0.8s cubic-bezier(0.42, 0, 0.58, 5);
 }
 
-.modal-hide-jumpToUp {
+.modal-hide-jumpToUp-508065-203010 {
   @include status();
   transform: translateY(100%);
 }
 
-.modal-show-jumpToDown {
+.modal-show-jumpToDown-508065-203010{
   animation: modalAnimationDown .8s cubic-bezier(0.42, 0, 0.58, 5);
 }
 
-.modal-hide-jumpToDown {
+.modal-hide-jumpToDown-508065-203010 {
   @include status();
   transform: translateY(-100%);
 }
 
-.modal-show-jumpToRight {
+.modal-show-jumpToRight-508065-203010 {
   animation: modalAnimationRight .8s cubic-bezier(0.42, 0, 0.58, 5);
 }
 
-.modal-hide-jumpToRight {
+.modal-hide-jumpToRight-508065-203010 {
   @include status();
   transform: translateX(-100%);
 }
 
-.modal-show-jumpToLeft {
+.modal-show-jumpToLeft-508065-203010 {
   animation: modalAnimationLeft .8s cubic-bezier(0.42, 0, 0.58, 5);
 }
 
-.modal-hide-jumpToLeft {
+.modal-hide-jumpToLeft-508065-203010 {
   @include status();
   transform: translateX(100%);
 }
@@ -135,6 +135,7 @@
   50% {
     transform: translateY(20px);
   }
+
   100% {
     transform: translateY(0);
   }

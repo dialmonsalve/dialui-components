@@ -1,7 +1,7 @@
 @use '../../abstract/mixins/globalMixins' as Gm;
 @use '../../abstract/variables/globalVariables' as Gv;
 
-.notification {
+.notification-508065-203010 {
   position: relative;
   border-radius: 50%;
   display: flex;
@@ -50,7 +50,7 @@
 
 }
 
-.notification-animation {
+.notification-animation-508065-203010 {
   &::after {
     animation: notification 1s 3 1s;
   }

@@ -96,7 +96,6 @@ function ButtonPage() {
 				backgroundColor="purple-400"
 				size="lg-300"
 				radius="radius-3"
-				isLoading
 			>
 				Enviar
 			</Button>
