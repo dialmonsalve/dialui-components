@@ -1,18 +1,14 @@
-import { ReactNode } from 'react';
+import { ReactNode } from "react";
 
 interface Props {
-  children?: ReactNode | ReactNode[];
-  color?: string
+	children?: ReactNode | ReactNode[];
+	color?: string;
 }
 
-export const CardMedia = ({ color = 'white', children }: Props) => {
-  return (
-    <div
-      className='card__media'
-      style={{ color }}
-    >
-
-      {children}
-    </div>
-  )
-}
+export const CardMedia = ({ color = "white", children }: Props) => {
+	return (
+		<div className="card__media" style={{ color }}>
+			{children}
+		</div>
+	);
+};

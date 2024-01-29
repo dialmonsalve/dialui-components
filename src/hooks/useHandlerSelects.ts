@@ -1,28 +1,28 @@
 import { useState } from "react";
-import type {Colors , SelectData, Size } from '@/types';
+import type { Colors, SelectData, Size } from "@/types";
 
 type SelectsHandlerResult = {
-  selectState:SelectData<Colors| Size>,
-  handleChange:(e: React.ChangeEvent<HTMLSelectElement>) => void
-}
+	selectState: SelectData<Colors | Size>;
+	handleChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
+};
 
-export const useHandlerSelects = (selectData: SelectData<Colors| Size>): SelectsHandlerResult => {
+export const useHandlerSelects = (
+	selectData: SelectData<Colors | Size>,
+): SelectsHandlerResult => {
+	const [selectState, setSelectState] =
+		useState<SelectData<Colors | Size>>(selectData);
 
-  const [selectState, setSelectState] = useState<SelectData<Colors| Size>>(selectData);
+	const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+		const { name, value } = e.target;
 
-  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+		setSelectState((prevState) => ({
+			...prevState,
+			[name]: value as Colors,
+		}));
+	};
 
-    const { name, value } = e.target;
-
-    setSelectState(prevState => ({
-      ...prevState,
-      [name]: value as Colors
-    }))
-
-  }
-
-  return {
-    selectState,
-    handleChange
-  }
-}
+	return {
+		selectState,
+		handleChange,
+	};
+};

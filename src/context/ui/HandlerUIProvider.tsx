@@ -1,28 +1,22 @@
-import { ReactNode } from 'react';
-import { HandlerUIContext } from '.';
+import { ReactNode } from "react";
+import { HandlerUIContext } from ".";
 
-import { ModalProvider } from '../modal';
-import { AlertProvider } from '../alert';
-import { ProviderSidebar } from '../sidebar';
-import { ProviderCheckbox } from '../form/checkbox';
+import { ModalProvider } from "../modal";
+import { AlertProvider } from "../alert";
+import { SidebarProvider } from "../sidebar";
 
 export interface Props {
-  children: ReactNode;
+	children: ReactNode;
 }
 
 export const ProviderHandlerUI = ({ children }: Props) => {
-
-  return (
-    <HandlerUIContext.Provider value={{}}>
-      <ProviderSidebar>
-        <ModalProvider >
-          <AlertProvider>
-            <ProviderCheckbox>
-              {children}
-            </ProviderCheckbox>
-          </AlertProvider>
-        </ModalProvider>
-      </ProviderSidebar>
-    </HandlerUIContext.Provider>
-  )
-}
+	return (
+		<HandlerUIContext.Provider value={{}}>
+			<SidebarProvider>
+				<ModalProvider>
+					<AlertProvider>{children}</AlertProvider>
+				</ModalProvider>
+			</SidebarProvider>
+		</HandlerUIContext.Provider>
+	);
+};

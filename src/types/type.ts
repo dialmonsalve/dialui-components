@@ -10,7 +10,7 @@ export type Size =
   | 'sm-100' | 'sm-200' | 'sm-300'
   | 'md-100' | 'md-200' | 'md-300'
   | 'lg-100' | 'lg-200' | 'lg-300'
-  | 'wf-25' | 'wf-50' | 'wf-75' | 'wf-100'
+  | 'w-25' | 'w-50' | 'w-75' | 'w-100'
 
 
 export type ModalMessageType = 'success' | 'danger' | 'warning' | 'info';

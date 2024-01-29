@@ -1,11 +1,11 @@
-import { useContext } from "react"
-import { ModalContext } from "../../context/modal"
+import { useContext } from "react";
+import { ModalContext } from "../../context/modal";
 
 export const useModal = () => {
+	const context = useContext(ModalContext);
 
-  const context = useContext(ModalContext)
+	if (context === undefined)
+		throw new Error("Context is not used inside the parent components");
 
-  if(context === undefined) throw new Error("Context is not used inside the parent components")
-
-  return context 
-}
+	return context;
+};

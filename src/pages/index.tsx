@@ -1,11 +1,24 @@
+import { type ChangeEvent, useState } from "react";
+
+import { TextArea } from "@/components/ui/form";
 
 function HomePage() {
-  return (
+	const [value, setValue] = useState("");
 
-    <div>
-      Home
-    </div>
-  )
+	const handleChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
+		setValue(e.target.value);
+	};
+
+	return (
+		<>
+			<div>Home</div>
+			<TextArea
+				onChange={handleChange}
+				characters={value}
+				totalCharacter={15}
+			/>
+		</>
+	);
 }
 
-export default HomePage
+export default HomePage;

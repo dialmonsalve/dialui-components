@@ -1,12 +1,11 @@
-import { createContext } from 'react';
+import { createContext } from "react";
 
 interface ContextProps {
-  //Properties
-  isOpenAlert:boolean;
+	//Properties
+	isOpenAlert: boolean;
 
-  // Functions
-  openAlert:(duration?:number)=>void;
-
+	// Functions
+	openAlert: (duration?: number) => void;
 }
 
-export const AlertContext = createContext({} as ContextProps)
+export const AlertContext = createContext({} as ContextProps);

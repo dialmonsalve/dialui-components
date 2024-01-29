@@ -1,3 +1,3 @@
-export  * from "./ModalContext";
-export  * from "./ModalProvider";
-export  * from "./modalReducer";
+export * from "./ModalContext";
+export * from "./ModalProvider";
+export * from "./modalReducer";

@@ -1,75 +1,75 @@
-import { MouseEvent, ReactNode } from 'react';
+import { MouseEvent, ReactNode } from "react";
 
 interface Props {
-  background?: string;
-  color?: string
-  degrees?: number;
-  finalBg?: string;
-  hasGradient?: boolean;
-  hover?: string
-  initialBg?: string;
-  margin?: string;
-  middleBg?: string;
-  width?: number;
-  height?: string;
-  children?: ReactNode | ReactNode[];
+	background?: string;
+	color?: string;
+	degrees?: number;
+	finalBg?: string;
+	hasGradient?: boolean;
+	hover?: string;
+	initialBg?: string;
+	margin?: string;
+	middleBg?: string;
+	width?: number;
+	height?: string;
+	children?: ReactNode | ReactNode[];
 }
 
 export const Card = ({
-  background = '#000000',
-  color = 'white',
-  degrees = 135,
-  finalBg = '#ffffff',
-  hasGradient = true,
-  height,
-  hover = 'rgba(0,0,0,.8)',
-  initialBg = ' #7a7777',
-  margin,
-  middleBg = ' #d4c6c6',
-  children,
-  ...props
+	background = "#000000",
+	color = "white",
+	degrees = 135,
+	finalBg = "#ffffff",
+	hasGradient = true,
+	height,
+	hover = "rgba(0,0,0,.8)",
+	initialBg = " #7a7777",
+	margin,
+	middleBg = " #d4c6c6",
+	children,
+	...props
 }: Props) => {
-
-  const backgroundColor = (degrees: number) => {
-    if (hasGradient) {
-      return background = `linear-gradient(
+	const backgroundColor = (degrees: number) => {
+		if (hasGradient) {
+			return (background = `linear-gradient(
           ${degrees}deg,
           ${initialBg} 0%,
           ${middleBg} 50%,
           ${finalBg} 100%
         )
-      `;
-    }
-    return background
-  }
+      `);
+		}
+		return background;
+	};
 
-  const handleFocus = (e: MouseEvent<HTMLDivElement, globalThis.MouseEvent>) => {
-    if (hasGradient) {
-      e.currentTarget.style.background = backgroundColor(-degrees * .45);
-    } else {
-      e.currentTarget.style.background = hover;
-    }
-  };
+	const handleFocus = (
+		e: MouseEvent<HTMLDivElement, globalThis.MouseEvent>,
+	) => {
+		if (hasGradient) {
+			e.currentTarget.style.background = backgroundColor(-degrees * 0.45);
+		} else {
+			e.currentTarget.style.background = hover;
+		}
+	};
 
-  const handleBlur = (e: MouseEvent<HTMLDivElement, globalThis.MouseEvent>) => {
-    e.currentTarget.style.background = backgroundColor(degrees);
-  };
+	const handleBlur = (e: MouseEvent<HTMLDivElement, globalThis.MouseEvent>) => {
+		e.currentTarget.style.background = backgroundColor(degrees);
+	};
 
-  return (
-    <div
-      className='card'
-      style={{
-        background: backgroundColor(degrees),
-        color,
-        margin,
-        height,
-      }}
-      onMouseEnter={handleFocus}
-      onMouseLeave={handleBlur}
-      {...props}
-    >
-      {children}
-
-    </div>
-  )
-}
+	return (
+		<div
+			className="card"
+			style={{
+				background: backgroundColor(degrees),
+				color,
+				margin,
+				height,
+			}}
+			onMouseEnter={handleFocus}
+			onMouseLeave={handleBlur}
+			{...props}
+		>
+			{children}
+		</div>
+	);
+};

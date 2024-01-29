@@ -1,12 +1,32 @@
-import { useContext } from "react"
-import { CheckboxContext } from "@/context/form/checkbox"
+import { type ChangeEvent, useEffect, useState } from "react";
 
-export const useCheckbox = () => {
+export const useCheckbox = (
+	initialState: Record<string, boolean> | boolean,
+) => {
+	const [isChecked, setIsChecked] = useState(initialState);
 
-  const context = useContext(CheckboxContext)
+	useEffect(() => {
+		setIsChecked(initialState);
+	}, [initialState]);
 
-  if(context === undefined) throw new Error("Context is not used inside the parent components")
+	const handleCheck = (e: ChangeEvent<HTMLInputElement>) => {
+		const { checked, name } = e.target;
 
-  return context 
-}
+		if (typeof initialState === "boolean") {
+			setIsChecked(!isChecked);
+			return;
+		}
 
+		if (initialState instanceof Object) {
+			setIsChecked((prev) => ({
+				...(prev as Record<string, boolean>),
+				[name]: checked,
+			}));
+		}
+	};
+
+	return {
+		isChecked,
+		handleCheck,
+	};
+};

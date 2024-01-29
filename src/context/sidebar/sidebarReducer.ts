@@ -1,25 +1,27 @@
-import { SidebarState } from '.';
+import { SidebarState } from ".";
 
 type SidebarActionType =
-  | { type: '[Sidebar] - open sidebar' }
-  | { type: '[Sidebar] - close sidebar' }
+	| { type: "[Sidebar] - open sidebar" }
+	| { type: "[Sidebar] - close sidebar" };
 
-export const sidebarReducer = (state: SidebarState, action: SidebarActionType): SidebarState => {
+export const sidebarReducer = (
+	state: SidebarState,
+	action: SidebarActionType,
+): SidebarState => {
+	switch (action.type) {
+		case "[Sidebar] - open sidebar":
+			return {
+				...state,
+				isOpenSidebar: true,
+			};
 
-  switch (action.type) {
-    case '[Sidebar] - open sidebar':
-      return {
-        ...state,
-        isOpenSidebar: true
-      }
+		case "[Sidebar] - close sidebar":
+			return {
+				...state,
+				isOpenSidebar: false,
+			};
 
-    case '[Sidebar] - close sidebar':
-      return {
-        ...state,
-        isOpenSidebar: false
-      }
-
-    default:
-      return state;
-  }
-}
+		default:
+			return state;
+	}
+};

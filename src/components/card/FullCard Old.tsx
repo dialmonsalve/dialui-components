@@ -7,145 +7,146 @@ import { CardHead } from "../Card/CardHead";
 import { CardMedia } from "../Card/CardMedia";
 
 // ! This file isn't used for the app, only is an example
-type Color = 'blue' | 'green' | 'red'
+type Color = "blue" | "green" | "red";
 
-type Size = 'small' | 'medium' | 'large'
+type Size = "small" | "medium" | "large";
 
 const initialBgStates: { [id: number]: Color | undefined } = {};
 simpleButtons.forEach((button) => {
-  initialBgStates[button.id] = button.backgroundColor;
+	initialBgStates[button.id] = button.backgroundColor;
 });
 
 const initialSizeStates: { [id: number]: Size | undefined } = {};
 simpleButtons.forEach((button) => {
-  initialSizeStates[button.id] = button.size;
+	initialSizeStates[button.id] = button.size;
 });
 
 const initialAnimatedStates: { [id: number]: boolean | undefined } = {};
 simpleButtons.forEach((button) => {
-  initialAnimatedStates[button.id] = button.isAnimated;
+	initialAnimatedStates[button.id] = button.isAnimated;
 });
 
 const initialHasBackgroundStates: { [id: number]: boolean | undefined } = {};
 simpleButtons.forEach((button) => {
-  initialHasBackgroundStates[button.id] = button.hasBackground;
+	initialHasBackgroundStates[button.id] = button.hasBackground;
 });
 export const FullCard = () => {
+	const [isAnimated, setIsAnimated] = useState(initialAnimatedStates);
+	const [hasBackground, setHasBackground] = useState(
+		initialHasBackgroundStates,
+	);
+	const [bgStates, setBgStates] = useState(initialBgStates);
+	const [sizeStates, setSizeStates] = useState(initialSizeStates);
 
-  const [isAnimated, setIsAnimated] = useState(initialAnimatedStates);
-  const [hasBackground, setHasBackground] = useState(initialHasBackgroundStates);
-  const [bgStates, setBgStates] = useState(initialBgStates);
-  const [sizeStates, setSizeStates] = useState(initialSizeStates);
+	const handleAnimation = (index: number) => {
+		setIsAnimated((prevStates) => {
+			const newStates = { ...prevStates };
+			newStates[index] = !newStates[index];
+			return newStates;
+		});
+	};
 
-  const handleAnimation = (index: number) => {
-    setIsAnimated((prevStates) => {
-      const newStates = { ...prevStates };
-      newStates[index] = !newStates[index];
-      return newStates;
-    });
-  };
+	const handleHasBackground = (index: number) => {
+		setHasBackground((prevStates) => {
+			const newStates = { ...prevStates };
+			newStates[index] = !newStates[index];
+			return newStates;
+		});
+	};
 
-  const handleHasBackground = (index: number) => {
-    setHasBackground((prevStates) => {
-      const newStates = { ...prevStates };
-      newStates[index] = !newStates[index];
-      return newStates;
-    });
-  };
+	const handleBackgroundChange = (
+		index: number,
+		event: React.ChangeEvent<HTMLSelectElement>,
+	) => {
+		const value = event.target.value as Color;
+		setBgStates((prevStates) => {
+			const newStates = { ...prevStates };
+			newStates[index] = value;
+			return newStates;
+		});
+	};
 
-  const handleBackgroundChange = (index: number, event: React.ChangeEvent<HTMLSelectElement>) => {
-    const value = event.target.value as Color;
-    setBgStates((prevStates) => {
-      const newStates = { ...prevStates };
-      newStates[index] = value;
-      return newStates;
-    });
-  };
+	const handleSizeChange = (
+		index: number,
+		event: React.ChangeEvent<HTMLSelectElement>,
+	) => {
+		const value = event.target.value as Size;
+		setSizeStates((prevStates) => {
+			const newStates = { ...prevStates };
+			newStates[index] = value;
+			return newStates;
+		});
+	};
 
-  const handleSizeChange = (index: number, event: React.ChangeEvent<HTMLSelectElement>) => {
-    const value = event.target.value as Size;
-    setSizeStates((prevStates) => {
-      const newStates = { ...prevStates };
-      newStates[index] = value;
-      return newStates;
-    });
-  };
+	return (
+		<div className="content-buttons">
+			{simpleButtons.map((button) => (
+				<Card
+					key={button.id}
+					initialBg="#131212"
+					middleBg="#414b34"
+					finalBg="#000000"
+					degrees={120}
+					height={"45rem"}
+				>
+					<CardHead />
+					<h3 className="title-card">Choice properties</h3>
+					<CardMedia>
+						<div className="control">
+							<input
+								type="checkbox"
+								checked={isAnimated[button.id]}
+								onChange={() => handleAnimation(button.id)}
+							/>
+							<label>Has Animation?</label>
+						</div>
 
-  return (
-    <div className="content-buttons">
-      {
-        simpleButtons.map(button => (
-          <Card
-            key={button.id}
-            initialBg="#131212"
-            middleBg='#414b34'
-            finalBg='#000000'
-            degrees={120}
-            height={'45rem'}
-          >
-            <CardHead />
-            <h3 className="title-card" >Choice properties</h3>
-            <CardMedia>
-              <div className="control">
-                <input
-                  type="checkbox"
-                  checked={isAnimated[button.id]}
-                  onChange={() => handleAnimation(button.id)}
+						<div className="control">
+							<input
+								type="checkbox"
+								checked={hasBackground[button.id]}
+								onChange={() => handleHasBackground(button.id)}
+							/>
+							<label>Has Background?</label>
+						</div>
 
-                />
-                <label>Has Animation?</label>
-              </div>
+						<div className="control">
+							<label style={{ alignSelf: "center" }}>Color:</label>
+							<select
+								value={bgStates[button.id]}
+								onChange={(event) => handleBackgroundChange(button.id, event)}
+								style={{ backgroundColor: bgStates[button.id] }}
+							>
+								<option value="red">Red</option>
+								<option value="blue">Blue</option>
+								<option value="green">Green</option>
+							</select>
+						</div>
 
-              <div className="control">
-                <input
-                  type="checkbox"
-                  checked={hasBackground[button.id]}
-                  onChange={() => handleHasBackground(button.id)}
-
-                />
-                <label>Has Background?</label>
-              </div>
-
-              <div className="control">
-                <label style={{alignSelf:'center'}} >Color:</label>
-                <select 
-                value={bgStates[button.id]}
-                  onChange={(event) => handleBackgroundChange(button.id, event)}
-                  style={{backgroundColor:bgStates[button.id]}}
-                >
-                  <option value='red' >Red</option>
-                  <option value='blue' >Blue</option>
-                  <option value='green' >Green</option>
-                </select>
-              </div>
-
-              <div className="control">
-                <label style={{alignSelf:'center'}} >Size:</label>
-                <select 
-                value={sizeStates[button.id]}
-                  onChange={(event) => handleSizeChange(button.id, event)}
-                  style={{backgroundColor:bgStates[button.id]}}
-                >
-                  <option value='small' >Small</option>
-                  <option value='medium' >Medium</option>
-                  <option value='large' >Large</option>
-                </select>
-              </div>
-
-            </CardMedia>
-            <CardContent
-            >
-              <Button
-                label={button.label}
-                hasBackground={hasBackground[button.id]}
-                isAnimated={isAnimated[button.id]}
-                backgroundColor={bgStates[button.id]}
-                size={sizeStates[button.id]}
-              />
-            </CardContent>
-          </Card>
-        ))
-      }
-    </div>
-  )
-}
+						<div className="control">
+							<label style={{ alignSelf: "center" }}>Size:</label>
+							<select
+								value={sizeStates[button.id]}
+								onChange={(event) => handleSizeChange(button.id, event)}
+								style={{ backgroundColor: bgStates[button.id] }}
+							>
+								<option value="small">Small</option>
+								<option value="medium">Medium</option>
+								<option value="large">Large</option>
+							</select>
+						</div>
+					</CardMedia>
+					<CardContent>
+						<Button
+							label={button.label}
+							hasBackground={hasBackground[button.id]}
+							isAnimated={isAnimated[button.id]}
+							backgroundColor={bgStates[button.id]}
+							size={sizeStates[button.id]}
+						/>
+					</CardContent>
+				</Card>
+			))}
+		</div>
+	);
+};

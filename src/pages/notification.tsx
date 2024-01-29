@@ -1,42 +1,68 @@
-import { Notification } from "@/components/ui/Notification";
-import { Checkbox } from "@/components/ui/Checkbox";
+import { Notification } from "@/components/ui";
+import { Checkbox } from "@/components/ui/form";
+
 import { useCheckbox } from "@/hooks/context/form";
 
+const form = {
+	respA: true,
+	respB: false,
+};
+
 function NotificationPage() {
-  const notal = []
+	const notal = [];
 
-  const { isActiveCheckbox } = useCheckbox()
+	const { isChecked, handleCheck } = useCheckbox(form);
 
-  const prueba = isActiveCheckbox ? "activo" : "inactivo"
-  return (
-    <>
-      <Notification hasNotification={notal.length > 0} size="sm" backgroundColor="blue-500" >
-        {notal.length === 0 ? "+99" : notal.length.toString()}
-      </Notification>
-      <br />
-      <br />
+	console.log({ isChecked: navigator.languages[1] });
 
-      <Notification hasNotification backgroundColor="outline-white" size="md" >
-        {notal.length === 0 ? "+99" : notal.length.toString()}
+	return (
+		<>
+			<Notification
+				hasNotification={notal.length > 0}
+				size="sm"
+				backgroundColor="blue-500"
+			>
+				{notal.length === 0 ? "+99" : notal.length.toString()}
+			</Notification>
+			<br />
+			<br />
 
-      </Notification>
-      <br />
+			<Notification hasNotification backgroundColor="outline-white" size="md">
+				{notal.length === 0 ? "+99" : notal.length.toString()}
+			</Notification>
+			<br />
 
-      <Notification
-        hasNotification={notal.length > 0}
-        backgroundColor="outline-white"
-        size="lg"
-      >
-        {notal.length === 0 ? "+99" : notal.length.toString()}
+			<Notification
+				hasNotification={notal.length > 0}
+				backgroundColor="outline-white"
+				size="lg"
+			>
+				{notal.length === 0 ? "+99" : notal.length.toString()}
+			</Notification>
+			<br />
 
-      </Notification>
-      <br />
-      <Checkbox />
+			<br />
+			<br />
 
-      <h1>{prueba}</h1>
-    </>
-  )
+			<br />
+			<div style={{ width: "380px" }}>
+				<Checkbox
+					handleCheck={handleCheck}
+					isChecked={isChecked}
+					name="respA"
+					label="monsalve sadfasdfsadf asd"
+				/>
+
+				<br />
+				<Checkbox
+					isChecked={isChecked}
+					handleCheck={handleCheck}
+					name="respB"
+					label="diego"
+				/>
+			</div>
+		</>
+	);
 }
-
 
 export default NotificationPage;
