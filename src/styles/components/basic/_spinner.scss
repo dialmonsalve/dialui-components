@@ -66,14 +66,12 @@
         }
       }
 
-      &__mouses {
+      &__mice {
         width: 120px;
 
         &--1,
         &--2 {
-          background: linear-gradient(45deg, Gv.$color-black-400 0%,
-              Gv.$color-gray-100 50%,
-              Gv.$color-gray-400 100%);
+          background: linear-gradient(45deg, Gv.$color-black-400 0%, black 10%, white 100%);
           width: 30px;
           height: 60px;
         }

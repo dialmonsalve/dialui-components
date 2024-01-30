@@ -6,10 +6,10 @@
   position: absolute;
   max-width: 100%;
 
-  &__mouses {
+  &__mice {
     display: flex;
     justify-content: space-between;
-    animation: mouses 1s linear infinite;
+    animation: mice 1s linear infinite;
     gap: 2px;
 
     &--1,
@@ -18,7 +18,7 @@
       display: block;
       height: .8em;
       width: .6em;
-      background-color: Gv.$color-white-200;
+      background: linear-gradient(45deg, Gv.$color-black-400 0%, black 10%, white 100% ) ;
     }
   }
 }
@@ -108,7 +108,7 @@
       animation: circles .3s linear infinite 1s;
       height: 16px;
       width: 16px;
-      border: 1px solid black;
+      border: 1px solid Gv.$color-black-400;
     }
   }
 }

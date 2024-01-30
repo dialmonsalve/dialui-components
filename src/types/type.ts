@@ -69,5 +69,5 @@ export type SpinnerType =
 	| 'fleas'
 	| 'squares'
 	| 'eclipse'
-	| 'mouses'
+	| 'mice'
 	| 'circles';

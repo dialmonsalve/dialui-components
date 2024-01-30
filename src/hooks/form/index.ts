@@ -1,1 +1,2 @@
-export * from "./useCheckbox";
+export * from './useCheckbox';
+export * from './useInputForm';

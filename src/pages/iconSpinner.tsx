@@ -5,7 +5,6 @@ function IconSpinnerPage() {
 
 	return (
 		<>
-			{/* <Spinner type="classic" /> */}
 			<div>
 				<Button
 					isLoading={hola}

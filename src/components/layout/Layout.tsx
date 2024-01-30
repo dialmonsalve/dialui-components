@@ -99,6 +99,16 @@ export const Layout = () => {
 						Notification
 					</NavigationLink>
 				</li>
+				<li className='item item--active' onClick={closeSidebar}>
+					<NavigationLink
+						to='/form-control'
+						color={'white'}
+						style={{ fontSize: '20px', height: '45px' }}
+						size='w-100'
+					>
+						InputForm
+					</NavigationLink>
+				</li>
 			</Sidebar>
 
 			<div className='right-layout'>

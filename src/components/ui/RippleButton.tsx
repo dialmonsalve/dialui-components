@@ -6,11 +6,11 @@ export interface Button extends ButtonHTMLAttributes<HTMLButtonElement> {
 	className: string;
 	children?: string | ReactNode;
 }
-const RippleButton = ({ children, ...props }: Button) => {
+const RippleButton = ({ children, type, ...props }: Button) => {
 	const { buttonRef } = useRippleButton();
 
 	return (
-		<button ref={buttonRef} type='button' {...props}>
+		<button ref={buttonRef} type={type} {...props}>
 			{children}
 		</button>
 	);

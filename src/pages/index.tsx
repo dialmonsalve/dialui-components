@@ -1,6 +1,6 @@
 import { type ChangeEvent, useState } from 'react';
 
-import { TextArea } from '@/components/ui/form';
+import { TextArea } from '@/components/form';
 
 function HomePage() {
 	const [value, setValue] = useState('');
@@ -15,6 +15,7 @@ function HomePage() {
 			<TextArea
 				onChange={handleChange}
 				characterState={value}
+				name='value'
 				totalCharacter={15}
 			/>
 		</>

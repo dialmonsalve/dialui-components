@@ -2,7 +2,7 @@
 @use "../../abstract/variables/globalVariables" as Gv;
 
 .text-area-508065-203010 {
-  padding: 16px;
+  padding: 10px;
   border: 1px solid Gv.$color-gray-200;
   border-radius: 5px;
   resize: vertical;
@@ -15,7 +15,7 @@
   &--value {
     width: 30px;
     padding: 8px;
-    color: green;
+    color: Gv.$color-green-400;
     font-weight: 900;
   }
 }

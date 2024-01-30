@@ -3,17 +3,19 @@ import type { ChangeEvent, TextareaHTMLAttributes } from 'react';
 import { HASH } from '@/const';
 
 interface Props extends TextareaHTMLAttributes<HTMLTextAreaElement> {
-	handleChange?: (e: ChangeEvent<HTMLTextAreaElement>) => void;
+	onChange?: (e: ChangeEvent<HTMLTextAreaElement>) => void;
 	className?: string;
 	totalCharacter?: number;
+	name: string;
 	characterState: string;
 }
 
 const TextArea = ({
-	className,
+	className="",
 	characterState,
-	handleChange,
-	totalCharacter = 0,
+	onChange,
+	totalCharacter = -50,
+	name,
 	...props
 }: Props) => {
 	const total =
@@ -26,7 +28,9 @@ const TextArea = ({
 	return (
 		<>
 			<textarea
-				onChange={handleChange}
+				onChange={onChange}
+				value={characterState}
+				name={name}
 				className={`text-area${HASH} ${className}`}
 				{...props}
 			/>

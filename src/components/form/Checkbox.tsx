@@ -13,31 +13,29 @@ interface Props
 const Checkbox = ({
 	name,
 	isChecked,
-	className,
+	className = '',
 	handleCheck,
 	...props
 }: Props) => {
 	const checked = typeof isChecked === 'boolean' ? isChecked : isChecked[name];
 
 	return (
-		<div className={`checkbox${HASH}`}>
-			<div
-				className={`checkbox${HASH}__checked ${
-					checked ? `checkbox${HASH}__active` : ''
-				} ${className}`}
-				{...props}
-			>
-				<label>
-					<input
-						className={`checkbox${HASH}__pulse`}
-						onChange={handleCheck}
-						type='checkbox'
-						name={name}
-						checked={checked}
-						id={name}
-					/>
-				</label>
-			</div>
+		<div
+			className={`${className} checkbox${HASH} ${
+				checked ? `checkbox${HASH}__active` : ''
+			}`}
+			{...props}
+		>
+			<label>
+				<input
+					className={`checkbox${HASH}__pulse`}
+					onChange={handleCheck}
+					type='checkbox'
+					name={name}
+					checked={checked}
+					id={name}
+				/>
+			</label>
 		</div>
 	);
 };

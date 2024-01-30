@@ -1,5 +1,5 @@
 import { Notification } from '@/components/ui';
-import { Checkbox } from '@/components/ui/form';
+import { Checkbox } from '@/components/form';
 
 import { useCheckbox } from '@/hooks/form';
 

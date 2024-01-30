@@ -4,13 +4,13 @@ import type { SpinnerType } from '@/types';
 interface Props {
 	spinnerType?: SpinnerType;
 }
-const IconSpinner = ({ spinnerType = 'mouses' }: Props) => {
-	if (spinnerType === 'mouses')
+const IconSpinner = ({ spinnerType = 'mice' }: Props) => {
+	if (spinnerType === 'mice')
 		return (
 			<div className={`icon-spinner${HASH}`}>
-				<div className={`icon-spinner${HASH}__mouses`}>
-					<div className={`icon-spinner${HASH}__mouses--1`} />
-					<div className={`icon-spinner${HASH}__mouses--2`} />
+				<div className={`icon-spinner${HASH}__mice`}>
+					<div className={`icon-spinner${HASH}__mice--1`} />
+					<div className={`icon-spinner${HASH}__mice--2`} />
 				</div>
 			</div>
 		);

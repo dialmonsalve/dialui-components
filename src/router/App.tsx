@@ -10,6 +10,7 @@ import NavigationLinkPage from "../pages/navigationLink";
 import SpinnerPage from "@/pages/spinner";
 import { Layout } from "../components/layout/Layout";
 import NotificationPage from "@/pages/notification";
+import FormControlPage from "@/pages/formControl";
 
 const routes: RouteObject[] = [
 	{
@@ -50,6 +51,10 @@ const routes: RouteObject[] = [
 			{
 				path: "notification",
 				element: <NotificationPage />,
+			},
+			{
+				path: "form-control",
+				element: <FormControlPage />,
 			},
 		],
 	},

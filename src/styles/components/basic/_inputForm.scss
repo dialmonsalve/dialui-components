@@ -1,0 +1,13 @@
+@use "../../abstract/variables/globalVariables" as Gv;
+
+.input-508065-203010{
+  border: none;
+  padding: 10px;
+  outline: none;
+  border-radius: 8px;
+
+  &:focus {
+    outline: 2px solid Gv.$color-green-400;
+  }
+
+}
