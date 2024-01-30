@@ -5,82 +5,82 @@
   visibility: $visibility;
 }
 
-.modal-show-fade-in-out-508065-203010 {
+.modal-show-fade-in-out-3001-24 {
   @include status(1, visible);
 }
 
-.modal-hide-fade-in-out-508065-203010 {
+.modal-hide-fade-in-out-3001-24 {
   @include status();
 }
 
-.modal-show-toUp-508065-203010 {
+.modal-show-toUp-3001-24 {
   transform: translateY(0);
 }
 
-.modal-hide-toUp-508065-203010 {
+.modal-hide-toUp-3001-24 {
   @include status();
   transform: translateY(100%);
 }
 
-.modal-show-toDown-508065-203010 {
+.modal-show-toDown-3001-24 {
   transform: translateY(0);
 }
 
-.modal-hide-toDown-508065-203010 {
+.modal-hide-toDown-3001-24 {
   @include status();
   transform: translateY(-100%);
 }
 
-.modal-show-toRight-508065-203010 {
+.modal-show-toRight-3001-24 {
   transform: translateX(0);
 }
 
-.modal-hide-toRight-508065-203010 {
+.modal-hide-toRight-3001-24 {
   @include status();
   transform: translateX(-100%);
 }
 
-.modal-show-toLeft-508065-203010{
+.modal-show-toLeft-3001-24{
   transform: translateX(0);
 }
 
-.modal-hide-toLeft-508065-203010 {
+.modal-hide-toLeft-3001-24 {
   @include status();
   transform: translateX(100%);
 }
 
-.modal-show-jumpToUp-508065-203010 {
+.modal-show-jumpToUp-3001-24 {
   animation: modalAnimationUp 0.8s cubic-bezier(0.42, 0, 0.58, 5);
 }
 
-.modal-hide-jumpToUp-508065-203010 {
+.modal-hide-jumpToUp-3001-24 {
   @include status();
   transform: translateY(100%);
 }
 
-.modal-show-jumpToDown-508065-203010{
+.modal-show-jumpToDown-3001-24{
   animation: modalAnimationDown .8s cubic-bezier(0.42, 0, 0.58, 5);
 }
 
-.modal-hide-jumpToDown-508065-203010 {
+.modal-hide-jumpToDown-3001-24 {
   @include status();
   transform: translateY(-100%);
 }
 
-.modal-show-jumpToRight-508065-203010 {
+.modal-show-jumpToRight-3001-24 {
   animation: modalAnimationRight .8s cubic-bezier(0.42, 0, 0.58, 5);
 }
 
-.modal-hide-jumpToRight-508065-203010 {
+.modal-hide-jumpToRight-3001-24 {
   @include status();
   transform: translateX(-100%);
 }
 
-.modal-show-jumpToLeft-508065-203010 {
+.modal-show-jumpToLeft-3001-24 {
   animation: modalAnimationLeft .8s cubic-bezier(0.42, 0, 0.58, 5);
 }
 
-.modal-hide-jumpToLeft-508065-203010 {
+.modal-hide-jumpToLeft-3001-24 {
   @include status();
   transform: translateX(100%);
 }

@@ -1,7 +1,7 @@
 @use '../../abstract/mixins/globalMixins' as Gm;
 @use '../../abstract/variables/globalVariables' as Gv;
 
-.icon-spinner-508065-203010 {
+.icon-spinner-3001-24 {
   background-color: transparent;
   position: absolute;
   max-width: 100%;
@@ -23,7 +23,7 @@
   }
 }
 
-.icon-spinner-508065-203010 {
+.icon-spinner-3001-24 {
   &__fleas {
     display: flex;
     gap: 1px;
@@ -73,7 +73,7 @@
   }
 }
 
-.icon-spinner-508065-203010 {
+.icon-spinner-3001-24 {
   &__circles {
     display: flex;
     gap: 3px;
@@ -113,7 +113,7 @@
   }
 }
 
-.icon-spinner-508065-203010 {
+.icon-spinner-3001-24 {
   &__eclipse {
     justify-content: space-between;
     animation: left-right 1s linear infinite;
@@ -129,7 +129,7 @@
   }
 }
 
-.icon-spinner-508065-203010 {
+.icon-spinner-3001-24 {
   &__squares {
     display: flex;
     gap: 12px;

@@ -2,7 +2,7 @@
 @use '../../abstract/mixins/globalMixins' as Gm;
 @use '../../animations';
 
-.btn-508065-203010 {
+.btn-3001-24 {
 
   display: flex;
   align-items: center;
@@ -10,26 +10,6 @@
   align-content: center;
   font-weight: 900;
   padding: 12px 20px;
-  transition: all 0.3s ease;
-  text-align: center;
-  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.3);
-
-  &,
-  &:link,
-  &:visited {
-    letter-spacing: 1px;
-    position: relative;
-    transition: all .1s ease-in-out;
-  }
-
-  &:focus,
-  &:focus-visible {
-    outline: 2px auto Gv.$color-white-200;
-  }
-
-  &:active {
-    box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.3) inset;
-  }
 
   &__animated {
     animation: moveInBottom .2s ease-out 0.5s backwards;
@@ -37,7 +17,7 @@
 }
 
 //! Button beat
-.beat-508065-203010 {
+.beat-3001-24 {
   @include Gm.respond(tab-port) {
     &:hover {
       transform: translateY(-.3rem);
@@ -70,7 +50,7 @@
 }
 
 //! Button squares
-.squares-508065-203010 {
+.squares-3001-24 {
 
   @include Gm.respond(tab-port) {
     &:hover {
@@ -92,7 +72,6 @@
       background-color: Gv.$color-white-200 ;
       border-radius: 50%;
     }
-
 
     & span:nth-child(n) {
       position: absolute;
@@ -120,7 +99,7 @@
 }
 
 //! Button ripple
-.ripple-508065-203010 {
+.ripple-3001-24 {
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -138,7 +117,7 @@
 }
 
 //! Button filled
-.filled-508065-203010 {
+.filled-3001-24 {
 
   @include Gm.respond(tab-port) {
 
@@ -173,15 +152,19 @@
   }
 }
 
-.btn-disabled-508065-203010 {
+.btn-disabled-3001-24 {
 
   background-color: Gv.$color-gray-100;
   color: Gv.$color-gray-400;
   cursor: not-allowed;
 
+  &:active {
+    box-shadow: none;
+  }
+
 }
 
-.slide-down-508065-203010 {
+.slide-down-3001-24 {
 
   @include Gm.respond(tab-port) {
     z-index: 0;

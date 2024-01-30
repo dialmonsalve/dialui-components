@@ -1,7 +1,7 @@
 @use '../../abstract/variables/globalVariables' as Gv;
 @use '../../abstract/mixins/globalMixins' as Gm;
 
-.spinner-508065-203010 {
+.spinner-3001-24 {
   align-items: center;
   backdrop-filter: blur(4px);
   background-color: Gv.$color-black-200;
@@ -24,7 +24,7 @@
     align-items: center;
     flex-direction: column;
 
-    & .icon-spinner-508065-203010 {
+    & .icon-spinner-3001-24 {
 
       &__fleas {
         width: 85px;

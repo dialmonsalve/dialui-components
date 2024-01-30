@@ -89,8 +89,8 @@ const FormControlPage = () => {
 				type='submit'
 				radius='radius-4'
 				backgroundColor='green-400'
-				buttonStyle='ripple'
         isLoading
+				size='w-100'
         spinnerType='mice'
 			>
 				Enviar

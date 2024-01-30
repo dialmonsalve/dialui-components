@@ -30,18 +30,18 @@ const Button = ({
 	radius = 'radius-0',
 	size = 'md-100',
 	spinnerType = 'eclipse',
-	className,
+	className='',
 	type,
 	...props
 }: Props) => {
 	const isDisabled =
 		disabled || isLoading
-			? `btn${HASH}-disabled`
+			? `btn-disabled${HASH}`
 			: `btn${HASH}__${backgroundColor} ${buttonStyle}${HASH}`;
 
 	const isAnimated = hasInitialAnimation ? `btn${HASH}__animated` : '';
 
-	const ownClassName = `btn${HASH} btn${HASH}__${size} btn${HASH}__${radius} ${isDisabled} ${isAnimated} ${className}`;
+	const ownClassName = `${className} btn${HASH} btn${HASH}__${size} btn${HASH}__${radius} ${isDisabled} ${isAnimated}`;
 
 	const properties = {
 		disabled: disabled || isLoading,
