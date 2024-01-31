@@ -18,7 +18,7 @@ const Alert = ({
 	message,
 	type,
 	style,
-	className,
+	className = '',
 	sideY = 'up',
 	sideX = 'right',
 	...props
@@ -32,7 +32,7 @@ const Alert = ({
 
 	return (
 		<div
-			className={`alert${HASH} alert${HASH}__${type} alert${HASH}__${sideY} alert${HASH}__${sideX} ${showAlert} ${className}`}
+			className={`${className} alert${HASH} alert${HASH}__${type} alert${HASH}__${sideY} alert${HASH}__${sideX} ${showAlert}`}
 			style={style}
 			{...props}
 		>

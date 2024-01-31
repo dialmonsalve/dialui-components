@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui";
 
 function IconSpinnerPage() {
-	const hola = true;
+	const hola = false;
 
 	return (
 		<>

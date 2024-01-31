@@ -1,0 +1,146 @@
+@use '../../abstract/variables/globalVariables' as Gv;
+@use '../../abstract/mixins/globalMixins' as Gm;
+
+.select-container {
+  position: sticky;
+  border: 1px solid Gv.$color-gray-200;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 5px;
+  border-radius: 12px;
+  outline: none;
+  background-color: Gv.$color-white-100;
+  z-index: 9999;
+  
+  &:focus {
+    border-color: Gv.$color-green-600;
+  }
+  
+  @include Gm.respond(phone){
+    padding: 6px 8px;
+  }
+  
+  &__span {
+    flex-grow: 1;
+    display: flex;
+    gap: 2px;
+    flex-wrap: wrap;
+
+    &--option-badge {
+      display: flex;
+      align-items: center;
+      border: 1px solid Gv.$color-blue-100;
+      background-color: Gv.$color-blue-400 ;
+      border-radius: 12px;
+      padding: 2px 8px;
+      gap: 6px;
+      color: Gv.$color-white-200;
+      outline: none;
+      font-size: 10px;
+
+      @include Gm.respond(tab-port) {
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+          background-color: Gv.$color-red-200;
+          border-color: Gv.$color-red-300;
+        }
+
+        &:hover,
+        >.remove-btn,
+        &:focus>.remove-btn {
+          color: Gv.$color-white-200;
+        }
+
+      }
+
+      &>.remove-btn,
+      &>.remove-btn {
+        font-size: 14px;
+        color: Gv.$color-white-200;
+      }
+    }
+  }
+
+  &__clear-btn {
+    background: none;
+    color: Gv.$color-red-400;
+    border: none;
+    outline: none;
+    font-size: 28px;
+
+    @include Gm.respond(phone) {
+
+      &:focus,
+      &:hover {
+        color: Gv.$color-red-600;
+      }
+    }
+
+  }
+
+  &__caret {
+    border: .25em solid transparent;
+    border-top-color: Gv.$color-red-500;
+    translate: 0 25%;
+    font-size: 28px;
+
+    @include Gm.respond(phone) {
+      font-size: 40px;
+      cursor: pointer;
+    }
+  }
+
+  &__options {
+    position: absolute;
+    margin: 0;
+    padding: 10px 8px;
+    display: none;
+    max-height: 140px;
+    overflow-y: auto;
+    border-radius: 5px;
+    width: 100%;
+    left: 0;
+    top: calc(100% + 4px);
+    background-color: Gv.$color-white-100;
+    font-size: 14px;
+    color: Gv.$color-blue-400;
+
+    @include Gm.respond(phone) {
+      font-size: 18px;
+      max-height: 140px;
+    }
+
+    &--option {
+      padding: 4px 4px;
+      margin-bottom: 3px;
+
+      @include Gm.respond(phone) {
+        cursor: pointer;
+
+      }
+    }
+
+    &--selected {
+      background-color: Gv.$color-red-300;
+      border-radius: 6px;
+      color: Gv.$color-white-100;
+    }
+
+    &--highlighted {
+      background-color: Gv.$color-blue-400;
+      color: Gv.$color-white-100;
+      border: 1px solid Gv.$color-blue-100;
+      border-radius: 6px;
+      box-shadow: 1px 1px 5px Gv.$color-black-300;
+    }
+  }
+
+  &__show {
+    display: block;
+  }
+}

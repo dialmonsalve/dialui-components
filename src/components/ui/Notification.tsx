@@ -7,13 +7,11 @@ interface Props {
 	backgroundColor?: Colors;
 	size?: "sm" | "md" | "lg";
 	hasNotification: boolean;
-	className?: string;
 }
 
 const Notification = ({
 	children,
 	hasNotification,
-	className,
 	backgroundColor = "red-600",
 	size = "md",
 }: Props) => {
@@ -23,7 +21,7 @@ const Notification = ({
 
 	return (
 		<div
-			className={`notification${HASH} notification${HASH}__${size} ${animation} ${className}`}
+			className={`notification${HASH} notification${HASH}__${size} ${animation}`}
 		>
 			<p>{children}</p>
 		</div>
