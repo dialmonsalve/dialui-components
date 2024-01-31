@@ -11,7 +11,7 @@
   border-radius: 12px;
   outline: none;
   background-color: Gv.$color-white-100;
-  z-index: 9999;
+  // z-index: 0;
   
   &:focus {
     border-color: Gv.$color-green-600;
@@ -109,6 +109,8 @@
     background-color: Gv.$color-white-100;
     font-size: 14px;
     color: Gv.$color-blue-400;
+    z-index: 999;
+    background-color: red;
 
     @include Gm.respond(phone) {
       font-size: 18px;

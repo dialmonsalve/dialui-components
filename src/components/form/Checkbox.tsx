@@ -5,19 +5,19 @@ import { HASH } from '@/const';
 interface Props
 	extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
 	name: string;
-	isChecked: Record<string, boolean> | boolean;
+	checkboxFormState: Record<string, boolean> | boolean;
 	className?: string;
 	handleCheck: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
 const Checkbox = ({
 	name,
-	isChecked,
+	checkboxFormState,
 	className = '',
 	handleCheck,
 	...props
 }: Props) => {
-	const checked = typeof isChecked === 'boolean' ? isChecked : isChecked[name];
+	const checked = typeof checkboxFormState === 'boolean' ? checkboxFormState : checkboxFormState[name];
 
 	return (
 		<div

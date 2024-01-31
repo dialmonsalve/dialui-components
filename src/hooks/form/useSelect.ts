@@ -1,32 +1,26 @@
-
 import { useState } from 'react';
 
-type SingleSelectProps = {
-	// multiple?: false;
-	valueState?: string;
-	// handleSelectChange: (value: string | undefined) => void;
-};
-type MultipleSelectProps = {
-	// multiple: true;
-	valueState: string[];
-	// handleSelectChange: (value: string[]) => void;
-};
-type SelectProps = {
-	options: string[];
-} & (SingleSelectProps | MultipleSelectProps);
+export const useSelect = <T extends string | string[] | undefined>({
+	initialSelect,
+	name,
+}: { initialSelect: T; name: string }) => {
+	const [newSelectState, setNewSelectState] = useState<T>(initialSelect);
 
-export const useSelect = <T extends string | string[] | undefined>(
-	initialForm: T,
-) => {
-	const [valueState, setValueState] = useState<T>(initialForm);
+	const handleSelectChange = (o: T) => setNewSelectState(o);
+
+	const resetSelect = () => {
+		setNewSelectState(initialSelect);
+	};
+
+	const selectState =
+		Array.isArray(newSelectState) && name
+			? { [name.trim()]: [...newSelectState] }
+			: { [name.trim()]: newSelectState };
 
 	return {
-		valueState,
-    
-		handleSelectChange: (o:any) => setValueState(o),
-		formSelect: Array.isArray(valueState)
-			? { formSelect: [...valueState] }
-			: [valueState],
-		setValueState,
+		selectState,
+		newSelectState,
+		handleSelectChange,
+		resetSelect,
 	};
 };

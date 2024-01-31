@@ -1,6 +1,6 @@
 import { type ChangeEvent, useEffect, useState } from 'react';
 
-const ERROR_MESSAGE = `The initialForm argument must be of object type, if you want to use this Component with a simple string, number, boolean or other, you must directly use the useState react hook. Example
+const ERROR_MESSAGE = `The initialCheckbox argument must be of object type, if you want to use this Component with a simple string, number, boolean or other, you must directly use the useState react hook. Example
 				
 const [isChecked, setIsChecked] = useState(false or true)
 
@@ -11,22 +11,22 @@ const [isChecked, setIsChecked] = useState(false or true)
 />
 `;
 
-export const useCheckbox = <T>(initialForm: T) => {
-	const [isChecked, setIsChecked] = useState(initialForm);
+export const useCheckbox = <T>(initialCheckbox: T) => {
+	const [checkboxState, setCheckboxState] = useState(initialCheckbox);
 
 	useEffect(() => {
-		setIsChecked(initialForm);
-	}, [initialForm]);
+		setCheckboxState(initialCheckbox);
+	}, [initialCheckbox]);
 
-	const handleCheck = (e: ChangeEvent<HTMLInputElement>) => {
+	const handleCheckboxChange = (e: ChangeEvent<HTMLInputElement>) => {
 		const { checked, name } = e.target;
 
-		if (Object.keys(initialForm as Record<string, boolean>).length <= 1) {
+		if (Object.keys(initialCheckbox as Record<string, boolean>).length <= 1) {
 			throw new Error(ERROR_MESSAGE);
 		}
 
-		if (initialForm instanceof Object) {
-			setIsChecked((prev) => ({
+		if (initialCheckbox instanceof Object) {
+			setCheckboxState((prev) => ({
 				...prev,
 				[name]: checked,
 			}));
@@ -34,12 +34,12 @@ export const useCheckbox = <T>(initialForm: T) => {
 	};
 
 	const resetCheckbox = () => {
-		setIsChecked(initialForm);
+		setCheckboxState(initialCheckbox);
 	};
 
 	return {
-		isChecked,
-		handleCheck,
+		checkboxState,
+		handleCheckboxChange,
 		resetCheckbox
 	};
 };

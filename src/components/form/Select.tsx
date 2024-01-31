@@ -2,24 +2,27 @@ import { useEffect, useRef, useState } from 'react';
 
 type SingleSelectProps = {
 	multiple?: false;
-	valueState?: string;
-	onChange: (value: string | undefined) => void;
+	newSelectState?: string;
+	onChange: (newSelectState: string | undefined) => void;
 };
 type MultipleSelectProps = {
 	multiple: true;
-	valueState: string[];
+	newSelectState: string[];
 	onChange: (value: string[]) => void;
 };
 type SelectProps = {
 	options: string[];
 } & (SingleSelectProps | MultipleSelectProps);
 
-
-export const Select = ({ multiple, valueState, options, onChange }: SelectProps) => {
+export const Select = ({
+	multiple,
+	newSelectState,
+	options,
+	onChange,
+}: SelectProps) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const [highlightedIndex, setHighlightedIndex] = useState(0);
 	const containerRef = useRef<HTMLDivElement>(null);
-
 
 	useEffect(() => {
 		if (isOpen) setHighlightedIndex(0);
@@ -89,18 +92,20 @@ export const Select = ({ multiple, valueState, options, onChange }: SelectProps)
 
 	const selectOption = (option: string) => {
 		if (multiple) {
-			if (valueState.includes(option)) {
-				onChange(valueState.filter((o) => o !== option));
+			if (newSelectState.includes(option)) {
+				onChange(newSelectState.filter((o) => o !== option));
 			} else {
-				onChange([...valueState, option]);
+				onChange([...newSelectState, option]);
 			}
 		} else {
-			if (option !== valueState) onChange(option);
+			if (option !== newSelectState) onChange(option);
 		}
 	};
 
 	const isOptionSelected = (option: string) => {
-		return multiple ? valueState?.includes(option) : option === valueState;
+		return multiple
+			? newSelectState?.includes(option)
+			: option === newSelectState;
 	};
 
 	return (
@@ -113,7 +118,7 @@ export const Select = ({ multiple, valueState, options, onChange }: SelectProps)
 		>
 			<span className='select-container__span'>
 				{multiple
-					? valueState?.map((v) => (
+					? newSelectState?.map((v) => (
 							<button
 								key={v}
 								onClick={(e) => {
@@ -127,7 +132,7 @@ export const Select = ({ multiple, valueState, options, onChange }: SelectProps)
 								{v} <span className='remove-btn'>&times;</span>{' '}
 							</button>
 					  ))
-					: valueState}
+					: newSelectState}
 			</span>
 
 			<button

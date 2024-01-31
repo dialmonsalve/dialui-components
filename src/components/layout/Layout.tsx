@@ -101,7 +101,7 @@ export const Layout = () => {
 				</li>
 				<li className='item item--active' onClick={closeSidebar}>
 					<NavigationLink
-						to='/form-control'
+						to='/form'
 						color={'white'}
 						style={{ fontSize: '20px', height: '45px' }}
 						size='w-100'
