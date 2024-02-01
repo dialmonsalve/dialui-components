@@ -12,10 +12,12 @@ export const useSelect = <T extends string | string[] | undefined>({
 		setNewSelectState(initialSelect);
 	};
 
+	const nameClean = name.replace(/\s/g, '');
+
 	const selectState =
 		Array.isArray(newSelectState) && name
-			? { [name.trim()]: [...newSelectState] }
-			: { [name.trim()]: newSelectState };
+			? { [nameClean]: [...newSelectState] }
+			: { [nameClean]: newSelectState };
 
 	return {
 		selectState,

@@ -6,20 +6,21 @@ import { FormEvent } from 'react';
 const form = {
 	name: '',
 	lastName: '',
-	que: '',
-	como: '',
+	phone: '',
+	description: '',
 };
 
 const check = {
 	serieA: false,
-	serieB: false,
+	serieB: true,
 };
 
-const options = ['diego', 'alejandro', 'monsalve', 'estrada'];
+const multiOptions = ['COMPRAS', 'VENTAS', 'LOGISTICA', 'CONTABILIDAD'];
+const simpleOptions = ['UNO', 'DOS', 'TRES', 'CUATRO'];
 
 const FormControlPage = () => {
 	const { newSelectState, selectState, handleSelectChange, resetSelect } =
-		useSelect<typeof options>({ initialSelect: [], name: 'MultiSelection' });
+		useSelect<typeof multiOptions>({ initialSelect: [], name: 'MultiSelection' });
 
 	const {
 		newSelectState: simpleSelect,
@@ -31,13 +32,7 @@ const FormControlPage = () => {
 		name: 'SimpleSelection',
 	});
 
-	const {
-		inputState,
-		handleInputBlur,
-		handleInputChange,
-		resetInput,
-		inputTouched,
-	} = useInput(form);
+	const { inputState, handleInputChange, resetInput } = useInput(form);
 
 	const { handleCheckboxChange, checkboxState, resetCheckbox } =
 		useCheckbox(check);
@@ -75,9 +70,8 @@ const FormControlPage = () => {
 			<InputForm
 				type='text'
 				value={inputState.name}
-				placeholder='name'
+				placeholder='Name'
 				name='name'
-				onBlur={handleInputBlur}
 				onChange={handleInputChange}
 			/>
 			<InputForm
@@ -85,39 +79,37 @@ const FormControlPage = () => {
 				name='lastName'
 				value={inputState.lastName}
 				placeholder='LastName'
-				onBlur={handleInputBlur}
+				onChange={handleInputChange}
+			/>
+			<InputForm
+				type='phone'
+				name='phone'
+				value={inputState.phone}
+				placeholder='Phone'
 				onChange={handleInputChange}
 			/>
 
 			<div style={{ zIndex: 1 }}>
 				<Select
 					multiple
-					options={options}
+					options={multiOptions}
 					onChange={handleSelectChange}
 					newSelectState={newSelectState}
 				/>
 			</div>
 			<div>
 				<Select
-					options={options}
+					options={simpleOptions}
 					onChange={handleSimple}
 					newSelectState={simpleSelect}
 				/>
 			</div>
 			<br />
 			<TextArea
-				name='que'
-				characterState={inputState.que}
-				placeholder='que'
+				name='description'
+				characterState={inputState.description}
+				placeholder='Description'
 				onChange={handleInputChange}
-				onBlur={handleInputBlur}
-			/>
-			<TextArea
-				name='como'
-				characterState={inputState.como}
-				placeholder='como'
-				onChange={handleInputChange}
-				onBlur={handleInputBlur}
 			/>
 			<br />
 

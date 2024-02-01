@@ -11,7 +11,8 @@
   border-radius: 12px;
   outline: none;
   background-color: Gv.$color-white-100;
-  // z-index: 0;
+  color: Gv.$color-blue-600;
+  font-size: 14px;
   
   &:focus {
     border-color: Gv.$color-green-600;
@@ -37,11 +38,11 @@
       gap: 6px;
       color: Gv.$color-white-200;
       outline: none;
-      font-size: 10px;
+      font-size: 12px;
 
       @include Gm.respond(tab-port) {
         border-radius: 8px;
-        font-size: 16px;
+        font-size: 14px;
         cursor: pointer;
 
         &:hover,
@@ -110,7 +111,6 @@
     font-size: 14px;
     color: Gv.$color-blue-400;
     z-index: 999;
-    background-color: red;
 
     @include Gm.respond(phone) {
       font-size: 18px;
