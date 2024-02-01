@@ -12,7 +12,7 @@ const [value, setValue] = useState(string, boolean, e.g.)
 />
 	`;
 
-export const useInput = <T>(initialInput: T) => {
+export const useInput = <T>({initialInput}: {initialInput: T}) => {
 	const [inputState, setInputState] = useState(initialInput);
 	// const [isSubmitted, setIsSubmitted] = useState(false);
 	const [inputTouched, setInputTouched] = useState<IsTouched>(null);

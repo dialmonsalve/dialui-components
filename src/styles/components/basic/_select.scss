@@ -2,26 +2,27 @@
 @use '../../abstract/mixins/globalMixins' as Gm;
 
 .select-container {
-  position: sticky;
-  border: 1px solid Gv.$color-gray-200;
-  display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 4px 5px;
-  border-radius: 12px;
-  outline: none;
   background-color: Gv.$color-white-100;
+  border-radius: 12px;
+  border: 1px solid Gv.$color-gray-200;
   color: Gv.$color-blue-600;
+  display: flex;
   font-size: 14px;
-  
+  font-weight: 900;
+  gap: 8px;
+  outline: none;
+  padding: 4px 5px;
+  position: sticky;
+
   &:focus {
     border-color: Gv.$color-green-600;
   }
-  
-  @include Gm.respond(phone){
+
+  @include Gm.respond(phone) {
     padding: 6px 8px;
   }
-  
+
   &__span {
     flex-grow: 1;
     display: flex;
@@ -29,16 +30,16 @@
     flex-wrap: wrap;
 
     &--option-badge {
-      display: flex;
       align-items: center;
-      border: 1px solid Gv.$color-blue-100;
       background-color: Gv.$color-blue-400 ;
       border-radius: 12px;
-      padding: 2px 8px;
-      gap: 6px;
+      border: 1px solid Gv.$color-blue-100;
       color: Gv.$color-white-200;
-      outline: none;
+      display: flex;
       font-size: 12px;
+      gap: 6px;
+      outline: none;
+      padding: 2px 8px;
 
       @include Gm.respond(tab-port) {
         border-radius: 8px;
@@ -111,15 +112,16 @@
     font-size: 14px;
     color: Gv.$color-blue-400;
     z-index: 999;
+    font-weight: 300;
 
     @include Gm.respond(phone) {
-      font-size: 18px;
+      font-size: 14px;
       max-height: 140px;
     }
 
     &--option {
       padding: 4px 4px;
-      margin-bottom: 3px;
+      margin-bottom: 2px;
 
       @include Gm.respond(phone) {
         cursor: pointer;

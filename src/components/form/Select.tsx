@@ -2,12 +2,12 @@ import { useEffect, useRef, useState } from 'react';
 
 type SingleSelectProps = {
 	multiple?: false;
-	newSelectState?: string;
-	onChange: (newSelectState: string | undefined) => void;
+	selectState?: string;
+	onChange: (selectState: string | undefined) => void;
 };
 type MultipleSelectProps = {
 	multiple: true;
-	newSelectState: string[];
+	selectState: string[];
 	onChange: (value: string[]) => void;
 };
 type SelectProps = {
@@ -16,7 +16,7 @@ type SelectProps = {
 
 export const Select = ({
 	multiple,
-	newSelectState,
+	selectState,
 	options,
 	onChange,
 }: SelectProps) => {
@@ -92,20 +92,20 @@ export const Select = ({
 
 	const selectOption = (option: string) => {
 		if (multiple) {
-			if (newSelectState.includes(option)) {
-				onChange(newSelectState.filter((o) => o !== option));
+			if (selectState.includes(option)) {
+				onChange(selectState.filter((o) => o !== option));
 			} else {
-				onChange([...newSelectState, option]);
+				onChange([...selectState, option]);
 			}
 		} else {
-			if (option !== newSelectState) onChange(option);
+			if (option !== selectState) onChange(option);
 		}
 	};
 
 	const isOptionSelected = (option: string) => {
 		return multiple
-			? newSelectState?.includes(option)
-			: option === newSelectState;
+			? selectState?.includes(option)
+			: option === selectState;
 	};
 
 	return (
@@ -118,21 +118,20 @@ export const Select = ({
 		>
 			<span className='select-container__span'>
 				{multiple
-					? newSelectState?.map((v) => (
-							<button
+					? selectState?.map((v) => (
+							<span
 								key={v}
 								onClick={(e) => {
 									e.stopPropagation();
 									selectOption(v);
 								}}
 								className='select-container__span--option-badge'
-								type='button'
 							>
 								{' '}
 								{v} <span className='remove-btn'>&times;</span>{' '}
-							</button>
+							</span>
 					  ))
-					: newSelectState}
+					: selectState}
 			</span>
 
 			<button
@@ -151,6 +150,7 @@ export const Select = ({
 					isOpen ? 'select-container__show' : ''
 				}`}
 			>
+				<li className={"select-container__options--option"}>{""}</li>
 				{options.map((option, index) => (
 					<li
 						onClick={(e) => {

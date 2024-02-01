@@ -11,7 +11,7 @@ const [isChecked, setIsChecked] = useState(false or true)
 />
 `;
 
-export const useCheckbox = <T>(initialCheckbox: T) => {
+export const useCheckbox = <T>({initialCheckbox}: {initialCheckbox: T}) => {
 	const [checkboxState, setCheckboxState] = useState(initialCheckbox);
 
 	useEffect(() => {

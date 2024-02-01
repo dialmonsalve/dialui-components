@@ -1,7 +1,13 @@
-import { Checkbox, InputForm, Select, TextArea } from '@/components/form';
+import {
+	Checkbox,
+	InputForm,
+	InputTags,
+	Select,
+	TextArea,
+} from '@/components/form';
 import { Button } from '@/components/ui';
 import { useCheckbox, useInput, useSelect } from '@/hooks/form';
-import { FormEvent } from 'react';
+import { FormEvent, useState } from 'react';
 
 const form = {
 	name: '',
@@ -19,39 +25,50 @@ const multiOptions = ['COMPRAS', 'VENTAS', 'LOGISTICA', 'CONTABILIDAD'];
 const simpleOptions = ['UNO', 'DOS', 'TRES', 'CUATRO'];
 
 const FormControlPage = () => {
-	const { newSelectState, selectState, handleSelectChange, resetSelect } =
-		useSelect<typeof multiOptions>({ initialSelect: [], name: 'MultiSelection' });
+	const { selectState, handleSelectChange, resetSelect } = useSelect<
+		typeof multiOptions
+	>({
+		initialSelect: [],
+	});
 
 	const {
-		newSelectState: simpleSelect,
-		selectState: simpleState,
+		selectState: simpleSelect,
 		handleSelectChange: handleSimple,
 		resetSelect: simpleRest,
 	} = useSelect<string | undefined>({
 		initialSelect: '',
-		name: 'SimpleSelection',
 	});
 
-	const { inputState, handleInputChange, resetInput } = useInput(form);
+	const { inputState, handleInputChange, resetInput } = useInput({
+		initialInput: form,
+	});
 
-	const { handleCheckboxChange, checkboxState, resetCheckbox } =
-		useCheckbox(check);
+	const { handleCheckboxChange, checkboxState, resetCheckbox } = useCheckbox({
+		initialCheckbox: check,
+	});
 
-	const contact = {
-		...inputState,
-		...checkboxState,
-		...selectState,
-		...simpleState,
+	const [tags, setTags] = useState<string[]>([]);
+
+	const resetTags = () => {
+		setTags([]);
 	};
 
 	const handleSubmit = (e: FormEvent) => {
 		e.preventDefault();
-		console.log({ contact });
+		const contact = {
+			...inputState,
+			...checkboxState,
+			profile: [...selectState],
+			election: simpleSelect,
+			tags: [...tags],
+		};
+		console.log(contact);
 
 		resetInput();
 		resetCheckbox();
 		resetSelect();
 		simpleRest();
+		resetTags();
 	};
 
 	return (
@@ -94,14 +111,14 @@ const FormControlPage = () => {
 					multiple
 					options={multiOptions}
 					onChange={handleSelectChange}
-					newSelectState={newSelectState}
+					selectState={selectState}
 				/>
 			</div>
 			<div>
 				<Select
 					options={simpleOptions}
 					onChange={handleSimple}
-					newSelectState={simpleSelect}
+					selectState={simpleSelect}
 				/>
 			</div>
 			<br />
@@ -112,6 +129,8 @@ const FormControlPage = () => {
 				onChange={handleInputChange}
 			/>
 			<br />
+
+			<InputTags optionTags={tags} onChange={setTags} />
 
 			<div style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}>
 				<Checkbox
