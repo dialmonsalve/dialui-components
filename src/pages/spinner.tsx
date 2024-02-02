@@ -1,4 +1,4 @@
-import { Spinner } from '@/components/ui';
+import { Spinner } from '@/components/UI';
 
 function SpinnerPage() {
 	const prueba = false;

@@ -5,82 +5,82 @@
   visibility: $visibility;
 }
 
-.modal-show-fade-in-out-3001-24 {
+.modal-show-fade-in-out {
   @include status(1, visible);
 }
 
-.modal-hide-fade-in-out-3001-24 {
+.modal-hide-fade-in-out {
   @include status();
 }
 
-.modal-show-toUp-3001-24 {
+.modal-show-toUp {
   transform: translateY(0);
 }
 
-.modal-hide-toUp-3001-24 {
+.modal-hide-toUp {
   @include status();
   transform: translateY(100%);
 }
 
-.modal-show-toDown-3001-24 {
+.modal-show-toDown {
   transform: translateY(0);
 }
 
-.modal-hide-toDown-3001-24 {
+.modal-hide-toDown {
   @include status();
   transform: translateY(-100%);
 }
 
-.modal-show-toRight-3001-24 {
+.modal-show-toRight {
   transform: translateX(0);
 }
 
-.modal-hide-toRight-3001-24 {
+.modal-hide-toRight {
   @include status();
   transform: translateX(-100%);
 }
 
-.modal-show-toLeft-3001-24{
+.modal-show-toLeft{
   transform: translateX(0);
 }
 
-.modal-hide-toLeft-3001-24 {
+.modal-hide-toLeft {
   @include status();
   transform: translateX(100%);
 }
 
-.modal-show-jumpToUp-3001-24 {
+.modal-show-jumpToUp {
   animation: modalAnimationUp 0.8s cubic-bezier(0.42, 0, 0.58, 5);
 }
 
-.modal-hide-jumpToUp-3001-24 {
+.modal-hide-jumpToUp {
   @include status();
   transform: translateY(100%);
 }
 
-.modal-show-jumpToDown-3001-24{
+.modal-show-jumpToDown{
   animation: modalAnimationDown .8s cubic-bezier(0.42, 0, 0.58, 5);
 }
 
-.modal-hide-jumpToDown-3001-24 {
+.modal-hide-jumpToDown {
   @include status();
   transform: translateY(-100%);
 }
 
-.modal-show-jumpToRight-3001-24 {
+.modal-show-jumpToRight {
   animation: modalAnimationRight .8s cubic-bezier(0.42, 0, 0.58, 5);
 }
 
-.modal-hide-jumpToRight-3001-24 {
+.modal-hide-jumpToRight {
   @include status();
   transform: translateX(-100%);
 }
 
-.modal-show-jumpToLeft-3001-24 {
+.modal-show-jumpToLeft {
   animation: modalAnimationLeft .8s cubic-bezier(0.42, 0, 0.58, 5);
 }
 
-.modal-hide-jumpToLeft-3001-24 {
+.modal-hide-jumpToLeft {
   @include status();
   transform: translateX(100%);
 }

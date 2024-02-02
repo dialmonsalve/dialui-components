@@ -1,7 +1,8 @@
 @use '../../abstract/mixins/globalMixins' as Gm;
 @use '../../abstract/variables/globalVariables' as Gv;
+@forward '../../animations/modal';
 
-.modal-3001-24 {
+.modal {
   align-items: center;
   backdrop-filter: blur(4px);
   background-color: Gv.$color-black-200;
@@ -55,6 +56,7 @@
     @include Gm.respond(tab-port){
       background-color: transparent;
       color: white;
+      cursor: pointer;
       &:hover{
         background-color: white;
         color: Gv.$color-red-600

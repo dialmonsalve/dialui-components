@@ -1,4 +1,4 @@
-import { Alert } from "@/components/ui";
+import { Alert } from "@/components/UI";
 import { useAlert } from "@/hooks/context";
 
 function AlertPage() {

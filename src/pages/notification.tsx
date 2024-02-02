@@ -1,4 +1,4 @@
-import { Notification } from '@/components/ui';
+import { Notification } from '@/components/UI';
 import { Checkbox } from '@/components/form';
 
 import { useCheckbox } from '@/hooks/form';
@@ -11,7 +11,8 @@ const form = {
 function NotificationPage() {
 	const notal = [55];
 
-	const { isChecked, handleCheck } = useCheckbox(form);
+	const { handleCheckboxChange, checkboxState, resetCheckbox } =
+		useCheckbox({initialCheckbox: form});
 
 	return (
 		<>
@@ -45,15 +46,15 @@ function NotificationPage() {
 			<br />
 			<div style={{ width: '380px' }}>
 				<Checkbox
-					handleCheck={handleCheck}
-					isChecked={isChecked}
+					handleCheck={handleCheckboxChange}
 					name='respA'
+					checkboxFormState={checkboxState}
 				/>
 
 				<br />
 				<Checkbox
-					isChecked={isChecked}
-					handleCheck={handleCheck}
+					checkboxFormState={checkboxState}
+					handleCheck={handleCheckboxChange}
 					name='respB'
 				/>
 			</div>

@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui";
+import { Button } from "@/components/UI";
 
 function ButtonPage() {
 	const click = (number: number) => {

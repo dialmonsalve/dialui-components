@@ -1,34 +1,35 @@
 import type { DetailedHTMLProps, HTMLAttributes, ChangeEvent } from 'react';
 
-import { HASH } from '@/const';
+import styles from '@/styles/components/form/checkbox.module.scss';
 
 interface Props
 	extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
 	name: string;
 	checkboxFormState: Record<string, boolean> | boolean;
-	className?: string;
 	handleCheck: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
 const Checkbox = ({
-	name,
 	checkboxFormState,
-	className = '',
+	name,
 	handleCheck,
 	...props
 }: Props) => {
-	const checked = typeof checkboxFormState === 'boolean' ? checkboxFormState : checkboxFormState[name];
+	const checked =
+		typeof checkboxFormState === 'boolean'
+			? checkboxFormState
+			: checkboxFormState[name];
 
 	return (
 		<div
-			className={`${className} checkbox${HASH} ${
-				checked ? `checkbox${HASH}__active` : ''
+			className={`${styles['checkbox']} ${
+				checked ? `${styles['checkbox__active']}` : ''
 			}`}
 			{...props}
 		>
 			<label>
 				<input
-					className={`checkbox${HASH}__pulse`}
+					className={styles['checkbox__pulse']}
 					onChange={handleCheck}
 					type='checkbox'
 					name={name}

@@ -11,7 +11,6 @@ export const useSelect = <T extends string | string[] | undefined>({
 		setSelectState(initialSelect);
 	};
 
-
 	return {
 		selectState,
 		handleSelectChange,

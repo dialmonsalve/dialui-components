@@ -19,7 +19,7 @@ interface Props extends InputHTMLAttributes<HTMLInputElement> {
 	onChange?: (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => void;
 }
 
-const InputForm = ({
+const Input = ({
 	type,
 	name,
 	value,
@@ -33,7 +33,7 @@ const InputForm = ({
 }: Props) => {
 	return (
 		<input
-			className={`${className} input${HASH} ${
+			className={`${className} _input${HASH} ${
 				disabled ? `input${HASH}-disabled` : ''
 			}`}
 			type={type}
@@ -49,4 +49,4 @@ const InputForm = ({
 	);
 };
 
-export default InputForm;
+export default Input;

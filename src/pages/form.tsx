@@ -1,13 +1,13 @@
 import {
 	Checkbox,
-	InputForm,
+	Input,
 	InputTags,
 	Select,
 	TextArea,
 } from '@/components/form';
-import { Button } from '@/components/ui';
-import { useCheckbox, useInput, useSelect } from '@/hooks/form';
-import { FormEvent, useState } from 'react';
+import { Button } from '@/components/UI';
+import { useCheckbox, useInput, useInputTags, useSelect } from '@/hooks/form';
+import { type FormEvent } from 'react';
 
 const form = {
 	name: '',
@@ -24,11 +24,29 @@ const check = {
 const multiOptions = ['COMPRAS', 'VENTAS', 'LOGISTICA', 'CONTABILIDAD'];
 const simpleOptions = ['UNO', 'DOS', 'TRES', 'CUATRO'];
 
+const databaseTags: string[] = [
+	'harry',
+	'hola',
+	'cincuenta',
+	'setenta',
+	'ochenta',
+	'noventa',
+	'cien',
+	'cientodiez',
+	'cientosetenta',
+	'cientoochenta',
+	'Pepe',
+	'berta',
+	'aurelio',
+	'doscientossetenta',
+	'doscientosochentano',
+];
+
 const FormControlPage = () => {
 	const { selectState, handleSelectChange, resetSelect } = useSelect<
 		typeof multiOptions
 	>({
-		initialSelect: [],
+		initialSelect: ['VENTAS'],
 	});
 
 	const {
@@ -47,20 +65,18 @@ const FormControlPage = () => {
 		initialCheckbox: check,
 	});
 
-	const [tags, setTags] = useState<string[]>([]);
-
-	const resetTags = () => {
-		setTags([]);
-	};
-
+	const { tagsState, handleInputTagsChange, resetInputTags } = useInputTags({
+		initialInputTag: databaseTags,
+	});
 	const handleSubmit = (e: FormEvent) => {
 		e.preventDefault();
+
 		const contact = {
 			...inputState,
 			...checkboxState,
 			profile: [...selectState],
 			election: simpleSelect,
-			tags: [...tags],
+			tags: [...tagsState],
 		};
 		console.log(contact);
 
@@ -68,7 +84,7 @@ const FormControlPage = () => {
 		resetCheckbox();
 		resetSelect();
 		simpleRest();
-		resetTags();
+		resetInputTags();
 	};
 
 	return (
@@ -84,21 +100,21 @@ const FormControlPage = () => {
 			onSubmit={handleSubmit}
 			method='POST'
 		>
-			<InputForm
+		<Input
 				type='text'
 				value={inputState.name}
 				placeholder='Name'
 				name='name'
 				onChange={handleInputChange}
 			/>
-			<InputForm
+			<Input
 				type='text'
 				name='lastName'
 				value={inputState.lastName}
 				placeholder='LastName'
 				onChange={handleInputChange}
 			/>
-			<InputForm
+			<Input
 				type='phone'
 				name='phone'
 				value={inputState.phone}
@@ -130,7 +146,11 @@ const FormControlPage = () => {
 			/>
 			<br />
 
-			<InputTags optionTags={tags} onChange={setTags} />
+			<InputTags
+				placeholder='Tags'
+				optionTags={tagsState}
+				onChange={handleInputTagsChange}
+			/>
 
 			<div style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}>
 				<Checkbox

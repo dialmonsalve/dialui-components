@@ -1,4 +1,4 @@
-import { Modal } from '@/components/ui';
+import { Modal } from '@/components/UI';
 import { useModal } from '@/hooks/context';
 
 function ModalPage() {

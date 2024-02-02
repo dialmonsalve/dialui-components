@@ -1,10 +1,10 @@
-@use "../../abstract/variables/globalVariables" as Gv;
+@use "../abstract/variables/globalVariables" as Gv;
 
-.input-3001-24{
+._input_daem_22 {
   border: none;
   padding: 10px;
   outline: none;
-  border-radius: 8px;
+  border-radius: 6px;
 
   &:focus {
     outline: 2px solid Gv.$color-green-400;

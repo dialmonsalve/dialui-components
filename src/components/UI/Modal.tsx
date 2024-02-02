@@ -1,7 +1,8 @@
 import { useModal } from '@/hooks/context';
-import { Button } from './';
+import { Button } from '.';
 import { Info, Danger, Success, Warning } from '../icons';
-import { HASH } from '@/const';
+
+import styles from '@/styles/components/UI/modal.module.scss';
 
 import type { Animation, MessageType } from '@/types';
 
@@ -38,44 +39,48 @@ const Modal = ({
 	};
 
 	const classOpenModal = isOpenModal
-		? `modal-show-${animation}${HASH}`
-		: `modal-hide-${animation}${HASH}`;
+		? styles[`modal-show-${animation}`]
+		: styles[`modal-hide-${animation}`];
 
 	return (
 		<div
 			{...props}
 			onClick={closeModal}
-			className={`modal${HASH} ${classOpenModal}`}
+			className={`${styles.modal} ${classOpenModal}`}
 		>
 			<div
 				onClick={handleContentClick}
-				className={`modal${HASH}__container modal${HASH}__${type}`}
+				className={`${styles['modal__container']} ${styles[`modal__${type}`]}`}
 			>
-				<span className={`modal${HASH}__close`} onClick={closeModal}>
+				<span className={styles.modal__close} onClick={closeModal}>
 					X
 				</span>
-				<div className={`modal${HASH}__content`}>
-					<div className={`modal${HASH}__content--cont-img`}>
+				<div className={styles.modal__content}>
+					<div className={styles['modal__content--cont-img']}>
 						{type === 'info' && (
-							<Info className={`modal${HASH}__content--img`} />
+							<Info className={styles['modal__content--img']} />
 						)}
 						{type === 'error' && (
-							<Danger className={`modal${HASH}__content--img`} />
+							<Danger className={styles['modal__content--img']} />
 						)}
 						{type === 'success' && (
-							<Success className={`modal${HASH}__content--img`} />
+							<Success className={styles['modal__content--img']} />
 						)}
 						{type === 'warning' && (
-							<Warning className={`modal${HASH}__content--img`} />
+							<Warning className={styles['modal__content--img']} />
 						)}
 					</div>
 
-					<h4 className={`modal${HASH}__content--title modal${HASH}__${type}--title`}>
+					<h4
+						className={`${styles['modal__content--title']} ${
+							styles[`modal__${type}--title`]
+						}`}
+					>
 						{title}
 					</h4>
 
-					<p className={`modal${HASH}__content--description`}>{description}</p>
-					<div className={`modal${HASH}__buttons`}>
+					<p className={styles['modal__content--description']}>{description}</p>
+					<div className={styles.modal__buttons}>
 						{type === 'success' || type === 'info' ? (
 							<>
 								<Button

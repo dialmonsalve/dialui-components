@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { simpleButtons } from "../../helpers/buttonItems";
-import { Button } from "../ui/Button";
+import { Button } from "../UI/Button";
 import { Card } from "../Card/Card";
 import { CardContent } from "../Card/CardContent";
 import { CardHead } from "../Card/CardHead";

@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import styles from '@/styles/components/form/select.module.scss';
 
 type SingleSelectProps = {
 	multiple?: false;
@@ -30,7 +31,7 @@ export const Select = ({
 
 	useEffect(() => {
 		const ulElement = containerRef.current?.querySelector(
-			'.select-container__options',
+			`.${styles.select__options}`,
 		);
 		const handler = (e: KeyboardEvent) => {
 			if (e.target !== containerRef.current) return;
@@ -103,9 +104,7 @@ export const Select = ({
 	};
 
 	const isOptionSelected = (option: string) => {
-		return multiple
-			? selectState?.includes(option)
-			: option === selectState;
+		return multiple ? selectState?.includes(option) : option === selectState;
 	};
 
 	return (
@@ -113,10 +112,10 @@ export const Select = ({
 			onBlur={() => setIsOpen(false)}
 			onClick={() => setIsOpen((prev) => !prev)}
 			tabIndex={0}
-			className='select-container'
+			className={styles['select']}
 			ref={containerRef}
 		>
-			<span className='select-container__span'>
+			<span className={styles['select__span']}>
 				{multiple
 					? selectState?.map((v) => (
 							<span
@@ -125,10 +124,10 @@ export const Select = ({
 									e.stopPropagation();
 									selectOption(v);
 								}}
-								className='select-container__span--option-badge'
+								className={styles['select__span--option-badge']}
 							>
 								{' '}
-								{v} <span className='remove-btn'>&times;</span>{' '}
+								{v} <span>&times;</span>{' '}
 							</span>
 					  ))
 					: selectState}
@@ -140,17 +139,17 @@ export const Select = ({
 					e.stopPropagation();
 					clearOptions();
 				}}
-				className='select-container__clear-btn'
+				className={styles['select__clear']}
 			>
 				&times;
 			</button>
-			<div className='select-container__caret' />
+			<div className={styles['select__caret']} />
 			<ul
-				className={`select-container__options ${
-					isOpen ? 'select-container__show' : ''
+				className={`${styles['select__options']} ${
+					isOpen ? styles['select__show'] : ''
 				}`}
 			>
-				<li className={"select-container__options--option"}>{""}</li>
+				<li className={styles['select__options--option']}>{''}</li>
 				{options.map((option, index) => (
 					<li
 						onClick={(e) => {
@@ -158,14 +157,14 @@ export const Select = ({
 							selectOption(option);
 							setIsOpen(false);
 						}}
-						className={`select-container__options--option ${
+						className={`${styles['select__options--option']} ${
 							isOptionSelected(option)
-								? 'select-container__options--selected'
+								? styles['select__options--selected']
 								: ''
 						} 
                 ${
 									index === highlightedIndex
-										? 'select-container__options--highlighted'
+										? styles['select__options--highlighted']
 										: ''
 								}`}
 						key={option}

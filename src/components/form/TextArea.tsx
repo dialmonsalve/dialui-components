@@ -1,6 +1,6 @@
 import type { ChangeEvent, TextareaHTMLAttributes } from 'react';
 
-import { HASH } from '@/const';
+import styles from '@/styles/components/form/textarea.module.scss';
 
 interface Props extends TextareaHTMLAttributes<HTMLTextAreaElement> {
 	onChange?: (e: ChangeEvent<HTMLTextAreaElement>) => void;
@@ -11,11 +11,10 @@ interface Props extends TextareaHTMLAttributes<HTMLTextAreaElement> {
 }
 
 const TextArea = ({
-	className="",
 	characterState,
+	name,
 	onChange,
 	totalCharacter = -50,
-	name,
 	...props
 }: Props) => {
 	const total =
@@ -31,12 +30,13 @@ const TextArea = ({
 				onChange={onChange}
 				value={characterState}
 				name={name}
-				className={`text-area${HASH} ${className}`}
+				className={styles['text-area']}
 				{...props}
 			/>
 			<span
-				className={`text-area${HASH}--value`}
-				style={{ color: `${isTotal === 0 ? 'red' : 'green'}` }}
+				className={`${styles['text-area__value']} ${
+					styles[`${isTotal === 0 ? 'text-area__red' : 'text-area__green'}`]
+				} `}
 			>
 				{isTotal}
 			</span>

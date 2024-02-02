@@ -1,9 +1,9 @@
 import type { ReactNode, ButtonHTMLAttributes } from 'react';
 
-import { IconSpinner } from './';
-import { RippleButton } from './';
+import { IconSpinner } from '.';
+import { RippleButton } from '.';
 
-import { HASH } from '@/const';
+import styles from '@/styles/components/UI/button.module.scss';
 import type { Colors, Size, Radius, SpinnerType, ButtonStyle } from '@/types';
 
 export interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -16,7 +16,6 @@ export interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
 	radius?: Radius;
 	size?: Size;
 	spinnerType?: SpinnerType;
-	className?: string;
 	type?: 'submit' | 'button' | 'reset';
 }
 
@@ -30,18 +29,19 @@ const Button = ({
 	radius = 'radius-0',
 	size = 'md-100',
 	spinnerType = 'eclipse',
-	className='',
 	type,
 	...props
 }: Props) => {
 	const isDisabled =
 		disabled || isLoading
-			? `btn-disabled${HASH}`
-			: `btn${HASH}__${backgroundColor} ${buttonStyle}${HASH}`;
+			? styles['btn-disabled']
+			: `${styles[`btn__${backgroundColor}`]} ${styles[buttonStyle]}`;
 
-	const isAnimated = hasInitialAnimation ? `btn${HASH}__animated` : '';
+	const isAnimated = hasInitialAnimation ? styles['btn__animated'] : '';
 
-	const ownClassName = `${className} btn${HASH} btn${HASH}__${size} btn${HASH}__${radius} ${isDisabled} ${isAnimated}`;
+	const ownClassName = `${styles.btn} ${styles[`btn__${size}`]} ${
+		styles[`btn__${radius}`]
+	} ${isDisabled} ${isAnimated}`;
 
 	const properties = {
 		disabled: disabled || isLoading,

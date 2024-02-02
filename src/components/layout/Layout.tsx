@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom';
 import { Header } from './Header';
 import { Sidebar } from './Sidebar';
 
-import { NavigationLink } from '../ui/NavigationLink';
+import { NavigationLink } from '../UI/NavigationLink';
 import { useSidebar } from '@/hooks/context';
 
 export const Layout = () => {
@@ -106,7 +106,7 @@ export const Layout = () => {
 						style={{ fontSize: '20px', height: '45px' }}
 						size='w-100'
 					>
-						InputForm
+						Form
 					</NavigationLink>
 				</li>
 			</Sidebar>

@@ -1,7 +1,7 @@
 import { useHandleCheckbox, useHandlerSelects } from "@/hooks";
 
 import { Card, CardActions, CardHead, CardMedia } from "./";
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/UI/Button";
 
 import { CheckboxData, Color, SelectData, Size } from "@/types";
 

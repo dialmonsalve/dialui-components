@@ -1,12 +1,21 @@
 import { useState, KeyboardEvent, type FocusEvent } from 'react';
 
+import styles from '@/styles/components/form/inputTags.module.scss';
+import { HASH } from '@/const';
+
 interface InputTagProps {
 	optionTags: string[];
 	onBlur?: (e: FocusEvent<HTMLInputElement>) => void;
 	onChange: (value: string[]) => void;
+	placeholder?: string;
 }
 
-const InputTags = ({ optionTags, onChange, onBlur }: InputTagProps) => {
+const InputTags = ({
+	optionTags,
+	placeholder,
+	onChange,
+	onBlur,
+}: InputTagProps) => {
 	const [value, setValue] = useState('');
 
 	const handleAddTags = (e: KeyboardEvent<HTMLDivElement>) => {
@@ -23,7 +32,7 @@ const InputTags = ({ optionTags, onChange, onBlur }: InputTagProps) => {
 	return (
 		<>
 			<input
-				className='input-tags'
+				className={`_input${HASH}`}
 				type='text'
 				name='tag'
 				value={value}
@@ -33,17 +42,18 @@ const InputTags = ({ optionTags, onChange, onBlur }: InputTagProps) => {
 					e.key === 'Enter' && e.preventDefault();
 					handleAddTags(e);
 				}}
+				placeholder={placeholder}
 			/>
-			<ul className='tags' >
-				<li className='tags__item'>
+			<ul className={styles.tags}>
+				<li className={styles.tags__item}>
 					{optionTags.map((tag) => (
 						<span
-							className='tags__badge'
+							className={styles.tags__badge}
 							key={tag}
 							onClick={() => handleDeleteTags(tag)}
 						>
 							{tag}
-							<span className='tags__remove'>&times;</span>
+							<span className={styles.tags__remove}>&times;</span>
 						</span>
 					))}
 				</li>

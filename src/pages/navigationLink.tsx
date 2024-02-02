@@ -1,4 +1,4 @@
-import { NavigationLink } from '@/components/ui/NavigationLink';
+import { NavigationLink } from '@/components/UI/NavigationLink';
 
 function NavigationLinkPage() {
 	return (

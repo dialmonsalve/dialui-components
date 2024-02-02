@@ -1,17 +1,17 @@
 @use '../../abstract/variables/globalVariables' as Gv;
 @use '../../abstract/mixins/globalMixins' as Gm;
 
-.select-container {
-  align-items: center;
+.select {
   background-color: Gv.$color-white-100;
-  border-radius: 12px;
   border: 1px solid Gv.$color-gray-200;
   color: Gv.$color-blue-600;
   display: flex;
   font-size: 14px;
   font-weight: 900;
-  gap: 8px;
   outline: none;
+  gap: 4px;
+  align-items: center;
+  border-radius: 12px;
   padding: 4px 5px;
   position: sticky;
 
@@ -33,7 +33,7 @@
       align-items: center;
       background-color: Gv.$color-blue-400 ;
       border-radius: 12px;
-      border: 1px solid Gv.$color-blue-100;
+      border: 1px solid Gv.$color-blue-600;
       color: Gv.$color-white-200;
       display: flex;
       font-size: 12px;
@@ -51,29 +51,15 @@
           background-color: Gv.$color-red-200;
           border-color: Gv.$color-red-300;
         }
-
-        &:hover,
-        >.remove-btn,
-        &:focus>.remove-btn {
-          color: Gv.$color-white-200;
-        }
-
-      }
-
-      &>.remove-btn,
-      &>.remove-btn {
-        font-size: 14px;
-        color: Gv.$color-white-200;
       }
     }
   }
 
-  &__clear-btn {
-    background: none;
+  &__clear {
     color: Gv.$color-red-400;
-    border: none;
-    outline: none;
     font-size: 28px;
+    display: flex;
+    gap: 4px;
 
     @include Gm.respond(phone) {
 
@@ -83,18 +69,25 @@
       }
     }
 
+    &::after {
+      content: "";
+      background-color: Gv.$color-black-300;
+      width: 1px;
+      height: 28px;
+    }
   }
 
   &__caret {
     border: .25em solid transparent;
     border-top-color: Gv.$color-red-500;
     translate: 0 25%;
-    font-size: 28px;
+    font-size: 24px;
 
     @include Gm.respond(phone) {
-      font-size: 40px;
+
       cursor: pointer;
     }
+
   }
 
   &__options {
