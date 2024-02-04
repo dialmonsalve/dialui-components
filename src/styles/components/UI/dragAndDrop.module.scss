@@ -1,0 +1,35 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.list-item {
+  display: flex;
+  gap: 8px;
+  min-width: 300px;
+  font-size: 16px;
+  background-color: rgba(15, 195, 195, .7);
+  cursor: grab;
+  border-radius: 8px;
+  transition: all 1s ease ;
+  color: white;
+  align-items: center;
+}
+
+.list-item > h3 {
+  margin: 0;
+}
+
+.list-item > span {
+  font-size: 16px;
+  font-weight: bold;
+  border-right: 2px solid white;
+  padding: 6px;
+  margin-left: 15px;
+  padding-right: 20px;
+}
+
+.next-position {
+  transition: all .2s ease-in-out;
+  background-color: #fbb;
+}

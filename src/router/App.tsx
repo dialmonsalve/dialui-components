@@ -11,6 +11,7 @@ import SpinnerPage from "@/pages/spinner";
 import { Layout } from "../components/layout/Layout";
 import NotificationPage from "@/pages/notification";
 import FormPage from "@/pages/form";
+import DragAndDropPage from "@/pages/dragDrop";
 
 const routes: RouteObject[] = [
 	{
@@ -51,6 +52,10 @@ const routes: RouteObject[] = [
 			{
 				path: "notification",
 				element: <NotificationPage />,
+			},
+			{
+				path: "drag",
+				element: <DragAndDropPage />,
 			},
 			{
 				path: "form",

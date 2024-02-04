@@ -109,6 +109,16 @@ export const Layout = () => {
 						Form
 					</NavigationLink>
 				</li>
+				<li className='item item--active' onClick={closeSidebar}>
+					<NavigationLink
+						to='/drag'
+						color={'white'}
+						style={{ fontSize: '20px', height: '45px' }}
+						size='w-100'
+					>
+						Drag
+					</NavigationLink>
+				</li>
 			</Sidebar>
 
 			<div className='right-layout'>

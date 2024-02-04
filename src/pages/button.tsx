@@ -62,7 +62,7 @@ function ButtonPage() {
 			<br />
 			<Button
 				buttonStyle="filled"
-				spinnerType="mouses"
+				spinnerType="mice"
 				backgroundColor="red-600"
 				size="md-300"
 				radius="radius-5"
@@ -92,7 +92,7 @@ function ButtonPage() {
 			<br />
 			<Button
 				buttonStyle="squares"
-				spinnerType="mouses"
+				spinnerType="mice"
 				backgroundColor="purple-400"
 				size="lg-300"
 				radius="radius-3"
