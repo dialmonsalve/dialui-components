@@ -2,7 +2,7 @@ import { DragEvent, ReactNode, useEffect, useState } from 'react';
 import styles from '@/styles/components/UI/dragAndDrop.module.scss';
 
 interface Props {
-	initialState: { id: number; content: string; description?: string }[];
+	initialState: { id: number; content?: string; description: string }[];
 	children?: ReactNode;
 }
 const DragAndDrop = ({ initialState, children }: Props) => {
@@ -45,32 +45,28 @@ const DragAndDrop = ({ initialState, children }: Props) => {
 		setDragOverItemIndex(undefined);
 	};
 
-	return (
-		<div className={styles.list}>
-			{entryState.map((sport, index) => (
-				<li
-					key={sport.id}
-					className={
-						dragOverItemIndex === index
-							? `${styles['list-item']} ${styles['next-position']}`
-							: styles['list-item']
-					}
-					draggable
-					onDragStart={() => handleDragStart(index)}
-					onDragOver={handleDragOver}
-					onDrop={() => handleDrop()}
-					onDragEnter={() => handleDragEnter(index)}
-					onDragLeave={handleDragLeave}
-					onDragEnd={handleDragEnd}
-				>
-					<span>{index + 1}</span>
-					<h3>{sport.content}</h3>
-					{sport.description && <p>{sport.description}</p>}
-					{children}
-				</li>
-			))}
-		</div>
-	);
+	return entryState.map((sport, index) => (
+		<li
+			key={sport.id}
+			className={
+				dragOverItemIndex === index
+					? `${styles['list-item']} ${styles['next-position']}`
+					: styles['list-item']
+			}
+			draggable
+			onDragStart={() => handleDragStart(index)}
+			onDragOver={handleDragOver}
+			onDrop={() => handleDrop()}
+			onDragEnter={() => handleDragEnter(index)}
+			onDragLeave={handleDragLeave}
+			onDragEnd={handleDragEnd}
+		>
+			<span>{index + 1}</span>
+			<h3>{sport.description}</h3>
+			{sport.content && <p>{sport.content}</p>}
+			{children}
+		</li>
+	));
 };
 
 export default DragAndDrop;

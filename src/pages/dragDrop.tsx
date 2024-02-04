@@ -3,51 +3,51 @@ import { DragAndDrop } from '@/components/UI';
 const entries = [
 	{
 		id: 1,
-		content: 'uno',
+		description: 'uno',
 	},
 	{
 		id: 2,
-		content: 'dos',
+		description: 'dos',
 	},
 	{
 		id: 3,
-		content: 'tres',
+		description: 'tres',
 	},
 	{
 		id: 4,
-		content: 'cuatro',
+		description: 'cuatro',
 	},
 	{
 		id: 5,
-		content: 'cinco',
+		description: 'cinco',
 	},
 	{
 		id: 6,
-		content: 'seis',
+		description: 'seis',
 	},
 	{
 		id: 7,
-		content: 'siete',
+		description: 'siete',
 	},
 	{
 		id: 8,
-		content: 'ocho',
+		description: 'ocho',
 	},
 	{
 		id: 9,
-		content: 'nueve',
-	}
+		description: 'nueve',
+	},
+	{
+		id: 10,
+		description: 'diez',
+	},
 ];
 function DragAndDropPage() {
 	return (
 		<>
-			{/* <Drag /> */}
-
-{/* <OtroDrag /> */}
-
-<DragAndDrop initialState={entries} />
-			{/* <NewDrag /> */}
-
+			<div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+				<DragAndDrop initialState={entries} />
+			</div>
 		</>
 	);
 }
