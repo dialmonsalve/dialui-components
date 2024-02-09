@@ -1,39 +1,30 @@
-import { ReactNode, useReducer } from 'react';
-import { SidebarContext, sidebarReducer } from '.';
-import { AlertProvider } from '../alert';
+import React, { ReactNode, useState } from 'react';
+import { SidebarContext } from './SidebarContext';
 
 export interface Props {
 	children: ReactNode;
 }
 
-export interface SidebarState {
-	isOpenSidebar: boolean;
-}
-
-const SIDEBAR_INITIAL_STATE: SidebarState = {
-	isOpenSidebar: false,
-};
-
-export const SidebarProvider = ({ children }: Props) => {
-	const [state, dispatch] = useReducer(sidebarReducer, SIDEBAR_INITIAL_STATE);
+export const SidebarProvider = React.memo(({ children }: Props) => {
+	const [isOpenSidebar, setIsOpenSidebar] = useState(false);
 
 	const openSidebar = () => {
-		dispatch({ type: '[Sidebar] - open sidebar' });
+		setIsOpenSidebar(true);
 	};
 
 	const closeSidebar = () => {
-		dispatch({ type: '[Sidebar] - close sidebar' });
+		setIsOpenSidebar(false);
 	};
 
 	return (
 		<SidebarContext.Provider
 			value={{
-				...state,
+				isOpenSidebar,
 				openSidebar,
 				closeSidebar,
 			}}
 		>
-			<AlertProvider>{children}</AlertProvider>
+			{children}
 		</SidebarContext.Provider>
 	);
-};
+});

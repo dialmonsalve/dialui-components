@@ -1,6 +1,6 @@
 import { ReactNode, useState } from 'react';
 
-import { AlertContext } from '.';
+import { AlertContext } from './AlertContext';
 
 export interface Props {
 	children: ReactNode;
@@ -10,7 +10,7 @@ export const AlertProvider = ({ children }: Props) => {
 	const [isOpenAlert, setIsOpenAlert] = useState(false);
 
 	const openAlert = (duration = 2) => {
-		setIsOpenAlert(true);
+		setIsOpenAlert(true);		
 
 		setTimeout(() => {
 			setIsOpenAlert(false);

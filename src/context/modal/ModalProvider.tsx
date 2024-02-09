@@ -1,53 +1,42 @@
-import { useReducer, ReactNode } from "react";
-import { ModalContext, modalReducer } from ".";
+import { ReactNode, useState } from 'react';
+import { ModalContext } from './ModalContext';
 
 export interface Props {
 	children: ReactNode;
 }
 
-export interface ModalState {
-	isOpenModal: boolean;
-	btnOk: "ok" | "";
-	btnYesNo: "yes" | "no" | "";
-}
-
-const MODAL_INITIAL_STATE: ModalState = {
-	isOpenModal: false,
-	btnOk: "",
-	btnYesNo: "",
-};
+type ModalResponse = 'ok' | 'yes' | 'no';
 
 export const ModalProvider = ({ children }: Props) => {
-	const [state, dispatch] = useReducer(modalReducer, MODAL_INITIAL_STATE);
+	const [isOpenModal, setIsOpenModal] = useState(false);
+	const [modalResponse, setModalResponse] = useState<ModalResponse>(
+		'' as ModalResponse,
+	);
 
 	const openModal = () => {
-		dispatch({ type: "[Modal] - open modal" });
+		setIsOpenModal(true);
 	};
 
 	const closeModal = () => {
-		dispatch({ type: "[Modal] - close modal" });
+		setIsOpenModal(false);
 	};
 
-	const setBtnOk = () => {
-		dispatch({ type: "[Modal] - button ok" });
-	};
-
-	const setBtnYesNo = (res: "yes" | "no") => {
-		if (res !== "yes" && res !== "no") {
+	const handleModalResponse = (res: ModalResponse) => {
+		if (res !== 'yes' && res !== 'no' && res !== 'ok') {
 			throw new Error(`'${res}' is not a valid response`);
 		}
-		dispatch({ type: "[Modal] - button Yes-no", payload: res });
+		setModalResponse(res);
 	};
 
 	const value = {
-		...state,
+		isOpenModal,
+		modalResponse,
 		openModal,
 		closeModal,
-		setBtnOk,
-		setBtnYesNo,
+		handleModalResponse,
 	};
 
 	return (
 		<ModalContext.Provider value={value}>{children}</ModalContext.Provider>
 	);
-};
+}

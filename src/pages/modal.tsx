@@ -2,7 +2,8 @@ import { Modal } from '@/components/UI';
 import { useModal } from '@/hooks/context';
 
 function ModalPage() {
-	const { openModal } = useModal();
+	const { openModal, modalResponse } = useModal();
+
 
 	return (
 		<>

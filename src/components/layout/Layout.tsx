@@ -11,7 +11,8 @@ export const Layout = () => {
 
 	const drawerWidth = 350;
 	return (
-		<div className='container'>
+		<>
+			<Header />
 			<Sidebar isAnimated drawerWidth={drawerWidth}>
 				<li className='item item--active' onClick={closeSidebar}>
 					<NavigationLink
@@ -132,10 +133,9 @@ export const Layout = () => {
 				</li>
 			</Sidebar>
 
-			<div className='right-layout'>
-				<Header />
+			<main className='right-layout'>
 				<Outlet />
-			</div>
-		</div>
+			</main>
+		</>
 	);
 };

@@ -1,9 +1,9 @@
 import { ReactNode } from "react";
-import { HandlerUIContext } from ".";
+import { HandlerUIContext } from "./HandlerUIContext";
 
-import { ModalProvider } from "../modal";
-import { AlertProvider } from "../alert";
-import { SidebarProvider } from "../sidebar";
+import { ModalProvider } from "../modal/ModalProvider";
+import { AlertProvider } from "../alert/AlertProvider";
+import { SidebarProvider } from "../sidebar/SidebarProvider";
 
 export interface Props {
 	children: ReactNode;
