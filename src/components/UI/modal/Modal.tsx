@@ -1,18 +1,18 @@
 import { useRef } from 'react';
 
-import { Info, Danger, Success, Warning } from '../icons';
+import { Info, Danger, Success, Warning } from '../../icons';
 
 import styles from '@/styles/components/UI/modal.module.scss';
 
 import type { Animation, MessageType } from '@/types';
-import { type Root } from 'react-dom/client';
+import { Button } from '..';
 
 interface Props {
 	description?: string;
 	animation?: Animation;
 	title?: string;
 	type: MessageType;
-	root: Root;
+	handleModalResponse?: (res: 'yes' | 'no' | 'ok' | 'cancel') => void;
 }
 
 const Modal = ({
@@ -20,13 +20,16 @@ const Modal = ({
 	type,
 	title = type,
 	animation = 'fade-in-out',
-	root,
-	...props
+	handleModalResponse,
 }: Props) => {
 	const ref = useRef<HTMLDivElement>(null);
 
-	function callback(e: AnimationEvent) {
-		root.unmount();
+	const setModalResponse = (res: 'yes' | 'no' | 'ok' | 'cancel') => {
+		handleModalResponse ? handleModalResponse(res) : false;
+		closeModal();
+	};
+
+	function callback() {
 		document.querySelector('#modal')?.remove();
 		ref.current?.removeEventListener('animationend', callback);
 	}
@@ -42,8 +45,7 @@ const Modal = ({
 
 	return (
 		<div
-			{...props}
-			onClick={closeModal}
+			onClick={()=>setModalResponse('cancel')}
 			className={`${styles.modal} ${styles[`modal-show-${animation}`]}`}
 			ref={ref}
 		>
@@ -51,7 +53,10 @@ const Modal = ({
 				onClick={handleContentClick}
 				className={`${styles['modal__container']} ${styles[`modal__${type}`]}`}
 			>
-				<span className={styles.modal__close} onClick={closeModal}>
+				<span
+					className={styles.modal__close}
+					onClick={()=>setModalResponse('cancel')}
+				>
 					X
 				</span>
 				<div className={styles.modal__content}>
@@ -79,6 +84,45 @@ const Modal = ({
 					</h4>
 
 					<p className={styles['modal__content--description']}>{description}</p>
+					<div className={styles.modal__buttons}>
+						{type === 'success' || type === 'info' ? (
+							<>
+								<Button
+									buttonStyle='ripple'
+									backgroundColor='outline-green'
+									radius='radius-2'
+									size='w-100'
+									color='white'
+									onClick={() => setModalResponse('ok')}
+								>
+									OK
+								</Button>
+							</>
+						) : (
+							<>
+								<Button
+									buttonStyle='ripple'
+									backgroundColor='outline-red'
+									radius='radius-2'
+									size='w-100'
+									color='white'
+									onClick={() => setModalResponse('yes')}
+								>
+									YES
+								</Button>
+								<Button
+									buttonStyle='ripple'
+									backgroundColor='outline-green'
+									radius='radius-2'
+									size='w-100'
+									color='white'
+									onClick={() => setModalResponse('no')}
+								>
+									NOT
+								</Button>
+							</>
+						)}
+					</div>
 				</div>
 			</div>
 		</div>

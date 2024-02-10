@@ -2,13 +2,10 @@ import { createContext } from 'react';
 
 interface ContextProps {
 	//Properties
-	isOpenModal: boolean;
-	modalResponse: 'ok' | 'yes' | 'no' |"";
+	modalResponse: 'ok' | 'yes' | 'no' | 'cancel';
 
 	// Functions
-	openModal: () => void;
-	closeModal: () => void;
-	handleModalResponse: (res: 'yes' | 'no' | 'ok') => void;
+	handleModalResponse: (res: 'yes' | 'no' | 'ok' | 'cancel') => void;
 }
 
 export const ModalContext = createContext({} as ContextProps);

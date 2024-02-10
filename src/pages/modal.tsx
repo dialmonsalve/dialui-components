@@ -1,19 +1,18 @@
-import { Modal } from '@/components/UI';
-import { useModal } from '@/hooks/context';
+import openModal from '@/components/UI/modal/openModal';
 
 function ModalPage() {
-	const { openModal, modalResponse } = useModal();
-
+	function handleModal() {
+		openModal({
+			animation: 'jumpToDown',
+			description: 'Desea Eliminar?',
+			title: 'Eliminar Usuario',
+			type: 'info',
+		});
+	}
 
 	return (
 		<>
-			<Modal
-				animation='jumpToDown'
-				type='error'
-				description='Esto es una descripción de prueba'
-				title='Desea eliminar?'
-			/>
-			<button type='button' onClick={openModal}>
+			<button type='button' onClick={handleModal}>
 				Open
 			</button>
 		</>

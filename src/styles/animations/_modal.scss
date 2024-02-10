@@ -1,97 +1,129 @@
-@use '../abstract/mixins/globalMixins' as Gm;
-
-@mixin status($opacity: 0, $visibility: hidden) {
-  opacity: $opacity;
-  visibility: $visibility;
-}
-
 .modal-show-fade-in-out {
-  @include status(1, visible);
+  animation: fadeIn .3s ease-in;
 }
 
 .modal-hide-fade-in-out {
-  @include status();
+  animation: fadeOut .3s ease-in;
 }
 
+// ! Modal show
 .modal-show-toUp {
-  transform: translateY(0);
-}
-
-.modal-hide-toUp {
-  @include status();
-  transform: translateY(100%);
-}
-
-.modal-show-toDown {
-  transform: translateY(0);
-}
-
-.modal-hide-toDown {
-  @include status();
-  transform: translateY(-100%);
+  animation: showUp .2s ease-in;
 }
 
 .modal-show-toRight {
-  transform: translateX(0);
+  animation: showRight .2s ease-in;
 }
 
-.modal-hide-toRight {
-  @include status();
-  transform: translateX(-100%);
+.modal-show-toDown {
+  animation: showDown .2s ease-in;
 }
 
-.modal-show-toLeft{
-  transform: translateX(0);
+.modal-show-toLeft {
+  animation: showLeft .2s ease-in;
 }
 
-.modal-hide-toLeft {
-  @include status();
-  transform: translateX(100%);
-}
+//! Modal show + jump
 
 .modal-show-jumpToUp {
   animation: modalAnimationUp 0.8s cubic-bezier(0.42, 0, 0.58, 5);
-}
-
-.modal-hide-jumpToUp {
-  @include status();
-  transform: translateY(100%);
-}
-
-.modal-show-jumpToDown{
-  animation: modalAnimationDown .8s cubic-bezier(0.42, 0, 0.58, 5);
-}
-
-.modal-hide-jumpToDown {
-  @include status();
-  transform: translateY(-100%);
 }
 
 .modal-show-jumpToRight {
   animation: modalAnimationRight .8s cubic-bezier(0.42, 0, 0.58, 5);
 }
 
-.modal-hide-jumpToRight {
-  @include status();
-  transform: translateX(-100%);
+.modal-show-jumpToDown {
+  animation: modalAnimationDown .8s cubic-bezier(0.42, 0, 0.58, 5);
 }
 
 .modal-show-jumpToLeft {
   animation: modalAnimationLeft .8s cubic-bezier(0.42, 0, 0.58, 5);
 }
 
-.modal-hide-jumpToLeft {
-  @include status();
-  transform: translateX(100%);
+//! Modal hide
+
+.modal-hide-toUp {
+  animation: hideUp .3s ease-in-out;
 }
 
-@keyframes modalAnimationDown {
+.modal-hide-toRight {
+  animation: hideRight .3s ease-in-out;
+}
+
+.modal-hide-toDown {
+  animation: hideDown .3s ease-in-out;
+}
+
+.modal-hide-toLeft {
+  animation: hideLeft .3s ease-in-out;
+}
+
+//! Modal + hide + jump
+
+.modal-hide-jumpToUp {
+  animation: hideUp .3s ease-in-out;
+}
+
+.modal-hide-jumpToRight {
+  animation: hideRight .3s ease-in-out;
+}
+
+.modal-hide-jumpToDown {
+  animation: hideDown .3s ease-in-out;
+}
+
+.modal-hide-jumpToLeft {
+  animation: hideLeft .3s ease-in-out;
+}
+
+@keyframes showUp {
   0% {
-    transform: translateY(-50%);
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes showRight {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes showDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes showLeft {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes modalAnimationUp {
+  0% {
+    transform: translateY(50%);
   }
 
   50% {
-    transform: translateY(-20px);
+    transform: translateY(20px);
   }
 
   100% {
@@ -113,6 +145,20 @@
   }
 }
 
+@keyframes modalAnimationDown {
+  0% {
+    transform: translateY(-50%);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
 @keyframes modalAnimationLeft {
   0% {
     transform: translateX(50%);
@@ -127,16 +173,43 @@
   }
 }
 
-@keyframes modalAnimationUp {
-  0% {
-    transform: translateY(50%);
-  }
+@keyframes hideUp {
+  100% {
+    transform: translateY(100%);
 
-  50% {
-    transform: translateY(20px);
+  }
+}
+
+@keyframes hideDown {
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes hideRight {
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes hideLeft {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
 
   100% {
-    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
   }
 }

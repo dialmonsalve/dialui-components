@@ -1,22 +1,22 @@
-import { RouteObject, createBrowserRouter } from "react-router-dom";
+import { RouteObject, createBrowserRouter } from 'react-router-dom';
 
-import IconSpinner from "../pages/iconSpinner";
-import ButtonPage from "../pages/button";
-import HomePage from "../pages/index";
-import ModalPage from "../pages/modal";
-import NotFoundPage from "../pages/notFound";
-import AlertPage from "../pages/alert";
-import NavigationLinkPage from "../pages/navigationLink";
-import SpinnerPage from "@/pages/spinner";
-import { Layout } from "../components/layout/Layout";
-import NotificationPage from "@/pages/notification";
-import FormPage from "@/pages/form";
-import DragAndDropPage from "@/pages/dragDrop";
-import InfiniteScrollPage from "@/pages/infiniteScroll";
+import IconSpinner from '../pages/iconSpinner';
+import ButtonPage from '../pages/button';
+import HomePage from '../pages/index';
+import ModalPage from '../pages/modal';
+import NotFoundPage from '../pages/notFound';
+import AlertPage from '../pages/alert';
+import NavigationLinkPage from '../pages/navigationLink';
+import SpinnerPage from '@/pages/spinner';
+import { Layout } from '../components/layout/Layout';
+import NotificationPage from '@/pages/notification';
+import FormPage from '@/pages/form';
+import DragAndDropPage from '@/pages/dragDrop';
+import InfiniteScrollPage from '@/pages/infiniteScroll';
 
 const routes: RouteObject[] = [
 	{
-		path: "/",
+		path: '/',
 		element: <Layout />,
 		errorElement: <NotFoundPage />,
 		children: [
@@ -25,45 +25,45 @@ const routes: RouteObject[] = [
 				element: <HomePage />,
 			},
 			{
-				path: "icon-spinner",
+				path: 'icon-spinner',
 				element: <IconSpinner />,
 			},
 			{
-				path: "buttons",
+				path: 'buttons',
 				element: <ButtonPage />,
 			},
 			{
-				path: "modal",
+				path: 'modal',
 				element: <ModalPage />,
 			},
 			{
-				path: "alert",
+				path: 'alert',
 				element: <AlertPage />,
 			},
 
 			{
-				path: "navigation-link",
+				path: 'navigation-link',
 				element: <NavigationLinkPage />,
 			},
 			{
-				path: "spinner",
+				path: 'spinner',
 				element: <SpinnerPage />,
 			},
 
 			{
-				path: "notification",
+				path: 'notification',
 				element: <NotificationPage />,
 			},
 			{
-				path: "drag",
+				path: 'drag',
 				element: <DragAndDropPage />,
 			},
 			{
-				path: "form",
+				path: 'form',
 				element: <FormPage />,
 			},
 			{
-				path: "infinite-scroll",
+				path: 'infinite-scroll',
 				element: <InfiniteScrollPage />,
 			},
 		],

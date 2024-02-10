@@ -1,23 +1,25 @@
-import { Alert } from "@/components/UI";
-import { useAlert } from "@/hooks/context";
+import openAlert from '@/components/UI/alert/openAlert';
 
 function AlertPage() {
-	const { openAlert } = useAlert();
 	const click = () => {
-		openAlert(20);
+
+		const database = false
+		const typeError = database ? 'error' : 'info';
+		const typeMessage = database ? "Usuario no autorizado para la acción" : "Usuario eliminado con éxito" 
+		openAlert({
+			message: typeMessage,
+			type: typeError,
+			// sideX: 'right',
+			// sideY: 'down',
+			// duration: 4000,
+		});
 	};
 
 	return (
 		<>
-			<Alert
-				message="El usuario ha sido creado exitosamente"
-				type="error"
-				sideX="left"
-				sideY="up"
-					
-			/>
-
-			<button type="button" onClick={click}>click</button>
+			<button type='button' onClick={click}>
+				click
+			</button>
 		</>
 	);
 }

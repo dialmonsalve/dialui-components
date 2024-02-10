@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import openModal from '../card/openModal';
+
 
 interface Props {
 	backgroundColor?: string;
@@ -19,20 +19,21 @@ export const Header = ({
 	children,
 	...props
 }: Props) => {
+
 	return (
 		<>
-		<button type='button' onClick={()=>openModal()} >Open modal</button>
-		<header
-			className='header'
-			style={{
-				backgroundColor,
-				padding,
-				borderRadius,
-			}}
-			{...props}
+
+			<header
+				className='header'
+				style={{
+					backgroundColor,
+					padding,
+					borderRadius,
+				}}
+				{...props}
 			>
-			{children}
-		</header>
-			</>
+				{children}
+			</header>
+		</>
 	);
 };

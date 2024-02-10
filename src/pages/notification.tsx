@@ -10,7 +10,6 @@ const form = {
 
 function NotificationPage() {
 	const notal = [55];
-
 	const { handleCheckboxChange, checkboxState, resetCheckbox } =
 		useCheckbox({initialCheckbox: form});
 
