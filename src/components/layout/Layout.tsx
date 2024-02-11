@@ -131,6 +131,16 @@ export const Layout = () => {
 						infinite scroll
 					</NavigationLink>
 				</li>
+				<li className='item item--active' onClick={closeSidebar}>
+					<NavigationLink
+						to='/table'
+						color={'white'}
+						style={{ fontSize: '20px', height: '45px' }}
+						size='w-100'
+					>
+						table
+					</NavigationLink>
+				</li>
 			</Sidebar>
 
 			<main className='right-layout'>

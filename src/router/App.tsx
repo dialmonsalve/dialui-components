@@ -13,6 +13,7 @@ import NotificationPage from '@/pages/notification';
 import FormPage from '@/pages/form';
 import DragAndDropPage from '@/pages/dragDrop';
 import InfiniteScrollPage from '@/pages/infiniteScroll';
+import TablePage from '@/pages/table';
 
 const routes: RouteObject[] = [
 	{
@@ -65,6 +66,10 @@ const routes: RouteObject[] = [
 			{
 				path: 'infinite-scroll',
 				element: <InfiniteScrollPage />,
+			},
+			{
+				path: 'table',
+				element: <TablePage />,
 			},
 		],
 	},

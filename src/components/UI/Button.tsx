@@ -49,6 +49,19 @@ const Button = ({
 		...props,
 	};
 
+	if (buttonStyle === 'table')
+		return (
+			<button
+				className={`${styles.btn} ${styles[`btn__${backgroundColor}`]}  ${
+					styles.btn__table
+				}`}
+				type='button'
+				{...props}
+			>
+				{children}
+			</button>
+		);
+
 	if (buttonStyle !== 'ripple') {
 		return (
 			<button type={type} {...properties}>

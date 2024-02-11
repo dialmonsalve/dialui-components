@@ -12,16 +12,28 @@
   justify-content: center;
   align-content: center;
   font-weight: 900;
-  padding: 12px 20px;
   position: relative;
 
   &__animated {
     animation: moveInBottom .2s ease-out 0.5s backwards;
   }
+
+  &__table {
+    font-size: 8px;
+    padding: 3px 5px;
+    box-shadow: 1px 1px 5px rgba(Gv.$color-black-200, .2);
+    border-radius: 16px;
+  }
+
+  @include Gm.respond(tab-port) {
+    font-size: 10px;
+
+  }
 }
 
 //! Button beat
 .beat {
+  padding: 12px 20px;
 
   @include Gm.respond(tab-port) {
     transition: transform .3s ease;
@@ -58,6 +70,7 @@
 
 //! Button squares
 .squares {
+  padding: 12px 20px;
 
   @include Gm.respond(tab-port) {
     &:hover {
@@ -112,6 +125,7 @@
   align-items: center;
   text-align: center;
   justify-content: center;
+  padding: 12px 20px;
 
   & span {
     position: absolute;
@@ -125,6 +139,7 @@
 
 //! Button filled
 .filled {
+  padding: 12px 20px;
 
   @include Gm.respond(tab-port) {
 
@@ -157,6 +172,8 @@
       animation: filled 3s linear both;
     }
   }
+
+
 }
 
 .btn-disabled {
@@ -172,6 +189,7 @@
 }
 
 .slide-down {
+  padding: 12px 20px;
 
   @include Gm.respond(tab-port) {
     z-index: 0;

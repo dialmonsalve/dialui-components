@@ -49,7 +49,8 @@ export type ButtonStyle =
 	| 'ripple'
 	| 'beat'
 	| 'filled'
-	| 'bright';
+	| 'bright'
+	| 'table';
 
 // export type Content =
 //   'center' | 'flex-end' | 'flex-start' |
@@ -65,9 +66,4 @@ export type ButtonStyle =
 
 // export type Position = "static" | "relative" | "absolute" | "sticky" | "fixed";
 
-export type SpinnerType =
-	| 'fleas'
-	| 'squares'
-	| 'eclipse'
-	| 'mice'
-	| 'circles';
+export type SpinnerType = 'fleas' | 'squares' | 'eclipse' | 'mice' | 'circles';
