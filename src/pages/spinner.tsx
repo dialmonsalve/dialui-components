@@ -1,8 +1,8 @@
-import { Spinner } from '@/components/UI';
+import { Spinner } from '../prod/components/UI';
 
 function SpinnerPage() {
 	const prueba = false;
-	return prueba ? <Spinner spinnerType='mice' /> : <div>Spinners</div>;
+	return prueba ? <Spinner spinnerType='squares' /> : <div>Spinners</div>;
 }
 
 export default SpinnerPage;

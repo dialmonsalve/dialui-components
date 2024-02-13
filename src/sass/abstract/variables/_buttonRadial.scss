@@ -1,0 +1,25 @@
+.btn {
+  &__radius-0 {
+    border-radius: 0;
+  }
+
+  &__radius-1 {
+    border-radius: 4px;
+  }
+
+  &__radius-2 {
+    border-radius: 6px;
+  }
+
+  &__radius-3 {
+    border-radius: 8px;
+  }
+
+  &__radius-4 {
+    border-radius: 12px;
+  }
+
+  &__radius-5 {
+    border-radius: 16px;
+  }
+}

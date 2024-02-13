@@ -1,0 +1,71 @@
+@use "../abstract/mixins" as m;
+
+.sidebar {
+  @include m.sidebar();
+}
+
+.animation-sidebar {
+  @include m.sidebar();
+  animation: sidebarAnimationRight 0.5s cubic-bezier(0.58, 0, 0.42, 1);
+}
+
+.menu {
+  background-color: rgb(100, 29, 221);
+  background-image: url("/assets/arrow-left.svg");
+  background-position: 70% center;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  border-radius: 0 1rem 1rem 0;
+  color: white;
+
+  display: flex;
+  padding: 0.5rem;
+  position: sticky;
+  width: 10%;
+
+  &:hover {
+    cursor: pointer;
+    // background-color: rgba(0, 0, 0, 0.6);
+  }
+}
+
+.menu-hide {
+  background-image: url("/assets/arrow-right.svg");
+}
+
+.hide-sidebar {
+  transform: translateX(-93%);
+}
+
+.animation-hide-sidebar {
+  transform: translateX(-93%);
+  animation: sidebarAnimationLeft;
+}
+
+@keyframes sidebarAnimationLeft {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(100px);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes sidebarAnimationRight {
+  0% {
+    transform: translateX(-88%);
+  }
+
+  50% {
+    transform: translateX(20%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}

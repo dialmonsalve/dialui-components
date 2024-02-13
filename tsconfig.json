@@ -14,8 +14,8 @@
         "src/styles/index"
       ],
       "@/types": [
-        "src/types/*",
-        "src/types/index"
+        "src/prod/types/*",
+        "src/prod/types/index"
       ],
       "@/hooks": [
         "src/hooks/*",

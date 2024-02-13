@@ -1,7 +1,7 @@
-import { Notification } from '@/components/UI';
-import { Checkbox } from '@/components/form';
+import { Notification } from '../prod/components/UI';
+import { Checkbox } from '../prod/components/form';
 
-import { useCheckbox } from '@/hooks/form';
+import { useCheckbox } from '../prod/hooks/form';
 
 const form = {
 	respA: true,
@@ -10,7 +10,7 @@ const form = {
 
 function NotificationPage() {
 	const notal = [55];
-	const { handleCheckboxChange, checkboxState, resetCheckbox } =
+	const { handleCheckboxChange, checkboxState,  } =
 		useCheckbox({initialCheckbox: form});
 
 	return (

@@ -1,4 +1,4 @@
-import openModal from '@/components/UI/modal/openModal';
+import openModal from '../prod/components/UI/modal/openModal';
 
 function ModalPage() {
 	function handleModal() {

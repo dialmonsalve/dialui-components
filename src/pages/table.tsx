@@ -4,8 +4,8 @@ import Table, {
 	Cell,
 	Row,
 	Title,
-} from '@/components/UI/Table';
-import Button from '@/components/UI/Button';
+} from '../prod/components/UI/Table';
+import Button from '../prod/components/UI/Button';
 
 export default function TablePage() {
 	const backgroundColor = 'white';

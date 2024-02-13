@@ -1,4 +1,4 @@
-import openAlert from '@/components/UI/alert/openAlert';
+import openAlert from '../prod/components/UI/alert/openAlert';
 
 function AlertPage() {
 	const click = () => {

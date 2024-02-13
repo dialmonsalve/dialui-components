@@ -1,0 +1,27 @@
+@use "../abstract/mixins/globalMixins" as Gm;
+@use "../abstract/variables/globalVariables" as Gv;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: rgb(222, 222, 223);
+  margin: 0;
+  font-family: Gv.$font-family;
+
+  @include Gm.respond(tab-port) {
+    padding: 0;
+  }
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  border-radius: 1rem;
+}

@@ -4,9 +4,14 @@ import {
 	InputTags,
 	Select,
 	TextArea,
-} from '@/components/form';
-import { Button } from '@/components/UI';
-import { useCheckbox, useInput, useInputTags, useSelect } from '@/hooks/form';
+} from '../prod/components/form';
+import { Button } from '../prod/components/UI';
+import {
+	useCheckbox,
+	useInput,
+	useInputTags,
+	useSelect,
+} from '../prod/hooks/form';
 import { type FormEvent } from 'react';
 
 const form = {
@@ -100,19 +105,21 @@ const FormControlPage = () => {
 			onSubmit={handleSubmit}
 			method='POST'
 		>
-		<Input
+			<Input
 				type='text'
 				value={inputState.name}
 				placeholder='Name'
 				name='name'
 				onChange={handleInputChange}
-			/>
+				disabled
+				/>
 			<Input
 				type='text'
 				name='lastName'
 				value={inputState.lastName}
 				placeholder='LastName'
 				onChange={handleInputChange}
+				disabled
 			/>
 			<Input
 				type='phone'

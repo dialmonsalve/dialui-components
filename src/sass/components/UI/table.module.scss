@@ -1,0 +1,254 @@
+@use "../../abstract/variables/globalVariables" as Gv;
+@use "../../abstract/mixins/globalMixins" as Gm;
+
+.table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.td,
+.th {
+  padding: 8px;
+  border-top: 1px solid Gv.$color-gray-100;
+  border-bottom: 1px solid Gv.$color-gray-100;
+  font-size: 12px;
+
+  @include Gm.respond(tab-port) {
+    font-size: 16px;
+  }
+}
+
+.thead .tr {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.thead {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.tbody .tr {
+  &:active {
+    outline: 2px solid Gv.$color-white-100;
+  }
+}
+
+.tr {
+  @include Gm.respond(tab-port) {
+    transition: background-color 0.2s ease-in-out, color 0.2s ease;
+  }
+}
+
+.thead > .tr .th {
+  padding: 14px 8px;
+}
+
+// .td:nth-child(1),
+// .th:nth-child(1) {
+//   position: sticky;
+//   left: 0;
+//   background-color: Gv.$color-red-600;
+//   text-align: center;
+//   // font-weight: 700;
+// }
+
+// .th:nth-child(1) {
+//   background-color: Gv.$color-gray-400;
+// }
+
+@mixin colorTable($background, $color: Gv.$color-gray-400) {
+  background-color: $background;
+  color: $color;
+}
+
+// yellow
+.tr-yellow:nth-child(even) {
+  @include colorTable(Gv.$color-yellow-100, Gv.$color-gray-300);
+}
+
+.tr-yellow:nth-child(odd) {
+  @include colorTable(Gv.$color-yellow-200, Gv.$color-gray-300);
+}
+
+.tbody .tr-yellow {
+  &:hover {
+    @include Gm.respond(tab-port) {
+      @include colorTable(Gv.$color-yellow-600, Gv.$color-white-100);
+    }
+  }
+}
+
+.thead .tr-yellow {
+  @include colorTable(Gv.$color-yellow-600, Gv.$color-white-100);
+}
+
+// blue
+.tr-blue:nth-child(even) {
+  @include colorTable(Gv.$color-blue-100);
+}
+
+.tr-blue:nth-child(odd) {
+  @include colorTable(Gv.$color-blue-200);
+}
+
+.tbody .tr-blue {
+  &:hover {
+    @include Gm.respond(tab-port) {
+      @include colorTable(Gv.$color-blue-500, Gv.$color-white-100);
+    }
+  }
+}
+
+.thead .tr-blue {
+  @include colorTable(Gv.$color-blue-600, Gv.$color-white-100);
+}
+
+// red
+.tr-red:nth-child(even) {
+  @include colorTable(Gv.$color-red-300);
+}
+
+.tr-red:nth-child(odd) {
+  @include colorTable(Gv.$color-red-200);
+}
+
+.tbody .tr-red {
+  &:hover {
+    @include Gm.respond(tab-port) {
+      @include colorTable(Gv.$color-red-500, Gv.$color-white-100);
+    }
+  }
+}
+
+.thead .tr-red {
+  @include colorTable(Gv.$color-red-600, Gv.$color-white-100);
+}
+
+// green
+.tr-green:nth-child(even) {
+  @include colorTable(Gv.$color-green-100);
+}
+
+.tr-green:nth-child(odd) {
+  @include colorTable(Gv.$color-green-200);
+}
+
+.tbody .tr-green {
+  &:hover {
+    @include Gm.respond(tab-port) {
+      @include colorTable(Gv.$color-green-500, Gv.$color-white-100);
+    }
+  }
+}
+
+.thead .tr-green {
+  @include colorTable(Gv.$color-green-600, Gv.$color-white-100);
+}
+
+// purple
+.tr-purple:nth-child(even) {
+  @include colorTable(Gv.$color-purple-100);
+}
+
+.tr-purple:nth-child(odd) {
+  @include colorTable(Gv.$color-purple-200);
+}
+
+.tbody .tr-purple {
+  &:hover {
+    @include Gm.respond(tab-port) {
+      @include colorTable(Gv.$color-purple-500, Gv.$color-white-100);
+    }
+  }
+}
+
+.thead .tr-purple {
+  @include colorTable(Gv.$color-purple-500, Gv.$color-white-100);
+}
+
+// pink
+.tr-pink:nth-child(even) {
+  @include colorTable(Gv.$color-pink-100);
+}
+
+.tr-pink:nth-child(odd) {
+  @include colorTable(Gv.$color-pink-200);
+}
+
+.tbody .tr-pink {
+  &:hover {
+    @include Gm.respond(tab-port) {
+      @include colorTable(Gv.$color-pink-400, Gv.$color-white-100);
+    }
+  }
+}
+
+.thead .tr-pink {
+  @include colorTable(Gv.$color-pink-400, Gv.$color-white-100);
+}
+
+//gray
+.tr-gray:nth-child(even) {
+  @include colorTable(Gv.$color-gray-100);
+}
+
+.tr-gray:nth-child(odd) {
+  @include colorTable(Gv.$color-gray-200);
+}
+
+.tbody .tr-gray {
+  &:hover {
+    @include Gm.respond(tab-port) {
+      @include colorTable(Gv.$color-gray-400, Gv.$color-white-100);
+    }
+  }
+}
+
+.thead .tr-gray {
+  @include colorTable(Gv.$color-gray-400, Gv.$color-white-100);
+}
+
+//black
+.tr-black:nth-child(even) {
+  @include colorTable(Gv.$color-black-300, Gv.$color-white-100);
+}
+
+.tr-black:nth-child(odd) {
+  @include colorTable(Gv.$color-black-200, Gv.$color-white-100);
+}
+
+.tbody .tr-black {
+  &:hover {
+    @include Gm.respond(tab-port) {
+      @include colorTable(Gv.$color-black-400, Gv.$color-white-100);
+    }
+  }
+}
+
+.thead .tr-black {
+  @include colorTable(Gv.$color-black-400, Gv.$color-white-100);
+}
+
+//white
+.tr-white:nth-child(even) {
+  @include colorTable(Gv.$color-white-100, Gv.$color-gray-300);
+}
+
+.tr-white:nth-child(odd) {
+  @include colorTable(Gv.$color-white-200, Gv.$color-gray-300);
+}
+
+.tbody .tr-white {
+  &:hover {
+    @include Gm.respond(tab-port) {
+      @include colorTable(Gv.$color-black-200, Gv.$color-white-100);
+    }
+  }
+
+  &:active {
+    outline: 2px solid Gv.$color-red-400;
+  }
+}

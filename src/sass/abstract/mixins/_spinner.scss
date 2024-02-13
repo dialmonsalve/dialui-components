@@ -1,0 +1,69 @@
+@use "../variables/globalVariables" as Gv;
+@forward "../../animations/iconSpinner";
+
+@mixin spinner() {
+  background-color: transparent;
+  position: absolute;
+  max-width: 100%;
+}
+
+@mixin containerMice($gap) {
+  display: flex;
+  justify-content: space-between;
+  animation: mice 1s linear infinite;
+  gap: $gap;
+}
+
+@mixin mice($height, $width) {
+  border-radius: 50%;
+  height: $height;
+  width: $width;
+  background: linear-gradient(
+    45deg,
+    Gv.$color-black-400 0%,
+    black 10%,
+    white 100%
+  );
+}
+
+@mixin containerFleas($gap) {
+  display: flex;
+  gap: $gap;
+}
+
+@mixin fleas($height, $width) {
+  border-radius: 50%;
+  display: block;
+  height: $height;
+  width: $width;
+  background: linear-gradient(
+    135deg,
+    Gv.$color-black-400 0%,
+    Gv.$color-black-400 50%,
+    Gv.$color-red-600 100%
+  );
+}
+
+@mixin containerCircle() {
+  display: flex;
+  gap: 3px;
+}
+
+@mixin iconSpinnerCircle($translateY, $height, $width, $background, $delay) {
+  transform: translateY($translateY);
+  animation: circles 0.3s linear infinite $delay;
+  height: $height;
+  width: $width;
+  background: $background;
+  border: 1px solid white;
+}
+
+@mixin squares($height, $width, $background) {
+  width: $width;
+  height: $height;
+  background: $background;
+}
+
+
+
+

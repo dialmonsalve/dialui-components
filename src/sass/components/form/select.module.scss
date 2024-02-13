@@ -1,0 +1,139 @@
+@use "../../abstract/variables/globalVariables" as Gv;
+@use "../../abstract/mixins/globalMixins" as Gm;
+
+.select {
+  background-color: Gv.$color-white-100;
+  border: 1px solid Gv.$color-gray-200;
+  color: Gv.$color-blue-600;
+  display: flex;
+  font-size: 14px;
+  font-weight: 900;
+  outline: none;
+  gap: 4px;
+  align-items: center;
+  border-radius: 12px;
+  padding: 4px 5px;
+  position: sticky;
+
+  &:focus {
+    border-color: Gv.$color-green-600;
+  }
+
+  @include Gm.respond(phone) {
+    padding: 6px 8px;
+  }
+
+  &__span {
+    flex-grow: 1;
+    display: flex;
+    gap: 2px;
+    flex-wrap: wrap;
+
+    &--option-badge {
+      align-items: center;
+      background-color: Gv.$color-blue-400;
+      border-radius: 12px;
+      border: 1px solid Gv.$color-blue-600;
+      color: Gv.$color-white-200;
+      display: flex;
+      font-size: 12px;
+      gap: 6px;
+      outline: none;
+      padding: 2px 8px;
+
+      @include Gm.respond(tab-port) {
+        border-radius: 8px;
+        font-size: 14px;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+          background-color: Gv.$color-red-200;
+          border-color: Gv.$color-red-300;
+        }
+      }
+    }
+  }
+
+  &__clear {
+    color: Gv.$color-red-400;
+    font-size: 28px;
+    display: flex;
+    gap: 4px;
+
+    @include Gm.respond(phone) {
+      &:focus,
+      &:hover {
+        color: Gv.$color-red-600;
+      }
+    }
+
+    &::after {
+      content: "";
+      background-color: Gv.$color-black-300;
+      width: 1px;
+      height: 28px;
+    }
+  }
+
+  &__caret {
+    border: 0.25em solid transparent;
+    border-top-color: Gv.$color-red-500;
+    translate: 0 25%;
+    font-size: 24px;
+
+    @include Gm.respond(phone) {
+      cursor: pointer;
+    }
+  }
+
+  &__options {
+    position: absolute;
+    margin: 0;
+    padding: 10px 8px;
+    display: none;
+    max-height: 140px;
+    overflow-y: auto;
+    border-radius: 5px;
+    width: 100%;
+    left: 0;
+    top: calc(100% + 4px);
+    background-color: Gv.$color-white-100;
+    font-size: 14px;
+    color: Gv.$color-blue-400;
+    z-index: 999;
+    font-weight: 300;
+
+    @include Gm.respond(phone) {
+      font-size: 14px;
+      max-height: 140px;
+    }
+
+    &--option {
+      padding: 4px 4px;
+      margin-bottom: 2px;
+
+      @include Gm.respond(phone) {
+        cursor: pointer;
+      }
+    }
+
+    &--selected {
+      background-color: Gv.$color-red-300;
+      border-radius: 6px;
+      color: Gv.$color-white-100;
+    }
+
+    &--highlighted {
+      background-color: Gv.$color-blue-400;
+      color: Gv.$color-white-100;
+      border: 1px solid Gv.$color-blue-100;
+      border-radius: 6px;
+      box-shadow: 1px 1px 5px Gv.$color-black-300;
+    }
+  }
+
+  &__show {
+    display: block;
+  }
+}

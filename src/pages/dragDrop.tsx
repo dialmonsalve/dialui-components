@@ -1,4 +1,4 @@
-import { DragAndDrop } from '@/components/UI';
+import { DragAndDrop } from '../prod/components/UI';
 
 const entries = [
 	{

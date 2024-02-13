@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom';
 import { Header } from './Header';
 import { Sidebar } from './Sidebar';
 
-import { NavigationLink } from '../UI/NavigationLink';
+import { NavigationLink } from '../NavigationLink';
 import { useSidebar } from '@/hooks/context';
 
 export const Layout = () => {
@@ -67,18 +67,6 @@ export const Layout = () => {
 						alert
 					</NavigationLink>
 				</li>
-
-				<li className='item item--active' onClick={closeSidebar}>
-					<NavigationLink
-						to='/navigation-link'
-						color={'white'}
-						style={{ fontSize: '20px', height: '45px' }}
-						size='w-100'
-					>
-						link
-					</NavigationLink>
-				</li>
-
 				<li className='item item--active' onClick={closeSidebar}>
 					<NavigationLink
 						to='/spinner'

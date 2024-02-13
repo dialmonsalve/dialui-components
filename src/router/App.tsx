@@ -6,7 +6,6 @@ import HomePage from '../pages/index';
 import ModalPage from '../pages/modal';
 import NotFoundPage from '../pages/notFound';
 import AlertPage from '../pages/alert';
-import NavigationLinkPage from '../pages/navigationLink';
 import SpinnerPage from '@/pages/spinner';
 import { Layout } from '../components/layout/Layout';
 import NotificationPage from '@/pages/notification';
@@ -40,11 +39,6 @@ const routes: RouteObject[] = [
 			{
 				path: 'alert',
 				element: <AlertPage />,
-			},
-
-			{
-				path: 'navigation-link',
-				element: <NavigationLinkPage />,
 			},
 			{
 				path: 'spinner',
