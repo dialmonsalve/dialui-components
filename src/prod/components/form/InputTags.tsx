@@ -3,30 +3,51 @@ import { useState, KeyboardEvent, type FocusEvent } from 'react';
 import styles from '../../styles/components/form/inputTags.module.css';
 import inputStyle from '../../styles/components/form/input.module.css';
 
-interface InputTagProps {
-	optionTags: string[];
-	onBlur?: (e: FocusEvent<HTMLInputElement>) => void;
-	onChange: (value: string[]) => void;
+// !turn off to test
+// interface InputTagProps {
+// 	placeholder?: string;
+// 	tags: string[];
+// 	onBlur?: (e: FocusEvent<HTMLInputElement>) => void;
+// 	setTags: (value: string[]) => void;
+// }
+
+//! turn on to test 
+interface InputTagTest {
 	placeholder?: string;
+	initialInputTags:string[]
+	onBlur?: (e: FocusEvent<HTMLInputElement>) => void;
 }
 
-const InputTags = ({
-	optionTags,
-	placeholder,
-	onChange,
-	onBlur,
-}: InputTagProps) => {
+// !turn off to test
+// const InputTags = ({ placeholder, onBlur, tags, setTags }: InputTagProps) => {
+
+//! turn on to test 
+const InputTags = ({ placeholder, onBlur, initialInputTags }: InputTagTest) => {
 	const [value, setValue] = useState('');
 
+	//! turn on to test
+	const [tags, setTags] = useState<string[]>(initialInputTags);
+
 	const handleAddTags = (e: KeyboardEvent<HTMLDivElement>) => {
+
+		const valueLowercase = value.trim().toLocaleLowerCase()
+		if (valueLowercase === '') return;
+		if (tags.includes(valueLowercase)) return;
 		if (e.key === 'Enter') {
-			if (optionTags.includes(value.trim().toLocaleLowerCase())) return;
-			onChange([...optionTags, value]);
+			setTags([...tags, value]);
 			setValue('');
 		}
 	};
+	
+	const addToClick = () => {
+		const valueLowercase = value.trim().toLocaleLowerCase()
+		if (valueLowercase === '') return;
+		if (tags.includes(valueLowercase)) return;
+		setTags([...tags, valueLowercase]);
+	};
+
 	const handleDeleteTags = (compareTag: string) => {
-		onChange(optionTags.filter((oldTag) => oldTag !== compareTag));
+		setTags(tags.filter((oldTag) => oldTag !== compareTag));
 	};
 
 	return (
@@ -36,29 +57,32 @@ const InputTags = ({
 				type='text'
 				name='tag'
 				value={value}
-				onBlur={onBlur}
 				onChange={(e) => setValue(e.target.value)}
 				onKeyDown={(e) => {
 					e.key === 'Enter' && e.preventDefault();
 					handleAddTags(e);
 				}}
 				placeholder={placeholder}
+				onBlur={onBlur}
 			/>
+			<button type='button' onClick={addToClick}>
+				add
+			</button>
 			<ul className={styles.tags}>
-				<li className={styles.tags__item}>
-					{optionTags.map((tag) => (
+				{tags.map((tag) => (
+					<li role='listitem' className={styles.tags__item} key={tag}>
 						<span
 							className={styles.tags__badge}
-							key={tag}
 							onClick={() => handleDeleteTags(tag)}
 						>
-							{tag}
+							{tag.trim().toLocaleLowerCase()}
 							<span className={styles.tags__remove}>&times;</span>
 						</span>
-					))}
-				</li>
+					</li>
+				))}
 			</ul>
 		</>
 	);
 };
-export default InputTags;
+
+export default InputTags

@@ -13,11 +13,13 @@ interface Props {
 	title?: string;
 	type: MessageType;
 	handleModalResponse?: (res: 'yes' | 'no' | 'ok' | 'cancel') => void;
+	dataid?:string
 }
 
 const Modal = ({
 	description,
 	type,
+	dataid="modal",
 	title = type,
 	animation = 'fade-in-out',
 	handleModalResponse,
@@ -48,6 +50,7 @@ const Modal = ({
 			onClick={()=>setModalResponse('cancel')}
 			className={`${styles.modal} ${styles[`modal-show-${animation}`]}`}
 			ref={ref}
+			data-testid={dataid}
 		>
 			<div
 				onClick={handleContentClick}

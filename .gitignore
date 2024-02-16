@@ -24,4 +24,6 @@ dist-ssr
 *.sw?
 
 src/prod/styles/abstract/*
+tests/
+coverage/
 

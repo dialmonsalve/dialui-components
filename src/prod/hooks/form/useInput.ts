@@ -27,10 +27,10 @@ export const useInput = <T>({initialInput}: {initialInput: T}) => {
 		}
 		const { name, value } = e.target;
 
-		setInputState((prevState) => ({
-			...prevState,
+		setInputState({
+			...inputState,
 			[name]: value,
-		}));
+		});
 	};
 
 	const handleInputBlur = (e: ReactFocusEvent) => {
@@ -55,6 +55,7 @@ export const useInput = <T>({initialInput}: {initialInput: T}) => {
 
 	return {
 		inputState,
+		...inputState,
 		// isSubmitted,
 		inputTouched,
 

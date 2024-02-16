@@ -1,22 +1,44 @@
-import type { ChangeEvent, TextareaHTMLAttributes } from 'react';
+import { useState, type ChangeEvent, type TextareaHTMLAttributes } from 'react';
 
 import styles from '../../styles/components/form/textarea.module.css';
 
-interface Props extends TextareaHTMLAttributes<HTMLTextAreaElement> {
-	onChange?: (e: ChangeEvent<HTMLTextAreaElement>) => void;
+//! turn off to test
+// interface Props extends TextareaHTMLAttributes<HTMLTextAreaElement> {
+// 	onChange?: (e: ChangeEvent<HTMLTextAreaElement>) => void;
+// 	className?: string;
+// 	totalCharacter?: number;
+// 	name: string;
+// 	characterState: string;
+// }
+
+//! turn on to test
+interface PropsTest extends TextareaHTMLAttributes<HTMLTextAreaElement> {
 	className?: string;
 	totalCharacter?: number;
 	name: string;
-	characterState: string;
+	placeholder?: string;
 }
-
 const TextArea = ({
-	characterState,
 	name,
-	onChange,
-	totalCharacter = -50,
+	placeholder,
+	totalCharacter = 0,
 	...props
-}: Props) => {
+}: PropsTest) => {
+	const [characterState, setCharacterState] = useState('');
+
+	const onChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
+		setCharacterState(e.target.value);
+	};
+
+	//! turn off to test
+	// const TextArea = ({
+	// 	characterState,
+	// 	name,
+	// 	onChange,
+	// 	totalCharacter = -50,
+	// 	...props
+	// }: Props) => {
+
 	const total =
 		totalCharacter > 0
 			? totalCharacter - characterState?.length
@@ -31,6 +53,7 @@ const TextArea = ({
 				value={characterState}
 				name={name}
 				className={styles['text-area']}
+				placeholder={placeholder}
 				{...props}
 			/>
 			<span

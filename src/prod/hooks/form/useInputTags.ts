@@ -1,15 +1,15 @@
 import { useEffect, useState } from 'react';
 
 export const useInputTags = ({
-	initialInputTag,
-}: { initialInputTag: string[] }) => {
-	const [tagsState, setTagsState] = useState(initialInputTag);
+	initialInputTags,
+}: { initialInputTags: string[] }) => {
+	const [tagsState, setTagsState] = useState(initialInputTags);
 
 	useEffect(() => {
-		setTagsState(initialInputTag);
-	}, [initialInputTag]);
+		setTagsState(initialInputTags);
+	}, [initialInputTags]);
 
-	const resetInputTags = () => setTagsState(initialInputTag);
+	const resetInputTags = () => setTagsState(initialInputTags);
 
 	return {
 		tagsState,

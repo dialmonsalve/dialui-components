@@ -30,21 +30,21 @@ const multiOptions = ['COMPRAS', 'VENTAS', 'LOGISTICA', 'CONTABILIDAD'];
 const simpleOptions = ['UNO', 'DOS', 'TRES', 'CUATRO'];
 
 const databaseTags: string[] = [
-	'harry',
-	'hola',
-	'cincuenta',
-	'setenta',
-	'ochenta',
-	'noventa',
-	'cien',
-	'cientodiez',
-	'cientosetenta',
-	'cientoochenta',
-	'Pepe',
-	'berta',
-	'aurelio',
-	'doscientossetenta',
-	'doscientosochentano',
+	// 'harry',
+	// 'hola',
+	// 'cincuenta',
+	// 'setenta',
+	// 'ochenta',
+	// 'noventa',
+	// 'cien',
+	// 'cientodiez',
+	// 'cientosetenta',
+	// 'cientoochenta',
+	// 'Pepe',
+	// 'berta',
+	// 'aurelio',
+	// 'doscientossetenta',
+	// 'doscientosochentano',
 ];
 
 const FormControlPage = () => {
@@ -71,7 +71,7 @@ const FormControlPage = () => {
 	});
 
 	const { tagsState, handleInputTagsChange, resetInputTags } = useInputTags({
-		initialInputTag: databaseTags,
+		initialInputTags: databaseTags,
 	});
 	const handleSubmit = (e: FormEvent) => {
 		e.preventDefault();
@@ -155,8 +155,9 @@ const FormControlPage = () => {
 
 			<InputTags
 				placeholder='Tags'
-				optionTags={tagsState}
-				onChange={handleInputTagsChange}
+				tags={tagsState}
+				setTags={handleInputTagsChange}
+				
 			/>
 
 			<div style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}>
