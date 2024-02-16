@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { HandlerUIContext } from './HandlerUIContext';
+import { UIContext } from './UIContext';
 
 import { ModalProvider } from '../modal/ModalProvider';
 
@@ -7,10 +7,10 @@ export interface Props {
 	children: ReactNode;
 }
 
-export const ProviderHandlerUI = ({ children }: Props) => {
+export const UIProvider = ({ children }: Props) => {
 	return (
-		<HandlerUIContext.Provider value={{}}>
+		<UIContext.Provider value={{}}>
 				<ModalProvider>{children}</ModalProvider>
-		</HandlerUIContext.Provider>
+		</UIContext.Provider>
 	);
 };
