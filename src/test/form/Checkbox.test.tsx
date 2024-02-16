@@ -6,7 +6,6 @@ import { act } from 'react-dom/test-utils';
 import user from '@testing-library/user-event';
 import { ERROR_CHECK_MESSAGE } from '../helpers/const';
 
-
 type ChangeEvt = ChangeEvent<HTMLInputElement>;
 const multiCheck = {
 	serieA: false,
@@ -19,13 +18,13 @@ describe('Checkbox', () => {
 	});
 
 	describe('User', () => {
-		
-		
 		test('should reset all the checkbox', async () => {
 			user.setup();
-			const { result } = renderHook(() =>
-				useCheckbox({ initialCheckbox: multiCheck }),
-			);
+			const { result } = renderHook(useCheckbox, {
+				initialProps: {
+					initialCheckbox: multiCheck,
+				},
+			});
 			const { checkboxState, handleCheckboxChange } = result.current;
 			render(
 				<Checkbox
@@ -44,9 +43,11 @@ describe('Checkbox', () => {
 
 		test('should change from true to false with a multiple checkbox', async () => {
 			user.setup();
-			const { result } = renderHook(() =>
-				useCheckbox({ initialCheckbox: multiCheck }),
-			);
+			const { result } = renderHook(useCheckbox, {
+				initialProps: {
+					initialCheckbox: multiCheck,
+				},
+			});
 			const { checkboxState, handleCheckboxChange } = result.current;
 			render(
 				<Checkbox
@@ -74,7 +75,6 @@ describe('Checkbox', () => {
 					name='isChecked'
 				/>,
 			);
-			
 
 			const checkbox = screen.getByRole('checkbox');
 			await user.click(checkbox);
@@ -84,7 +84,6 @@ describe('Checkbox', () => {
 	});
 
 	describe('Development', () => {
-		
 		test('Should have a checkbox', () => {
 			const { result } = renderHook(() =>
 				useCheckbox({ initialCheckbox: multiCheck }),

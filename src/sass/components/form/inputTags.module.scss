@@ -8,17 +8,14 @@
   padding: 4px 4px 5px;
   overflow: auto;
   min-height: 34px;
+  flex-grow: 0;
+  display: flex;
+  gap: 4px 8px;
+  flex-wrap: wrap;
 
   @include Gm.respond(phone) {
     padding: 4px 8px;
     overflow: none;
-  }
-
-  &__item {
-    flex-grow: 0;
-    display: flex;
-    gap: 4px 8px;
-    flex-wrap: wrap;
   }
 
   &__badge {

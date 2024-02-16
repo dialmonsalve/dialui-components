@@ -4,29 +4,29 @@ import styles from '../../styles/components/form/inputTags.module.css';
 import inputStyle from '../../styles/components/form/input.module.css';
 
 // !turn off to test
-// interface InputTagProps {
-// 	placeholder?: string;
-// 	tags: string[];
-// 	onBlur?: (e: FocusEvent<HTMLInputElement>) => void;
-// 	setTags: (value: string[]) => void;
-// }
-
-//! turn on to test 
-interface InputTagTest {
+interface InputTagProps {
 	placeholder?: string;
-	initialInputTags:string[]
+	tags: string[];
 	onBlur?: (e: FocusEvent<HTMLInputElement>) => void;
+	setTags: (value: string[]) => void;
 }
 
+//! turn on to test 
+// interface InputTagTest {
+// 	placeholder?: string;
+// 	initialInputTags:string[]
+// 	onBlur?: (e: FocusEvent<HTMLInputElement>) => void;
+// }
+
 // !turn off to test
-// const InputTags = ({ placeholder, onBlur, tags, setTags }: InputTagProps) => {
+const InputTags = ({ placeholder, onBlur, tags, setTags }: InputTagProps) => {
 
 //! turn on to test 
-const InputTags = ({ placeholder, onBlur, initialInputTags }: InputTagTest) => {
+// const InputTags = ({ placeholder, onBlur, initialInputTags }: InputTagTest) => {
 	const [value, setValue] = useState('');
 
 	//! turn on to test
-	const [tags, setTags] = useState<string[]>(initialInputTags);
+	// const [tags, setTags] = useState<string[]>(initialInputTags);
 
 	const handleAddTags = (e: KeyboardEvent<HTMLDivElement>) => {
 
@@ -44,6 +44,7 @@ const InputTags = ({ placeholder, onBlur, initialInputTags }: InputTagTest) => {
 		if (valueLowercase === '') return;
 		if (tags.includes(valueLowercase)) return;
 		setTags([...tags, valueLowercase]);
+		setValue('');
 	};
 
 	const handleDeleteTags = (compareTag: string) => {
