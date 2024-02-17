@@ -50,12 +50,12 @@
 	"scripts": {
 		"dev": "vite",
 		"build": "tsc && vite build",
-		"sass": "sass --watch --no-source-map --style=compressed src/dev/sass:src/styles",
-		"styles:prod": "sass --no-source-map --style=compressed src/dev/sass:dist/styles",
-		"clean": "rimraf dist/",
-		"clean:prod": "rimraf dist/main.d.ts dist/main.js dist/dev dist/styles/abstract",
-		"push:npm": "np",
 		"dialui": "npm run clean && tsc && npm run styles:prod && npm run clean:prod",
+		"sass": "sass --watch --no-source-map --style=compressed src/develop/sass:src/styles",
+		"styles:prod": "sass --no-source-map --style=compressed src/develop/sass:dist/styles",
+		"clean": "rimraf dist/",
+		"clean:prod": "rimraf dist/main.d.ts dist/main.js dist/develop dist/styles/abstract",
+		"push:npm": "np",
 		"test": "vitest --coverage --ui"
 	},
 	"devDependencies": {
