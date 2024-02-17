@@ -2,6 +2,7 @@ import { useState, KeyboardEvent, type FocusEvent } from 'react';
 
 import styles from '../../styles/components/form/inputTags.module.css';
 import inputStyle from '../../styles/components/form/input.module.css';
+import { Button } from '../UI';
 
 interface InputTagProps {
 	placeholder?: string;
@@ -50,9 +51,18 @@ const InputTags = ({ placeholder, onBlur, tags, setTags }: InputTagProps) => {
 				placeholder={placeholder}
 				onBlur={onBlur}
 			/>
-			<button type='button' onClick={addToClick}>
-				add
-			</button>
+			<Button
+				disabled={value.length === 0}
+				type='button'
+				onClick={addToClick}
+				buttonStyle='squares'
+				size='w-100'
+				radius='radius-2'
+				style={{textTransform:"uppercase", fontSize:"14px"}}
+				backgroundColor='green-300'
+			>
+				add tag
+			</Button>
 			<ul className={styles.tags}>
 				{tags.map((tag) => (
 					<li role='listitem' className={styles.tags__item} key={tag}>

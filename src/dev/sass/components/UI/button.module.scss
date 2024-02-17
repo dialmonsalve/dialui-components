@@ -73,7 +73,7 @@
 
   @include Gm.respond(tab-port) {
     &:hover {
-      box-shadow: 0 0 20px Gv.$color-blue-400;
+      box-shadow: 0 0 20px Gv.$color-black-200;
     }
 
     &:hover span:nth-child(1) {

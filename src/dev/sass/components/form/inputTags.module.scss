@@ -20,11 +20,12 @@
 
   &__badge {
     background-color: Gv.$color-blue-400;
-    border-radius: 8px;
+    border-radius: 10px;
     border: 1px solid Gv.$color-blue-600;
     color: Gv.$color-white-200;
     display: flex;
     font-size: 12px;
+    font-weight: 700;
     gap: 4px;
     padding: 2px 8px;
 
