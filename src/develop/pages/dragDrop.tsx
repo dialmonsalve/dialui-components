@@ -1,5 +1,5 @@
 import DragAndDrop from '../../components/UI/DragAndDrop';
-import { useDrag } from '../../hooks/useDrag';
+import useDrag from '../../hooks/useDragAndDrop';
 
 const initialState = [
 	{

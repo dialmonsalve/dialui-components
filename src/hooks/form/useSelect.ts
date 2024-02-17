@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export const useSelect = <T extends string | string[] | undefined>({
+const useSelect = <T extends string | string[] | undefined>({
 	initialSelect,
 }: { initialSelect: T }) => {
 	const [selectState, setSelectState] = useState<T>(initialSelect);
@@ -17,3 +17,5 @@ export const useSelect = <T extends string | string[] | undefined>({
 		resetSelect,
 	};
 };
+
+export default useSelect

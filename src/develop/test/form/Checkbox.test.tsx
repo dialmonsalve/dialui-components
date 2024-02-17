@@ -4,7 +4,7 @@ import user from '@testing-library/user-event';
 import { act } from 'react-dom/test-utils';
 
 import { Checkbox } from '../../../components/form';
-import { useCheckbox } from '../../../hooks/form';
+import { useCheckbox } from '../../../hooks';
 
 import { ERROR_CHECK_MESSAGE } from '../helpers/const';
 

@@ -12,7 +12,7 @@ const [value, setValue] = useState(string, boolean, e.g.)
 />
 	`;
 
-export const useInput = <T>({initialInput}: {initialInput: T}) => {
+const useInput = <T>({ initialInput }: { initialInput: T }) => {
 	const [inputState, setInputState] = useState(initialInput);
 	// const [isSubmitted, setIsSubmitted] = useState(false);
 	const [inputTouched, setInputTouched] = useState<IsTouched>(null);
@@ -38,17 +38,6 @@ export const useInput = <T>({initialInput}: {initialInput: T}) => {
 		setInputTouched((prevIsTouched) => ({ ...prevIsTouched, [name]: true }));
 	};
 
-	// const areFieldsValid = (
-	//   errors: ErrorMessages<typeof initial | undefined>
-	// ) => {
-	//   setIsSubmitted(true);
-	//   if (errors) {
-	//     return false;
-	//   }
-	//   setIsTouched(null);
-	//   setIsSubmitted(false);
-	//   return true;
-	// };
 	const resetInput = () => {
 		setInputState(initialInput);
 	};
@@ -74,3 +63,6 @@ type ReactFocusEvent = React.FocusEvent<Elements>;
 // type ReactEvent = React.Event<HTMLFormElement>
 
 type Elements = HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement;
+
+
+export default useInput

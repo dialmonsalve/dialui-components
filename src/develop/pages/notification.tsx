@@ -1,7 +1,7 @@
 import { Notification } from '../../components/UI';
 import { Checkbox } from '../../components/form';
 
-import { useCheckbox } from '../../hooks/form';
+import { useCheckbox } from '../../hooks';
 
 const form = {
 	respA: true,

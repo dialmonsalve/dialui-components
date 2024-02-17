@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export const useInputTags = ({
+const useInputTags = ({
 	initialInputTags,
 }: { initialInputTags: string[] }) => {
 	const [tagsState, setTagsState] = useState(initialInputTags);
@@ -17,3 +17,5 @@ export const useInputTags = ({
 		resetInputTags,
 	};
 };
+
+export default useInputTags

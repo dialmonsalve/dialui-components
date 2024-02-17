@@ -4,9 +4,9 @@ interface InitialState<T> {
 	initialState: T;
 }
 
-export function useDrag<T extends { position: number }[]>({
+const useDragAndDrop = <T extends { position: number }[]>({
 	initialState,
-}: InitialState<T>) {
+}: InitialState<T>) => {
 	const [entryState, setEntryState] = useState(
 		initialState.sort((a, b) => a.position - b.position),
 	);
@@ -65,4 +65,6 @@ export function useDrag<T extends { position: number }[]>({
 		handleDragLeave,
 		handleDragEnd,
 	};
-}
+};
+
+export default useDragAndDrop;

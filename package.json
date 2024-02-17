@@ -27,7 +27,7 @@
 	"license": "MIT",
 	"homepage": "https://diegomonsalve.com //! TODO",
 	"repository": {
-		"url": "https://github.com/dialmonsalve/MyComponents",
+		"url": "https://github.com/dialmonsalve/dialui-components",
 		"type": "git"
 	},
 	"files": [
@@ -49,12 +49,13 @@
 	},
 	"scripts": {
 		"dev": "vite",
-		"build": "npm run clean && tsc && npm run styles:prod && npm run clean:prod",
+		"build": "tsc && vite build",
 		"sass": "sass --watch --no-source-map --style=compressed src/dev/sass:src/styles",
 		"styles:prod": "sass --no-source-map --style=compressed src/dev/sass:dist/styles",
 		"clean": "rimraf dist/",
 		"clean:prod": "rimraf dist/main.d.ts dist/main.js dist/dev dist/styles/abstract",
 		"push:npm": "np",
+		"dialui": "npm run clean && tsc && npm run styles:prod && npm run clean:prod",
 		"test": "vitest --coverage --ui"
 	},
 	"devDependencies": {

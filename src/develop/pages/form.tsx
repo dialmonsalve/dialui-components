@@ -11,7 +11,7 @@ import {
 	useInput,
 	useInputTags,
 	useSelect,
-} from '../../hooks/form';
+} from '../../hooks';
 import { type FormEvent } from 'react';
 
 const form = {

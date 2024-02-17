@@ -4,7 +4,8 @@ import { cleanup, render, renderHook, screen } from '@testing-library/react';
 import { Input } from '../../../components/form';
 
 import { beforeEach } from 'vitest';
-import { useInput } from '../../../hooks/form';
+import { useInput } from '../../../hooks';
+
 import { ChangeEvent } from 'react';
 
 import '@testing-library/jest-dom';

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { CheckboxData } from "../types";
+import { CheckboxData } from "../../types";
 
 type CheckHandlerResult = [CheckboxData, (name: string) => void];
 

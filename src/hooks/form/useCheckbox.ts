@@ -11,7 +11,7 @@ const [isChecked, setIsChecked] = useState(false or true)
 />
 `;
 
-export const useCheckbox = <T>({ initialCheckbox }: { initialCheckbox: T }) => {
+const useCheckbox = <T>({ initialCheckbox }: { initialCheckbox: T }) => {
 	const [checkboxState, setCheckboxState] = useState(initialCheckbox);
 
 	useEffect(() => {
@@ -43,3 +43,5 @@ export const useCheckbox = <T>({ initialCheckbox }: { initialCheckbox: T }) => {
 		resetCheckbox,
 	};
 };
+
+export default useCheckbox
