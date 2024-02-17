@@ -1,4 +1,4 @@
-import { TextArea } from '../../../components/form';
+import  TextArea  from './TextArea';
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';

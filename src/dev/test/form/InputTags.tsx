@@ -1,17 +1,18 @@
 import { useState, KeyboardEvent, type FocusEvent } from 'react';
 
-import styles from '../../styles/components/form/inputTags.module.css';
-import inputStyle from '../../styles/components/form/input.module.css';
+import styles from '../../../styles/components/form/inputTags.module.css';
+import inputStyle from '../../../styles/components/form/input.module.css';
 
-interface InputTagProps {
+interface InputTagTest {
 	placeholder?: string;
-	tags: string[];
+	initialInputTags: string[];
 	onBlur?: (e: FocusEvent<HTMLInputElement>) => void;
-	setTags: (value: string[]) => void;
 }
 
-const InputTags = ({ placeholder, onBlur, tags, setTags }: InputTagProps) => {
+const InputTags = ({ placeholder, onBlur, initialInputTags }: InputTagTest) => {
 	const [value, setValue] = useState('');
+
+	const [tags, setTags] = useState<string[]>(initialInputTags);
 
 	const handleAddTags = (e: KeyboardEvent<HTMLDivElement>) => {
 		const valueLowercase = value.trim().toLocaleLowerCase();

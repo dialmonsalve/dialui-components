@@ -4,7 +4,7 @@ import { Info, Danger, Success, Warning } from '../../icons';
 
 import styles from '../../../styles/components/UI/modal.module.css';
 
-import type { Animation, MessageType } from '@/types';
+import type { Animation, MessageType } from '../../../types';
 import { Button } from '..';
 
 interface Props {

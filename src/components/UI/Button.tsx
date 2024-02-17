@@ -4,7 +4,7 @@ import { useRippleButton } from '../../hooks/useRippleButton';
 import { IconSpinner } from '.';
 
 import styles from '../../styles/components/UI/button.module.css';
-import type { Colors, Size, Radius, SpinnerType, ButtonStyle } from '@/types';
+import type { Colors, Size, Radius, SpinnerType, ButtonStyle } from '../../types';
 
 export interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
 	backgroundColor?: Colors;

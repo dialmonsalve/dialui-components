@@ -1,4 +1,4 @@
-import { Animation, MessageType } from '@/types';
+import { Animation, MessageType } from '../../../types';
 import { Suspense, lazy } from 'react';
 import { createRoot } from 'react-dom/client';
 

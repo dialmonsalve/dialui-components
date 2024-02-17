@@ -1,7 +1,7 @@
 import { CSSProperties, DragEvent, ReactNode } from 'react';
 
 import styles from '../../styles/components/UI/dragAndDrop.module.css';
-import { BasicColors } from '@/types';
+import { BasicColors } from '../../types';
 
 interface DragAndDropProps {
 	entry: { id: number };

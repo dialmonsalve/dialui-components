@@ -8,4 +8,6 @@ interface ContextProps {
 	handleModalResponse: (res: 'yes' | 'no' | 'ok' | 'cancel') => void;
 }
 
-export const ModalContext = createContext({} as ContextProps);
+const ModalContext = createContext({} as ContextProps);
+
+export default ModalContext

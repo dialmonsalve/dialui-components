@@ -1,6 +1,6 @@
 import { cleanup, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { InputTags } from '../../../components/form';
+import InputTags from './InputTags';
 
 import '@testing-library/jest-dom';
 
@@ -18,7 +18,6 @@ describe('Input Tags', () => {
 		const inputText = screen.getByRole('textbox');
 		expect(inputText).toBeDefined();
 	});
-
 
 	test('Should have a button add', () => {
 		const buttonAdd = screen.getByRole('button', { name: 'add' });
@@ -115,7 +114,7 @@ describe('Input Tags', () => {
 		await user.click(buttonShow);
 
 		const spanItem = screen.queryByText('hello');
-		expect(spanItem).toHaveTextContent("hello");
+		expect(spanItem).toHaveTextContent('hello');
 	});
 
 	test('Should allow to erase a tag', async () => {

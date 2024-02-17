@@ -1,6 +1,14 @@
 import openModal from '../../components/UI/modal/openModal';
+import useModal from '../../hooks/context/useModal';
 
 function ModalPage() {
+
+
+	const modal = useModal()
+
+	console.log(modal.modalResponse);
+	
+	
 	function handleModal() {
 		openModal({
 			animation: 'jumpToDown',

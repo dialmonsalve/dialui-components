@@ -2,7 +2,7 @@ import { HalfRounded } from '../icons/HalfRounded';
 import { Needle } from '../icons/Needle';
 import { LP } from '../icons/LP';
 
-import { SpinnerType } from '@/types';
+import { SpinnerType } from '../../types';
 
 import styles from '../../styles/components/UI/spinner.module.css';
 import { IconSpinner } from '.';

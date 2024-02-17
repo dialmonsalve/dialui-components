@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-import { router } from './dev/router/App.tsx';
+import { router } from './dev/router/App';
 import { RouterProvider } from 'react-router-dom';
-import { UIProvider } from './context/ui/UIProvider.tsx';
-import { SidebarProvider } from './dev/hooks/context/sidebar/SidebarProvider.tsx';
+import { UIProvider } from './context/ui/UIProvider';
+import { SidebarProvider } from './dev/hooks/context/sidebar/SidebarProvider';
 
 
 import './dev/devStyles/index.scss';

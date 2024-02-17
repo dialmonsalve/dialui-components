@@ -1,4 +1,4 @@
-import type { SpinnerType } from '@/types';
+import type { SpinnerType } from '../../types';
 
 import iconSpinner from '../../styles/components/UI/iconSpinner.module.css';
 import bigSpinner from '../../styles/components/UI/bigSpinner.module.css';

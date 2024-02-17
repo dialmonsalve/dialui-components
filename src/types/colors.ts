@@ -1,6 +1,6 @@
 export type Colors = keyof typeof PalletColors;
 
-const PalletColors = {
+export const PalletColors = {
 	'black-100': 'color-black-100',
 	'black-200': 'color-black-200',
 	'black-300': 'color-black-300',

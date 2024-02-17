@@ -1,5 +1,5 @@
 import { useState } from "react";
-import type { Colors, SelectData, Size } from "@/types";
+import type { Colors, SelectData, Size } from "../types";
 
 type SelectsHandlerResult = {
 	selectState: SelectData<Colors | Size>;

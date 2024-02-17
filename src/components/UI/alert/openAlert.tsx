@@ -1,7 +1,7 @@
 import { Suspense, lazy } from 'react';
 import { createRoot } from 'react-dom/client';
 
-import { MessageType } from '@/types';
+import { MessageType } from '../../../types';
 
 interface Props {
 	message: string;

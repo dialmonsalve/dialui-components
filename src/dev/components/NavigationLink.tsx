@@ -1,5 +1,5 @@
 import { AnchorHTMLAttributes, MouseEvent } from "react";
-import type { Colors, Size, Radius } from "@/types";
+import type { Colors, Size, Radius } from "../../types";
 import { NavLink } from "react-router-dom";
 
 export interface NavigationProps
