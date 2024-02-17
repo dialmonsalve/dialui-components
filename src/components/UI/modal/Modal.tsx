@@ -91,7 +91,7 @@ const Modal = ({
 						{type === 'success' || type === 'info' ? (
 							<>
 								<Button
-									buttonStyle='ripple'
+									buttonStyle='normal'
 									backgroundColor='outline-green'
 									radius='radius-2'
 									size='w-100'
@@ -104,7 +104,7 @@ const Modal = ({
 						) : (
 							<>
 								<Button
-									buttonStyle='ripple'
+									buttonStyle='normal'
 									backgroundColor='outline-red'
 									radius='radius-2'
 									size='w-100'
@@ -114,7 +114,7 @@ const Modal = ({
 									YES
 								</Button>
 								<Button
-									buttonStyle='ripple'
+									buttonStyle='normal'
 									backgroundColor='outline-green'
 									radius='radius-2'
 									size='w-100'
