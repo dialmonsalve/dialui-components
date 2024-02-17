@@ -5,14 +5,16 @@
   color: Gv.$color-white-200;
   cursor: grab;
   padding: 10px;
-
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2), 3px 3px 2px rgba(0, 0, 0, 0.2),
+    4px 4px 2px rgba(0, 0, 0, 0.2);
+    transition: box-shadow .4s ease;
 }
 
 .list-yellow {
   &:nth-child(odd) {
     background-color: Gv.$color-yellow-200;
   }
-  
+
   &:nth-child(even) {
     background-color: Gv.$color-yellow-400;
   }
@@ -22,7 +24,7 @@
   &:nth-child(odd) {
     background-color: Gv.$color-blue-100;
   }
-  
+
   &:nth-child(even) {
     background-color: Gv.$color-blue-300;
   }
@@ -32,7 +34,7 @@
   &:nth-child(odd) {
     background-color: Gv.$color-red-100;
   }
-  
+
   &:nth-child(even) {
     background-color: Gv.$color-red-300;
   }
@@ -42,7 +44,7 @@
   &:nth-child(odd) {
     background-color: Gv.$color-green-100;
   }
-  
+
   &:nth-child(even) {
     background-color: Gv.$color-green-300;
   }
@@ -52,7 +54,7 @@
   &:nth-child(odd) {
     background-color: Gv.$color-gray-100;
   }
-  
+
   &:nth-child(even) {
     background-color: Gv.$color-gray-300;
   }
@@ -63,7 +65,7 @@
     background-color: Gv.$color-gray-100;
     color: Gv.$color-gray-400;
   }
-  
+
   &:nth-child(even) {
     background-color: Gv.$color-white-200;
     color: Gv.$color-gray-400;
@@ -74,7 +76,7 @@
   &:nth-child(odd) {
     background-color: Gv.$color-purple-200;
   }
-  
+
   &:nth-child(even) {
     background-color: Gv.$color-purple-400;
   }
@@ -83,16 +85,16 @@
 .list-pink {
   &:nth-child(odd) {
     background-color: Gv.$color-pink-100;
-
   }
-  
+
   &:nth-child(even) {
     background-color: Gv.$color-pink-200;
-
   }
 }
 
 .next-position:nth-child(odd),
 .next-position:nth-child(even) {
-  background-color: Gv.$color-red-400;
+  background-color: Gv.$color-gray-100;
+  box-shadow: none;
+  border: thin dashed white;
 }

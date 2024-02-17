@@ -7,7 +7,7 @@
 	"scripts": {
 		"dev": "vite",
 		"build": "tsc && vite build",
-		"sass": "sass --watch --no-source-map --style=compressed src/dev/sass:src/prod/styles",
+		"sass": "sass --watch --no-source-map --style=compressed src/dev/sass:src/styles",
 		"test": "vitest --coverage --ui"
 	},
 	"peerDependencies": {

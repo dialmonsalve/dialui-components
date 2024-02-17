@@ -21,6 +21,7 @@ export function useDrag<T extends { position: number }[]>({
 	const handleDragStart = (index: number) => {
 		setDragItemIndex(index);
 	};
+
 	const handleDragOver = (event: DragEvent) => {
 		event.preventDefault();
 	};
