@@ -1,7 +1,7 @@
 {
 	"name": "dialui-components",
 	"private": false,
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"type": "module",
 	"main": "dist/types/index.js",
 	"typings": "dist/index.d.ts",
@@ -54,7 +54,7 @@
 		"styles:prod": "sass --no-source-map --style=compressed src/dev/sass:dist/styles",
 		"clean": "rimraf dist/",
 		"clean:prod": "rimraf dist/main.d.ts dist/main.js dist/dev dist/styles/abstract",
-		"push:npm":"np",
+		"push:npm": "np",
 		"test": "vitest --coverage --ui"
 	},
 	"devDependencies": {
