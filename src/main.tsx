@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-import { router } from './router/App.tsx';
+import { router } from './dev/router/App.tsx';
 import { RouterProvider } from 'react-router-dom';
-import { UIProvider } from './prod/context/ui/UIProvider.tsx';
-import { SidebarProvider } from './hooks/context/sidebar/SidebarProvider.tsx';
+import { UIProvider } from './context/ui/UIProvider.tsx';
+import { SidebarProvider } from './dev/hooks/context/sidebar/SidebarProvider.tsx';
 
-import './devsass/index.scss';
+
+import './dev/devStyles/index.scss';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 	<React.StrictMode>

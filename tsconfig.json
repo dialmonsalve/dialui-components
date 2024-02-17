@@ -3,9 +3,9 @@
     "baseUrl": "/home/dialmonsalve/Documents/Programacion/Javascript/React/MyComponents/",
     "paths": {
       "@/*": ["src/*"],
-      "@/components": ["src/components/*", "src/components/index"],
+      "@/components": ["src/dev/components/*", "src/dev/components/index"],
       "@/styles": ["src/styles/*", "src/styles/index"],
-      "@/types": ["src/prod/types/*", "src/prod/types/index"],
+      "@/types": ["src/types/*", "src/types/index"],
       "@/hooks": ["src/hooks/*", "src/hooks/index"],
       "@/helpers": ["src/helpers/*"]
     },
