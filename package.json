@@ -4,7 +4,7 @@
 	"version": "0.1.4",
 	"type": "module",
 	"main": "dist/index.js",
-	"typings": "dist/index.d.ts",
+	"typings": "dist/index.d.ts dist/providers.d.ts dist/hooks.d.ts",
 	"keywords": [
 		"react",
 		"dialmonsalve",

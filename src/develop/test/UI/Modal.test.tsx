@@ -1,4 +1,4 @@
-import { Modal } from '../../../components/UI';
+import  Modal  from '../../../components/UI/modal/Modal';
 import openModal from '../../../components/UI/modal/openModal';
 import { fireEvent, render, renderHook, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
