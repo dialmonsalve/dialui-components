@@ -52,7 +52,7 @@ more details: [Alert](https://dialui-components.netlify.app/alert)
 Button component with many colors and animation styles
 
 ```tsx
-import {Button} from "dialui-components
+import {Button} from "dialui-components"
 
 <Button
   buttonStyle="ripple"
@@ -72,6 +72,7 @@ more details: [Button](https://dialui-components.netlify.app/buttons)
 ### Drag and drop
 
 ```tsx
+import {DragAndDrop} from "dialui-components"
 import { useDragAndDrop } from "dialui-components/dist/hooks"
 
 interface InitialState:{
@@ -80,17 +81,16 @@ interface InitialState:{
   ...props
 }
 
-function DragAndDropPage() {
-	const {
-		dragOverItem,
-		entryState,
-		handleDragEnd,
-		handleDragEnter,
-		handleDragLeave,
-		handleDragOver,
-		handleDragStart,
-		handleDrop,
-	} = useDrag({ initialState });
+const {
+  entryState,
+  dragOverItem,
+  handleDragEnd,
+  handleDragEnter,
+  handleDragLeave,
+  handleDragOver,
+  handleDragStart,
+  handleDrop,
+} = useDragAndDrop({ initialState });
 
 <div
   style={{ display: "grid", gap: "10px", padding: "25px" }}
