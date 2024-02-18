@@ -1,6 +1,12 @@
+import openModal from "./components/UI/modal/openModal"
+import openAlert from "./components/UI/alert/openAlert"
+
 export * from "./components/form"
 export * from "./components/UI"
 
-export * from "./components/UI/alert/openAlert"
-export * from "./components/UI/modal/openModal"
 
+
+export {
+  openAlert,
+  openModal
+}

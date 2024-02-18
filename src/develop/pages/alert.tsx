@@ -9,9 +9,9 @@ function AlertPage() {
 		openAlert({
 			message: typeMessage,
 			type: typeError,
-			// sideX: 'right',
-			// sideY: 'down',
-			// duration: 4000,
+			sideX: 'right',
+			sideY: 'down',
+			duration: 4000,
 		});
 	};
 
