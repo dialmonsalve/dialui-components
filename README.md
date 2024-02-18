@@ -1,4 +1,6 @@
-# dialui-components  _mini set of componentes_
+# dialui-components
+
+mini set of react componentes
 
 Install:
 
