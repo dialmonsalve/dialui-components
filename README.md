@@ -1,12 +1,29 @@
-# dialui-components
-
-### Mini set of componentes
+# dialui-components  _mini set of componentes_
 
 Install:
 
 ```shell
 npm i dialui-components
 ```
+
+## user Interface Components
+
+- [Alert](https://dialui-components.netlify.app/alert)
+- [Button](https://dialui-components.netlify.app/buttons)
+- [Drag and drop](https://dialui-components.netlify.app/drag)
+- [Icon spinner](https://dialui-components.netlify.app/icon-spinner)
+- [Modal ](https://dialui-components.netlify.app/modal)
+- [Notification](https://dialui-components.netlify.app/notificacion)
+- [Spinner](https://dialui-components.netlify.app/spinner)
+- [Table](https://dialui-components.netlify.app/table)
+
+## Form Components
+
+- [Checkbox](https://dialui-components.netlify.app/checkbox)
+- [Input](https://dialui-components.netlify.app/input)
+- [Input tags](https://dialui-components.netlify.app/input-tags)
+- [Select and Multi Select](https://dialui-components.netlify.app/select)
+- [TextArea](https://dialui-components.netlify.app/textarea)
 
 visit npm: [npm package dialui-components](https://www.npmjs.com/package/dialui-components). For more info about documentation visit: [dialui-components](https://dialui-components.netlify.app)
 
@@ -17,13 +34,13 @@ visit npm: [npm package dialui-components](https://www.npmjs.com/package/dialui-
 Function that opens alert in lazy mode
 
 ```tsx
-import {openAlert} from 'dialui-components'
+import {openAlert} from "dialui-components"
 
 openAlert({
   message: typeMessage,
   type: typeError,
-  sideX?: 'right',
-  sideY?: 'down',
+  sideX?: "right",
+  sideY?: "down",
   duration?: 4000,
 });
 ```
@@ -35,15 +52,15 @@ more details: [Alert](https://dialui-components.netlify.app/alert)
 Button component with many colors and animation styles
 
 ```tsx
-import {Button} from 'dialui-components
+import {Button} from "dialui-components
 
 <Button
-  buttonStyle='ripple'
-  backgroundColor='blue-200'
-  size='sm-100'
-  radius='radius-3'
-  spinnerType='fleas'
-  onClick={() => console.log('click')}
+  buttonStyle="ripple"
+  backgroundColor="blue-200"
+  size="sm-100"
+  radius="radius-3"
+  spinnerType="fleas"
+  onClick={() => console.log("click")}
   isLoading
 >
   Send message
@@ -55,7 +72,7 @@ more details: [Button](https://dialui-components.netlify.app/buttons)
 ### Drag and drop
 
 ```tsx
-import { useDragAndDrop } from 'dialui-components/dist/hooks'
+import { useDragAndDrop } from "dialui-components/dist/hooks"
 
 interface InitialState:{
   id:number;
@@ -76,7 +93,7 @@ function DragAndDropPage() {
 	} = useDrag({ initialState });
 
 <div
-  style={{ display: 'grid', gap: '10px', padding: '25px' }}
+  style={{ display: "grid", gap: "10px", padding: "25px" }}
 >
   {entryState.map((entry, index) => (
     <DragAndDrop
@@ -90,7 +107,7 @@ function DragAndDropPage() {
       handleDrop={handleDrop}
       index={index}
       key={entry.id}
-      backgroundColor='green'
+      backgroundColor="green"
     >
       <h4 >{entry.title}</h4>
       <h2 >{entry.description}</h2>
@@ -99,29 +116,20 @@ function DragAndDropPage() {
 </div>
 ```
 
-more detail: [Drag and drop](https://dialui-components.netlify.app/drag)
-
-### Icon Spinner
-
-```tsx
-import { IconSpinner } from "dialui-components";
-```
-
-//! TODO
-more detail: [Icon spinner](https://dialui-components.netlify.app/icon-spinner)
+more details: [Drag and drop](https://dialui-components.netlify.app/drag)
 
 ### Modal:
 
 Function that opens modal in lazy mode
 
 ```tsx
-import {openModal} from 'dialui-components
+import {openModal} from "dialui-components
 
 openModal({
-  animation: 'jumpToDown',
-  description: 'Desea Eliminar?',
-  title: 'Eliminar Usuario',
-  type: 'info',
+  animation: "jumpToDown",
+  description: "Are you sure?",
+  title: "Delete user",
+  type: "info",
 });
 ```
 
@@ -180,18 +188,11 @@ More details: [Table](https://dialui-components.netlify.app/table)
 ### Spinner:
 
 ```tsx
-import {openAlert} from 'dialui-components'
+import {openAlert} from "dialui-components"
 
-<Spinner spinnerType='squares' />
+<Spinner spinnerType="squares" />
 ```
 
-More detail: [Spinner](https://dialui-components.netlify.app/spinner)
+More details: [Spinner](https://dialui-components.netlify.app/spinner)
 
-### Form Components
-
-- [Checkbox](https://dialui-components.netlify.app/checkbox)
-- [Input](https://dialui-components.netlify.app/input)
-- [Input tags](https://dialui-components.netlify.app/input-tags)
-- [Select and Multi Select](https://dialui-components.netlify.app/select)
-- [TextArea](https://dialui-components.netlify.app/textarea)
-
+visit the complete documentation at: [dialui-components](https://dialui-components.netlify.app)
