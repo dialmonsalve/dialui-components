@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom/client';
 import { router } from './develop/router/App';
 import { RouterProvider } from 'react-router-dom';
 import { UIProvider } from './providers';
-import { SidebarProvider } from './develop/hooks/context/sidebar/SidebarProvider';
+import { SidebarProvider } from './develop/hooks/context/sidebar/ThemeProvider';
 
 
 import './develop/devStyles/index.scss';

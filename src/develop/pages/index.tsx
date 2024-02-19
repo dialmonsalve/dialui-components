@@ -1,7 +1,13 @@
 function HomePage() {
+	
+	const hola = "hola"
+
+	console.log(hola);
+
+
 	return (
 		<>
-			<div>home</div>
+			<h1 className="h1">home</h1>
 
 		</>
 	);

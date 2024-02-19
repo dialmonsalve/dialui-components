@@ -50,7 +50,7 @@ const routes: RouteObject[] = [
 				element: <NotificationPage />,
 			},
 			{
-				path: 'drag',
+				path: 'drag-and-drop',
 				element: <DragAndDropPage />,
 			},
 			{

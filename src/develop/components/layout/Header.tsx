@@ -1,39 +1,15 @@
-import { ReactNode } from 'react';
+import  useTheme from '../../hooks/context/useTheme';
 
-
-interface Props {
-	backgroundColor?: string;
-	borderRadius?: string;
-	drawerWidth?: number;
-	padding?: string;
-	space?: number;
-	children?: ReactNode;
-}
-
-export const Header = ({
-	backgroundColor = 'white',
-	borderRadius = '1rem',
-
-	padding = '2rem',
-
-	children,
-	...props
-}: Props) => {
+export const Header = () => {
+	const { theme, handleToggleTheme } = useTheme();
 
 	return (
-		<>
-
-			<header
-				className='header'
-				style={{
-					backgroundColor,
-					padding,
-					borderRadius,
-				}}
-				{...props}
-			>
-				{children}
-			</header>
-		</>
+		<header className={`${theme} header`}>
+			<div className='header__options' >
+				<button type='button' onClick={handleToggleTheme}>
+					Change
+				</button>
+			</div>
+		</header>
 	);
 };
