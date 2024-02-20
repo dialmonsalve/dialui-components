@@ -9,33 +9,33 @@ const form = {
 };
 
 function NotificationPage() {
-	const totalNotifications = [55];
+	const totalNotifications = 5;
 	const { handleCheckboxChange, checkboxState,  } =
 		useCheckbox({initialCheckbox: form});
 
 	return (
 		<>
 			<Notification
-				hasNotification={totalNotifications.length > 0}
+				hasNotification={totalNotifications > 0}
 				size='sm'
 				backgroundColor='blue-500'
 			>
-				{totalNotifications.length === 0 ? '+99' : totalNotifications.length.toString()}
+				{totalNotifications > 10 ? '+99' : totalNotifications.toString()}
 			</Notification>
 			<br />
 			<br />
 
 			<Notification hasNotification backgroundColor='outline-white' size='md'>
-				{totalNotifications.length === 0 ? '+99' : totalNotifications.length.toString()}
+				{totalNotifications > 10 ? '+99' : totalNotifications.toString()}
 			</Notification>
 
 			<br />
 			<Notification
-				hasNotification={totalNotifications.length > 0}
+				hasNotification={totalNotifications > 0}
 				backgroundColor='red-600'
 				size='lg'
 			>
-				{totalNotifications.length === 0 ? '+99' : totalNotifications.length.toString()}
+				{totalNotifications > 10 ? '+99' : totalNotifications.toString()}
 			</Notification>
 			<br />
 

@@ -1,52 +1,83 @@
 @use "../abstract/mixins/globalMixins" as Gm;
-@use "../abstract/variables/globalVariables" as GV;
+@use "../abstract/variables/globalVariables" as Gv;
 
 .sidebar {
+  overflow-y: auto;
   height: 100vh;
   display: flex;
   max-height: 100vh;
   position: absolute;
-  padding: 2rem;
   width: 100vw;
-  z-index: 6;
-  
-  
-  @include Gm.responsive(tab-port){
+  z-index: 1;
+  transition: transform 0.3s ease;
+  transform: translateY(100%);
+
+  @include Gm.responsive(tab-port) {
+    border-radius: 1rem;
+    width: 40vw;
     right: 0;
-    width: 20vw;
-    top: 5%;
-  }
-  
-  @include Gm.responsive(tab-land){
-    position: relative;
-    overflow-y: auto;
+    height: 60vh;
+    box-shadow: 4px 2px 4px rgba($color: #000, $alpha: 0.6),
+      -4px 4px 8px rgba($color: #000, $alpha: 0.6);
+    transform: translate(105%, -10%);
   }
 
-  &__container {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
+  @include Gm.responsive(tab-land) {
+    border-radius: 0;
+    width: 20vw;
+    position: relative;
+    transition: background-color 0.3s ease;
+    transform: translateY(0);
+    box-shadow: none;
+    height: 100vh;
+  }
+}
+
+.show-sidebar {
+  transform: translateY(0);
+  @include Gm.responsive(tab-port) {
+    transform: translateX(-10%) translateY(15%);
+  }
+  @include Gm.responsive(tab-land) {
+    transform: translateY(0);
   }
 }
 
 .light.sidebar {
-  background-color: rgb(222, 222, 223)
+  background-color: Gv.$color-white-200;
+  .sidebar__container--link {
+    color: Gv.$color-blue-400;
+
+    @include Gm.responsive(tab-land) {
+      &:hover {
+        color: white;
+      }
+    }
+  }
 }
 
-.dark.sidebar{
+.dark.sidebar {
   background-color: #121212;
+  .sidebar__container--link {
+    color: Gv.$primary-color;
+    @include Gm.responsive(tab-land) {
+      &:hover {
+        color: white;
+      }
+    }
+  }
 }
 
 .sidebar::-webkit-scrollbar {
-  width: 12px; 
+  width: 12px;
 }
 
 .sidebar::-webkit-scrollbar-track {
-  background: white; 
+  background: whitesmoke;
 }
 
 .sidebar::-webkit-scrollbar-thumb {
-  background-color: purple; 
-  border-radius: 20px; 
-  border: 3px solid white; 
+  background-color: purple;
+  border-radius: 20px;
+  border: 3px solid whitesmoke;
 }

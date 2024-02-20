@@ -2,33 +2,46 @@
 @use "../abstract/mixins/globalMixins" as Gm;
 
 .header {
-  height: 10vh;
+  height: 8vh;
   width: 100vw;
   padding: 2rem;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   
-  @include Gm.responsive(tab-land){
+  @include Gm.responsive(tab-land) {
+    height: 10vh;
     width: 80vw;
     position: sticky;
     top: 0;
     z-index: 1;
   }
+
+  &__options {
+    &--theme-btn {
+      padding: 0.5rem;
+      width: 3rem;
+      
+      @include Gm.responsive(tab-port) {
+        width: 5rem;
+        
+      }
+    }
+  }
 }
 
 .light.header {
-  box-shadow: 4px 4px 4px rgba($color: #000, $alpha: 0.6);
-  & button {
-    color: black;
-    border: 1px solid black;
-    padding: 0.5rem;
-  }
+  background-color: rgba(255, 255, 255, .9);
+  box-shadow: 1px 1px 4px rgba($color: #000, $alpha: 0.6),
+  2px 2px 4px rgba($color: #000, $alpha: 0.6),
+  8px 8px 8px rgba($color: #000, $alpha: 0.6);
+  
 }
 .dark.header {
-  border-bottom: thin solid Gv.$color-gray-300;
+  background-color: rgba(Gv.$color-dark, 0.95);
+  border-bottom: 1px solid Gv.$primary-color;
   & button {
-    color: white;
-    border: 1px solid white;
+    color: Gv.$primary-color;
     padding: 0.5rem;
   }
 }

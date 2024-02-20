@@ -1,0 +1,45 @@
+@use "../abstract/mixins/globalMixins" as Gm;
+@use "../abstract/variables/globalVariables" as Gv;
+
+.sidebar {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    margin: auto auto;
+
+    &--item {
+      display: flex;
+      text-align: center;
+      width: 100%;
+      justify-content: center;
+      border-top: 1px solid Gv.$color-gray-100;
+      transition: background-color 0.3s ease;
+      @include Gm.responsive(tab-land) {
+        &:hover {
+          background-color: Gv.$primary-color;
+          color: Gv.$color-white-200;
+        }
+      }
+      @include Gm.responsive(tab-port) {
+        text-align: left;
+      }
+
+      &:last-child {
+        border-bottom: 1px solid Gv.$color-gray-100;
+      }
+    }
+    &--link {
+      padding: 1rem;
+      font-size: 1.5rem;
+      width: 100%;
+      text-transform: capitalize;
+      @include Gm.responsive(tab-port) {
+        justify-content: flex-start;
+        padding: 1.5rem;
+        font-size: 2rem;
+      }
+    }
+  }
+}

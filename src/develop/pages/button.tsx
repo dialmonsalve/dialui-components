@@ -6,7 +6,7 @@ function ButtonPage() {
 	};
 
 	return (
-		<div>
+		<div >
 			<Button
 				buttonStyle="slide-down"
 				backgroundColor="blue-200"
@@ -131,6 +131,9 @@ function ButtonPage() {
 				Enviar
 			</Button>
 			<br />
+
+			<div >
+
 			<Button
 				buttonStyle="slide-down"
 				backgroundColor="red-400"
@@ -140,6 +143,8 @@ function ButtonPage() {
 			>
 				Enviar
 			</Button>
+			</div>
+
 		</div>
 	);
 }

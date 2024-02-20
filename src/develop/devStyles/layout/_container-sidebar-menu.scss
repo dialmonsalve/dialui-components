@@ -1,0 +1,134 @@
+@use "../abstract/mixins/globalMixins" as Gm;
+@use "../abstract/variables/globalVariables" as Gv;
+
+.light.container-btn-menu {
+  background-color: Gv.$color-white-200;
+}
+
+.dark.container-btn-menu {
+  background-color: #121212;
+
+  @include Gm.responsive(tab-port) {
+    border: 0;
+  }
+}
+
+.container-btn-menu {
+  align-items: center;
+  border-top: 2px solid Gv.$primary-color;
+  display: flex;
+  height: 7vh;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 93%;
+  transition: background-color 0.3s ease;
+  width: 100vw;
+  z-index: 2;
+
+  @include Gm.responsive(tab-port) {
+    top: 10vh;
+    left: 88vw;
+    width: 5rem;
+    height: 5rem;
+    border-top: none;
+    border-radius: 50%;
+  }
+  @include Gm.responsive(tab-land) {
+    display: none;
+  }
+
+  &__btn {
+    padding: 0.8rem;
+    display: flex;
+    width: 3.5rem;
+    height: 3.5rem;
+    align-items: center;
+    justify-content: center;
+    background-color: Gv.$primary-color;
+    border-radius: 2.5px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6), 4px 4px 12px rgba(0, 0, 0, 0.6);
+
+    @include Gm.responsive(tab-port) {
+      padding: 1rem;
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+    }
+  }
+
+  &__close {
+    position: relative;
+    width: 6rem;
+    height: 2px;
+    background-color: Gv.$color-white-200;
+
+    &::before,
+    &::after {
+      width: 2rem;
+      height: 2px;
+      background-color: Gv.$color-white-200;
+      display: inline-block;
+
+      @include Gm.responsive(tab-port) {
+        width: 3rem;
+      }
+    }
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all 0.2s;
+    }
+
+    &::before {
+      top: -0.8rem;
+    }
+
+    &::after {
+      top: 0.8rem;
+    }
+  }
+  &__open {
+    position: relative;
+    width: 6rem;
+    height: 2px;
+    background-color: transparent;
+
+    &::before,
+    &::after {
+      width: 2rem;
+      height: 2px;
+      background-color: Gv.$color-white-200;
+      display: inline-block;
+
+      @include Gm.responsive(tab-port) {
+        width: 3rem;
+      }
+    }
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all 0.2s;
+    }
+
+    &::before {
+      top: -0.8rem;
+      transform: rotate(135deg) translate(7px, -6px);
+      @include Gm.responsive(tab-port) {
+        transform: rotate(135deg) translate(4px, -3px);
+      }
+    }
+
+    &::after {
+      top: 0.8rem;
+      transform: rotate(-135deg) translate(5px, 4px);
+      @include Gm.responsive(tab-port) {
+        transform: rotate(-135deg) translate(5px, 5px);
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+@use "../abstract/mixins/globalMixins" as Gm;
+@use "../abstract/variables/globalVariables" as Gv;
+
+#root {
+  display: flex;
+  flex-direction: column;
+  @include Gm.responsive(tab-port) {
+    flex-direction: row;
+  }
+}
+
+.contain {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  height: 100vh;
+  max-height: 100vh;
+  padding: 0 2rem 2.5rem 0rem;
+  overflow-x: hidden;
+  transition: all 0.3s ease;
+  @include Gm.responsive(tab-land) {
+    border-left: 1px solid Gv.$primary-color;
+    border-top: 1px solid Gv.$primary-color;
+  }
+}
+
+.light.contain {
+  background-color: Gv.$color-white-200;
+  color: Gv.$color-blue-400; 
+}
+
+.dark.contain {
+  background-color: Gv.$color-dark;
+  color:Gv.$color-white-200; 
+
+}
+
+.contain::-webkit-scrollbar {
+  width: 12px;
+}
+
+.contain::-webkit-scrollbar-track {
+  background: white;
+}
+
+.contain::-webkit-scrollbar-thumb {
+  background-color: Gv.$primary-color;
+  border-radius: 20px;
+  border: 3px solid white;
+}
