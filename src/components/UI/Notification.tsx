@@ -14,7 +14,7 @@ const Notification = ({
 	backgroundColor = 'red-600',
 	size = 'md',
 }: Props) => {
-	const animation = true
+	const animation = hasNotification
 		? `${styles['notification-animation']} ${
 				styles[`notification__${backgroundColor}`]
 		  }`
