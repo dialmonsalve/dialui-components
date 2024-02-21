@@ -7,7 +7,6 @@
 
 .btn {
   display: flex;
-  // display: inline-block;
   align-items: center;
   justify-content: center;
   align-content: center;
@@ -23,18 +22,18 @@
     padding: 3px 5px;
     box-shadow: 1px 1px 5px rgba(Gv.$color-black-200, 0.2);
     border-radius: 16px;
+    @include Gm.responsive(tab-land) {
+      font-size: 10px;
+    }
   }
 
-  @include Gm.respond(tab-port) {
-    font-size: 10px;
-  }
 }
 
 //! Button beat
 .beat {
   padding: 12px 20px;
 
-  @include Gm.respond(tab-port) {
+  @include Gm.responsive(tab-land) {
     transition: transform 0.3s ease;
 
     &:hover {
@@ -71,7 +70,7 @@
 .squares {
   padding: 12px 20px;
 
-  @include Gm.respond(tab-port) {
+  @include Gm.responsive(tab-port) {
     &:hover {
       box-shadow: 0 0 20px Gv.$color-black-200;
     }
@@ -139,7 +138,7 @@
 .filled {
   padding: 12px 20px;
 
-  @include Gm.respond(tab-port) {
+  @include Gm.responsive(tab-port) {
     overflow: hidden;
 
     &::before {
@@ -184,7 +183,7 @@
 .slide-down {
   padding: 12px 20px;
 
-  @include Gm.respond(tab-port) {
+  @include Gm.responsive(tab-port) {
     z-index: 0;
     overflow: hidden;
 

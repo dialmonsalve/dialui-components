@@ -1,8 +1,10 @@
 import Highlighter from '../components/Highlighter';
+import useAppOptions from '../hooks/context/useAppOptions';
 
-import lang from '../lang/lang.json';
+import language from '../lang/lang.json';
 
 function HomePage() {
+	const { lang } = useAppOptions();
 	const codeString = `
 	import { Button } from "dialui-components";
 	
@@ -20,7 +22,7 @@ function HomePage() {
 	`;
 	return (
 		<>
-			<h1 className='h1'>{lang.en.home}</h1>
+			<h1 className='h1'>{language[lang].home.h1}</h1>
 			<Highlighter>{codeString}</Highlighter>
 		</>
 	);

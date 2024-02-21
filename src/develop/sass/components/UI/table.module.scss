@@ -14,7 +14,7 @@
   border-bottom: 1px solid Gv.$color-gray-100;
   font-size: 12px;
 
-  @include Gm.respond(tab-port) {
+  @include Gm.responsive(tab-port) {
     font-size: 16px;
   }
 }
@@ -37,7 +37,7 @@
 }
 
 .tr {
-  @include Gm.respond(tab-port) {
+  @include Gm.responsive(tab-port) {
     transition: background-color 0.2s ease-in-out, color 0.2s ease;
   }
 }
@@ -75,7 +75,7 @@
 
 .tbody .tr-yellow {
   &:hover {
-    @include Gm.respond(tab-port) {
+    @include Gm.responsive(tab-port) {
       @include colorTable(Gv.$color-yellow-600, Gv.$color-white-100);
     }
   }
@@ -96,7 +96,7 @@
 
 .tbody .tr-blue {
   &:hover {
-    @include Gm.respond(tab-port) {
+    @include Gm.responsive(tab-port) {
       @include colorTable(Gv.$color-blue-500, Gv.$color-white-100);
     }
   }
@@ -117,7 +117,7 @@
 
 .tbody .tr-red {
   &:hover {
-    @include Gm.respond(tab-port) {
+    @include Gm.responsive(tab-port) {
       @include colorTable(Gv.$color-red-500, Gv.$color-white-100);
     }
   }
@@ -138,7 +138,7 @@
 
 .tbody .tr-green {
   &:hover {
-    @include Gm.respond(tab-port) {
+    @include Gm.responsive(tab-port) {
       @include colorTable(Gv.$color-green-500, Gv.$color-white-100);
     }
   }
@@ -159,7 +159,7 @@
 
 .tbody .tr-purple {
   &:hover {
-    @include Gm.respond(tab-port) {
+    @include Gm.responsive(tab-port) {
       @include colorTable(Gv.$color-purple-500, Gv.$color-white-100);
     }
   }
@@ -180,7 +180,7 @@
 
 .tbody .tr-pink {
   &:hover {
-    @include Gm.respond(tab-port) {
+    @include Gm.responsive(tab-port) {
       @include colorTable(Gv.$color-pink-400, Gv.$color-white-100);
     }
   }
@@ -201,7 +201,7 @@
 
 .tbody .tr-gray {
   &:hover {
-    @include Gm.respond(tab-port) {
+    @include Gm.responsive(tab-port) {
       @include colorTable(Gv.$color-gray-400, Gv.$color-white-100);
     }
   }
@@ -222,7 +222,7 @@
 
 .tbody .tr-black {
   &:hover {
-    @include Gm.respond(tab-port) {
+    @include Gm.responsive(tab-port) {
       @include colorTable(Gv.$color-black-400, Gv.$color-white-100);
     }
   }
@@ -243,7 +243,7 @@
 
 .tbody .tr-white {
   &:hover {
-    @include Gm.respond(tab-port) {
+    @include Gm.responsive(tab-port) {
       @include colorTable(Gv.$color-black-200, Gv.$color-white-100);
     }
   }

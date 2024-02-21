@@ -45,11 +45,12 @@
   font-size: $font-size;
   width: $width;
   height: $height;
+  min-width: 40px;
 }
 
 //! Little beat in buttons
 @mixin hoverAnimations($color) {
-  @include Gm.respond(tab-port) {
+  @include Gm.responsive(tab-land) {
     &:hover {
       background-color: rgba($color: $color, $alpha: 0.55);
       color: Gv.$color-white-200;

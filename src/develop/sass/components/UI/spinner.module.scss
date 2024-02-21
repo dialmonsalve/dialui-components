@@ -24,14 +24,14 @@
     flex-direction: column;
 
     &__eclipse {
-      @include Gm.respond(tab-port) {
+      @include Gm.responsive(tab-port) {
         width: 180px;
         height: 180px;
       }
     }
 
     &__mice {
-      @include Gm.respond(tab-port) {
+      @include Gm.responsive(tab-port) {
         width: 150px;
       }
     }

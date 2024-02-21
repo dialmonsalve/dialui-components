@@ -13,7 +13,7 @@
     font-weight: 700;
     font-size: 10px;
 
-    @include Gm.respond(phone) {
+    @include Gm.responsive(tab-port) {
       font-size: 12px;
     }
   }

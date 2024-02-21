@@ -1,14 +1,20 @@
 {
 		"es": {
-			"home": "inicio",
+			"coffee":"Invítame un café",
+			"home":{
+				"h1":"Inicio"
+			},
 			"notFound":{
-				"h1":"404 page not found"
+				"h1":"404 página no encontrada"
 			}
 		},
 		"en": {
-			"home": "home",
+			"coffee":"Bug me a coffee",
+			"home": {
+				"h1":"home"
+			},
 			"notFound":{
-				"h1":"404 página no encontrada"
+				"h1":"404 page not found"
 			}
 		}
 }

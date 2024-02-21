@@ -9,8 +9,10 @@ const useTheme = () => {
 
 	return {
 		theme: context.theme,
+		lang: context.lang,
 		handleToggleTheme: context.handleToggleTheme,
+		handleToggleLang: context.handleToggleLang,
 	};
 };
 
-export default useTheme
+export default useTheme;

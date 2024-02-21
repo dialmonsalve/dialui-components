@@ -3,74 +3,86 @@
 
 .btn {
   &__sm-100 {
-    @include bm.size(8px, 40px, 20px);
-
-    @include Gm.respond(tab-port) {
-      @include bm.size(10px, 60px, 20px);
+    @include bm.size(14px, 40px, 20px);
+    @include Gm.responsive(tab-port) {
+      @include bm.size(16px, 60px, 20px);
     }
   }
 
   &__sm-200 {
-    @include bm.size(9px, 60px, 20px);
+    @include bm.size(14px, 60px, 20px);
 
-    @include Gm.respond(tab-port) {
-      @include bm.size(12px, 85px, 20px);
+    @include Gm.responsive(tab-port) {
+      @include bm.size(18px, 85px, 20px);
     }
   }
 
   &__sm-300 {
-    @include bm.size(10px, 80px, 20px);
+    @include bm.size(14px, 80px, 20px);
 
-    @include Gm.respond(tab-port) {
-      @include bm.size(14px, 110px, 20px);
+    @include Gm.responsive(tab-port) {
+      @include bm.size(20px, 110px, 24px);
     }
   }
 
   &__md-100 {
-    @include bm.size(11px, 100px, 30px);
+    @include bm.size(16px, 100px, 30px);
 
-    @include Gm.respond(tab-port) {
-      @include bm.size(14px, 135px, 35px);
+    @include Gm.responsive(tab-port) {
+      @include bm.size(22px, 135px, 35px);
     }
   }
 
   &__md-200 {
-    @include bm.size(12px, 120px, 30px);
+    @include bm.size(16px, 120px, 30px);
 
-    @include Gm.respond(tab-port) {
-      @include bm.size(16px, 155px, 35px);
+    @include Gm.responsive(tab-port) {
+      @include bm.size(24px, 155px, 35px);
     }
   }
 
   &__md-300 {
     @include bm.size(16px, 140px, 30px);
 
-    @include Gm.respond(tab-port) {
-      @include bm.size(18px, 175px, 35px);
+    @include Gm.responsive(tab-port) {
+      @include bm.size(26px, 175px, 35px);
     }
   }
 
   &__lg-100 {
     @include bm.size(18px, 160px, 40px);
 
-    @include Gm.respond(tab-port) {
-      @include bm.size(21px, 195px, 45px);
+    @include Gm.responsive(tab-port) {
+      @include bm.size(28px, 195px, 45px);
     }
   }
 
   &__lg-200 {
     @include bm.size(18px, 180px, 40px);
 
-    @include Gm.respond(tab-port) {
-      @include bm.size(22px, 215px, 45px);
+    @include Gm.responsive(tab-port) {
+      @include bm.size(30px, 215px, 45px);
     }
   }
 
   &__lg-300 {
-    @include bm.size(22px, 200px, 40px);
+    @include bm.size(18px, 200px, 40px);
 
-    @include Gm.respond(tab-port) {
-      @include bm.size(24px, 235px, 45px);
+    @include Gm.responsive(tab-port) {
+      @include bm.size(32px, 235px, 45px);
+    }
+  }
+
+  &__w-10{
+    
+    width: 10%;
+    padding: 6px 20px;
+    font-size: 12px;
+    height: 25px;
+  
+    @include Gm.responsive(tab-port) {
+      font-size: 16px;
+      height: 30px;
     }
   }
 
@@ -80,7 +92,7 @@
     font-size: 10px;
     height: 25px;
 
-    @include Gm.respond(tab-port) {
+    @include Gm.responsive(tab-port) {
       font-size: 14px;
       height: 30px;
     }
@@ -92,7 +104,7 @@
     padding: 6px 20px;
     height: 25px;
 
-    @include Gm.respond(tab-port) {
+    @include Gm.responsive(tab-port) {
       font-size: 14px;
       height: 30px;
     }
@@ -104,7 +116,7 @@
     font-size: 10px;
     height: 25px;
 
-    @include Gm.respond(tab-port) {
+    @include Gm.responsive(tab-port) {
       font-size: 14px;
       height: 30px;
     }
@@ -116,7 +128,7 @@
     padding: 6px 20px;
     height: 25px;
 
-    @include Gm.respond(tab-port) {
+    @include Gm.responsive(tab-port) {
       font-size: 14px;
       height: 40px;
     }

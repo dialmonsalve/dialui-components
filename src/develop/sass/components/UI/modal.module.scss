@@ -19,19 +19,19 @@
 
   &__container {
     position: relative;
-    padding: 1.2rem;
-    border-radius: 0.5rem;
+    padding: 12px;
+    border-radius:5px;
     display: flex;
     flex-direction: column;
     gap: 5px;
     min-width: 90%;
 
-    @include Gm.respond(phone) {
-      border-radius: 1.2rem;
+    @include Gm.responsive(tab-port) {
+      border-radius:12px;
       min-width: 80%;
     }
 
-    @include Gm.respond(tab-port) {
+    @include Gm.responsive(tab-land) {
       min-width: 50%;
     }
   }
@@ -52,9 +52,10 @@
     align-items: center;
     justify-content: center;
 
-    @include Gm.respond(tab-port) {
+    @include Gm.responsive(tab-port) {
       background-color: transparent;
       color: white;
+      font-size: 20px;
       cursor: pointer;
 
       &:hover {
@@ -65,7 +66,7 @@
   }
 
   &__content {
-    border-radius: 0.5rem;
+    border-radius: 5px;
     background: linear-gradient(
       135deg,
       Gv.$color-black-100 0%,
@@ -74,20 +75,20 @@
     box-shadow: 2px 2px 5px Gv.$color-black-200;
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+    padding: 10px;
     align-items: center;
     border: 1px solid inherit;
 
-    @include Gm.respond(tab-port) {
-      border-radius: 1.2rem;
-      padding: 2rem;
+    @include Gm.responsive(tab-port) {
+      border-radius: 12px;
+      padding: 20px;
     }
 
     > *:not(:nth-child(1)) {
-      margin-bottom: 1rem;
+      margin-bottom: 10px;
 
-      @include Gm.respond(tab-port) {
-        margin-bottom: 2rem;
+      @include Gm.responsive(tab-port) {
+        margin-bottom: 20px;
       }
     }
 
@@ -100,7 +101,7 @@
       width: 80%;
       height: 80%;
 
-      @include Gm.respond(tab-port) {
+      @include Gm.responsive(tab-port) {
         width: 90%;
         height: 90%;
       }
@@ -111,11 +112,11 @@
       text-transform: uppercase;
       color: Gv.$color-white-200;
 
-      @include Gm.respond(phone) {
+      @include Gm.responsive(phone) {
         font-size: 26px;
       }
 
-      @include Gm.respond(tab-port) {
+      @include Gm.responsive(tab-port) {
         font-size: 28px;
       }
     }
@@ -124,11 +125,11 @@
       color: Gv.$color-white-100;
       font-size: 12px;
 
-      @include Gm.respond(phone) {
+      @include Gm.responsive(phone) {
         font-size: 18px;
       }
 
-      @include Gm.respond(tab-port) {
+      @include Gm.responsive(tab-land) {
         font-size: 24px;
       }
     }
@@ -141,7 +142,7 @@
     width: 90%;
     flex: 1;
 
-    @include Gm.respond(tab-port) {
+    @include Gm.responsive(tab-land) {
       gap: 10px;
       flex-direction: row;
     }

@@ -4,9 +4,8 @@
 .header {
   height: 8vh;
   width: 100vw;
-  padding: 2rem;
+  padding: 3rem;
   display: flex;
-  align-items: center;
   justify-content: flex-end;
 
   @include Gm.responsive(tab-land) {
@@ -19,22 +18,32 @@
 
   &__options {
     display: flex;
-    align-items: center;
-    gap: 1rem;
+    justify-content: space-between;
 
+    width: 100%;
+    @include Gm.responsive(tab-port) {
+      align-items: center;
+      width: 35%;
+    }
+    @include Gm.responsive(tab-land) {
+      width: 25%;
+    }
     &--link {
+      order: 1;
       background-color: Gv.$color-purple-600;
       color: white;
       padding: 1rem;
       font-size: 12px;
       border-radius: 4px;
-      @include Gm.responsive(tab-land) {
+      @include Gm.responsive(tab-port) {
+        order: 0;
         &:hover {
           background-color: Gv.$color-purple-400;
         }
       }
     }
     &--theme-btn {
+      order: 1;
       padding: 0.5rem;
       width: 3rem;
 
@@ -54,8 +63,4 @@
 .dark.header {
   background-color: rgba(Gv.$color-dark, 0.95);
   border-bottom: 1px solid Gv.$primary-color;
-  & button {
-    color: Gv.$primary-color;
-    padding: 0.5rem;
-  }
 }
