@@ -4,7 +4,7 @@ import useAppOptions from '../hooks/context/useAppOptions';
 import language from '../lang/lang.json';
 
 function HomePage() {
-	const { lang } = useAppOptions();
+	const { lang, theme } = useAppOptions();
 	const codeString = `
 	import { Button } from "dialui-components";
 	
@@ -21,10 +21,12 @@ function HomePage() {
 	</Button>
 	`;
 	return (
-		<>
+		<section className={`${theme} section-home`}>
 			<h1 className='h1'>{language[lang].home.h1}</h1>
+
+			<Highlighter language='shell'>{language[lang].home.install}</Highlighter>
 			<Highlighter>{codeString}</Highlighter>
-		</>
+		</section>
 	);
 }
 

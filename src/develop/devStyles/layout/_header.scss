@@ -2,25 +2,28 @@
 @use "../abstract/mixins/globalMixins" as Gm;
 
 .header {
-  height: 8vh;
+  height: 10vh;
   width: 100vw;
-  padding: 3rem;
+  padding: 0 3rem;
   display: flex;
-  justify-content: flex-end;
-
-  @include Gm.responsive(tab-land) {
-    height: 10vh;
-    width: 80vw;
+  align-items: center;
+  transition: transform 0.3s ease;
+  
+  @include Gm.responsive(tab-port) {
     position: sticky;
+    justify-content: flex-end;
+  }
+  @include Gm.responsive(tab-land) {
+    position: sticky;
+    width: 80vw;
     top: 0;
-    z-index: 1;
   }
 
   &__options {
     display: flex;
     justify-content: space-between;
-
     width: 100%;
+    
     @include Gm.responsive(tab-port) {
       align-items: center;
       width: 35%;
@@ -60,7 +63,8 @@
     2px 2px 4px rgba($color: #000, $alpha: 0.6),
     8px 8px 8px rgba($color: #000, $alpha: 0.6);
 }
+
 .dark.header {
-  background-color: rgba(Gv.$color-dark, 0.95);
-  border-bottom: 1px solid Gv.$primary-color;
+  background-color: Gv.$color-dark ;
+  // border-bottom: 1px solid Gv.$primary-color;
 }

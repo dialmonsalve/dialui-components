@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom';
 import { Header } from './Header';
 import { Sidebar } from './Sidebar';
 
-import  useAppOptions  from '../../hooks/context/useAppOptions';
+import useAppOptions from '../../hooks/context/useAppOptions';
 
 export const Layout = () => {
 	const { theme } = useAppOptions();
@@ -11,12 +11,10 @@ export const Layout = () => {
 	return (
 		<>
 			<Sidebar />
-			<div className={`${theme} contain`}>
+			<main className={`${theme} main`}>
 				<Header />
-				<main className='main'>
-					<Outlet />
-				</main>
-			</div>
+				<Outlet />
+			</main>
 		</>
 	);
 };

@@ -15,17 +15,18 @@ export const Sidebar = () => {
 					type='button'
 					className='container-btn-menu__btn'
 					onClick={() => setToggleMenu(!toggleMenu)}
-				>
+					>
 					<span
 						className={`${
 							toggleMenu
-								? 'container-btn-menu__open'
-								: 'container-btn-menu__close'
+							? 'container-btn-menu__open'
+							: 'container-btn-menu__close'
 						}`}
-					/>
+						/>
 				</button>
 			</div>
 			<nav className={`${theme} sidebar ${toggleMenu ? 'show-sidebar' : ''}`}>
+						<div style={{width:"20vw", height:"10vh", borderBottom:"1px solid purple" }} ></div>
 				<ul className='sidebar__container'>
 					{navigation.map((link) => (
 						<NavigationLink

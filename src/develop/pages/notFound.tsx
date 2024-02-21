@@ -10,15 +10,15 @@ const { theme,  lang} = useAppOptions();
 	return (
 		<>
 			<Sidebar />
-			<div className={`${styles[theme]} ${styles["container-not-found"]}`} >
+			<main className={`${styles[theme]} ${styles["container-not-found"]}`} >
 				<Header />
-				<main className={`${styles[theme]} ${styles["not-found"]}`}>
+				<section className={`${styles[theme]} ${styles["not-found"]}`}>
 					<h1>{language[lang].notFound.h1}</h1>
 					<div className={styles.img}>
 						<NotFound />
 						</div>	
-				</main>
-			</div>
+				</section>
+			</main>
 		</>
 	);
 }

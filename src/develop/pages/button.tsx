@@ -6,7 +6,7 @@ function ButtonPage() {
 	};
 
 	return (
-		<div >
+		<section style={{padding:"2rem 4rem", minWidth:"90vh"}} >
 			<Button
 				buttonStyle="slide-down"
 				backgroundColor="blue-200"
@@ -37,7 +37,7 @@ function ButtonPage() {
 				buttonStyle="beat"
 			>
 				Enviar
-			</Button>
+			</Button>transition
 			<br />
 			<Button
 				buttonStyle="filled"
@@ -145,7 +145,7 @@ function ButtonPage() {
 			</Button>
 			</div>
 
-		</div>
+		</section>
 	);
 }
 

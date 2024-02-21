@@ -11,12 +11,8 @@
 }
 
 .not-found {
-  padding: 6rem 2rem;
-  position: absolute;
-  height: 92vh;
-  z-index:-1;
-  width: 100vw;
-  bottom: 0;
+  padding: 6rem 0rem;
+  height: 90vh;
   @include Gm.responsive(tab-port) {
     display: flex;
     flex-direction: column;
@@ -50,7 +46,7 @@
 }
 
 .light.not-found {
-  background-color: Gv.$color-white-200;
+  background-color: rgba(255, 255, 255, 0.842);
   color: Gv.$color-blue-400;
 }
 

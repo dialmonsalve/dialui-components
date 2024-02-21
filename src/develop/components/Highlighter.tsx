@@ -7,7 +7,10 @@ import { openAlert } from '../..';
 import useTheme from '../hooks/context/useAppOptions';
 import Clipboard from './Clipboard';
 
-function Highlighter({ children }: { children: string }) {
+function Highlighter({
+	children,
+	language = 'jsx',
+}: { children: string; language?: string }) {
 	const { theme } = useTheme();
 	const copyToClipboard = async () => {
 		await navigator.clipboard.writeText(children);
@@ -20,9 +23,9 @@ function Highlighter({ children }: { children: string }) {
 		});
 	};
 	return (
-		<div className='code-highlighter'>
+		<article className='code-highlighter'>
 			<SyntaxHighlighter
-				language='jsx'
+				language={language}
 				style={theme === 'light' ? oneDark : oneLight}
 			>
 				{children}
@@ -31,11 +34,11 @@ function Highlighter({ children }: { children: string }) {
 				type='button'
 				className='code-highlighter__btn'
 				onClick={copyToClipboard}
-				style={{ color:`${theme === 'light' ? 'white' : 'black'}`}}
+				style={{ color: `${theme === 'light' ? 'white' : 'black'}` }}
 			>
 				<Clipboard />
 			</button>
-		</div>
+		</article>
 	);
 }
 

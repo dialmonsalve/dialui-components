@@ -1,17 +1,17 @@
 @use "../abstract/mixins/globalMixins" as Gm;
 @use "../abstract/variables/globalVariables" as Gv;
 
-.light.container-btn-menu {
-  background-color: Gv.$color-white-200;
-}
+// .light.container-btn-menu {
+//   background-color: Gv.$color-white-200;
+// }
 
-.dark.container-btn-menu {
-  background-color: #121212;
+// .dark.container-btn-menu {
+//   background-color: #121212;
 
-  @include Gm.responsive(tab-port) {
-    border: 0;
-  }
-}
+//   @include Gm.responsive(tab-port) {
+//     border: 0;
+//   }
+// }
 
 .container-btn-menu {
   align-items: center;
@@ -22,12 +22,12 @@
   left: 0;
   position: fixed;
   top: 93%;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
   width: 100vw;
   z-index: 2;
 
   @include Gm.responsive(tab-port) {
-    top: 10vh;
+    top: 13vh;
     left: 88vw;
     width: 5rem;
     height: 5rem;

@@ -11,32 +11,38 @@
   z-index: 1;
   transition: transform 0.3s ease;
   transform: translateY(100%);
-
+  flex: 1;
+  
   @include Gm.responsive(tab-port) {
     border-radius: 1rem;
     width: 40vw;
     right: 0;
     height: 60vh;
     box-shadow: 4px 2px 4px rgba($color: #000, $alpha: 0.6),
-      -4px 4px 8px rgba($color: #000, $alpha: 0.6);
+    -4px 4px 8px rgba($color: #000, $alpha: 0.6);
     transform: translate(105%, -10%);
   }
-
+  
   @include Gm.responsive(tab-land) {
     border-radius: 0;
     width: 20vw;
     position: relative;
-    transition: background-color 0.3s ease;
+    transition: background-color .1s ease;
     transform: translateY(0);
     box-shadow: none;
     height: 100vh;
+    flex-direction: column ;
+
+  }
+  &__container{
+    width: 100%;
   }
 }
 
 .show-sidebar {
   transform: translateY(0);
   @include Gm.responsive(tab-port) {
-    transform: translateX(-10%) translateY(15%);
+    transform: translateX(-10%) translateY(18%);
   }
   @include Gm.responsive(tab-land) {
     transform: translateY(0);
@@ -46,7 +52,8 @@
 .light.sidebar {
   background-color: Gv.$color-white-200;
   .sidebar__container--link {
-    color: Gv.$color-blue-400;
+    color: Gv.$color-blue-400;    flex: 1;
+    width: 100%;
 
     @include Gm.responsive(tab-land) {
       &:hover {
@@ -57,7 +64,7 @@
 }
 
 .dark.sidebar {
-  background-color: #121212;
+  background-color: Gv.$color-dark;
   .sidebar__container--link {
     color: Gv.$primary-color;
     @include Gm.responsive(tab-land) {
