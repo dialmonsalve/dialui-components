@@ -4,17 +4,16 @@ import ReactDOM from 'react-dom/client';
 import { router } from './develop/router/App';
 import { RouterProvider } from 'react-router-dom';
 import { UIProvider } from './providers';
-import { SidebarProvider } from './develop/hooks/context/sidebar/ThemeProvider';
-
+import { AppOptionsProvider } from './develop/hooks/context/appOptions/AppOptionsProvider';
 
 import './develop/devStyles/index.scss';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 	<React.StrictMode>
 		<UIProvider>
-			<SidebarProvider>
+			<AppOptionsProvider>
 				<RouterProvider router={router} />
-			</SidebarProvider>
+			</AppOptionsProvider>
 		</UIProvider>
 	</React.StrictMode>,
 );

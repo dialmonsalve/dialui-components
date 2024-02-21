@@ -1,0 +1,14 @@
+{
+		"es": {
+			"home": "inicio",
+			"notFound":{
+				"h1":"404 page not found"
+			}
+		},
+		"en": {
+			"home": "home",
+			"notFound":{
+				"h1":"404 página no encontrada"
+			}
+		}
+}

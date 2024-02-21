@@ -8,4 +8,4 @@ interface ContextProps {
 	handleToggleTheme: () => void;
 }
 
-export const ThemeContext = createContext({} as ContextProps);
+export const AppOptionsContext = createContext({} as ContextProps);

@@ -1,5 +1,5 @@
-import React, { ReactNode, useEffect, useState } from 'react';
-import { ThemeContext } from './ThemeContext';
+import  { ReactNode, useEffect, useState } from 'react';
+import { AppOptionsContext } from './AppOptionsContext';
 
 export interface Props {
 	children: ReactNode;
@@ -8,7 +8,7 @@ export interface Props {
 const data = localStorage.getItem('theme');
 const themeStorage = JSON.parse(data || '{"theme":"light"}');
 
-export const SidebarProvider = React.memo(({ children }: Props) => {
+export const AppOptionsProvider = ({ children }: Props) => {
 	const [theme, setTheme] = useState<'light' | 'dark'>(themeStorage.theme);
 
 	useEffect(() => {
@@ -24,13 +24,13 @@ export const SidebarProvider = React.memo(({ children }: Props) => {
 	};
 
 	return (
-		<ThemeContext.Provider
+		<AppOptionsContext.Provider
 			value={{
 				theme,
 				handleToggleTheme,
 			}}
 		>
 			{children}
-		</ThemeContext.Provider>
+		</AppOptionsContext.Provider>
 	);
-});
+};

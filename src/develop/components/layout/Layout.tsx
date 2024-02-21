@@ -3,10 +3,10 @@ import { Outlet } from 'react-router-dom';
 import { Header } from './Header';
 import { Sidebar } from './Sidebar';
 
-import  useTheme  from '../../hooks/context/useTheme';
+import  useAppOptions  from '../../hooks/context/useAppOptions';
 
 export const Layout = () => {
-	const { theme } = useTheme();
+	const { theme } = useAppOptions();
 
 	return (
 		<>

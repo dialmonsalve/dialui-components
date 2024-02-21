@@ -1,0 +1,60 @@
+@use "../abstract/mixins/globalMixins" as Gm;
+@use "../abstract/variables/globalVariables" as Gv;
+
+.dark.container-not-found {
+  @include Gm.responsive(tab-land) {
+    border: 1px solid Gv.$primary-color;
+  }
+}
+.light.container-not-found {
+  border-left: 1px solid Gv.$primary-color;
+}
+
+.not-found {
+  padding: 6rem 2rem;
+  position: absolute;
+  height: 92vh;
+  z-index:-1;
+  width: 100vw;
+  bottom: 0;
+  @include Gm.responsive(tab-port) {
+    display: flex;
+    flex-direction: column;
+  }
+  @include Gm.responsive(tab-land) {
+    width: 80vw;
+    height: 90vh;
+  }
+  
+  & h1 {
+    font-size: 3.5rem;
+    text-align: center;
+  }
+}
+
+.image {
+  width: 30rem;
+  height: 30rem;
+  @include Gm.responsive(tab-port) {
+    width: 55rem;
+    height: 55rem;
+  }
+}
+
+.img {
+  width: 30rem;
+  @include Gm.responsive(tab-port) {
+    width: 55rem
+  }
+  margin: 0 auto;
+}
+
+.light.not-found {
+  background-color: Gv.$color-white-200;
+  color: Gv.$color-blue-400;
+}
+
+.dark.not-found {
+  background-color: Gv.$color-dark;
+  color: Gv.$color-white-200;
+}

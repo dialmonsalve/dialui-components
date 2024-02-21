@@ -1,0 +1,20 @@
+@use "../abstract/variables/globalVariables" as Gv;
+@use "../abstract/mixins/globalMixins" as Gm;
+
+.code-highlighter{
+  position: relative;
+
+  @include Gm.responsive(tab-port){
+    max-width: 50vw;
+    margin: 0 auto;
+    width: 60vw;
+  }
+
+  &__btn {
+    position: absolute;
+    top: 4%;
+    right: 2%;
+    color: white;
+    width: 30px;
+  }
+}

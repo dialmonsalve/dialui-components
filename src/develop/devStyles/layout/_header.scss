@@ -8,7 +8,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  
+
   @include Gm.responsive(tab-land) {
     height: 10vh;
     width: 80vw;
@@ -18,24 +18,38 @@
   }
 
   &__options {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    &--link {
+      background-color: Gv.$color-purple-600;
+      color: white;
+      padding: 1rem;
+      font-size: 12px;
+      border-radius: 4px;
+      @include Gm.responsive(tab-land) {
+        &:hover {
+          background-color: Gv.$color-purple-400;
+        }
+      }
+    }
     &--theme-btn {
       padding: 0.5rem;
       width: 3rem;
-      
+
       @include Gm.responsive(tab-port) {
         width: 5rem;
-        
       }
     }
   }
 }
 
 .light.header {
-  background-color: rgba(255, 255, 255, .9);
+  background-color: rgba(255, 255, 255, 0.9);
   box-shadow: 1px 1px 4px rgba($color: #000, $alpha: 0.6),
-  2px 2px 4px rgba($color: #000, $alpha: 0.6),
-  8px 8px 8px rgba($color: #000, $alpha: 0.6);
-  
+    2px 2px 4px rgba($color: #000, $alpha: 0.6),
+    8px 8px 8px rgba($color: #000, $alpha: 0.6);
 }
 .dark.header {
   background-color: rgba(Gv.$color-dark, 0.95);
