@@ -33,6 +33,8 @@ export const AppOptionsProvider = ({ children }: Props) => {
 		setLang('en');
 	};
 
+
+	
 	return (
 		<AppOptionsContext.Provider
 			value={{

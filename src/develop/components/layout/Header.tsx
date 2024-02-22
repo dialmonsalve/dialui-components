@@ -2,12 +2,14 @@ import { Link } from 'react-router-dom';
 import useAppOptions from '../../hooks/context/useAppOptions';
 import { Button } from '../../..';
 import language from '../../lang/lang.json';
+import { Moon } from '../icons/Moon';
+import { Sun } from '../icons/Sun';
 
 export const Header = () => {
 	const { theme, handleToggleTheme, lang, handleToggleLang } = useAppOptions();
 
 	return (
-		<header className={`${theme} header`}>
+		<header className='header'>
 			<div className='header__options'>
 				<Link
 					to='https://www.paypal.me/dialmonsalve'
@@ -19,7 +21,7 @@ export const Header = () => {
 				<Button
 					buttonStyle='beat'
 					size='sm-100'
-					backgroundColor='green-600'
+					backgroundColor='purple-400'
 					radius='radius-5'
 					onClick={handleToggleLang}
 					type='button'
@@ -31,12 +33,7 @@ export const Header = () => {
 					type='button'
 					onClick={handleToggleTheme}
 				>
-					<img
-						src={`${
-							theme === 'light' ? '/assets/moon.svg' : '/assets/sun.svg'
-						} `}
-						alt=''
-					/>
+					{theme === 'light' ? <Moon /> : <Sun />}
 				</button>
 			</div>
 		</header>

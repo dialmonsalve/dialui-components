@@ -7,7 +7,7 @@
     flex-direction: column;
     flex-grow: 1;
     align-items: center;
-    margin: auto auto;
+    margin-top: 6vh;
 
     &--item {
       display: flex;
@@ -16,12 +16,7 @@
       justify-content: center;
       border-top: 1px solid Gv.$color-gray-100;
       transition: background-color 0.3s ease;
-      @include Gm.responsive(tab-land) {
-        &:hover {
-          background-color: Gv.$primary-color;
-          color: Gv.$color-white-200;
-        }
-      }
+
       @include Gm.responsive(tab-port) {
         text-align: left;
       }

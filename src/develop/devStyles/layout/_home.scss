@@ -4,41 +4,7 @@
 .section-home {
   padding: 5.5rem 4rem;
   position: relative;
-  min-height: 90vh;
-
   @include Gm.responsive(tab-land){
     // width: 80vw;
   }
 }
-
-.light.section-home{
-  background-color: rgba(255, 255, 255, 0.842);
-}
-
-.dark.section-home{
-  background-color: Gv.$color-dark;
-  @include Gm.responsive(tab-land) {
-    // border-left: 1px solid Gv.$primary-color;
-    border: 1px solid Gv.$primary-color;
-  }
-}
-
-// padding: 6rem 2rem;
-// position: absolute;
-// height: 90vh;
-// z-index:-1;
-// width: 100vw;
-// bottom: 0;
-// @include Gm.responsive(tab-port) {
-//   display: flex;
-//   flex-direction: column;
-// }
-// @include Gm.responsive(tab-land) {
-//   width: 80vw;
-//   height: 90vh;
-// }
-
-// & h1 {
-//   font-size: 3.5rem;
-//   text-align: center;
-// }

@@ -5,7 +5,7 @@ import {
 } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { openAlert } from '../..';
 import useTheme from '../hooks/context/useAppOptions';
-import Clipboard from './Clipboard';
+import Clipboard from './icons/Clipboard';
 
 function Highlighter({
 	children,

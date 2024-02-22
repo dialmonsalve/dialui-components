@@ -1,24 +1,26 @@
 import { Header } from '../components/layout/Header';
 import { Sidebar } from '../components/layout/Sidebar';
 import useAppOptions from '../hooks/context/useAppOptions';
-import styles from "../devStyles/components/notFound.module.scss"
-import NotFound from '../components/NotFound';
+import styles from '../devStyles/components/notFound.module.scss';
+import NotFound from '../components/icons/NotFound';
 import language from '../lang/lang.json';
 
 function NotFoundPage() {
-const { theme,  lang} = useAppOptions();	
+	const { theme, lang } = useAppOptions();
 	return (
 		<>
 			<Sidebar />
-			<main className={`${styles[theme]} ${styles["container-not-found"]}`} >
+			<div className={`${theme} container`}>
 				<Header />
-				<section className={`${styles[theme]} ${styles["not-found"]}`}>
-					<h1>{language[lang].notFound.h1}</h1>
-					<div className={styles.img}>
-						<NotFound />
-						</div>	
-				</section>
-			</main>
+				<main className={`${theme} main`}>
+					<section className={`${styles['not-found']}`}>
+						<h1>{language[lang].notFound.h1}</h1>
+						<div className={styles.img}>
+							<NotFound />
+						</div>
+					</section>
+				</main>
+			</div>
 		</>
 	);
 }

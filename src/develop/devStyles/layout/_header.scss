@@ -2,34 +2,34 @@
 @use "../abstract/mixins/globalMixins" as Gm;
 
 .header {
-  height: 10vh;
-  width: 100vw;
-  padding: 0 3rem;
   display: flex;
-  align-items: center;
-  transition: transform 0.3s ease;
+  height: 10vh;
+  padding: 0 2rem;
+  width: 100vw;
+  z-index: 1;
+ transition: background-color .2s ease; 
   
   @include Gm.responsive(tab-port) {
-    position: sticky;
     justify-content: flex-end;
+    padding: 0 4rem;
   }
+  
   @include Gm.responsive(tab-land) {
-    position: sticky;
+    height: 11vh;
     width: 80vw;
-    top: 0;
   }
 
   &__options {
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    
+    align-items: center;
+    width: 100vw;
+
     @include Gm.responsive(tab-port) {
-      align-items: center;
-      width: 35%;
+      max-width: 40vw;
     }
     @include Gm.responsive(tab-land) {
-      width: 25%;
+      max-width: 23vw;
     }
     &--link {
       order: 1;
@@ -47,24 +47,12 @@
     }
     &--theme-btn {
       order: 1;
-      padding: 0.5rem;
-      width: 3rem;
-
-      @include Gm.responsive(tab-port) {
-        width: 5rem;
-      }
     }
   }
 }
-
-.light.header {
-  background-color: rgba(255, 255, 255, 0.9);
-  box-shadow: 1px 1px 4px rgba($color: #000, $alpha: 0.6),
-    2px 2px 4px rgba($color: #000, $alpha: 0.6),
-    8px 8px 8px rgba($color: #000, $alpha: 0.6);
-}
-
-.dark.header {
-  background-color: Gv.$color-dark ;
-  // border-bottom: 1px solid Gv.$primary-color;
+.ico-theme {
+  width: 2.5rem;
+  @include Gm.responsive(tab-port) {
+    width: 4rem;
+  }
 }

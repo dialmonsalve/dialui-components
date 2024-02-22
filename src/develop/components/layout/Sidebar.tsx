@@ -9,24 +9,23 @@ export const Sidebar = () => {
 	const [toggleMenu, setToggleMenu] = useState(false);
 
 	return (
-		<>
-			<div className={`${theme} container-btn-menu`}>
+		<nav className={`${theme} navigation`} >
+			<div className={'navigation__btn-menu'}>
 				<button
 					type='button'
-					className='container-btn-menu__btn'
+					className='navigation__btn-menu--btn'
 					onClick={() => setToggleMenu(!toggleMenu)}
-					>
+				>
 					<span
 						className={`${
 							toggleMenu
-							? 'container-btn-menu__open'
-							: 'container-btn-menu__close'
+								? 'navigation__btn-menu__open'
+								: 'navigation__btn-menu__close'
 						}`}
-						/>
+					/>
 				</button>
 			</div>
-			<nav className={`${theme} sidebar ${toggleMenu ? 'show-sidebar' : ''}`}>
-						<div style={{width:"20vw", height:"10vh", borderBottom:"1px solid purple" }} ></div>
+			<nav className={`sidebar ${toggleMenu ? 'show-sidebar' : ''}`} >
 				<ul className='sidebar__container'>
 					{navigation.map((link) => (
 						<NavigationLink
@@ -39,6 +38,6 @@ export const Sidebar = () => {
 					))}
 				</ul>
 			</nav>
-		</>
+		</nav>
 	);
 };

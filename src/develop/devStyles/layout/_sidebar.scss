@@ -2,74 +2,94 @@
 @use "../abstract/variables/globalVariables" as Gv;
 
 .sidebar {
-  overflow-y: auto;
-  height: 100vh;
   display: flex;
+  height: 92vh;
   max-height: 100vh;
+  overflow-y: auto;
   position: absolute;
+  transform: translateY(107vh);
+  bottom: 8vh;
+  transition: transform 0.3s ease, background-color 0.3s ease;
   width: 100vw;
-  z-index: 1;
-  transition: transform 0.3s ease;
-  transform: translateY(100%);
-  flex: 1;
-  
+  z-index: 2;
+
   @include Gm.responsive(tab-port) {
     border-radius: 1rem;
-    width: 40vw;
-    right: 0;
-    height: 60vh;
     box-shadow: 4px 2px 4px rgba($color: #000, $alpha: 0.6),
-    -4px 4px 8px rgba($color: #000, $alpha: 0.6);
-    transform: translate(105%, -10%);
+      -4px 4px 8px rgba($color: #000, $alpha: 0.6);
+    height: 60vh;
+    max-height: 60vh;
+    right: 3%;
+    top: 11%;
+    transform: translate(115%, -12%);
+    width: 35vw;
+    border: none;
   }
-  
+
   @include Gm.responsive(tab-land) {
     border-radius: 0;
-    width: 20vw;
-    position: relative;
-    transition: background-color .1s ease;
-    transform: translateY(0);
     box-shadow: none;
     height: 100vh;
-    flex-direction: column ;
-
-  }
-  &__container{
-    width: 100%;
+    max-height: 100vh;
+    position: relative;
+    right: 0;
+    transform: translateY(0);
+    width: 20vw;
+    border-right: 1px solid Gv.$primary-color;
+    border-top: 1px solid Gv.$primary-color;
   }
 }
-
 .show-sidebar {
   transform: translateY(0);
-  @include Gm.responsive(tab-port) {
-    transform: translateX(-10%) translateY(18%);
-  }
-  @include Gm.responsive(tab-land) {
-    transform: translateY(0);
-  }
 }
 
-.light.sidebar {
-  background-color: Gv.$color-white-200;
-  .sidebar__container--link {
-    color: Gv.$color-blue-400;    flex: 1;
-    width: 100%;
-
+.dark.navigation {
+  .navigation__btn-menu {
+    background-color: Gv.$color-dark;
+  }
+  .sidebar {
+    background-color: rgba($color: rgb(19, 18, 18), $alpha: 0.98);
     @include Gm.responsive(tab-land) {
-      &:hover {
-        color: white;
+      background-color: Gv.$color-dark;
+    }
+
+    .sidebar__container--link {
+      color: Gv.$primary-color;
+      @include Gm.responsive(tab-land) {
+        &:hover {
+          color: white;
+        }
+      }
+    }
+    .sidebar__container--item {
+      @include Gm.responsive(tab-land) {
+        &:hover {
+          background-color: Gv.$primary-color;
+        }
       }
     }
   }
 }
 
-.dark.sidebar {
-  background-color: Gv.$color-dark;
-  .sidebar__container--link {
-    color: Gv.$primary-color;
-    @include Gm.responsive(tab-land) {
-      &:hover {
-        color: white;
+.light.navigation {
+  .navigation__btn-menu {
+    background-color: Gv.$color-white-200;
+  }
+  .sidebar {
+    background-color: rgba($color: #ffffff, $alpha: 0.95);
+    .sidebar__container--link {
+      color: Gv.$color-blue-400;
+      @include Gm.responsive(tab-land) {
+        &:hover {
+          color: white;
+        }
+      }
+    }
+    .sidebar__container--item {
+      @include Gm.responsive(tab-land) {
+        &:hover {
+          background-color: Gv.$color-blue-400;
+        }
       }
     }
   }

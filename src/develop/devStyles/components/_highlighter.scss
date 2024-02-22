@@ -15,6 +15,9 @@
     top: 4%;
     right: 2%;
     color: white;
-    width: 30px;
+    width:15px;
+    @include Gm.responsive(tab-port){
+      width: 20px;
+    }
   }
 }

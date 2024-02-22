@@ -4,32 +4,46 @@
 #root {
   display: flex;
   flex-direction: column;
+
   @include Gm.responsive(tab-port) {
     flex-direction: row;
   }
 }
 
-.main {
+.container {
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
-  // height: 100vh;
-  // max-height: 100vh;
-  // padding: 0 2rem 2.5rem 0rem;
-  overflow-x: hidden;
+  overflow: hidden;
+  height: 100vh;
 }
 
-.light.main {
-  // color: Gv.$color-blue-400; 
+.light.container {
+  color: Gv.$color-blue-400;
+  background-color: Gv.$color-white-200;
+
+  .header {
+    background-color: Gv.$color-white-200;
+  }
 }
 
-.dark.main {
-  // color:Gv.$color-white-200; 
-  // @include Gm.responsive(tab-land) {
-  //   border-left: 1px solid Gv.$primary-color;
-  //   // border-top: 1px solid Gv.$primary-color;
-  // }
-  
+.dark.container {
+  color: Gv.$color-white-200;
+  .header {
+    background-color: Gv.$color-dark;
+  }
+  .main {
+    background-color: Gv.$color-dark;
+  }
+}
+
+.main {
+  overflow: auto;
+  border-top: 1px solid Gv.$primary-color;
+  height: 90vh;
+  transition: background-color 0.2s ease;
+  @include Gm.responsive(tab-land) {
+    max-height: 89vh;
+  }
 }
 
 .main::-webkit-scrollbar {

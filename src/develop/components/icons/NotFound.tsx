@@ -1,4 +1,4 @@
-import styles from "../devStyles/components/notFound.module.scss"
+import styles from "../../devStyles/components/notFound.module.scss"
 const NotFound = () => {
 	return (
 		<svg
