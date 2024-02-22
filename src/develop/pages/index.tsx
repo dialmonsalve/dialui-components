@@ -26,7 +26,6 @@ function HomePage() {
 
 			<Highlighter language='shell'>{language[lang].home.install}</Highlighter>
 			<Highlighter>{codeString}</Highlighter>
-			<Highlighter>{codeString}</Highlighter>
 		</section>
 	);
 }

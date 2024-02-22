@@ -2,17 +2,11 @@
 @use "../abstract/variables/globalVariables" as Gv;
 
 .not-found {
-  padding: 6rem 0rem;
-  // height: 100vh;
   @include Gm.responsive(tab-port) {
     display: flex;
     flex-direction: column;
   }
 
-  & h1 {
-    font-size: 3.5rem;
-    text-align: center;
-  }
 }
 .image {
   width: 30rem;

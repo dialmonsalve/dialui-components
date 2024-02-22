@@ -17,9 +17,9 @@ function Highlighter({
 		openAlert({
 			message: 'copied to clipboard',
 			type: 'info',
-			sideX: 'left',
+			sideX: 'right',
 			sideY: 'down',
-			duration: 3000,
+			duration: 1500,
 		});
 	};
 	return (

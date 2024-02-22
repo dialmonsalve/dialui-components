@@ -1,48 +1,24 @@
 @use "../abstract/mixins/globalMixins" as Gm;
 @use "../abstract/variables/globalVariables" as Gv;
 
-#root {
-  display: flex;
-  flex-direction: column;
-
-  @include Gm.responsive(tab-port) {
-    flex-direction: row;
-  }
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  height: 100vh;
-}
-
-.light.container {
-  color: Gv.$color-blue-400;
-  background-color: Gv.$color-white-200;
-
-  .header {
-    background-color: Gv.$color-white-200;
-  }
-}
-
-.dark.container {
-  color: Gv.$color-white-200;
-  .header {
-    background-color: Gv.$color-dark;
-  }
-  .main {
-    background-color: Gv.$color-dark;
-  }
-}
-
 .main {
   overflow: auto;
   border-top: 1px solid Gv.$primary-color;
   height: 90vh;
+  padding: 3rem 1rem 8rem;
   transition: background-color 0.2s ease;
+  @include Gm.responsive(tab-port) {
+    padding: 3rem 4rem;
+  }
   @include Gm.responsive(tab-land) {
     max-height: 89vh;
+  }
+
+  & .h1 {
+    font-size: 3.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0 0 3rem;
   }
 }
 

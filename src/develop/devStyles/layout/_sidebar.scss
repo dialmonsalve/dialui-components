@@ -29,8 +29,8 @@
   @include Gm.responsive(tab-land) {
     border-radius: 0;
     box-shadow: none;
-    height: 100vh;
-    max-height: 100vh;
+    height: 90vh;
+    max-height: 90vh;
     position: relative;
     right: 0;
     transform: translateY(0);
@@ -54,7 +54,7 @@
     }
 
     .sidebar__container--link {
-      color: Gv.$primary-color;
+      color: rgb(204, 204, 204);
       @include Gm.responsive(tab-land) {
         &:hover {
           color: white;
