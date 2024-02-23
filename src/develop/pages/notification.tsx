@@ -1,5 +1,5 @@
-import { Notification } from '../../components/UI';
-import { Checkbox } from '../../components/form';
+import Notification from '../../components/UI/Notification';
+import Checkbox from '../../components/form/Checkbox';
 
 import { useCheckbox } from '../../hooks';
 
@@ -10,8 +10,9 @@ const form = {
 
 function NotificationPage() {
 	const totalNotifications = 5;
-	const { handleCheckboxChange, checkboxState,  } =
-		useCheckbox({initialCheckbox: form});
+	const { handleCheckboxChange, checkboxState } = useCheckbox({
+		initialCheckbox: form,
+	});
 
 	return (
 		<>

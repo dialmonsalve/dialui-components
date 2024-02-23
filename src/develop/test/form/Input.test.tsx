@@ -1,7 +1,7 @@
 import { act } from 'react-dom/test-utils';
 import user from '@testing-library/user-event';
 import { cleanup, render, renderHook, screen } from '@testing-library/react';
-import { Input } from '../../../components/form';
+import Input from '../../../components/form/Input';
 
 import { beforeEach } from 'vitest';
 import { useInput } from '../../../hooks';

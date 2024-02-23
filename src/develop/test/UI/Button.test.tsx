@@ -1,4 +1,4 @@
-import { Button } from '../../../';
+import Button from '../../../components/UI/buttons/ButtonNormal';
 import { render } from '@testing-library/react';
 
 describe('Button', () => {
@@ -6,26 +6,16 @@ describe('Button', () => {
 		render(
 			<>
 				<Button backgroundColor='black-300'>Add</Button>
-				<Button backgroundColor='black-300' buttonStyle='table'>
+				<Button backgroundColor='black-300'>Add</Button>
+				<Button backgroundColor='black-300'>Add</Button>
+				<Button backgroundColor='black-300' isLoading>
 					Add
 				</Button>
-				<Button backgroundColor='black-300' buttonStyle='squares'>
+				<Button backgroundColor='black-300'>Add</Button>
+				<Button backgroundColor='black-300' hasInitialAnimation>
 					Add
 				</Button>
-				<Button backgroundColor='black-300' isLoading buttonStyle='ripple'>
-					Add
-				</Button>
-				<Button backgroundColor='black-300' buttonStyle='ripple'>
-					Add
-				</Button>
-				<Button
-					backgroundColor='black-300'
-					hasInitialAnimation
-					buttonStyle='beat'
-				>
-					Add
-				</Button>
-				<Button backgroundColor='black-300' isLoading buttonStyle='bright'>
+				<Button backgroundColor='black-300' isLoading>
 					Add
 				</Button>
 			</>,

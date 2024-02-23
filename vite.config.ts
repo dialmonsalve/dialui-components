@@ -10,13 +10,28 @@ export default defineConfig({
 	plugins: [react(), tsconfigPaths()],
 	test: {
 		environment: 'happy-dom',
-		globals:true,
-		coverage :{
-			provider:'v8',
+		globals: true,
+		coverage: {
+			provider: 'v8',
 			reportsDirectory: './coverage/unit/',
-			enabled:true,
-			include:['src/prod/components/**/*.tsx'],
-			exclude:['src/prod/components/icons']
-		}
+			enabled: true,
+			include: ['src/prod/components/**/*.tsx'],
+			exclude: ['src/prod/components/icons'],
+		},
+	},
+	build: {
+		rollupOptions: {
+			output: {
+				manualChunks(id) {
+					if (id.includes('node_modules')) {
+						return id
+							.toString()
+							.split('node_modules/')[1]
+							.split('/')[0]
+							.toString();
+					}
+				},
+			},
+		},
 	},
 });

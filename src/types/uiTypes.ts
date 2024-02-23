@@ -37,15 +37,6 @@ export type Animation =
 	| 'jumpToUp'
 	| 'toUp';
 
-export type ButtonStyle =
-	| 'normal'
-	| 'squares'
-	| 'slide-down'
-	| 'ripple'
-	| 'beat'
-	| 'filled'
-	| 'bright'
-	| 'table';
 
 export type SpinnerType = 'fleas' | 'squares' | 'eclipse' | 'mice' | 'dots';
 

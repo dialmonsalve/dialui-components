@@ -1,4 +1,4 @@
-import ButtonSlideDown from '../../components/UI/buttons/ButtonSlideDown';
+import ButtonSlideDown from '../../components/UI/buttons/ButtonNormal';
 import FleaIconsSpinner from '../../components/UI/iconSpinner/IconsSpinnerFleas';
 
 

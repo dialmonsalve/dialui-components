@@ -8,9 +8,8 @@ import { ButtonProps } from './type';
 import type { IconSpinnerSize } from '../../../types';
 
 import styles from '../../../styles/components/buttons/button.module.css';
-import styleBeat from '../../../styles/components/buttons/buttonBeat.module.css';
 
-const ButtonBeat = ({
+const ButtonNormal = ({
 	backgroundColor = 'blue-200',
 	children,
 	disabled=false,
@@ -28,7 +27,7 @@ const ButtonBeat = ({
 	const isDisabled =
 		disabled || isLoading
 			? styles['btn-disabled']
-			: `${styles[`btn__${backgroundColor}`]} ${styleBeat.beat}`;
+			: `${styles[`btn__${backgroundColor}`]}`;
 
 	const isAnimated = hasInitialAnimation ? styles['btn__animated'] : '';
 
@@ -58,4 +57,4 @@ const ButtonBeat = ({
 	);
 };
 
-export default ButtonBeat;
+export default ButtonNormal;

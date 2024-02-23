@@ -1,4 +1,4 @@
-import { Button } from "../../";
+import Button  from "../../components/UI/buttons/ButtonNormal";
 
 function IconSpinnerPage() {
 	const hola = true;

@@ -5,7 +5,7 @@ import Table, {
 	Row,
 	Title,
 } from '../../components/UI/Table';
-import {Button} from '../..';
+import Button from '../../components/UI/buttons/ButtonNormal';
 
 export default function TablePage() {
 	const backgroundColor = 'white';
@@ -41,7 +41,6 @@ export default function TablePage() {
 								<Cell>{person.city}</Cell>
 								<Cell>
 									<Button
-										buttonStyle='table'
 										backgroundColor='blue-600'
 
 									>
@@ -50,7 +49,6 @@ export default function TablePage() {
 								</Cell>
 								<Cell>
 									<Button
-										buttonStyle='table'
 										backgroundColor='red-600'
 
 									>

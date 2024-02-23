@@ -1,4 +1,3 @@
-import { Button } from '../../../';
 import Table, {
 	Cell,
 	Row,
@@ -62,22 +61,6 @@ describe('Table', () => {
 								<Cell>{person.lastName}</Cell>
 								<Cell>{person.country}</Cell>
 								<Cell>{person.city}</Cell>
-								<Cell>
-									<Button
-										buttonStyle='table'
-										backgroundColor='blue-600'
-									>
-										edit
-									</Button>
-								</Cell>
-								<Cell>
-									<Button
-										buttonStyle='table'
-										backgroundColor='red-600'
-									>
-										delete
-									</Button>
-								</Cell>
 							</Row>
 						))}
 					</TableBody>

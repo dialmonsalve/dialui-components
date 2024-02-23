@@ -2,7 +2,7 @@ import { useState, KeyboardEvent, type FocusEvent } from 'react';
 
 import styles from '../../styles/components/form/inputTags.module.css';
 import inputStyle from '../../styles/components/form/input.module.css';
-import {Button}  from '../../';
+import Button from '../UI/buttons/ButtonNormal';
 
 interface InputTagProps {
 	placeholder?: string;
@@ -55,7 +55,6 @@ const InputTags = ({ placeholder, onBlur, tags, setTags }: InputTagProps) => {
 				disabled={value.length === 0}
 				type='button'
 				onClick={addToClick}
-				buttonStyle='squares'
 				size='vw-100'
 				borderRadius='r-2'
 				backgroundColor='green-300'

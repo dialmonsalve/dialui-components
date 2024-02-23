@@ -5,7 +5,7 @@ import { Info, Danger, Success, Warning } from '../../icons';
 import styles from '../../../styles/components/UI/modal.module.css';
 
 import type { Animation, MessageType } from '../../../types';
-import { Button } from '../../../';
+import Button from '../buttons/ButtonNormal';
 
 interface Props {
 	description?: string;
@@ -91,7 +91,6 @@ const Modal = ({
 						{type === 'success' || type === 'info' ? (
 							<>
 								<Button
-									buttonStyle='normal'
 									backgroundColor='outline-green'
 									borderRadius='r-2'
 									size='vw-100'
@@ -103,7 +102,6 @@ const Modal = ({
 						) : (
 							<>
 								<Button
-									buttonStyle='normal'
 									backgroundColor='outline-red'
 									borderRadius='r-2'
 									size='vw-100'
@@ -112,7 +110,6 @@ const Modal = ({
 									YES
 								</Button>
 								<Button
-									buttonStyle='normal'
 									backgroundColor='outline-green'
 									borderRadius='r-2'
 									size='vw-100'

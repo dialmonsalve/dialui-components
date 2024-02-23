@@ -1,4 +1,4 @@
-import {  type ChangeEvent, type TextareaHTMLAttributes } from 'react';
+import { type ChangeEvent, type TextareaHTMLAttributes } from 'react';
 
 import styles from '../../styles/components/form/textarea.module.css';
 
@@ -8,18 +8,17 @@ interface Props extends TextareaHTMLAttributes<HTMLTextAreaElement> {
 	totalCharacter?: number;
 	name: string;
 	characterState: string;
-		placeholder?: string;
+	placeholder?: string;
 }
 
-	const TextArea = ({
-		characterState,
-		name,
-		placeholder,
-		onChange,
-		totalCharacter = 0,
-		...props
-	}: Props) => {
-
+const TextArea = ({
+	characterState,
+	name,
+	placeholder,
+	onChange,
+	totalCharacter = 0,
+	...props
+}: Props) => {
 	const total =
 		totalCharacter > 0
 			? totalCharacter - characterState?.length

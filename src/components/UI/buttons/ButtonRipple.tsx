@@ -1,4 +1,3 @@
-import { ReactNode } from 'react';
 import { useRippleButton } from '../../../hooks/useRippleButton';
 
 import MiceIconsSpinner from '../iconSpinner/IconSpinnerMice';
@@ -7,37 +6,16 @@ import DotIconsSpinner from '../iconSpinner/IconSpinnerDots';
 import EclipseIconSpinner from '../iconSpinner/IconSpinnerEclipse';
 import SquareIconsSpinner from '../iconSpinner/IconSpinnerSquares';
 
-import type {
-	ButtonStyle,
-	Colors,
-	IconSpinnerSize,
-	Radius,
-	Size,
-	SpinnerType,
-} from '../../../types';
-
 import styles from '../../../styles/components/buttons/button.module.css';
 import styleRipple from '../../../styles/components/buttons/buttonRipple.module.css';
 
-interface Props {
-	backgroundColor?: Colors;
-	buttonStyle?: ButtonStyle;
-	children?: ReactNode;
-	disabled?: boolean;
-	hasInitialAnimation?: boolean;
-	isLoading?: boolean;
-	borderRadius?: Radius;
-	size?: Size;
-	iconSpinner?: SpinnerType;
-	type?: 'submit' | 'button' | 'reset';
-	hasSpinner?: boolean;
-	onClick?: React.MouseEventHandler<HTMLButtonElement>;
-}
+import { ButtonProps } from './type';
+import type { IconSpinnerSize } from '../../../types';
 
 const ButtonRipple = ({
 	backgroundColor = 'blue-200',
 	children,
-	disabled,
+	disabled=false,
 	hasInitialAnimation = false,
 	isLoading = false,
 	borderRadius = 'r-0',
@@ -45,31 +23,29 @@ const ButtonRipple = ({
 	iconSpinner = 'eclipse',
 	hasSpinner = false,
 	onClick,
-	type,
-}: Props) => {
+	type="button",
+}: ButtonProps) => {
 	const { buttonRef } = useRippleButton();
+
+	const mainClasses = `${styles.btn} ${styles[borderRadius]} ${styles[size]}`;
 
 	const isDisabled =
 		disabled || isLoading
 			? styles['btn-disabled']
-			: `${styles[`btn__${backgroundColor}`]}`;
+			: `${styles[`btn__${backgroundColor}`]} ${styleRipple.ripple}`;
 
 	const isAnimated = hasInitialAnimation ? styles['btn__animated'] : '';
-
-	const properties = {
-		disabled: disabled || isLoading,
-		onClick,
-	};
 
 	const partialSize = [...size];
 	const ISize = (partialSize[0] + partialSize[1]) as IconSpinnerSize;
 
 	return (
 		<button
-			ref={buttonRef}
+			className={`${mainClasses} ${isDisabled} ${isAnimated}`}
 			type={type}
-			className={`${styles.btn} ${styleRipple.ripple} ${styles[borderRadius]} ${styles[size]} ${isDisabled} ${isAnimated}`}
-			{...properties}
+			disabled={disabled || isLoading}
+			onClick={onClick}
+			ref={buttonRef}
 		>
 			{children}
 			{hasSpinner && isLoading ? (

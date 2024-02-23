@@ -1,17 +1,13 @@
-import {
-	Checkbox,
-	Input,
-	InputTags,
-	Select,
-	TextArea,
-} from '../../components/form';
-import { Button } from '../../';
-import {
-	useCheckbox,
-	useInput,
-	useInputTags,
-	useSelect,
-} from '../../hooks';
+import Checkbox from '../../components/form/Checkbox';
+
+import Input from '../../components/form/Input';
+import InputTags from '../../components/form/InputTags';
+
+import Select from '../../components/form/Select';
+import TextArea from '../../components/form/TextArea';
+
+import Button from '../../components/UI/buttons/ButtonNormal';
+import { useCheckbox, useInput, useInputTags, useSelect } from '../../hooks';
 import { type FormEvent } from 'react';
 
 const form = {
@@ -112,7 +108,7 @@ const FormControlPage = () => {
 				name='name'
 				onChange={handleInputChange}
 				disabled
-				/>
+			/>
 			<Input
 				type='text'
 				name='lastName'
@@ -157,7 +153,6 @@ const FormControlPage = () => {
 				placeholder='Tags'
 				tags={tagsState}
 				setTags={handleInputTagsChange}
-				
 			/>
 
 			<div style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}>

@@ -1,84 +1,138 @@
-import type { ReactNode } from 'react';
-import MiceIconsSpinner from '../iconSpinner/IconSpinnerMice';
-import FleaIconsSpinner from '../iconSpinner/IconsSpinnerFleas';
-import DotIconsSpinner from '../iconSpinner/IconSpinnerDots';
-import EclipseIconSpinner from '../iconSpinner/IconSpinnerEclipse';
-import SquareIconsSpinner from '../iconSpinner/IconSpinnerSquares';
+import ButtonNormal from './ButtonNormal';
+import ButtonBeat from './ButtonBeat';
+import ButtonFilled from './ButtonFilled';
+import ButtonRipple from './ButtonRipple';
+import ButtonSlideDown from './ButtonSlideDown';
+import ButtonSquares from './ButtonSquares';
+import { ButtonProps } from './type';
 
-import type {
-	Colors,
-	Size,
-	Radius,
-	SpinnerType,
-	ButtonStyle,
-	IconSpinnerSize,
-} from '../../../types';
-
-import styles from '../../../styles/components/buttons/button.module.css';
-
-export interface Props {
-	backgroundColor?: Colors;
-	buttonStyle?: ButtonStyle;
-	children?: ReactNode;
-	disabled?: boolean;
-	hasInitialAnimation?: boolean;
-	isLoading?: boolean;
-	borderRadius?: Radius;
-	size?: Size;
-	iconSpinner?: SpinnerType;
-	type?: 'submit' | 'button' | 'reset';
-	hasSpinner?: boolean;
-	onClick?: React.MouseEventHandler<HTMLButtonElement>
+interface Props extends ButtonProps {
+	button: 'normal' | 'squares' | 'filled' | 'beat' | 'ripple' | 'slideDown';
 }
-
-const Button = ({
-	backgroundColor = 'blue-200',
-	children,
-	disabled,
-	hasInitialAnimation = false,
-	isLoading = false,
-	borderRadius = 'r-0',
-	size = 'md-100',
-	iconSpinner = 'eclipse',
-	hasSpinner = false,
-	onClick,
-	type,
-}: Props) => {
-	const isDisabled =
-		disabled || isLoading
-			? styles['btn-disabled']
-			: `${styles[`btn__${backgroundColor}`]}`;
-
-	const isAnimated = hasInitialAnimation ? styles['btn__animated'] : '';
-
-	const properties = {
-		disabled: disabled || isLoading,
+const Button = (props: Props) => {
+	const {
+		button = 'normal',
+		borderRadius,
+		backgroundColor,
+		children,
+		disabled,
+		hasInitialAnimation,
+		hasSpinner,
+		iconSpinner,
+		isLoading,
 		onClick,
-	};
+		size,
+		type,
+	} = props;
+	if (button === 'normal') {
+		return (
+			<ButtonNormal
+				backgroundColor={backgroundColor}
+				borderRadius={borderRadius}
+				disabled={disabled}
+				hasInitialAnimation={hasInitialAnimation}
+				hasSpinner={hasSpinner}
+				iconSpinner={iconSpinner}
+				isLoading={isLoading}
+				onClick={onClick}
+				size={size}
+				type={type}
+			>
+				{children}
+			</ButtonNormal>
+		);
+	}
+	if (button === 'ripple') {
+		return (
+			<ButtonRipple
+				backgroundColor={backgroundColor}
+				borderRadius={borderRadius}
+				disabled={disabled}
+				hasInitialAnimation={hasInitialAnimation}
+				hasSpinner={hasSpinner}
+				iconSpinner={iconSpinner}
+				isLoading={isLoading}
+				onClick={onClick}
+				size={size}
+				type={type}
+			>
+				{children}
+			</ButtonRipple>
+		);
+	}
+	if (button === 'beat') {
+		return (
+			<ButtonBeat
+				backgroundColor={backgroundColor}
+				borderRadius={borderRadius}
+				disabled={disabled}
+				hasInitialAnimation={hasInitialAnimation}
+				hasSpinner={hasSpinner}
+				iconSpinner={iconSpinner}
+				isLoading={isLoading}
+				onClick={onClick}
+				size={size}
+				type={type}
+			>
+				{children}
+			</ButtonBeat>
+		);
+	}
+	if (button === 'slideDown') {
+		return (
+			<ButtonSlideDown
+				backgroundColor={backgroundColor}
+				borderRadius={borderRadius}
+				disabled={disabled}
+				hasInitialAnimation={hasInitialAnimation}
+				hasSpinner={hasSpinner}
+				iconSpinner={iconSpinner}
+				isLoading={isLoading}
+				onClick={onClick}
+				size={size}
+				type={type}
+			>
+				{children}
+			</ButtonSlideDown>
+		);
+	}
+	if (button === 'filled') {
+		return (
+			<ButtonFilled
+				backgroundColor={backgroundColor}
+				borderRadius={borderRadius}
+				disabled={disabled}
+				hasInitialAnimation={hasInitialAnimation}
+				hasSpinner={hasSpinner}
+				iconSpinner={iconSpinner}
+				isLoading={isLoading}
+				onClick={onClick}
+				size={size}
+				type={type}
+			>
+				{children}
+			</ButtonFilled>
+		);
+	}
 
-	const partialSize = [...size];
-	const ISize = (partialSize[0] + partialSize[1]) as IconSpinnerSize;
-
-	return (
-		<button
-			className={`${styles.btn} ${styles[borderRadius]} ${styles[size]} ${isDisabled} ${isAnimated}`}
-			type={type}
-			{...properties}
-		>
-			{children}
-			{hasSpinner && isLoading ? (
-				<span className={styles.ico}>
-					{iconSpinner === 'mice' && <MiceIconsSpinner size={ISize} />}
-					{iconSpinner === 'fleas' && <FleaIconsSpinner size={ISize} />}
-					{iconSpinner === 'dots' && <DotIconsSpinner size={ISize} />}
-					{iconSpinner === 'eclipse' && <EclipseIconSpinner size={ISize} />}
-					{iconSpinner === 'squares' && <SquareIconsSpinner size={ISize} />}
-				</span>
-			) : (
-				<></>
-			)}
-		</button>
-	);
+	if (button === 'squares') {
+		return (
+			<ButtonSquares
+				backgroundColor={backgroundColor}
+				borderRadius={borderRadius}
+				disabled={disabled}
+				hasInitialAnimation={hasInitialAnimation}
+				hasSpinner={hasSpinner}
+				iconSpinner={iconSpinner}
+				isLoading={isLoading}
+				onClick={onClick}
+				size={size}
+				type={type}
+			>
+				{children}
+			</ButtonSquares>
+		);
+	}
 };
 
 export default Button;
