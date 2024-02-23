@@ -1,4 +1,4 @@
-import { Button } from '../../../components/UI';
+import { Button } from '../../../';
 import Table, {
 	Cell,
 	Row,
@@ -66,7 +66,6 @@ describe('Table', () => {
 									<Button
 										buttonStyle='table'
 										backgroundColor='blue-600'
-										style={{ textTransform: 'uppercase' }}
 									>
 										edit
 									</Button>
@@ -75,7 +74,6 @@ describe('Table', () => {
 									<Button
 										buttonStyle='table'
 										backgroundColor='red-600'
-										style={{ textTransform: 'uppercase' }}
 									>
 										delete
 									</Button>

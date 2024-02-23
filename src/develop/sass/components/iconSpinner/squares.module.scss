@@ -1,0 +1,90 @@
+// @use "../../abstract/mixins/spinner" as s;
+@use "../../abstract/variables/globalVariables" as Gv;
+
+.squares {
+  display: flex;
+  gap: 3px;
+
+  &__sm {
+    width: 20px;
+  }
+  &__md {
+    width: 28px;
+  }
+  &__lg {
+    width: 40px;
+  }
+  &__vw {
+    width: 26px;
+  }
+  
+  &--1 {
+    background: linear-gradient(
+      45deg,
+      Gv.$color-purple-600 0%,
+      transparent 50%,
+      Gv.$color-red-600 100%
+    );
+    animation: rect-right 1s linear infinite;
+    transform: translateY(6px);
+  }
+  
+  &--2 {
+    background: linear-gradient(
+      135deg,
+      Gv.$color-green-600 0%,
+      transparent 50%,
+      Gv.$color-pink-600 100%
+    );
+    animation: rect-left 1s linear infinite;
+    transform: translateY(-6px);
+  }
+}
+
+.sm {
+  width: 8px;
+  height: 8px;
+}
+.md {
+  width: 14px;
+  height: 14px;
+}
+.lg {
+  width: 20px;
+  height: 20px;
+}
+.vw {
+  width: 12px;
+  height: 12px;
+  right: 10%;
+}
+
+@keyframes rect-left {
+  25% {
+    transform: translate(-10px, -6px);
+  }
+
+  50% {
+    transform: translate(-10px, 0px);
+  }
+
+  75% {
+    transform: translate(0px, 0px);
+  }
+
+}
+
+@keyframes rect-right {
+  25% {
+    transform: translate(10px, 6px);
+  }
+
+  50% {
+    transform: translate(10px, 0px);
+  }
+
+  75% {
+    transform: translate(0px, 0px);
+  }
+
+}

@@ -1,0 +1,43 @@
+@use "../../abstract/variables/globalVariables" as Gv;
+@use "../../abstract/mixins/globalMixins" as Gm;
+
+.filled {
+  position: relative;
+  @include Gm.responsive(tab-land) {
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 250px;
+      left: 0;
+      bottom: -150%;
+      border-radius: 23%;
+      background-color: inherit;
+      z-index: 0;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background-color: inherit;
+      z-index: -1;
+    }
+
+    &:hover::before {
+      animation: filled 3s linear both;
+    }
+  }
+}
+
+@keyframes filled {
+  100% {
+    bottom: 100px;
+    transform: rotate(360deg);
+  }
+}

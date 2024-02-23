@@ -1,0 +1,49 @@
+@use "../../abstract/variables/globalVariables" as Gv;
+@use "../../abstract/mixins/globalMixins" as Gm;
+
+.squares {
+
+  @include Gm.responsive(tab-land) {
+    &:hover {
+      box-shadow: 0 0 20px Gv.$color-black-200;
+    }
+
+    &:hover span:nth-child(1) {
+      right: 80%;
+      transform: rotate(180deg);
+      color: Gv.$color-black-400;
+      background-color: Gv.$color-white-200;
+      border-radius: 50%;
+    }
+
+    &:hover span:nth-child(2) {
+      left: 80%;
+      transform: rotate(90deg);
+      color: Gv.$color-black-400;
+      background-color: Gv.$color-white-200;
+      border-radius: 50%;
+    }
+
+    & span:nth-child(n) {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      border: 2px solid;
+      transition: all 0.6s ease;
+    }
+
+    & span:nth-child(1) {
+      right: 10%;
+      top: -8px;
+      background-color: inherit;
+      color: Gv.$color-white-200;
+    }
+
+    & span:nth-child(2) {
+      left: 10%;
+      bottom: -8px;
+      background-color: inherit;
+      color: Gv.$color-white-200;
+    }
+  }
+}

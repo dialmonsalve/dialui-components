@@ -5,7 +5,7 @@ import { Info, Danger, Success, Warning } from '../../icons';
 import styles from '../../../styles/components/UI/modal.module.css';
 
 import type { Animation, MessageType } from '../../../types';
-import { Button } from '..';
+import { Button } from '../../../';
 
 interface Props {
 	description?: string;
@@ -93,9 +93,8 @@ const Modal = ({
 								<Button
 									buttonStyle='normal'
 									backgroundColor='outline-green'
-									radius='radius-2'
-									size='w-100'
-									color='white'
+									borderRadius='r-2'
+									size='vw-100'
 									onClick={() => setModalResponse('ok')}
 								>
 									OK
@@ -106,9 +105,8 @@ const Modal = ({
 								<Button
 									buttonStyle='normal'
 									backgroundColor='outline-red'
-									radius='radius-2'
-									size='w-100'
-									color='white'
+									borderRadius='r-2'
+									size='vw-100'
 									onClick={() => setModalResponse('yes')}
 								>
 									YES
@@ -116,9 +114,8 @@ const Modal = ({
 								<Button
 									buttonStyle='normal'
 									backgroundColor='outline-green'
-									radius='radius-2'
-									size='w-100'
-									color='white'
+									borderRadius='r-2'
+									size='vw-100'
 									onClick={() => setModalResponse('no')}
 								>
 									NOT

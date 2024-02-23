@@ -2,7 +2,7 @@ import { useState, KeyboardEvent, type FocusEvent } from 'react';
 
 import styles from '../../styles/components/form/inputTags.module.css';
 import inputStyle from '../../styles/components/form/input.module.css';
-import { Button } from '../UI';
+import {Button}  from '../../';
 
 interface InputTagProps {
 	placeholder?: string;
@@ -56,9 +56,8 @@ const InputTags = ({ placeholder, onBlur, tags, setTags }: InputTagProps) => {
 				type='button'
 				onClick={addToClick}
 				buttonStyle='squares'
-				size='w-100'
-				radius='radius-2'
-				style={{textTransform:"uppercase", fontSize:"14px"}}
+				size='vw-100'
+				borderRadius='r-2'
 				backgroundColor='green-300'
 			>
 				add tag

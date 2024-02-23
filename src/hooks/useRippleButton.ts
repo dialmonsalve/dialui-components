@@ -7,18 +7,22 @@ export const useRippleButton = () => {
 
 		const ripple = (e: MouseEvent<HTMLButtonElement>) => {
 			if (buttonRef.current) {
-				const rect = buttonRef.current.getBoundingClientRect();
-				const x = e.clientX - rect.left;
-				const y = e.clientY - rect.top;
 
-				const ripples = document.createElement("span");
-				ripples.style.left = `${x}px`;
-				ripples.style.top = `${y}px`;
+				if(e.target === btnElement){
 
-				buttonRef.current.appendChild(ripples);
-				setTimeout(() => {
-					ripples.remove();
-				}, 600);
+					const rect = buttonRef.current.getBoundingClientRect();
+					const x = e.clientX - rect.left;
+					const y = e.clientY - rect.top;
+	
+					const ripples = document.createElement("thisIsAFakeTag");
+					ripples.style.left = `${x}px`;
+					ripples.style.top = `${y}px`;
+	
+					buttonRef.current.appendChild(ripples);
+					setTimeout(() => {
+						ripples.remove();
+					}, 600);
+				}
 			}
 		};
 		btnElement?.addEventListener("click", ripple as unknown as EventListener);

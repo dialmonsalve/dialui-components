@@ -1,5 +1,5 @@
 @use "../variables/globalVariables" as Gv;
-@forward "../../animations/iconSpinner";
+
 
 @mixin spinner() {
   background-color: transparent;
@@ -26,16 +26,10 @@
   );
 }
 
-@mixin containerFleas($gap) {
-  display: flex;
-  gap: $gap;
-}
 
-@mixin fleas($height, $width) {
+@mixin fleas() {
   border-radius: 50%;
   display: block;
-  height: $height;
-  width: $width;
   background: linear-gradient(
     135deg,
     Gv.$color-black-400 0%,
@@ -46,22 +40,26 @@
 
 @mixin containerCircle() {
   display: flex;
-  gap: 3px;
 }
 
-@mixin iconSpinnerCircle($translateY, $height, $width, $background, $delay) {
+@mixin iconSpinnerCircle($translateY, $background, $delay) {
   transform: translateY($translateY);
   animation: circles 0.3s linear infinite $delay;
-  height: $height;
-  width: $width;
   background: $background;
-  border: 1px solid white;
 }
 
-@mixin squares($height, $width, $background) {
-  width: $width;
-  height: $height;
+@mixin squares($background) {
   background: $background;
+}
+
+@keyframes circles {
+  50% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(20%);
+  }
 }
 
 

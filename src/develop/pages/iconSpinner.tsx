@@ -1,4 +1,4 @@
-import { Button } from "../../components/UI";
+import { Button } from "../../";
 
 function IconSpinnerPage() {
 	const hola = true;
@@ -8,10 +8,9 @@ function IconSpinnerPage() {
 			<div>
 				<Button
 					isLoading={hola}
-					radius="radius-3"
+					borderRadius="r-3"
 					size="md-200"
 					backgroundColor="green-500"
-					style={{textTransform:"uppercase"}}
 				>
 					Enviar a todos los contactos
 				</Button>

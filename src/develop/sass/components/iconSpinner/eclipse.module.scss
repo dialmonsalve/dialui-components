@@ -1,0 +1,52 @@
+@use "../../abstract/variables/globalVariables" as Gv;
+
+.eclipse {
+  animation: left-right 1s linear infinite;
+
+  &--1 {
+    background: linear-gradient(45deg, white 0%, transparent 50%, blue 100%);
+    border-radius: 50%;
+    border: 1px solid Gv.$color-yellow-500;
+  }
+
+  &__sm {
+    width: 14px;
+  }
+  &__md {
+    width: 24px;
+  }
+  &__lg {
+    width: 32px;
+  }
+  &__vw {
+    width: 23px;
+  }
+}
+
+.sm {
+  width: 15px;
+  height: 15px;
+}
+.md {
+  width: 25px;
+  height: 25px;
+}
+.lg {
+  width: 30px;
+  height: 30px;
+}
+.vw {
+  width: 25px;
+  height: 25px;
+  right: 10%;
+}
+
+@keyframes left-right {
+  50% {
+    transform: rotate(100deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}

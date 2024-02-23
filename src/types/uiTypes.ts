@@ -16,21 +16,15 @@ export type Size =
 	| 'lg-100'
 	| 'lg-200'
 	| 'lg-300'
-	| 'w-10'
-	| 'w-25'
-	| 'w-50'
-	| 'w-75'
-	| 'w-100';
+	| 'vw-10'
+	| 'vw-25'
+	| 'vw-50'
+	| 'vw-75'
+	| 'vw-100';
 
 export type MessageType = 'success' | 'error' | 'warning' | 'info';
 
-export type Radius =
-	| 'radius-0'
-	| 'radius-1'
-	| 'radius-2'
-	| 'radius-3'
-	| 'radius-4'
-	| 'radius-5';
+export type Radius = 'r-0' | 'r-1' | 'r-2' | 'r-3' | 'r-4' | 'r-5' | 'r-100';
 
 export type Animation =
 	| 'fade-in-out'
@@ -53,4 +47,11 @@ export type ButtonStyle =
 	| 'bright'
 	| 'table';
 
-export type SpinnerType = 'fleas' | 'squares' | 'eclipse' | 'mice' | 'circles';
+export type SpinnerType = 'fleas' | 'squares' | 'eclipse' | 'mice' | 'dots';
+
+export type IconSpinnerSize =
+| 'sm'
+| 'md'
+| 'lg'
+| 'vw'
+

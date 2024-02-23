@@ -5,7 +5,7 @@ import {
 	Select,
 	TextArea,
 } from '../../components/form';
-import { Button } from '../../components/UI';
+import { Button } from '../../';
 import {
 	useCheckbox,
 	useInput,
@@ -174,11 +174,11 @@ const FormControlPage = () => {
 			</div>
 			<Button
 				type='submit'
-				radius='radius-4'
+				borderRadius='r-4'
 				backgroundColor='green-400'
 				// isLoading
-				size='w-100'
-				spinnerType='mice'
+				size='vw-100'
+				iconSpinner='mice'
 			>
 				Enviar
 			</Button>

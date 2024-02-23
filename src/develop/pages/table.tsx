@@ -5,7 +5,7 @@ import Table, {
 	Row,
 	Title,
 } from '../../components/UI/Table';
-import Button from '../../components/UI/Button';
+import {Button} from '../..';
 
 export default function TablePage() {
 	const backgroundColor = 'white';
@@ -43,7 +43,7 @@ export default function TablePage() {
 									<Button
 										buttonStyle='table'
 										backgroundColor='blue-600'
-										style={{ textTransform: 'uppercase' }}
+
 									>
 										edit
 									</Button>
@@ -52,7 +52,7 @@ export default function TablePage() {
 									<Button
 										buttonStyle='table'
 										backgroundColor='red-600'
-										style={{ textTransform: 'uppercase' }}
+
 									>
 										delete
 									</Button>

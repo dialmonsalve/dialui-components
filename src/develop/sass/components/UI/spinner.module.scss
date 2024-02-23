@@ -1,6 +1,5 @@
 @use "../../abstract/variables/globalVariables" as Gv;
 @use "../../abstract/mixins/globalMixins" as Gm;
-@forward "../../animations/iconSpinner";
 
 .spinner {
   align-items: center;

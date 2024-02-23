@@ -5,7 +5,6 @@ import { LP } from '../icons/LP';
 import { SpinnerType } from '../../types';
 
 import styles from '../../styles/components/UI/spinner.module.css';
-import { IconSpinner } from '.';
 
 interface Props {
 	spinnerType?: SpinnerType | 'half-spinner' | 'lp';
@@ -38,7 +37,7 @@ const Spinner = ({ spinnerType }: Props) => {
 		return (
 			<div className={styles['spinner']}>
 				<div className={styles['spinner__content']}>
-					<IconSpinner spinnerType={spinnerType} spin={false} />
+					{/* <IconSpinner spinnerType={spinnerType} spin={false} /> */}
 					<p className={styles['spinner__content--loading']}>Loading ...</p>
 				</div>
 			</div>

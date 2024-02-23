@@ -21,7 +21,7 @@ function HomePage() {
 	</Button>
 	`;
 	return (
-		<section className={`section-home`}>
+		<section className='section-home'>
 			<h1 className='h1'>{language[lang].home.h1}</h1>
 
 			<Highlighter language='shell'>{language[lang].home.install}</Highlighter>
