@@ -1,18 +1,21 @@
-import Button  from "../../components/UI/buttons/ButtonNormal";
+import Button from '../../components/UI/buttons/Button';
 
 function IconSpinnerPage() {
-	const hola = true;
+	const hola = false;
 
 	return (
 		<>
 			<div>
 				<Button
 					isLoading={hola}
-					borderRadius="r-3"
-					size="md-200"
-					backgroundColor="green-500"
+					button='ripple'
+					hasSpinner
+					iconSpinner='fleas'
+					borderRadius='r-3'
+					size='md-100'
+					backgroundColor='green-500'
 				>
-					Enviar a todos los contactos
+					Enviar
 				</Button>
 			</div>
 		</>

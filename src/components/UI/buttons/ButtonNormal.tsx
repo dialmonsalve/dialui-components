@@ -12,7 +12,7 @@ import styles from '../../../styles/components/buttons/button.module.css';
 const ButtonNormal = ({
 	backgroundColor = 'blue-200',
 	children,
-	disabled=false,
+	disabled = false,
 	hasInitialAnimation = false,
 	isLoading = false,
 	borderRadius = 'r-0',
@@ -20,16 +20,16 @@ const ButtonNormal = ({
 	iconSpinner = 'eclipse',
 	hasSpinner = false,
 	onClick,
-	type="button",
+	type = 'button',
 }: ButtonProps) => {
 	const mainClasses = `${styles.btn} ${styles[borderRadius]} ${styles[size]}`;
 
 	const isDisabled =
 		disabled || isLoading
-			? styles['btn-disabled']
+			? styles.disabled
 			: `${styles[`btn__${backgroundColor}`]}`;
 
-	const isAnimated = hasInitialAnimation ? styles['btn__animated'] : '';
+	const isAnimated = hasInitialAnimation ? styles.animated : '';
 
 	const partialSize = [...size];
 	const ISize = (partialSize[0] + partialSize[1]) as IconSpinnerSize;

@@ -16,167 +16,185 @@
   transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
   width: 100%;
   z-index: 999998;
+}
+.close {
+  align-self: flex-end;
+  background-color: white;
+  color: Gv.$color-red-600;
+  padding: 4px;
+  border: 1px solid white;
+  border-radius: 50%;
+  font-weight: 900;
+  transition: color, transform 0.5s ease;
+  box-shadow: 5px 3px 5px Gv.$color-black-200;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  &__container {
-    position: relative;
-    padding: 12px;
-    border-radius:5px;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    min-width: 90%;
+  @include Gm.responsive(tab-port) {
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
 
-    @include Gm.responsive(tab-port) {
-      border-radius:12px;
-      min-width: 80%;
-    }
-
-    @include Gm.responsive(tab-land) {
-      min-width: 50%;
-    }
-  }
-
-  &__close {
-    align-self: flex-end;
-    background-color: white;
-    color: Gv.$color-red-600;
-    padding: 4px;
-    border: 1px solid white;
-    border-radius: 50%;
-    font-weight: 900;
-    transition: color, transform 0.5s ease;
-    box-shadow: 5px 3px 5px Gv.$color-black-200;
-    width: 35px;
-    height: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    @include Gm.responsive(tab-port) {
-      background-color: transparent;
-      color: white;
-      font-size: 20px;
-      cursor: pointer;
-
-      &:hover {
-        background-color: white;
-        color: Gv.$color-red-600;
-      }
+    &:hover {
+      background-color: white;
+      color: Gv.$color-red-600;
     }
   }
-
-  &__content {
-    border-radius: 5px;
-    background: linear-gradient(
-      135deg,
-      Gv.$color-black-100 0%,
-      Gv.$color-black-400 100%
+}
+.success {
+  background: linear-gradient(
+    135deg,
+    Gv.$color-green-200 0%,
+    Gv.$color-green-300 100%
+  );
+  &--title {
+    background-image: linear-gradient(
+      to right,
+      Gv.$color-white-200,
+      Gv.$color-green-200
     );
-    box-shadow: 2px 2px 5px Gv.$color-black-200;
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    align-items: center;
-    border: 1px solid inherit;
+  }
+}
 
-    @include Gm.responsive(tab-port) {
-      border-radius: 12px;
-      padding: 20px;
-    }
+.warning {
+  background: linear-gradient(
+    to right,
+    Gv.$color-yellow-200 0%,
+    Gv.$color-yellow-300 100%
+  );
+  &--title {
+    background-image: linear-gradient(
+      to right,
+      Gv.$color-white-200,
+      Gv.$color-yellow-200
+    );
+  }
+}
 
-    > *:not(:nth-child(1)) {
-      margin-bottom: 10px;
+.error {
+  background: linear-gradient(to right, Gv.$color-red-200, Gv.$color-red-300);
+  &--title {
+    background-image: linear-gradient(
+      to right,
+      Gv.$color-white-200,
+      Gv.$color-red-400
+    );
+  }
+}
 
-      @include Gm.responsive(tab-port) {
-        margin-bottom: 20px;
-      }
-    }
+.info {
+  background: linear-gradient(
+    135deg,
+    Gv.$color-blue-200 0%,
+    Gv.$color-blue-200 100%
+  );
+  &--title {
+    background-image: linear-gradient(
+      to right,
+      Gv.$color-white-200,
+      Gv.$color-blue-200
+    );
+  }
+}
 
-    &--cont-img {
-      align-self: flex-start;
-    }
+.container {
+  position: relative;
+  padding: 12px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 90%;
 
-    &--img {
-      display: flex;
-      width: 80%;
-      height: 80%;
-
-      @include Gm.responsive(tab-port) {
-        width: 90%;
-        height: 90%;
-      }
-    }
-
-    &--title {
-      font-size: 10px;
-      text-transform: uppercase;
-      color: Gv.$color-white-200;
-
-      @include Gm.responsive(phone) {
-        font-size: 26px;
-      }
-
-      @include Gm.responsive(tab-port) {
-        font-size: 28px;
-      }
-    }
-
-    &--description {
-      color: Gv.$color-white-100;
-      font-size: 12px;
-
-      @include Gm.responsive(phone) {
-        font-size: 18px;
-      }
-
-      @include Gm.responsive(tab-land) {
-        font-size: 24px;
-      }
-    }
+  @include Gm.responsive(tab-port) {
+    border-radius: 12px;
+    min-width: 80%;
   }
 
-  &__buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+  @include Gm.responsive(tab-land) {
+    min-width: 50%;
+  }
+}
+
+.content {
+  border-radius: 5px;
+  background: linear-gradient(
+    135deg,
+    Gv.$color-black-100 0%,
+    Gv.$color-black-400 100%
+  );
+  box-shadow: 2px 2px 5px Gv.$color-black-200;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  align-items: center;
+  border: 1px solid inherit;
+
+  @include Gm.responsive(tab-port) {
+    border-radius: 12px;
+    padding: 20px;
+  }
+
+  > *:not(:nth-child(1)) {
+    margin-bottom: 10px;
+
+    @include Gm.responsive(tab-port) {
+      margin-bottom: 20px;
+    }
+  }
+}
+.container-img {
+  align-self: flex-start;
+}
+
+.img {
+  display: flex;
+  width: 80%;
+  height: 80%;
+
+  @include Gm.responsive(tab-port) {
     width: 90%;
-    flex: 1;
-
-    @include Gm.responsive(tab-land) {
-      gap: 10px;
-      flex-direction: row;
-    }
+    height: 90%;
   }
+}
+.title {
+  text-transform: uppercase;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
 
-  &__success {
-    background: linear-gradient(
-      135deg,
-      Gv.$color-green-200 0%,
-      Gv.$color-green-300 100%
-    );
+  @include Gm.responsive(tab-port) {
+    font-size: 28px;
   }
+}
 
-  &__warning {
-    background: linear-gradient(
-      135deg,
-      Gv.$color-yellow-200 0%,
-      Gv.$color-yellow-300 100%
-    );
+.description {
+  color: Gv.$color-white-100;
+  font-size: 12px;
+
+  @include Gm.responsive(tab-port) {
+    font-size: 24px;
   }
+}
 
-  &__error {
-    background: linear-gradient(
-      135deg,
-      Gv.$color-red-200 0%,
-      Gv.$color-red-300 100%
-    );
-  }
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 90%;
+  flex: 1;
 
-  &__info {
-    background: linear-gradient(
-      135deg,
-      Gv.$color-blue-200 0%,
-      Gv.$color-blue-200 100%
-    );
+  @include Gm.responsive(tab-land) {
+    gap: 10px;
+    flex-direction: row;
   }
 }

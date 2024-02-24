@@ -4,13 +4,14 @@
 .main {
   overflow: auto;
   border-top: 1px solid Gv.$primary-color;
-  height: 90vh;
+  height: 92vh;
   padding: 3rem 1rem 8rem;
   transition: background-color 0.2s ease;
   @include Gm.responsive(tab-port) {
     padding: 3rem 4rem;
   }
   @include Gm.responsive(tab-land) {
+    width: 80vw;
     max-height: 89vh;
   }
 

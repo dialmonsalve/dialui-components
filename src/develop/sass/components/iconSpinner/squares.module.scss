@@ -21,8 +21,8 @@
   &--1 {
     background: linear-gradient(
       45deg,
-      Gv.$color-purple-600 0%,
-      transparent 50%,
+      Gv.$color-black-400 0%,
+      gray 50%,
       Gv.$color-red-600 100%
     );
     animation: rect-right 1s linear infinite;
@@ -32,9 +32,9 @@
   &--2 {
     background: linear-gradient(
       135deg,
-      Gv.$color-green-600 0%,
+      Gv.$color-red-600 0%,
       transparent 50%,
-      Gv.$color-pink-600 100%
+      Gv.$color-black-400 100%
     );
     animation: rect-left 1s linear infinite;
     transform: translateY(-6px);

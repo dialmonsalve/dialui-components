@@ -1,9 +1,12 @@
-import { HalfRounded } from '../icons/HalfRounded';
-import { Needle } from '../icons/Needle';
-import { LP } from '../icons/LP';
+import IconSpinnerSquares from './iconSpinner/IconSpinnerSquares';
+import IconSpinnerDots from './iconSpinner/IconSpinnerDots';
+import IconSpinnerEclipse from './iconSpinner/IconSpinnerEclipse';
+import IconsSpinnerFleas from './iconSpinner/IconsSpinnerFleas';
+import IconSpinnerMice from './iconSpinner/IconSpinnerMice';
+
+import { HalfRounded, Needle, LP } from '../icons/';
 
 import { SpinnerType } from '../../types';
-
 import styles from '../../styles/components/UI/spinner.module.css';
 
 interface Props {
@@ -19,7 +22,8 @@ const Spinner = ({ spinnerType }: Props) => {
 				<p className={styles['spinner__loading']}> Loading...</p>
 			</div>
 		);
-	} else if (spinnerType === 'lp') {
+	}
+	if (spinnerType === 'lp') {
 		return (
 			<div className={styles['spinner']}>
 				<div className={styles['spinner__lp']}>
@@ -29,19 +33,51 @@ const Spinner = ({ spinnerType }: Props) => {
 					<div className={styles['spinner__lp-load']}>
 						<LP />
 					</div>
-					<p>Loading...</p>
 				</div>
+				<p className={styles['spinner__loading']}>Loading ...</p>
 			</div>
 		);
 	} else {
-		return (
-			<div className={styles['spinner']}>
-				<div className={styles['spinner__content']}>
-					{/* <IconSpinner spinnerType={spinnerType} spin={false} /> */}
-					<p className={styles['spinner__content--loading']}>Loading ...</p>
+		if (spinnerType === 'squares') {
+			return (
+				<div className={styles['spinner']}>
+					<IconSpinnerSquares size='lg' />
+					<p className={styles['spinner__loading']}>Loading ...</p>
 				</div>
-			</div>
-		);
+			);
+		}
+		if (spinnerType === 'dots') {
+			return (
+				<div className={styles['spinner']}>
+					<IconSpinnerDots size='lg' />
+					<p className={styles['spinner__loading']}>Loading ...</p>
+				</div>
+			);
+		}
+		if (spinnerType === 'eclipse') {
+			return (
+				<div className={styles['spinner']}>
+					<IconSpinnerEclipse size='lg' />
+					<p className={styles['spinner__loading']}>Loading ...</p>
+				</div>
+			);
+		}
+		if (spinnerType === 'fleas') {
+			return (
+				<div className={styles['spinner']}>
+					<IconsSpinnerFleas size='lg' />
+					<p className={styles['spinner__loading']}>Loading ...</p>
+				</div>
+			);
+		}
+		if (spinnerType === 'mice') {
+			return (
+				<div className={styles['spinner']}>
+					<IconSpinnerMice size='lg' />
+					<p className={styles['spinner__loading']}>Loading ...</p>
+				</div>
+			);
+		}
 	}
 };
 

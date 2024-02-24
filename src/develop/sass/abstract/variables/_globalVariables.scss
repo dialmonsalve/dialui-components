@@ -16,6 +16,8 @@ $gray: rgb(70, 68, 68);
 
 $black: rgb(0, 0, 0);
 
+$orange:#ff5e00;
+
 $color-white-100: #f5f5f5;
 $color-white-200: white;
 
@@ -200,5 +202,30 @@ $color-green-500: rgba(
 );
 $color-green-600: rgba(
   $color: $green,
+  $alpha: 1,
+);
+
+$color-orange-100: rgba(
+  $color: $orange,
+  $alpha: 0.3,
+);
+$color-orange-200: rgba(
+  $color: $orange,
+  $alpha: 0.45,
+);
+$color-orange-300: rgba(
+  $color: $orange,
+  $alpha: 0.55,
+);
+$color-orange-400: rgba(
+  $color: $orange,
+  $alpha: 0.7,
+);
+$color-orange-500: rgba(
+  $color: $orange,
+  $alpha: 0.8,
+);
+$color-orange-600: rgba(
+  $color: $orange,
   $alpha: 1,
 );

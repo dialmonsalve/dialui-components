@@ -3,11 +3,11 @@
 
 .header {
   display: flex;
-  height: 10vh;
+  height: 8vh;
   padding: 0 2rem;
   width: 100vw;
   z-index: 1;
- transition: background-color .2s ease; 
+  transition: background-color .2s ease;
   
   @include Gm.responsive(tab-port) {
     justify-content: flex-end;
@@ -18,19 +18,22 @@
     height: 11vh;
     width: 80vw;
   }
-
+  
   &__options {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 100vw;
-
+    gap: 2rem;
+    justify-content: space-around;
+    
     @include Gm.responsive(tab-port) {
-      max-width: 40vw;
+      justify-content: flex-end;
+      gap: 4rem;
     }
-    @include Gm.responsive(tab-land) {
-      max-width: 23vw;
-    }
+    // @include Gm.responsive(tab-land) {
+
+    // }
     &--link {
       order: 1;
       background-color: Gv.$color-purple-600;
@@ -46,7 +49,7 @@
       }
     }
     &--theme-btn {
-      order: 1;
+      order: 0;
     }
   }
 }

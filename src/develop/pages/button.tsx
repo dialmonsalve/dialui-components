@@ -1,4 +1,4 @@
-import ButtonSlideDown from '../../components/UI/buttons/ButtonNormal';
+import ButtonSlideDown from '../../components/UI/buttons/Button';
 import FleaIconsSpinner from '../../components/UI/iconSpinner/IconsSpinnerFleas';
 
 
@@ -8,11 +8,13 @@ function ButtonSlideDownPage() {
 	};
 
 	return (
-		<section style={{ padding: '2rem 4rem', minWidth: '90vh' }}>
+		<section style={{ padding: '2rem 4rem', width: '100%' }}>
 			<ButtonSlideDown
 				size='sm-100'
 				borderRadius='r-3'
 				onClick={() => click(5)}
+				backgroundColor='black-100'
+				button='ripple'
 				>
 				hola
 			</ButtonSlideDown>
@@ -21,6 +23,8 @@ function ButtonSlideDownPage() {
 				size='sm-200'
 				borderRadius='r-3'
 				onClick={() => click(5)}
+				backgroundColor='black-200'
+				button='ripple'
 				>
 				hola
 			</ButtonSlideDown>
@@ -29,6 +33,7 @@ function ButtonSlideDownPage() {
 				size='sm-300'
 				borderRadius='r-3'
 				onClick={() => click(5)}
+				backgroundColor='blue-600'
 				>
 				hola
 			</ButtonSlideDown>
@@ -46,9 +51,11 @@ function ButtonSlideDownPage() {
 			</ButtonSlideDown>
 			<br />
 			<ButtonSlideDown
+					button='ripple'
 				size='md-200'
 				borderRadius='r-3'
 				onClick={() => click(5)}
+				backgroundColor='red-500'
 				>
 				hola
 			</ButtonSlideDown>
@@ -57,10 +64,10 @@ function ButtonSlideDownPage() {
 				size='md-300'
 				borderRadius='r-3'
 				onClick={() => click(5)}
-			iconSpinner='eclipse'
-			isLoading
-			hasSpinner
-			>
+				iconSpinner='eclipse'
+				isLoading
+				hasSpinner
+				>
 				hola
 			</ButtonSlideDown>
 			<br />
@@ -68,7 +75,8 @@ function ButtonSlideDownPage() {
 				size='lg-100'
 				borderRadius='r-3'
 				onClick={() => click(5)}
-			>
+				backgroundColor='orange-100'
+				>
 				hola
 			</ButtonSlideDown>
 			<br />
@@ -76,6 +84,7 @@ function ButtonSlideDownPage() {
 				size='lg-200'
 				borderRadius='r-3'
 				onClick={() => click(5)}
+				backgroundColor='yellow-400'
 				>
 				hola
 			</ButtonSlideDown>
@@ -84,6 +93,7 @@ function ButtonSlideDownPage() {
 				size='lg-300'
 				borderRadius='r-3'
 				onClick={() => click(5)}
+				backgroundColor='purple-400'
 				>
 				hola
 			</ButtonSlideDown>
@@ -93,6 +103,8 @@ function ButtonSlideDownPage() {
 				size='vw-25'
 				borderRadius='r-3'
 				onClick={() => click(5)}
+				backgroundColor='pink-400'
+				
 			>
 				hola
 			</ButtonSlideDown>

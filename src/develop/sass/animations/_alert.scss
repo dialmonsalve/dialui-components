@@ -1,17 +1,31 @@
+@use "../abstract/mixins/globalMixins" as Gm;
+
 .show-alert-left {
-  animation: showToRight 0.3s ease;
+  animation: showToRight 0.2s ease;
+  @include Gm.responsive(tab-port) {
+    animation: showToRight 0.3s ease;
+  }
 }
 
 .show-alert-right {
-  animation: showToLeft 0.3s ease;
+  animation: showToLeft 0.2s ease;
+  @include Gm.responsive(tab-land) {
+    animation: showToLeft 0.3s ease;
+  }
 }
 
 .hide-alert-right {
-  animation: hideRight 0.3s ease-out;
+  animation: hideRight 0.2s ease-out;
+  @include Gm.responsive(tab-port) {
+    animation: hideRight 0.3s ease-out;
+  }
 }
 
 .hide-alert-left {
-  animation: hideToLeft 0.3s ease-out;
+  animation: hideToLeft 0.2s ease-out;
+  @include Gm.responsive(tab-port) {
+    animation: hideToLeft 0.3s ease-out;
+  }
 }
 
 @keyframes hideRight {

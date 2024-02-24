@@ -19,16 +19,17 @@
       -4px 4px 8px rgba($color: #000, $alpha: 0.6);
     height: 60vh;
     max-height: 60vh;
-    right: 3%;
-    top: 11%;
+    right: 2vw;
+    top: 10vh;
     transform: translate(115%, -12%);
     width: 35vw;
     border: none;
   }
-
+  
   @include Gm.responsive(tab-land) {
     border-radius: 0;
     box-shadow: none;
+    top: 11vh;
     height: 90vh;
     max-height: 90vh;
     position: relative;

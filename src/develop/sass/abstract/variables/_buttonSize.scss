@@ -12,7 +12,7 @@
 }
 
 .sm-300 {
-  padding: 0px 20px;
+  padding: 2px 20px;
   font-size: 20px;
 }
 
@@ -42,51 +42,34 @@
 }
 
 .lg-300 {
-  padding: 0px 50px;
+  padding: 2px 50px;
   font-size: 40px;
 }
 
 .vw-25 {
-  width: 15%;
+  width: 25%;
   padding: 6px 20px;
   font-size: 16px;
-  @include Gm.responsive(tab-port){
-    width: 35%;
-  }
-  @include Gm.responsive(tab-land){
-    width: 25%;
-  }
 }
 
 .vw-50 {
   width: 25%;
   padding: 6px 20px;
   font-size: 16px;
-  @include Gm.responsive(tab-port){
-    width: 50%;
-  }
+  width: 50%;
 }
 
 .vw-75 {
   width: 35%;
   padding: 6px 20px;
   font-size: 16px;
-  @include Gm.responsive(tab-port){
-    width: 65%;
-  }
-  @include Gm.responsive(tab-land){
-    width: 75%;
-  }
+  width: 75%;
+
 }
 
 .vw-100 {
   width: 45%;
   padding: 6px 20px;
   font-size: 16px;
-  @include Gm.responsive(tab-port){
-    width: 75%;
-  }
-  @include Gm.responsive(tab-land){
-    width: 100%;
-  }
+  width: 100%;
 }

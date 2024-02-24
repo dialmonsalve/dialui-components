@@ -5,7 +5,7 @@ import { Info, Danger, Success, Warning } from '../../icons';
 import styles from '../../../styles/components/UI/modal.module.css';
 
 import type { Animation, MessageType } from '../../../types';
-import Button from '../buttons/ButtonNormal';
+import ButtonNormal from '../buttons/ButtonNormal';
 
 interface Props {
 	description?: string;
@@ -54,69 +54,57 @@ const Modal = ({
 		>
 			<div
 				onClick={handleContentClick}
-				className={`${styles['modal__container']} ${styles[`modal__${type}`]}`}
+				className={`${styles.container} ${styles[type]}`}
 			>
 				<span
-					className={styles.modal__close}
+					className={styles.close}
 					onClick={() => setModalResponse('cancel')}
 				>
 					X
 				</span>
-				<div className={styles.modal__content}>
-					<div className={styles['modal__content--cont-img']}>
-						{type === 'info' && (
-							<Info className={styles['modal__content--img']} />
-						)}
-						{type === 'error' && (
-							<Danger className={styles['modal__content--img']} />
-						)}
-						{type === 'success' && (
-							<Success className={styles['modal__content--img']} />
-						)}
-						{type === 'warning' && (
-							<Warning className={styles['modal__content--img']} />
-						)}
+				<div className={styles.content}>
+					<div className={styles['container-img']}>
+						{type === 'info' && <Info className={styles['img']} />}
+						{type === 'error' && <Danger className={styles['img']} />}
+						{type === 'success' && <Success className={styles['img']} />}
+						{type === 'warning' && <Warning className={styles['img']} />}
 					</div>
 
 					<h4
-						className={`${styles['modal__content--title']} ${
-							styles[`modal__${type}--title`]
-						}`}
+						className={`${styles['title']} ${styles[`${type}--title`]}`}
 					>
 						{title}
 					</h4>
 
-					<p className={styles['modal__content--description']}>{description}</p>
-					<div className={styles.modal__buttons}>
+					<p className={styles['description']}>{description}</p>
+					<div className={styles.buttons}>
 						{type === 'success' || type === 'info' ? (
-							<>
-								<Button
-									backgroundColor='outline-green'
-									borderRadius='r-2'
-									size='vw-100'
-									onClick={() => setModalResponse('ok')}
-								>
-									OK
-								</Button>
-							</>
+							<ButtonNormal
+								backgroundColor='outline-green'
+								borderRadius='r-2'
+								size='vw-100'
+								onClick={() => setModalResponse('ok')}
+							>
+								OK
+							</ButtonNormal>
 						) : (
 							<>
-								<Button
-									backgroundColor='outline-red'
+								<ButtonNormal
+									backgroundColor='outline-white'
 									borderRadius='r-2'
 									size='vw-100'
 									onClick={() => setModalResponse('yes')}
 								>
 									YES
-								</Button>
-								<Button
+								</ButtonNormal>
+								<ButtonNormal
 									backgroundColor='outline-green'
 									borderRadius='r-2'
 									size='vw-100'
 									onClick={() => setModalResponse('no')}
 								>
 									NOT
-								</Button>
+								</ButtonNormal>
 							</>
 						)}
 					</div>

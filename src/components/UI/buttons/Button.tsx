@@ -7,7 +7,7 @@ import ButtonSquares from './ButtonSquares';
 import { ButtonProps } from './type';
 
 interface Props extends ButtonProps {
-	button: 'normal' | 'squares' | 'filled' | 'beat' | 'ripple' | 'slideDown';
+	button?: 'normal' | 'squares' | 'filled' | 'beat' | 'ripple' | 'slideDown';
 }
 const Button = (props: Props) => {
 	const {

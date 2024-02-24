@@ -12,8 +12,8 @@
 
   &__btn {
     position: absolute;
-    top: 4%;
-    right: 2%;
+    top: 10px;
+    right: 3%;
     color: white;
     width:15px;
     @include Gm.responsive(tab-port){

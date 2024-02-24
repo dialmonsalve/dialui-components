@@ -153,6 +153,30 @@
   &__purple-600 {
     @include bm.btnColor(Gv.$color-purple-600);
   }
+  //! Orange
+  &__orange-100 {
+    @include bm.btnColor(Gv.$color-orange-100);
+  }
+
+  &__orange-200 {
+    @include bm.btnColor(Gv.$color-orange-200);
+  }
+
+  &__orange-300 {
+    @include bm.btnColor(Gv.$color-orange-300);
+  }
+
+  &__orange-400 {
+    @include bm.btnColor(Gv.$color-orange-400);
+  }
+
+  &__orange-500 {
+    @include bm.btnColor(Gv.$color-orange-500);
+  }
+
+  &__orange-600 {
+    @include bm.btnColor(Gv.$color-orange-600);
+  }
 
   &__outlined-blue {
     @include bm.outlined(Gv.$color-blue-100);

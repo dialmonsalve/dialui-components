@@ -7,14 +7,14 @@
     flex-direction: column;
     flex-grow: 1;
     align-items: center;
-    margin-top: 6vh;
+    margin: auto 0;
 
     &--item {
       display: flex;
       text-align: center;
       width: 100%;
       justify-content: center;
-      border-top: 1px solid Gv.$color-gray-100;
+      border-top: 1px solid Gv.$color-gray-200;
       transition: background-color 0.3s ease;
 
       @include Gm.responsive(tab-port) {
@@ -22,7 +22,7 @@
       }
 
       &:last-child {
-        border-bottom: 1px solid Gv.$color-gray-100;
+        border-bottom: 1px solid Gv.$color-gray-200;
       }
     }
     &--link {

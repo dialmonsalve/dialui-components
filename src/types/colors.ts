@@ -38,6 +38,12 @@ export const PalletColors = {
 	'red-400': 'color-red-400',
 	'red-500': 'color-red-500',
 	'red-600': 'color-red-600',
+	'orange-100': 'color-orange-100',
+	'orange-200': 'color-orange-200',
+	'orange-300': 'color-orange-300',
+	'orange-400': 'color-orange-400',
+	'orange-500': 'color-orange-500',
+	'orange-600': 'color-orange-600',
 	'yellow-100': 'color-yellow-100',
 	'yellow-200': 'color-yellow-200',
 	'yellow-300': 'color-yellow-300',
@@ -63,4 +69,5 @@ export type BasicColors =
 	| 'gray'
 	| 'white'
 	| 'purple'
-	| 'pink';
+	| 'pink'
+	| 'orange';

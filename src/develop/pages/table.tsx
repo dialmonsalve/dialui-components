@@ -8,7 +8,7 @@ import Table, {
 import Button from '../../components/UI/buttons/ButtonNormal';
 
 export default function TablePage() {
-	const backgroundColor = 'white';
+	const backgroundColor = 'orange';
 	return (
 		<>
 			<div
@@ -42,15 +42,19 @@ export default function TablePage() {
 								<Cell>
 									<Button
 										backgroundColor='blue-600'
-
-									>
+										size='sm-100'
+										borderRadius='r-3'
+										
+										>
 										edit
 									</Button>
 								</Cell>
 								<Cell>
 									<Button
 										backgroundColor='red-600'
-
+										size='sm-100'
+										borderRadius='r-3'
+										
 									>
 										delete
 									</Button>

@@ -28,17 +28,9 @@
 //! Button without background
 @mixin outlined($color) {
   background-color: transparent;
-  border: 2px solid $color;
+  border: 1px solid $color;
   color: $color;
   @include hoverAnimations($color);
-}
-
-//! Button sizes
-@mixin size($font-size, $width, $height) {
-  font-size: $font-size;
-  width: $width;
-  height: $height;
-  min-width: 40px;
 }
 
 //! Little beat in buttons

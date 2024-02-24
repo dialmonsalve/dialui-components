@@ -46,19 +46,6 @@
   padding: 14px 8px;
 }
 
-// .td:nth-child(1),
-// .th:nth-child(1) {
-//   position: sticky;
-//   left: 0;
-//   background-color: Gv.$color-red-600;
-//   text-align: center;
-//   // font-weight: 700;
-// }
-
-// .th:nth-child(1) {
-//   background-color: Gv.$color-gray-400;
-// }
-
 @mixin colorTable($background, $color: Gv.$color-gray-400) {
   background-color: $background;
   color: $color;
@@ -189,6 +176,29 @@
 .thead .tr-pink {
   @include colorTable(Gv.$color-pink-400, Gv.$color-white-100);
 }
+
+.tr-orange:nth-child(even) {
+  @include colorTable(Gv.$color-orange-100);
+}
+
+.tr-orange:nth-child(odd) {
+  @include colorTable(Gv.$color-orange-200);
+}
+
+.tbody .tr-orange {
+  &:hover {
+    @include Gm.responsive(tab-port) {
+      @include colorTable(Gv.$color-orange-400, Gv.$color-white-100);
+    }
+  }
+}
+
+.thead .tr-orange {
+  @include colorTable(Gv.$color-orange-400, Gv.$color-white-100);
+}
+
+
+
 
 //gray
 .tr-gray:nth-child(even) {

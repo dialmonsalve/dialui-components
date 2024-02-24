@@ -12,15 +12,15 @@
   gap: 4px;
   align-items: center;
   border-radius: 12px;
-  padding: 4px 5px;
+  padding: 1px 5px;
   position: sticky;
 
   &:focus {
     border-color: Gv.$color-green-600;
   }
 
-  @include Gm.responsive(phone) {
-    padding: 6px 8px;
+  @include Gm.responsive(tab-land) {
+    padding: 1px 8px;
   }
 
   &__span {
@@ -61,7 +61,7 @@
     display: flex;
     gap: 4px;
 
-    @include Gm.responsive(phone) {
+    @include Gm.responsive(tab-land) {
       &:focus,
       &:hover {
         color: Gv.$color-red-600;
@@ -77,13 +77,14 @@
   }
 
   &__caret {
-    border: 0.25em solid transparent;
+    border: 8px solid transparent;
     border-top-color: Gv.$color-red-500;
     translate: 0 25%;
     font-size: 24px;
-
-    @include Gm.responsive(phone) {
+    
+    @include Gm.responsive(tab-land) {
       cursor: pointer;
+      font-size: 48px;
     }
   }
 
@@ -113,7 +114,7 @@
       padding: 4px 4px;
       margin-bottom: 2px;
 
-      @include Gm.responsive(tab-port) {
+      @include Gm.responsive(tab-land) {
         cursor: pointer;
       }
     }

@@ -17,7 +17,7 @@ function ModalPage() {
 			animation: 'jumpToDown',
 			description: 'Desea Eliminar?',
 			title: 'Eliminar Usuario',
-			type: 'info',
+			type: 'warning',
 		});
 	}
 

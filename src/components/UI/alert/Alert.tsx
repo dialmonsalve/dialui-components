@@ -11,7 +11,6 @@ interface Props {
 	duration?: number;
 	testid?: string;
 }
-
 const Alert = ({
 	message,
 	type,
@@ -40,13 +39,13 @@ const Alert = ({
 		}, duration);
 	}, [duration]);
 
-	const className = `${styles.alert} ${styles[`alert__${type}`]} ${
-		styles[`alert__${sideY}`]
-	} ${styles[`alert__${sideX}`]} ${styles[`show-alert-${sideX}`]}`;
+	const className = `${styles.alert} ${styles[type]} ${styles[sideY]} ${
+		styles[sideX]
+	} ${styles[`show-alert-${sideX}`]}`;
 
 	return (
 		<div className={className} ref={ref} data-testid={testid}>
-			<p className={`${styles.alert__message}`}>{message}</p>
+			<p className={`${styles.message}`}>{message}</p>
 		</div>
 	);
 };

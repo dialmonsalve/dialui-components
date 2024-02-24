@@ -49,7 +49,7 @@ function DragAndDropPage() {
 					handleDrop={handleDrop}
 					index={index}
 					key={entry.id}
-					backgroundColor='green'
+					backgroundColor='orange'
 				>
 					<h4 >{entry.title}</h4>
 					<h2 >{entry.description}</h2>

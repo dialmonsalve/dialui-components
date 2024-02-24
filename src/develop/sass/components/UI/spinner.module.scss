@@ -6,6 +6,8 @@
   backdrop-filter: blur(4px);
   background-color: Gv.$color-black-200;
   display: flex;
+  flex-direction: column;
+  gap: 20px;
   height: 100vh;
   justify-content: center;
   position: fixed;
@@ -13,39 +15,12 @@
   top: 0;
   transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
   width: 100%;
-  z-index: 999998;
-
-  &__content {
-    display: flex;
-    margin: auto;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-    &__eclipse {
-      @include Gm.responsive(tab-port) {
-        width: 180px;
-        height: 180px;
-      }
-    }
-
-    &__mice {
-      @include Gm.responsive(tab-port) {
-        width: 150px;
-      }
-    }
-
-    &--loading {
-      font-size: 20px;
-      color: white;
-      text-align: center;
-    }
-  }
+  z-index: 999999;
 
   &__half-spinner {
     padding: 35px;
     position: absolute;
-    animation: left-right 0.8s linear infinite;
+    animation: left-right 1s linear infinite;
     width: 300px;
     height: 150px;
   }
@@ -53,6 +28,18 @@
   &__loading {
     font-size: 25px;
     color: Gv.$color-white-200;
+    color: white;
+    font-size: 20px;
+  }
+
+  @keyframes left-right {
+    50% {
+      transform: rotate(100deg);
+    }
+
+    100% {
+      transform: rotate(0deg);
+    }
   }
 
   &__lp {
@@ -62,12 +49,7 @@
     align-items: center;
 
     &-load {
-      animation: mice 0.8s linear infinite;
-    }
-
-    & > p {
-      color: white;
-      font-size: 20px;
+      animation: lp 1.5s linear infinite;
     }
   }
 
@@ -75,5 +57,24 @@
     position: absolute;
     right: 3%;
     z-index: 1;
+  }
+
+}
+
+@keyframes lp {
+  25% {
+    transform: rotate(90deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  75% {
+    transform: rotate(270deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
   }
 }
