@@ -41,12 +41,18 @@ const DragAndDrop = ({
 					: styles['list-item']
 			} ${styles[`list-${backgroundColor}`]}`}
 			draggable
+			
 			onDragStart={() => handleDragStart(index)}
 			onDragOver={handleDragOver}
 			onDrop={() => handleDrop()}
 			onDragEnter={() => handleDragEnter(index)}
 			onDragLeave={handleDragLeave}
 			onDragEnd={handleDragEnd}
+
+			onTouchStart={() => handleDragStart(index)}
+			onTouchEnd={handleDragEnd}
+			onTouchCancel={handleDragLeave}
+			onTouchMove={() => handleDrop()}
 			style={sx}
 		>
 			{children}
