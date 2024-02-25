@@ -1,13 +1,12 @@
 import ButtonNormal from './ButtonNormal';
 import ButtonBeat from './ButtonBeat';
-import ButtonFilled from './ButtonFilled';
 import ButtonRipple from './ButtonRipple';
 import ButtonSlideDown from './ButtonSlideDown';
 import ButtonSquares from './ButtonSquares';
 import { ButtonProps } from './type';
 
 interface Props extends ButtonProps {
-	button?: 'normal' | 'squares' | 'filled' | 'beat' | 'ripple' | 'slideDown';
+	button?: 'normal' | 'squares' | 'beat' | 'ripple' | 'slideDown';
 }
 const Button = (props: Props) => {
 	const {
@@ -94,24 +93,6 @@ const Button = (props: Props) => {
 			>
 				{children}
 			</ButtonSlideDown>
-		);
-	}
-	if (button === 'filled') {
-		return (
-			<ButtonFilled
-				backgroundColor={backgroundColor}
-				borderRadius={borderRadius}
-				disabled={disabled}
-				hasInitialAnimation={hasInitialAnimation}
-				hasSpinner={hasSpinner}
-				iconSpinner={iconSpinner}
-				isLoading={isLoading}
-				onClick={onClick}
-				size={size}
-				type={type}
-			>
-				{children}
-			</ButtonFilled>
 		);
 	}
 

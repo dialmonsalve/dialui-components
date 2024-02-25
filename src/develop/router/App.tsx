@@ -1,18 +1,22 @@
-import { RouteObject, createBrowserRouter } from 'react-router-dom';
+import { Suspense, lazy } from 'react';
 
-import IconSpinner from '../pages/iconSpinner';
-import ButtonPage from '../pages/button';
-import HomePage from '../pages/index';
-import ModalPage from '../pages/modal';
-import NotFoundPage from '../pages/notFound';
-import AlertPage from '../pages/alert';
-import SpinnerPage from '../pages/spinner';
+import Home from '../pages/index';
+
+import { RouteObject, createBrowserRouter } from 'react-router-dom';
 import { Layout } from '../components/layout/Layout';
-import NotificationPage from '../pages/notification';
-import FormPage from '../pages/form';
-import DragAndDropPage from '../pages/dragDrop';
-import InfiniteScrollPage from '../pages/infiniteScroll';
-import TablePage from '../pages/table';
+import NotFoundPage from '../pages/notFound';
+
+const IconSpinner = lazy(() => import('../pages/iconSpinner'));
+const ButtonPage = lazy(() => import('../pages/button'));
+const ModalPage = lazy(() => import('../pages/modal'));
+const AlertPage = lazy(() => import('../pages/alert'));
+const SpinnerPage = lazy(() => import('../pages/spinner'));
+const NotificationPage = lazy(() => import('../pages/notification'));
+const FormPage = lazy(() => import('../pages/form'));
+const DragAndDropPage = lazy(() => import('../pages/dragDrop'));
+const TablePage = lazy(() => import('../pages/table'));
+
+const FONT_SIZE = '35px';
 
 const routes: RouteObject[] = [
 	{
@@ -22,52 +26,101 @@ const routes: RouteObject[] = [
 		children: [
 			{
 				index: true,
-				element: <HomePage />,
+				element: <Home />,
 			},
 			{
 				path: 'icon-spinner',
-				element: <IconSpinner />,
+				element: (
+					<Suspense
+						fallback={<div style={{ fontSize: FONT_SIZE }}>Loading...</div>}
+					>
+						<IconSpinner />,
+					</Suspense>
+				),
 			},
 			{
 				path: 'buttons',
-				element: <ButtonPage />,
+				element: (
+					<Suspense
+						fallback={<div style={{ fontSize: FONT_SIZE }}>Loading...</div>}
+					>
+						<ButtonPage />,
+					</Suspense>
+				),
 			},
 			{
 				path: 'modal',
-				element: <ModalPage />,
+				element: (
+					<Suspense
+						fallback={<div style={{ fontSize: FONT_SIZE }}>Loading...</div>}
+					>
+						<ModalPage />,
+					</Suspense>
+				),
 			},
 			{
 				path: 'alert',
-				element: <AlertPage />,
+				element: (
+					<Suspense
+						fallback={<div style={{ fontSize: FONT_SIZE }}>Loading...</div>}
+					>
+						<AlertPage />,
+					</Suspense>
+				),
 			},
 			{
 				path: 'spinner',
-				element: <SpinnerPage />,
+				element: (
+					<Suspense
+						fallback={<div style={{ fontSize: FONT_SIZE }}>Loading...</div>}
+					>
+						<SpinnerPage />,
+					</Suspense>
+				),
 			},
 
 			{
 				path: 'notification',
-				element: <NotificationPage />,
+				element: (
+					<Suspense
+						fallback={<div style={{ fontSize: FONT_SIZE }}>Loading...</div>}
+					>
+						<NotificationPage />,
+					</Suspense>
+				),
 			},
 			{
 				path: 'drag-and-drop',
-				element: <DragAndDropPage />,
+				element: (
+					<Suspense
+						fallback={<div style={{ fontSize: FONT_SIZE }}>Loading...</div>}
+					>
+						<DragAndDropPage />,
+					</Suspense>
+				),
 			},
 			{
 				path: 'form',
-				element: <FormPage />,
-			},
-			{
-				path: 'infinite-scroll',
-				element: <InfiniteScrollPage />,
+				element: (
+					<Suspense
+						fallback={<div style={{ fontSize: FONT_SIZE }}>Loading...</div>}
+					>
+						<FormPage />,
+					</Suspense>
+				),
 			},
 			{
 				path: 'table',
-				element: <TablePage />,
+				element: (
+					<Suspense
+						fallback={<div style={{ fontSize: FONT_SIZE }}>Loading...</div>}
+					>
+						<TablePage />,
+					</Suspense>
+				),
 			},
 		],
 	},
 ];
 
-// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call
 export const router = createBrowserRouter(routes);

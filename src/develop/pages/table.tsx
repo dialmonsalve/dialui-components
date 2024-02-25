@@ -44,8 +44,8 @@ export default function TablePage() {
 										backgroundColor='blue-600'
 										size='sm-100'
 										borderRadius='r-3'
-										
-										>
+										textTransform='uppercase'
+									>
 										edit
 									</Button>
 								</Cell>
@@ -54,7 +54,7 @@ export default function TablePage() {
 										backgroundColor='red-600'
 										size='sm-100'
 										borderRadius='r-3'
-										
+										textTransform='uppercase'
 									>
 										delete
 									</Button>

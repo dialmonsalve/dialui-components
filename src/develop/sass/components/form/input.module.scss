@@ -5,6 +5,7 @@
   padding: 10px;
   outline: none;
   border-radius: 6px;
+  border: 1px solid Gv.$color-gray-300;
 
 
   &:focus {
@@ -13,5 +14,6 @@
 
   &-disabled {
    cursor: not-allowed;
+   background-color: Gv.$color-gray-100;
   }
 }

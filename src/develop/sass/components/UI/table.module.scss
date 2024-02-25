@@ -177,18 +177,19 @@
   @include colorTable(Gv.$color-pink-400, Gv.$color-white-100);
 }
 
+// orange
 .tr-orange:nth-child(even) {
-  @include colorTable(Gv.$color-orange-100);
+  @include colorTable(Gv.$color-orange-400, Gv.$color-white-100);
 }
 
 .tr-orange:nth-child(odd) {
-  @include colorTable(Gv.$color-orange-200);
+  @include colorTable(Gv.$color-orange-300, Gv.$color-white-100);
 }
 
 .tbody .tr-orange {
   &:hover {
     @include Gm.responsive(tab-port) {
-      @include colorTable(Gv.$color-orange-400, Gv.$color-white-100);
+      @include colorTable(Gv.$color-orange-500, Gv.$color-white-100);
     }
   }
 }
@@ -196,9 +197,6 @@
 .thead .tr-orange {
   @include colorTable(Gv.$color-orange-400, Gv.$color-white-100);
 }
-
-
-
 
 //gray
 .tr-gray:nth-child(even) {

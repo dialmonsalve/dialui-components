@@ -58,6 +58,7 @@ const InputTags = ({ placeholder, onBlur, tags, setTags }: InputTagProps) => {
 				size='vw-100'
 				borderRadius='r-2'
 				backgroundColor='green-300'
+				textTransform='uppercase'
 			>
 				add tag
 			</Button>

@@ -1,58 +1,55 @@
 import DragAndDrop from '../../components/UI/DragAndDrop';
-import useDrag from '../../hooks/useDragAndDrop';
+import useDragAndDrop from '../../hooks/useDragAndDrop';
 
 const initialState = [
 	{
 		id: 1,
 		title: 'uno',
-		position: 1,
 		description: 'description numero 1',
 	},
 	{
 		id: 2,
-		title: 'dos',
-		position: 2,
+		title: 'dos',		
 		description: 'description numero 2',
 	},
 	{
 		id: 3,
 		title: 'tres',
-		position: 25000,
 		description: 'description numero 3',
 	},
 ];
 function DragAndDropPage() {
 	const {
+		dragItem,
 		dragOverItem,
 		entryState,
-		handleDragEnd,
-		handleDragEnter,
-		handleDragLeave,
-		handleDragOver,
-		handleDragStart,
-		handleDrop,
-	} = useDrag({ initialState });
-
+		setDragItem,
+		setDragOverItem,
+		setEntryState,
+	} = useDragAndDrop({ initialState });
 	return (
 		<div
-			style={{ display: 'grid', gap: '10px', padding: '25px' }}
+			style={{
+				display: 'flex',
+				gap: '10px',
+				padding: '25px',
+
+			}}
 		>
 			{entryState.map((entry, index) => (
 				<DragAndDrop
-					dragOverItem={dragOverItem}
-					entry={entry}
-					handleDragEnd={handleDragEnd}
-					handleDragEnter={handleDragEnter}
-					handleDragLeave={handleDragLeave}
-					handleDragOver={handleDragOver}
-					handleDragStart={handleDragStart}
-					handleDrop={handleDrop}
-					index={index}
 					key={entry.id}
+					index={index}
+					entryState={entryState}
+					dragItem={dragItem}
+					dragOverItem={dragOverItem}
+					setEntryState={setEntryState}
+					setDragItem={setDragItem}
+					setDragOverItem={setDragOverItem}
 					backgroundColor='orange'
 				>
-					<h4 >{entry.title}</h4>
-					<h2 >{entry.description}</h2>
+					<h1>{entry.title}</h1>
+					<p>{entry.description}</p>
 				</DragAndDrop>
 			))}
 		</div>

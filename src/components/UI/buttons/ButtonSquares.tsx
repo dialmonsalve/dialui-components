@@ -22,8 +22,9 @@ const ButtonSquares = ({
 	hasSpinner = false,
 	onClick,
 	type = 'button',
+	textTransform = 'lowercase',
 }: ButtonProps) => {
-	const mainClasses = `${styles.btn} ${styles[borderRadius]} ${styles[size]}`;
+	const mainClasses = `${styles.btn} ${styles[borderRadius]} ${styles[size]} ${styles[textTransform]}`;
 
 	const isDisabled =
 		disabled || isLoading

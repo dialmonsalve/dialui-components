@@ -59,8 +59,8 @@ import {Button} from "dialui-components"
   buttonStyle="ripple"
   backgroundColor="blue-200"
   size="sm-100"
-  radius="radius-3"
-  spinnerType="fleas"
+  borderRadius="r-3"
+  spinner="fleas"
   onClick={() => console.log("click")}
   isLoading
 >
@@ -78,40 +78,40 @@ import { useDragAndDrop } from "dialui-components/dist/hooks"
 
 interface InitialState:{
   id:number;
-  position:number;
+  positionEntry:number;
   ...props
 }
-
 const {
-  entryState,
+  dragItem,
   dragOverItem,
-  handleDragEnd,
-  handleDragEnter,
-  handleDragLeave,
-  handleDragOver,
-  handleDragStart,
-  handleDrop,
+  entryState,
+  setDragItem,
+  setDragOverItem,
+  setEntryState,
 } = useDragAndDrop({ initialState });
 
 <div
-  style={{ display: "grid", gap: "10px", padding: "25px" }}
+  style={{
+    display: 'flex',
+    gap: '10px',
+    padding: '25px',
+
+  }}
 >
   {entryState.map((entry, index) => (
     <DragAndDrop
-      dragOverItem={dragOverItem}
-      entry={entry}
-      handleDragEnd={handleDragEnd}
-      handleDragEnter={handleDragEnter}
-      handleDragLeave={handleDragLeave}
-      handleDragOver={handleDragOver}
-      handleDragStart={handleDragStart}
-      handleDrop={handleDrop}
-      index={index}
       key={entry.id}
-      backgroundColor="green"
+      index={index}
+      entryState={entryState}
+      dragItem={dragItem}
+      dragOverItem={dragOverItem}
+      setEntryState={setEntryState}
+      setDragItem={setDragItem}
+      setDragOverItem={setDragOverItem}
+      backgroundColor='orange'
     >
-      <h4 >{entry.title}</h4>
-      <h2 >{entry.description}</h2>
+      <h1>{entry.title}</h1>
+      <p>{entry.description}</p>
     </DragAndDrop>
   ))}
 </div>
@@ -173,7 +173,7 @@ import {Table, TableHead, TableBody, Cell, Row, Title, } from "dialui-components
           <Button
             buttonStyle="table"
             backgroundColor="blue-600"
-            style={{ textTransform: "uppercase" }}
+            textTransform="uppercase"
           >
             edit
           </Button>

@@ -1,69 +1,36 @@
-import { type DragEvent, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 interface InitialState<T> {
 	initialState: T;
 }
 
-const useDragAndDrop = <T extends { position: number }[]>({
-	initialState,
-}: InitialState<T>) => {
-	const [entryState, setEntryState] = useState(
-		initialState.sort((a, b) => a.position - b.position),
-	);
+const useDragAndDrop = <T>({ initialState }: InitialState<T>) => {
+	const [entryState, setEntryState] = useState(initialState);
 
-	const [dragItemIndex, setDragItemIndex] = useState<number | undefined>();
-	const [dragOverItem, setDragOverItemIndex] = useState<number | undefined>();
+	const [dragItem, setDragItem] = useState<number | undefined>();
+	const [dragOverItem, setDragOverItem] = useState<number | undefined>();
 
 	useEffect(() => {
-		setEntryState(initialState);
+		if (entryState instanceof Array) {
+			const newState = entryState
+				.map((entry, index) => {
+					return {
+						...entry,
+						positionEntry: index + 1,
+					};
+				})
+				.sort((a, b) => a.positionEntry - b.positionEntry);
+			setEntryState(newState as T);
+		}
 	}, [initialState]);
 
-	const handleDragStart = (index: number) => {
-		setDragItemIndex(index);
-	};
-
-	const handleDragOver = (event: DragEvent) => {
-		event.preventDefault();
-	};
-
-	const handleDrop = () => {
-		const newEntry = [...entryState];
-		const dragItem = newEntry.splice(dragItemIndex || 0, 1);
-		newEntry.splice(dragOverItem || 0, 0, ...dragItem);
-
-		setEntryState(newEntry as T);
-	};
-
-	const handleDragEnter = (index?: number) => {
-		setDragOverItemIndex(index);
-	};
-
-	const handleDragLeave = () => {
-		setDragOverItemIndex(undefined);
-	};
-
-	const handleDragEnd = () => {
-		const newState = entryState
-			.map((entry, index) => {
-				return {
-					...entry,
-					position: index + 1,
-				};
-			})
-			.sort((a, b) => a.position - b.position);
-		setEntryState(newState as T);
-		setDragItemIndex(undefined);
-		setDragOverItemIndex(undefined);
-	};
 	return {
 		entryState,
 		dragOverItem,
-		handleDragStart,
-		handleDragOver,
-		handleDrop,
-		handleDragEnter,
-		handleDragLeave,
-		handleDragEnd,
+		dragItem,
+		setDragItem,
+		setDragOverItem,
+		setEntryState,
 	};
 };
 

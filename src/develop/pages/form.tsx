@@ -25,23 +25,7 @@ const check = {
 const multiOptions = ['COMPRAS', 'VENTAS', 'LOGISTICA', 'CONTABILIDAD'];
 const simpleOptions = ['UNO', 'DOS', 'TRES', 'CUATRO'];
 
-const databaseTags: string[] = [
-	// 'harry',
-	// 'hola',
-	// 'cincuenta',
-	// 'setenta',
-	// 'ochenta',
-	// 'noventa',
-	// 'cien',
-	// 'cientodiez',
-	// 'cientosetenta',
-	// 'cientoochenta',
-	// 'Pepe',
-	// 'berta',
-	// 'aurelio',
-	// 'doscientossetenta',
-	// 'doscientosochentano',
-];
+const databaseTags: string[] = [];
 
 const FormControlPage = () => {
 	const { selectState, handleSelectChange, resetSelect } = useSelect<
@@ -71,15 +55,6 @@ const FormControlPage = () => {
 	});
 	const handleSubmit = (e: FormEvent) => {
 		e.preventDefault();
-
-		const contact = {
-			...inputState,
-			...checkboxState,
-			profile: [...selectState],
-			election: simpleSelect,
-			tags: [...tagsState],
-		};
-		console.log(contact);
 
 		resetInput();
 		resetCheckbox();

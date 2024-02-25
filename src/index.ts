@@ -18,24 +18,27 @@ import Checkbox from './components/form/Checkbox';
 import Input from './components/form/Input';
 import InputTags from './components/form/InputTags';
 import Select from './components/form/Select';
-import TextArea from './components/form/TextArea';
+import TextArea from './components/form/TextArea'
+import Spinner from './components/UI/Spinner';
+
 
 export {
 	Button,
-	IconSpinner,
-	openAlert,
-	openModal,
-	DragAndDrop,
-	Notification,
-	Table,
 	Cell,
-	Row,
-	TableBody,
-	TableHead,
-	Title,
 	Checkbox,
+	DragAndDrop,
+	IconSpinner,
 	Input,
 	InputTags,
+	Notification,
+	openAlert,
+	openModal,
+	Row,
 	Select,
+	Spinner,
+	Table,
+	TableBody,
+	TableHead,
 	TextArea,
+	Title,
 };

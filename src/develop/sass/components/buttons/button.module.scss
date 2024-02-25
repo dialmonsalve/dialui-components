@@ -10,6 +10,7 @@
   position: relative;
   transition: all 0.1s ease-in-out;
   box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.3);
+  font-weight: 700;
 }
 
 .animated {
@@ -45,4 +46,14 @@
     opacity: 1;
     transform: translate(0);
   }
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+.lowercase {
+  text-transform: lowercase;
+}
+.capitalize {
+  text-transform: capitalize;
 }
