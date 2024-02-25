@@ -16,8 +16,6 @@ const FormPage = lazy(() => import('../pages/form'));
 const DragAndDropPage = lazy(() => import('../pages/dragDrop'));
 const TablePage = lazy(() => import('../pages/table'));
 
-const FONT_SIZE = '35px';
-
 const routes: RouteObject[] = [
 	{
 		path: '/',
@@ -31,50 +29,40 @@ const routes: RouteObject[] = [
 			{
 				path: 'icon-spinner',
 				element: (
-					<Suspense
-						fallback={<div style={{ fontSize: FONT_SIZE }}>Loading...</div>}
-					>
-						<IconSpinner />,
+					<Suspense fallback={<></>}>
+						<IconSpinner />
 					</Suspense>
 				),
 			},
 			{
 				path: 'buttons',
 				element: (
-					<Suspense
-						fallback={<div style={{ fontSize: FONT_SIZE }}>Loading...</div>}
-					>
-						<ButtonPage />,
+					<Suspense fallback={<></>}>
+						<ButtonPage />
 					</Suspense>
 				),
 			},
 			{
 				path: 'modal',
 				element: (
-					<Suspense
-						fallback={<div style={{ fontSize: FONT_SIZE }}>Loading...</div>}
-					>
-						<ModalPage />,
+					<Suspense fallback={<></>}>
+						<ModalPage />
 					</Suspense>
 				),
 			},
 			{
 				path: 'alert',
 				element: (
-					<Suspense
-						fallback={<div style={{ fontSize: FONT_SIZE }}>Loading...</div>}
-					>
-						<AlertPage />,
+					<Suspense fallback={<></>}>
+						<AlertPage />
 					</Suspense>
 				),
 			},
 			{
 				path: 'spinner',
 				element: (
-					<Suspense
-						fallback={<div style={{ fontSize: FONT_SIZE }}>Loading...</div>}
-					>
-						<SpinnerPage />,
+					<Suspense fallback={<></>}>
+						<SpinnerPage />
 					</Suspense>
 				),
 			},
@@ -82,40 +70,32 @@ const routes: RouteObject[] = [
 			{
 				path: 'notification',
 				element: (
-					<Suspense
-						fallback={<div style={{ fontSize: FONT_SIZE }}>Loading...</div>}
-					>
-						<NotificationPage />,
+					<Suspense fallback={<></>}>
+						<NotificationPage />
 					</Suspense>
 				),
 			},
 			{
 				path: 'drag-and-drop',
 				element: (
-					<Suspense
-						fallback={<div style={{ fontSize: FONT_SIZE }}>Loading...</div>}
-					>
-						<DragAndDropPage />,
+					<Suspense fallback={<></>}>
+						<DragAndDropPage />
 					</Suspense>
 				),
 			},
 			{
 				path: 'form',
 				element: (
-					<Suspense
-						fallback={<div style={{ fontSize: FONT_SIZE }}>Loading...</div>}
-					>
-						<FormPage />,
+					<Suspense fallback={<></>}>
+						<FormPage />
 					</Suspense>
 				),
 			},
 			{
 				path: 'table',
 				element: (
-					<Suspense
-						fallback={<div style={{ fontSize: FONT_SIZE }}>Loading...</div>}
-					>
-						<TablePage />,
+					<Suspense fallback={<></>}>
+						<TablePage />
 					</Suspense>
 				),
 			},
