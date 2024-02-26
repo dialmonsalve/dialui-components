@@ -83,6 +83,9 @@ function DragAndDrop<T>({
 			onDragLeave={handleDragLeave}
 			onDragEnd={handleDragEnd}
 			style={sx}
+			onTouchStart={()=>handleDragStart(index)}
+			onTouchEnd={handleDragEnd}
+			onTouchMove={()=>handleDragOver}
 		>
 			{children}
 		</div>
