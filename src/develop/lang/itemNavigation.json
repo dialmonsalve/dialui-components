@@ -1,0 +1,82 @@
+[
+	{
+		"id": 1,
+		"to": "/",
+		"label": {
+      "es":"inicio",
+      "en": "home"
+    }
+	},
+	{
+		"id": 2,
+		"to": "/buttons",
+		"label": {
+			"es":"botones",
+			"en": "buttons"
+		}
+	},
+	{
+		"id": 3,
+		"to": "/icon-spinner",
+		"label": {
+      "es":"mini loader",
+      "en": "icon spinner"
+    }
+	},
+	{
+		"id": 4,
+		"to": "/modal",
+		"label": {
+      "es":"modal",
+      "en": "modal"
+    }
+	},
+	{
+		"id": 5,
+		"to": "/alert",
+		"label": {
+      "es":"alerta",
+      "en": "alert"
+    }
+	},
+	{
+		"id": 6,
+		"to": "/spinner",
+		"label": {
+      "es":"loader",
+      "en": "spinner"
+    }
+	},
+	{
+		"id": 7,
+		"to": "/notification",
+		"label": {
+      "es":"notificación",
+      "en": "notification"
+    }
+	},
+	{
+		"id": 8,
+		"to": "/form",
+		"label": {
+      "es":"formulario",
+      "en": "form"
+    }
+	},
+	{
+		"id": 9,
+		"to": "/drag-and-drop",
+		"label": {
+      "es":"drag and drop",
+      "en": "drag and drop"
+    }
+	},
+	{
+		"id": 10,
+		"to": "/table",
+		"label": {
+      "es":"tabla",
+      "en": "table"
+    }
+	}
+]

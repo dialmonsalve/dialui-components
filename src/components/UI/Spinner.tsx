@@ -10,11 +10,11 @@ import { SpinnerType } from '../../types';
 import styles from '../../styles/components/UI/spinner.module.css';
 
 interface Props {
-	spinnerType?: SpinnerType | 'half-spinner' | 'lp';
+	spinner?: SpinnerType | 'half-spinner' | 'lp';
 }
 
-const Spinner = ({ spinnerType }: Props) => {
-	if (spinnerType === 'half-spinner') {
+const Spinner = ({ spinner }: Props) => {
+	if (spinner === 'half-spinner') {
 		return (
 			<div className={styles.spinner}>
 				<HalfRounded className={styles['spinner__half-spinner']} />
@@ -23,7 +23,7 @@ const Spinner = ({ spinnerType }: Props) => {
 			</div>
 		);
 	}
-	if (spinnerType === 'lp') {
+	if (spinner === 'lp') {
 		return (
 			<div className={styles['spinner']}>
 				<div className={styles['spinner__lp']}>
@@ -38,7 +38,7 @@ const Spinner = ({ spinnerType }: Props) => {
 			</div>
 		);
 	} else {
-		if (spinnerType === 'squares') {
+		if (spinner === 'squares') {
 			return (
 				<div className={styles['spinner']}>
 					<IconSpinnerSquares size='lg' />
@@ -46,7 +46,7 @@ const Spinner = ({ spinnerType }: Props) => {
 				</div>
 			);
 		}
-		if (spinnerType === 'dots') {
+		if (spinner === 'dots') {
 			return (
 				<div className={styles['spinner']}>
 					<IconSpinnerDots size='lg' />
@@ -54,7 +54,7 @@ const Spinner = ({ spinnerType }: Props) => {
 				</div>
 			);
 		}
-		if (spinnerType === 'eclipse') {
+		if (spinner === 'eclipse') {
 			return (
 				<div className={styles['spinner']}>
 					<IconSpinnerEclipse size='lg' />
@@ -62,7 +62,7 @@ const Spinner = ({ spinnerType }: Props) => {
 				</div>
 			);
 		}
-		if (spinnerType === 'fleas') {
+		if (spinner === 'fleas') {
 			return (
 				<div className={styles['spinner']}>
 					<IconsSpinnerFleas size='lg' />
@@ -70,7 +70,7 @@ const Spinner = ({ spinnerType }: Props) => {
 				</div>
 			);
 		}
-		if (spinnerType === 'mice') {
+		if (spinner === 'mice') {
 			return (
 				<div className={styles['spinner']}>
 					<IconSpinnerMice size='lg' />

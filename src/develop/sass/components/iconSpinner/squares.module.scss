@@ -4,19 +4,7 @@
 .squares {
   display: flex;
   gap: 3px;
-
-  &__sm {
-    width: 20px;
-  }
-  &__md {
-    width: 28px;
-  }
-  &__lg {
-    width: 40px;
-  }
-  &__vw {
-    width: 26px;
-  }
+  width: fit-content;
   
   &--1 {
     background: linear-gradient(
@@ -54,8 +42,8 @@
   height: 20px;
 }
 .vw {
-  width: 12px;
-  height: 12px;
+  width: 8px;
+  height: 8px;
   right: 10%;
 }
 

@@ -3,20 +3,7 @@
 .fleas {
   display: flex;
   gap: 1px;
-
-
-  &__sm {
-    width: 16px;
-  }
-  &__md {
-    width: 30px;
-  }
-  &__lg {
-    width: 44px;
-  }
-  &__vw {
-    width: 44px;
-  }
+  width: fit-content;
   
   &--1,
   &--2,

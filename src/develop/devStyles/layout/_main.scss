@@ -5,13 +5,16 @@
   overflow: auto;
   border-top: 1px solid Gv.$primary-color;
   height: 92vh;
-  padding: 3rem 1rem 8rem;
+  padding: 3rem 5rem 8rem;
   transition: background-color 0.2s ease;
+  width: 100%;
   @include Gm.responsive(tab-port) {
-    padding: 3rem 4rem;
+    padding: 3rem 25rem 8rem;
+    
   }
   @include Gm.responsive(tab-land) {
-    width: 80vw;
+    width: 100%;
+    margin: 0 auto;
     max-height: 89vh;
   }
 
@@ -19,7 +22,6 @@
     font-size: 3.5rem;
     text-align: center;
     text-transform: uppercase;
-    padding: 0 0 3rem;
   }
 }
 

@@ -31,9 +31,6 @@
       justify-content: flex-end;
       gap: 4rem;
     }
-    // @include Gm.responsive(tab-land) {
-
-    // }
     &--link {
       order: 1;
       background-color: Gv.$color-purple-600;
@@ -41,6 +38,7 @@
       padding: 1rem;
       font-size: 12px;
       border-radius: 4px;
+      width: fit-content;
       @include Gm.responsive(tab-port) {
         order: 0;
         &:hover {

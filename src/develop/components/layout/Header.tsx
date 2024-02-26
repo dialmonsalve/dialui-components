@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import useAppOptions from '../../hooks/context/useAppOptions';
-import language from '../../lang/lang.json';
 import { Moon } from '../icons/Moon';
 import { Sun } from '../icons/Sun';
 import Select from '../../../components/form/Select';
@@ -19,7 +18,7 @@ export const Header = () => {
 					className='header__options--link'
 					style={{width:"130px"}}
 				>
-					{language[lang].coffee} ☕️
+					{lang === "en" ? "Bug me a coffee ☕️" : "Invítame un café ☕"}
 				</Link>
 				<div style={{width:"80px"}} >
 				<Select

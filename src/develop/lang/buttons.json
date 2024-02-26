@@ -1,0 +1,37 @@
+{
+	"es": {
+		"h1": "Botones",
+		"p1": "Cuando trabajamos con botones generalmente invertimos un buen tiempo diseñando, hasta quedar a gusto. En esta sección te mostramos como puedes hacer un botón en menos de un    minuto",
+		"h31": "botón por defecto",
+    "propButton":"Tipo de botón que quieres",
+		"propColor": "Colors es valor que permite cambiar el fondo del botón. Los colores van desde el color más tenue que es 100 hasta el más fuerte que es 600.",
+		"propSize": "Los tamaños del botón varían según lo definas",
+		"propRadius": "Radius es el valor que permite cambiar el radio del borde",
+		"propHasSpinner": "Hay veces que queremos que el botón tenga un mini spinner de carga mientras se hace una petición para no permitir los clicks innecesarios. Esta propiedad permite definir si quieres un spinner",
+		"propSpinnerType": "Cuando defines mini spinner de carga, querrás personalizarlo para darle un diseño diferente a tu botón",
+		"propIsLoading": "Cuando hagas la petición, configura tu estado para que se deshabilite y además muestre tu spinner en el botón",
+		"styleProp": "Si no te gustan estos diseños, puedes agregar los tuyos y modificarlos con la propiedad style de react",
+		"propDisabled": "Habilita o deshabilita el botón",
+		"propHasInitialAnimation": "Pequeña animación del botón al entrar a la página",
+		"propTransform": "Cambia el texto a minúsculas, mayúsculas o capitalizado",
+		"note":"Nota importante: Los botones que tienen animaciones con hover, dicha animación está deshabilitada en tablets y dispositivos mobiles"
+	},
+	"en": {
+		"h1": "Buttons",
+		"p1": "When working with buttons, we often spend a good amount of time designing until we're satisfied. In this section, we'll show you how to create a button in less than a minute",
+		"h31": "default button",
+    "propButton":"Button type that you want",
+		"propColor": "Colors is the value to allow change the button background. The colors range from the faintest color which is 100 to the strongest which is 600",
+    "propSize": "Button sizes vary depending on how you define them",
+    "propRadius": "Radius is the value that allows you to change the border radius",
+    "propHasSpinner": "Sometimes we want our button to have a mini loading spinner while making a request to prevent unnecessary clicks. This property allows you to define whether you want a spinner",
+    "propSpinnerType": "When defining a mini loading spinner, you'll want a custom spin to give your button a different design",
+    "propIsLoading": "When making the request, set your state to disable and also display your spinner on the button",
+    "styleProp": "If you don't like these designs, you can add your own and modify them using the style property in React",
+    "propDisabled": "Enable or disable the button",
+    "propHasInitialAnimation": "Small button animation when enter at the page.",
+    "propTransform": "Change the text to lowercase, uppercase, or capitalize",
+		"note":"Important note: Buttons that have hover animations, this animation is disabled on tablets and mobile devices"
+
+	}
+}

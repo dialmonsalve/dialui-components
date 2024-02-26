@@ -4,35 +4,29 @@
   animation: left-right 1.5s linear infinite;
 
   &--1 {
-    background: linear-gradient(45deg, white 0%, Gv.$color-yellow-600 50%, blue 100%);
+    background: linear-gradient(
+      13.5deg,
+      Gv.$color-blue-600 0%,
+      Gv.$color-white-200 65%,
+      yellow 100%
+    );
     border-radius: 50%;
-  }
-
-  &__sm {
-    width: 14px;
-  }
-  &__md {
-    width: 24px;
-  }
-  &__lg {
-    width: 30px;
-  }
-  &__vw {
-    width: 23px;
+    display: block;
+    width: 100%;
+    height: 100%;
   }
 }
-
 .sm {
-  width: 15px;
-  height: 15px;
+  width: 18px;
+  height: 18px;
 }
 .md {
   width: 25px;
   height: 25px;
 }
 .lg {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
 }
 .vw {
   width: 25px;
@@ -41,7 +35,6 @@
 }
 
 @keyframes left-right {
-
   100% {
     transform: rotate(359deg);
   }

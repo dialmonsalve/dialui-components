@@ -14,21 +14,21 @@
   border-radius: 12px;
   padding: 1px 5px;
   position: sticky;
-
+  
   &:focus {
     border-color: Gv.$color-green-600;
   }
-
+  
   @include Gm.responsive(tab-land) {
     padding: 1px 8px;
   }
-
+  
   &__span {
     flex-grow: 1;
     display: flex;
     gap: 2px;
     flex-wrap: wrap;
-
+    
     &--option-badge {
       align-items: center;
       background-color: Gv.$color-blue-400;
@@ -40,12 +40,12 @@
       gap: 6px;
       outline: none;
       padding: 2px 8px;
-
+      
       @include Gm.responsive(tab-port) {
         border-radius: 8px;
         font-size: 14px;
         cursor: pointer;
-
+        
         &:hover,
         &:focus {
           background-color: Gv.$color-red-200;
@@ -54,20 +54,20 @@
       }
     }
   }
-
+  
   &__clear {
     color: Gv.$color-red-400;
     font-size: 28px;
     display: flex;
     gap: 4px;
-
+    
     @include Gm.responsive(tab-land) {
       &:focus,
       &:hover {
         color: Gv.$color-red-600;
       }
     }
-
+    
     &::after {
       content: "";
       background-color: Gv.$color-black-300;
@@ -75,7 +75,7 @@
       height: 28px;
     }
   }
-
+  
   &__caret {
     border: 8px solid transparent;
     border-top-color: Gv.$color-red-500;
@@ -87,7 +87,7 @@
       font-size: 48px;
     }
   }
-
+  
   &__options {
     position: absolute;
     margin: 0;
@@ -118,7 +118,7 @@
         cursor: pointer;
       }
     }
-
+    
     &--selected {
       background-color: Gv.$color-red-300;
       border-radius: 6px;

@@ -17,12 +17,13 @@ const ButtonSlideDown = ({
 	hasInitialAnimation = false,
 	isLoading = false,
 	borderRadius = 'r-0',
-	size = 'md-100',
+	size = 'sm-100',
 	iconSpinner = 'eclipse',
 	hasSpinner = false,
 	onClick,
 	type = 'button',
 	textTransform = 'lowercase',
+	style,
 }: ButtonProps) => {
 	const mainClasses = `${styles.btn} ${styles[borderRadius]} ${styles[size]} ${styles[textTransform]}`;
 	const isDisabled =
@@ -41,6 +42,7 @@ const ButtonSlideDown = ({
 			type={type}
 			disabled={disabled || isLoading}
 			onClick={onClick}
+			style={style}
 		>
 			{children}
 			{hasSpinner && isLoading ? (

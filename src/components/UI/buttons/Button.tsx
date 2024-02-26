@@ -20,8 +20,10 @@ const Button = (props: Props) => {
 		iconSpinner,
 		isLoading,
 		onClick,
+		style,
 		size,
 		type,
+		textTransform
 	} = props;
 	if (button === 'normal') {
 		return (
@@ -36,6 +38,8 @@ const Button = (props: Props) => {
 				onClick={onClick}
 				size={size}
 				type={type}
+				style={style}
+				textTransform={textTransform}
 			>
 				{children}
 			</ButtonNormal>
@@ -54,6 +58,8 @@ const Button = (props: Props) => {
 				onClick={onClick}
 				size={size}
 				type={type}
+				style={style}
+				textTransform={textTransform}
 			>
 				{children}
 			</ButtonRipple>
@@ -72,6 +78,8 @@ const Button = (props: Props) => {
 				onClick={onClick}
 				size={size}
 				type={type}
+				style={style}
+				textTransform={textTransform}
 			>
 				{children}
 			</ButtonBeat>
@@ -90,6 +98,8 @@ const Button = (props: Props) => {
 				onClick={onClick}
 				size={size}
 				type={type}
+				style={style}
+				textTransform={textTransform}
 			>
 				{children}
 			</ButtonSlideDown>
@@ -109,6 +119,8 @@ const Button = (props: Props) => {
 				onClick={onClick}
 				size={size}
 				type={type}
+				style={style}
+				textTransform={textTransform}
 			>
 				{children}
 			</ButtonSquares>

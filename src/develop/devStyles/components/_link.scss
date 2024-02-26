@@ -8,6 +8,13 @@
     flex-grow: 1;
     align-items: center;
     margin: auto 0;
+    gap: 0;
+    @include Gm.responsive(tab-port){
+      margin-top: 9rem;
+    }
+    @include Gm.responsive(tab-land){
+      margin-top: auto;
+    }
 
     &--item {
       display: flex;

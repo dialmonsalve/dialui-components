@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import useAppOptions from '../../hooks/context/useAppOptions';
-import { navigation } from '../../utils/utils';
+
 import { NavigationLink } from '../NavigationLink';
 
+import language from "../../lang/itemNavigation.json"
+
 export const Sidebar = () => {
-	const { theme } = useAppOptions();
+	const { theme, lang } = useAppOptions();
 
 	const [toggleMenu, setToggleMenu] = useState(false);
 
@@ -27,13 +29,13 @@ export const Sidebar = () => {
 			</div>
 			<nav className={`sidebar ${toggleMenu ? 'show-sidebar' : ''}`} >
 				<ul className='sidebar__container'>
-					{navigation.map((link) => (
+					{language.map((link) => (
 						<NavigationLink
 							setToggleMenu={setToggleMenu}
 							key={link.id}
 							to={link.to}
 						>
-							{link.label}
+							{link.label[lang]}
 						</NavigationLink>
 					))}
 				</ul>

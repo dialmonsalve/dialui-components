@@ -1,6 +1,8 @@
 @use "../abstract/mixins/globalMixins" as Gm;
 @use "../abstract/variables/globalVariables" as Gv;
 
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
 *,
 *::after,
 *::before {
@@ -32,6 +34,6 @@ body {
   box-sizing: border-box;
   background-color: rgba(222, 222, 223, 0);
   margin: 0;
-  font-family: Gv.$font-family;
   overflow: hidden;
+  font-family: "Ubuntu", sans-serif;
 }

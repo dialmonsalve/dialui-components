@@ -8,7 +8,7 @@ interface Props {
 
 const IconsSpinnerFleas = ({ size = 'sm' }: Props) => {
 	return (
-		<span className={`${styles['fleas']} ${styles[`fleas__${size}`]}`}>
+		<span className={styles.fleas}>
 			<span className={`${styles['fleas--1']} ${styles[size]}`} />
 			<span className={`${styles['fleas--2']} ${styles[size]}`} />
 			<span className={`${styles['fleas--3']} ${styles[size]}`} />

@@ -47,3 +47,9 @@
     }
   }
 }
+
+@mixin btnSize($pad, $fs, ){
+  padding: $pad;
+  font-size: $fs;
+  width: fit-content;
+}

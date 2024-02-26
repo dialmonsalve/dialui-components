@@ -16,7 +16,6 @@ export type Size =
 	| 'lg-100'
 	| 'lg-200'
 	| 'lg-300'
-	| 'vw-10'
 	| 'vw-25'
 	| 'vw-50'
 	| 'vw-75'

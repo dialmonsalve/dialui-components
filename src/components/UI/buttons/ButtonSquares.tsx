@@ -17,9 +17,10 @@ const ButtonSquares = ({
 	hasInitialAnimation = false,
 	isLoading = false,
 	borderRadius = 'r-0',
-	size = 'md-100',
+	size = 'sm-100',
 	iconSpinner = 'eclipse',
 	hasSpinner = false,
+	style,
 	onClick,
 	type = 'button',
 	textTransform = 'lowercase',
@@ -42,6 +43,7 @@ const ButtonSquares = ({
 			type={type}
 			disabled={disabled || isLoading}
 			onClick={onClick}
+			style={style}
 		>
 			<span />
 			<span />

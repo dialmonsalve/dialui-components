@@ -5,19 +5,19 @@
   position: relative;
 
   @include Gm.responsive(tab-port){
-    max-width: 50vw;
     margin: 0 auto;
-    width: 60vw;
+    width: 100%;
   }
 
   &__btn {
     position: absolute;
-    top: 10px;
+    top: 8%;
     right: 3%;
     color: white;
     width:15px;
     @include Gm.responsive(tab-port){
       width: 20px;
+      right: 3%;
     }
   }
 }

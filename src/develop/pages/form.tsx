@@ -69,7 +69,6 @@ const FormControlPage = () => {
 				display: 'flex',
 				flexDirection: 'column',
 				gap: '8px',
-				width: '50%',
 				margin: 'auto auto',
 				// padding: '1rem 5rem 4rem',
 			}}

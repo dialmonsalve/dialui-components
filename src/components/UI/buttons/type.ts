@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import type { CSSProperties, ReactNode } from 'react';
 import type { Colors, Size, Radius, SpinnerType } from '../../../types';
 
 export interface ButtonProps {
@@ -11,6 +11,7 @@ export interface ButtonProps {
 	iconSpinner?: SpinnerType;
 	isLoading?: boolean;
 	size?: Size;
+	style?: CSSProperties;
 	type?: 'submit' | 'button' | 'reset';
 	textTransform?: 'capitalize' | 'lowercase' | 'uppercase';
 	onClick?: React.MouseEventHandler<HTMLButtonElement>;

@@ -17,11 +17,12 @@ const ButtonBeat = ({
 	hasInitialAnimation = false,
 	isLoading = false,
 	borderRadius = 'r-0',
-	size = 'md-100',
+	size = 'sm-100',
 	iconSpinner = 'eclipse',
 	hasSpinner = false,
-	onClick,
+	style,
 	type = 'button',
+	onClick,
 	textTransform = 'lowercase',
 }: ButtonProps) => {
 	const mainClasses = `${styles.btn} ${styles[borderRadius]} ${styles[size]} ${styles[textTransform]}`;
@@ -42,6 +43,7 @@ const ButtonBeat = ({
 			type={type}
 			disabled={disabled || isLoading}
 			onClick={onClick}
+			style={style}
 		>
 			{children}
 			{hasSpinner && isLoading ? (

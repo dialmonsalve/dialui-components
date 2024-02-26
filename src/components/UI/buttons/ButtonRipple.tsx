@@ -19,12 +19,13 @@ const ButtonRipple = ({
 	hasInitialAnimation = false,
 	isLoading = false,
 	borderRadius = 'r-0',
-	size = 'md-100',
+	size = 'sm-100',
 	iconSpinner = 'eclipse',
 	hasSpinner = false,
-	onClick,
+	style,
 	type = 'button',
-	textTransform = 'lowercase',
+	textTransform="lowercase",
+	onClick,
 }: ButtonProps) => {
 	const { buttonRef } = useRippleButton();
 
@@ -47,6 +48,7 @@ const ButtonRipple = ({
 			disabled={disabled || isLoading}
 			onClick={onClick}
 			ref={buttonRef}
+			style={style}
 		>
 			{children}
 			{hasSpinner && isLoading ? (

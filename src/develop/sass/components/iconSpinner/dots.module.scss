@@ -4,20 +4,7 @@
 .dots {
   display: flex;
   right: 0%;
-
-  &__sm {
-    width: 14px;
-  }
-  &__md {
-    width: 28px;
-
-  }
-  &__lg {
-    width: 36px;
-  }
-  &__vw {
-    width: 38px;
-  }
+  width: fit-content;
 
   &--1,
   &--2,

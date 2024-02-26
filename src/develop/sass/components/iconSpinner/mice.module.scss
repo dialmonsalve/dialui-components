@@ -5,6 +5,7 @@
   justify-content: space-between;
   animation: mice 1s linear infinite;
   gap: 3px;
+  width: fit-content;
 
   &--1,
   &--2 {
@@ -16,19 +17,6 @@
       black 10%,
       white 100%
     );
-  }
-
-  &__sm {
-    width: 18px;
-  }
-  &__md {
-    width: 30px;
-  }
-  &__lg {
-    width: 36px;
-  }
-  &__vw {
-    width: 18px;
   }
 }
 
