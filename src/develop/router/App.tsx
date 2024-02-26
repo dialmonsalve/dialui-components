@@ -13,7 +13,6 @@ const AlertPage = lazy(() => import('../pages/alert'));
 const SpinnerPage = lazy(() => import('../pages/spinner'));
 const NotificationPage = lazy(() => import('../pages/notification'));
 const FormPage = lazy(() => import('../pages/form'));
-const DragAndDropPage = lazy(() => import('../pages/dragDrop'));
 const TablePage = lazy(() => import('../pages/table'));
 
 const routes: RouteObject[] = [
@@ -75,14 +74,7 @@ const routes: RouteObject[] = [
 					</Suspense>
 				),
 			},
-			{
-				path: 'drag-and-drop',
-				element: (
-					<Suspense fallback={<></>}>
-						<DragAndDropPage />
-					</Suspense>
-				),
-			},
+
 			{
 				path: 'form',
 				element: (

@@ -10,7 +10,6 @@ Install: `npm i dialui-components`
 
 - [Alert](https://dialui-components.netlify.app/alert)
 - [Button](https://dialui-components.netlify.app/buttons)
-- [Drag and drop](https://dialui-components.netlify.app/drag)
 - [Icon spinner](https://dialui-components.netlify.app/icon-spinner)
 - [Modal ](https://dialui-components.netlify.app/modal)
 - [Notification](https://dialui-components.netlify.app/notificacion)
@@ -68,55 +67,6 @@ import {Button} from "dialui-components"
 ```
 
 more details: [Button](https://dialui-components.netlify.app/buttons)
-
-### Drag and drop
-
-```tsx
-import {DragAndDrop} from "dialui-components"
-import { useDragAndDrop } from "dialui-components/dist/hooks"
-
-interface InitialState:{
-  id:number;
-  positionEntry:number;
-  ...props
-}
-const {
-  dragItem,
-  dragOverItem,
-  entryState,
-  setDragItem,
-  setDragOverItem,
-  setEntryState,
-} = useDragAndDrop({ initialState });
-
-<div
-  style={{
-    display: 'flex',
-    gap: '10px',
-    padding: '25px',
-
-  }}
->
-  {entryState.map((entry, index) => (
-    <DragAndDrop
-      key={entry.id}
-      index={index}
-      entryState={entryState}
-      dragItem={dragItem}
-      dragOverItem={dragOverItem}
-      setEntryState={setEntryState}
-      setDragItem={setDragItem}
-      setDragOverItem={setDragOverItem}
-      backgroundColor='orange'
-    >
-      <h1>{entry.title}</h1>
-      <p>{entry.description}</p>
-    </DragAndDrop>
-  ))}
-</div>
-```
-
-more details: [Drag and drop](https://dialui-components.netlify.app/drag)
 
 ### Modal:
 
