@@ -4,7 +4,6 @@ import IconSpinner from './components/UI/iconSpinner/IconSpinner';
 import openAlert from './components/UI/alert/openAlert';
 import openModal from './components/UI/modal/openModal';
 
-import DragAndDrop from './components/UI/DragAndDrop';
 import Notification from './components/UI/Notification';
 import Table, {
 	Cell,
@@ -26,7 +25,6 @@ export {
 	Button,
 	Cell,
 	Checkbox,
-	DragAndDrop,
 	IconSpinner,
 	Input,
 	InputTags,
