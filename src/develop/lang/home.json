@@ -10,7 +10,7 @@
 			"li4": "4. Hay componentes que son complejos de realizar y requieren mucha atención y lógica como por ejemplo los multi selects, un input para etiquetas, spinners de carga, entre otros.",
 			"li5": "5. Una gamma considerable de estilos y animaciones para elegir en cada componente.",
 			"li6":"Puedes seguir usando CSS, tu framework de CSS favorito, tu biblioteca propia de estilos y hasta las más avanzadas. Este mini set de componentes usa 100% CSS puro",
-			"p4": "Si quieres conocer más te invitamos a que explores en nuestra documentación. Esperamos te sea de utilidad y los disfrutes tanto como lo hicimos nosotros al crearlos. Está atento porque no queremos parar acá y estaremos creando más siempre y cuando veamos que sea un componente que requiera alguna complejidad adicional."
+			"p4": "Si quieres conocer más te invitamos a que explores nuestra documentación. Esperamos te sea de utilidad y los disfrutes tanto como lo hicimos nosotros al crearlos. Está atento porque no queremos parar acá y estaremos creando más,pero siempre y cuando veamos que sea un componente que requiera alguna complejidad adicional."
 	},
 	"en": {
 			"h1": "home",

@@ -4,8 +4,7 @@ mini set of react componentes
 
 Install: `npm i dialui-components`
 
-<!-- ![components](/public/assets/my-components.png) -->
-<img src="./public/assets/my-components.png" alt="Descripción de la imagen" width="200" height="150">
+<img src="./public/assets/dialui-components.png" alt="Descripción de la imagen" width="200" height="150">
 
 ## user Interface Components
 
