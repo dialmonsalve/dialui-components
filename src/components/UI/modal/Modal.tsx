@@ -8,19 +8,17 @@ import type { Animation, MessageType } from '../../../types';
 import ButtonNormal from '../buttons/ButtonNormal';
 
 interface Props {
-	description?: string;
+	description: string;
 	animation?: Animation;
-	title?: string;
+	title: string;
 	type: MessageType;
 	handleModalResponse?: (res: 'yes' | 'no' | 'ok' | 'cancel') => void;
-	dataid?: string;
 }
 
 const Modal = ({
 	description,
 	type,
-	dataid = 'modal',
-	title = type,
+	title,
 	animation = 'fade-in-out',
 	handleModalResponse,
 }: Props) => {
@@ -50,7 +48,6 @@ const Modal = ({
 			onClick={() => setModalResponse('cancel')}
 			className={`${styles.modal} ${styles[`modal-show-${animation}`]}`}
 			ref={ref}
-			data-testid={dataid}
 		>
 			<div
 				onClick={handleContentClick}
@@ -84,6 +81,7 @@ const Modal = ({
 								borderRadius='r-2'
 								size='vw-100'
 								onClick={() => setModalResponse('ok')}
+								textTransform='uppercase'
 							>
 								OK
 							</ButtonNormal>
@@ -94,6 +92,7 @@ const Modal = ({
 									borderRadius='r-2'
 									size='vw-100'
 									onClick={() => setModalResponse('yes')}
+									textTransform='uppercase'
 								>
 									YES
 								</ButtonNormal>
@@ -102,6 +101,7 @@ const Modal = ({
 									borderRadius='r-2'
 									size='vw-100'
 									onClick={() => setModalResponse('no')}
+									textTransform='uppercase'
 								>
 									NOT
 								</ButtonNormal>

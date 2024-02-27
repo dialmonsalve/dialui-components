@@ -12,6 +12,7 @@
   transition: transform 0.3s ease, background-color 0.3s ease;
   width: 100vw;
   z-index: 2;
+  padding: 5rem 0;
 
   @include Gm.responsive(tab-port) {
     border-radius: 1rem;

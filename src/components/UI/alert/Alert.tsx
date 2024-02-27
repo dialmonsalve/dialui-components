@@ -9,12 +9,10 @@ interface Props {
 	sideY?: 'up' | 'down';
 	sideX?: 'left' | 'right';
 	duration?: number;
-	testid?: string;
 }
 const Alert = ({
 	message,
 	type,
-	testid = 'alert',
 	sideY = 'up',
 	sideX = 'right',
 	duration = 2000,
@@ -44,7 +42,7 @@ const Alert = ({
 	} ${styles[`show-alert-${sideX}`]}`;
 
 	return (
-		<div className={className} ref={ref} data-testid={testid}>
+		<div className={className} ref={ref}>
 			<p className={`${styles.message}`}>{message}</p>
 		</div>
 	);

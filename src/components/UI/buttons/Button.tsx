@@ -5,8 +5,10 @@ import ButtonSlideDown from './ButtonSlideDown';
 import ButtonSquares from './ButtonSquares';
 import { ButtonProps } from './type';
 
+type ButtonType = |'normal' | 'squares' | 'beat' | 'ripple' | 'slideDown'
+
 interface Props extends ButtonProps {
-	button?: 'normal' | 'squares' | 'beat' | 'ripple' | 'slideDown';
+	button?: ButtonType
 }
 const Button = (props: Props) => {
 	const {

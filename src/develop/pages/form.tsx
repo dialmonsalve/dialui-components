@@ -7,8 +7,8 @@ import Select from '../../components/form/Select';
 import TextArea from '../../components/form/TextArea';
 
 import Button from '../../components/UI/buttons/ButtonNormal';
-import { useCheckbox, useInput, useInputTags, useSelect } from '../../hooks';
-import { type FormEvent } from 'react';
+import { useCheckbox, useInput } from '../../hooks';
+import { useState, type FormEvent } from 'react';
 
 const form = {
 	name: '',
@@ -28,19 +28,11 @@ const simpleOptions = ['UNO', 'DOS', 'TRES', 'CUATRO'];
 const databaseTags: string[] = [];
 
 const FormControlPage = () => {
-	const { selectState, handleSelectChange, resetSelect } = useSelect<
-		typeof multiOptions
-	>({
-		initialSelect: ['VENTAS'],
-	});
+	const [selectState, handleSelectChange] = useState<typeof multiOptions>([
+		'VENTAS',
+	]);
 
-	const {
-		selectState: simpleSelect,
-		handleSelectChange: handleSimple,
-		resetSelect: simpleRest,
-	} = useSelect<string | undefined>({
-		initialSelect: '',
-	});
+	const [simpleSelect, handleSimple] = useState<string | undefined>('');
 
 	const { inputState, handleInputChange, resetInput } = useInput({
 		initialInput: form,
@@ -50,17 +42,12 @@ const FormControlPage = () => {
 		initialCheckbox: check,
 	});
 
-	const { tagsState, handleInputTagsChange, resetInputTags } = useInputTags({
-		initialInputTags: databaseTags,
-	});
+	const [tagsState, handleInputTagsChange] = useState(databaseTags);
 	const handleSubmit = (e: FormEvent) => {
 		e.preventDefault();
 
 		resetInput();
 		resetCheckbox();
-		resetSelect();
-		simpleRest();
-		resetInputTags();
 	};
 
 	return (
@@ -70,7 +57,6 @@ const FormControlPage = () => {
 				flexDirection: 'column',
 				gap: '8px',
 				margin: 'auto auto',
-				// padding: '1rem 5rem 4rem',
 			}}
 			onSubmit={handleSubmit}
 			method='POST'

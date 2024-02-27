@@ -3,15 +3,15 @@ import useAppOptions from '../../hooks/context/useAppOptions';
 
 import { NavigationLink } from '../NavigationLink';
 
-import language from "../../lang/itemNavigation.json"
+import language from '../../lang/itemNavigation.json';
 
 export const Sidebar = () => {
-	const { theme, lang } = useAppOptions();
+	const { theme } = useAppOptions();
 
 	const [toggleMenu, setToggleMenu] = useState(false);
 
 	return (
-		<nav className={`${theme} navigation`} >
+		<nav className={`${theme} navigation`}>
 			<div className={'navigation__btn-menu'}>
 				<button
 					type='button'
@@ -27,7 +27,7 @@ export const Sidebar = () => {
 					/>
 				</button>
 			</div>
-			<nav className={`sidebar ${toggleMenu ? 'show-sidebar' : ''}`} >
+			<nav className={`sidebar ${toggleMenu ? 'show-sidebar' : ''}`}>
 				<ul className='sidebar__container'>
 					{language.map((link) => (
 						<NavigationLink
@@ -35,7 +35,7 @@ export const Sidebar = () => {
 							key={link.id}
 							to={link.to}
 						>
-							{link.label[lang]}
+							{link.label}
 						</NavigationLink>
 					))}
 				</ul>

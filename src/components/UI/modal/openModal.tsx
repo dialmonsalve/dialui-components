@@ -3,7 +3,7 @@ import { Suspense, lazy } from 'react';
 import { createRoot } from 'react-dom/client';
 
 interface Props {
-	animation: Animation;
+	animation?: Animation;
 	type: MessageType;
 	description: string;
 	title: string;

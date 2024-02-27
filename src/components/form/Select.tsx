@@ -34,6 +34,7 @@ export const Select = ({
 			`.${styles.select__options}`,
 		);
 		const handler = (e: KeyboardEvent) => {
+			e.preventDefault();
 			if (e.target !== containerRef.current) return;
 			if (ulElement === null || ulElement === undefined) return;
 
@@ -58,7 +59,7 @@ export const Select = ({
 							const scrollTop = ulElement.scrollTop;
 
 							const elementTop = element.offsetTop;
-							const elementHeight = element.clientHeight;
+							const elementHeight = element.clientHeight + 30;
 							if (elementTop < scrollTop) {
 								ulElement.scrollTop = elementTop;
 							} else if (
