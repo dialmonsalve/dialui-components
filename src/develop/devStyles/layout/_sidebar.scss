@@ -3,23 +3,22 @@
 
 .sidebar {
   display: flex;
-  height: 92vh;
-  max-height: 100vh;
+  height:90%;
+  max-height: 90%;
   overflow-y: auto;
   position: absolute;
-  transform: translateY(107vh);
-  bottom: 8vh;
+  transform: translateY(100%);
+  top: 0;
   transition: transform 0.3s ease, background-color 0.3s ease;
   width: 100vw;
   z-index: 2;
-  padding: 5rem 0;
 
   @include Gm.responsive(tab-port) {
     border-radius: 1rem;
     box-shadow: 4px 2px 4px rgba($color: #000, $alpha: 0.6),
       -4px 4px 8px rgba($color: #000, $alpha: 0.6);
-    height: 60vh;
-    max-height: 60vh;
+    height: 60%;
+    max-height: 60%;
     right: 2vw;
     top: 10vh;
     transform: translate(115%, -12%);
@@ -30,9 +29,9 @@
   @include Gm.responsive(tab-land) {
     border-radius: 0;
     box-shadow: none;
-    top: 11vh;
-    height: 89vh;
-    max-height: 90vh;
+    top: 0;
+    height: 100%;
+    max-height: 90%;
     position: relative;
     right: 0;
     transform: translateY(0);
@@ -98,7 +97,14 @@
 }
 
 .sidebar::-webkit-scrollbar {
-  width: 12px;
+  @include Gm.responsive(tab-port){
+    width: 10px;
+
+  }
+  @include Gm.responsive(tab-land){
+    width: 12px;
+
+  }
 }
 
 .sidebar::-webkit-scrollbar-track {
@@ -106,7 +112,11 @@
 }
 
 .sidebar::-webkit-scrollbar-thumb {
-  background-color: purple;
+  background-color: rgba(128, 0, 128, 0.548);
+  @include Gm.responsive(tab-land){
+    background-color: purple;  
+  }
   border-radius: 20px;
   border: 3px solid whitesmoke;
+
 }

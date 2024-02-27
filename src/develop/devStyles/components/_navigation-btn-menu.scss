@@ -6,10 +6,10 @@
     align-items: center;
     border-top: 2px solid Gv.$primary-color;
     display: flex;
-    height: 8vh;
+    height: 10%;
     justify-content: center;
     position: fixed;
-    bottom: 0%;
+    bottom: 0;
     width: 100vw;
     z-index: 3;
     transition: background-color 0.2s ease;
@@ -17,17 +17,18 @@
     @include Gm.responsive(tab-port) {
       border-radius: 50%;
       border-top: none;
-      height: 5rem;
-      right: 5vw;
-      top: 12vh;
+      height: .5rem;
+      right: 4rem;
+      top: 13vh;
       width: 5rem;
     }
     @include Gm.responsive(tab-land) {
+      height: 10%;
+      width: 100%;
+      border-radius: 0;
       top: 0;
       left: 0;
-      width: 20vw;
-      height: 11vh;
-      border-radius: 0;
+      position: relative;
     }
     &--btn {
       align-items: center;
@@ -43,8 +44,8 @@
 
       @include Gm.responsive(tab-port) {
         padding: 1rem;
-        width: 5rem;
-        height: 5rem;
+        width: 4.5rem;
+        height: 4.5rem;
         border-radius: 50%;
       }
       @include Gm.responsive(tab-land) {
@@ -55,7 +56,7 @@
       background-color: Gv.$color-white-200;
       height: 2px;
       position: relative;
-      width: 6rem;
+      width: 2.5rem;
 
       &::before,
       &::after {
@@ -65,7 +66,7 @@
         width: 2rem;
 
         @include Gm.responsive(tab-port) {
-          width: 3rem;
+          width: 2.5rem;
         }
       }
       &::before,
@@ -88,7 +89,7 @@
       background-color: transparent;
       height: 2px;
       position: relative;
-      width: 6rem;
+      width: 5rem;
 
       &::before,
       &::after {
@@ -98,7 +99,7 @@
         display: inline-block;
 
         @include Gm.responsive(tab-port) {
-          width: 3rem;
+          width: 2.5rem;
         }
       }
       &::before,
@@ -110,18 +111,18 @@
       }
 
       &::before {
-        top: -0.8rem;
+        top: -0.9rem;
         transform: rotate(135deg) translate(7px, -6px);
         @include Gm.responsive(tab-port) {
-          transform: rotate(135deg) translate(4px, -4px);
+          transform: rotate(135deg) translate(4px, -5px);
         }
       }
 
       &::after {
-        top: 0.8rem;
+        top: 0.7rem;
         transform: rotate(-135deg) translate(5px, 4px);
         @include Gm.responsive(tab-port) {
-          transform: rotate(-135deg) translate(4px, 5px);
+          transform: rotate(-135deg) translate(5px, 5px);
         }
       }
     }

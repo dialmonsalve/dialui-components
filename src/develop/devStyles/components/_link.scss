@@ -7,14 +7,8 @@
     flex-direction: column;
     flex-grow: 1;
     align-items: center;
-    margin: auto 0;
     gap: 0;
-    @include Gm.responsive(tab-port){
-      margin-top: 9rem;
-    }
-    @include Gm.responsive(tab-land){
-      margin-top: auto;
-    }
+    margin: auto 0;
 
     &--item {
       display: flex;
@@ -34,7 +28,8 @@
     }
     &--link {
       padding: 1rem;
-      font-size: 1.5rem;
+      font-size: 1.8rem;
+      padding: 1.5rem 0;
       width: 100%;
       text-transform: capitalize;
       @include Gm.responsive(tab-port) {

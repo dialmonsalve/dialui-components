@@ -3,8 +3,8 @@
 
 .header {
   display: flex;
-  height: 8vh;
-  padding: 0 2rem;
+  height: 10%;
+  padding: 1rem 2rem;
   width: 100vw;
   z-index: 1;
   transition: background-color .2s ease;
@@ -15,7 +15,7 @@
   }
   
   @include Gm.responsive(tab-land) {
-    height: 11vh;
+    height: 10vh;
     width: 80vw;
   }
   

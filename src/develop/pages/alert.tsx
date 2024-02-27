@@ -15,6 +15,7 @@ function AlertPage() {
 		openAlert({
 			message: typeMessage,
 			type: 'info',
+			sideX:"left"
 		});
 	};
 

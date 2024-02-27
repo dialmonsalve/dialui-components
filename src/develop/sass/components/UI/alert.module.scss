@@ -8,13 +8,21 @@
   border-radius: 15px;
   position: fixed;
   z-index: 999997;
+  width: fit-content;
 }
+
 .left {
-  left: 2%;
+  left: 5%;
+  @include Gm.responsive(tab-port){
+    left: 2%;
+  }
 }
 
 .right {
-  right: 2%;
+  right: 4%;
+  @include Gm.responsive(tab-port){
+    right: 2%;
+  }
 }
 .up {
   top: 10%;
