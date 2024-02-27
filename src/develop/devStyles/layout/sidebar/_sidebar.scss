@@ -1,5 +1,5 @@
-@use "../abstract/mixins/globalMixins" as Gm;
-@use "../abstract/variables/globalVariables" as Gv;
+@use "../../abstract/mixins/globalMixins" as Gm;
+@use "../../abstract/variables/globalVariables" as Gv;
 
 .sidebar {
   display: flex;
@@ -7,6 +7,7 @@
   max-height: 90%;
   overflow-y: auto;
   position: absolute;
+  backdrop-filter: blur(3px);
   transform: translateY(100%);
   top: 0;
   transition: transform 0.3s ease, background-color 0.3s ease;
@@ -49,7 +50,7 @@
     background-color: Gv.$color-dark;
   }
   .sidebar {
-    background-color: rgba($color: rgb(19, 18, 18), $alpha: 0.98);
+    background-color: rgba($color:rgba(0, 0, 0, 0.925), $alpha: 0.9);
     @include Gm.responsive(tab-land) {
       background-color: Gv.$color-dark;
     }
@@ -77,7 +78,7 @@
     background-color: Gv.$color-white-200;
   }
   .sidebar {
-    background-color: rgba($color: #ffffff, $alpha: 0.95);
+    background-color: rgba($color: #ffffff, $alpha: 0.85);
     .sidebar__container--link {
       color: Gv.$color-blue-400;
       @include Gm.responsive(tab-land) {

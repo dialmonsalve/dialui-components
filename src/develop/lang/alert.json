@@ -1,0 +1,12 @@
+{
+  "es":{
+    "message":"Usuario eliminado con éxito",
+    "p1":"Este componente te permitirá darle una respuesta visual al usuario final cuando complete una acción. La alerta se carga de manera perezosa",
+    "button":"muéstrame!"
+  },
+  "en":{
+    "message":"User has been deleted",
+    "p1":"His component will allow you to give visual feedback to the end user when they complete an action. Alert loads lazily",
+    "button":"show me!"
+  }
+}

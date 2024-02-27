@@ -37,3 +37,12 @@ body {
   overflow: hidden;
   font-family: "Ubuntu", sans-serif;
 }
+
+#root {
+  display: flex;
+  flex-direction: column;
+
+  @include Gm.responsive(tab-port) {
+    flex-direction: row;
+  }
+}

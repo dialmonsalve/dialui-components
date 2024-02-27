@@ -1,13 +1,6 @@
 @use "../abstract/mixins" as Gm;
 @use "../abstract/variables/globalVariables" as Gv;
 
-section {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  width: 100%;
-  // padding: 15rem 0;
-}
 
 .p {
   font-size: 1.4rem;

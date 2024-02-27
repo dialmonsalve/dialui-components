@@ -30,7 +30,18 @@ function ModalPage() {
 
 				<p className='p'>
 					Resp. :{' '}
-					<span style={{ color: 'red', fontSize: '18px' }}>'{response}'</span>
+					<span
+						style={{
+							backgroundColor: 'red',
+							fontSize: '14px',
+							color: 'white',
+							padding: '0.5rem',
+							borderRadius: '5px',
+							fontWeight: 700,
+						}}
+					>
+						'{response}'
+					</span>
 				</p>
 
 				<div style={{ zIndex: 2, width: '18rem' }}>
@@ -103,12 +114,12 @@ return (
 			</article>
 
 			<article>
-				<h4 className='h3'>{lang === 'en' ? 'response' : 'respuesta'}</h4>
+				<h4 className='h3'>{language[lang].h41}</h4>
 				<p className='p'>{language[lang].p2}</p>
 			</article>
 
 			<article>
-				<h4 className='h3'>{lang === 'en' ? 'local state' : 'estado local'}</h4>
+				<h4 className='h3'>{language[lang].h42}</h4>
 				<p className='p'>{language[lang].localState}</p>
 				<Highlighter>
 					{`import { useState } from "react";
@@ -137,9 +148,7 @@ return (
 			</article>
 
 			<article>
-				<h4 className='h3'>
-					{lang === 'en' ? 'global state' : 'estado global'}
-				</h4>
+				<h4 className='h3'>{language[lang].h43}</h4>
 				<p className='p'>{language[lang].globalState}</p>
 				<Highlighter>
 					{` //main.tsx					

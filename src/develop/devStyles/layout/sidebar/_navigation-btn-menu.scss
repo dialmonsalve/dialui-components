@@ -1,12 +1,12 @@
-@use "../abstract/mixins/globalMixins" as Gm;
-@use "../abstract/variables/globalVariables" as Gv;
+@use "../../abstract/mixins/globalMixins" as Gm;
+@use "../../abstract/variables/globalVariables" as Gv;
 
 .navigation {
   &__btn-menu {
     align-items: center;
     border-top: 2px solid Gv.$primary-color;
     display: flex;
-    height: 10%;
+    height: 10vh;
     justify-content: center;
     position: fixed;
     bottom: 0;
@@ -19,7 +19,7 @@
       border-top: none;
       height: .5rem;
       right: 4rem;
-      top: 13vh;
+      top: 12vh;
       width: 5rem;
     }
     @include Gm.responsive(tab-land) {

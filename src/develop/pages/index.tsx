@@ -6,10 +6,10 @@ import language from '../lang/home.json';
 function HomePage() {
 	const { lang } = useAppOptions();
 	return (
-		<section className='section' >
+		<section className='section'>
 			<h1 className='h1'>{language[lang].h1}</h1>
 			<div>
-				<p className='p'>{lang === 'es' ? 'comienza:' : 'start:'}</p>
+				<p className='p'>{language[lang].p0}</p>
 				<Highlighter language='bash'>npm i dialui-components</Highlighter>
 			</div>
 

@@ -1,9 +1,9 @@
-@use "../abstract/variables/globalVariables" as Gv;
-@use "../abstract/mixins/globalMixins" as Gm;
+@use "../../abstract/mixins/globalMixins" as Gm;
+@use "../../abstract/variables/globalVariables" as Gv;
 
 .header {
   display: flex;
-  height: 10%;
+  height: 10vh;
   padding: 1rem 2rem;
   width: 100vw;
   z-index: 1;

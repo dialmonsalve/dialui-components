@@ -72,7 +72,7 @@ function MyComponent(){
 			</article>
 
 			<article>
-				<h4 className='h3'>{lang === 'es' ? 'demás:' : ' rest:'} </h4>
+				<h4 className='h3'>{language[lang].h41} </h4>
 				<ul className='ul'>
 					<li className='p'>- hasSpinner: {language[lang].propHasSpinner}</li>
 					<li className='p'>- isLoading: {language[lang].propIsLoading}</li>
@@ -87,7 +87,7 @@ function MyComponent(){
 			<p className='p'>{language[lang].note}</p>
 
 			<article className='article'>
-				<h4 className='h3'>{lang === 'es' ? 'algunos ejemplos:' : 'some examples:'}</h4>
+				<h4 className='h3'>{language[lang].h42}</h4>
 				<div>
 					<p className='p'>ripple Button:</p>
 					<Button
@@ -131,9 +131,7 @@ function MyComponent(){
 
 				<div>
 					<p className='p'>
-						{lang === 'es'
-							? 'Botón con icono eclipse cargando'
-							: 'Button with eclipse loading spin:'}
+						{language[lang].pIconSpinner}
 					</p>
 					<Button
 						borderRadius='r-3'
