@@ -4,13 +4,13 @@ import Mice from './IconSpinnerMice';
 import Fleas from './IconsSpinnerFleas';
 import Squares from './IconSpinnerSquares';
 
-import type { IconSpinnerSize, SpinnerType } from '../../../types';
+import type { SpinnerSize, SpinnerType } from '../../../types';
 
 interface Props {
 	iconSpinner?: SpinnerType;
-	size?: IconSpinnerSize;
+	size?: SpinnerSize;
 }
-const IconSpinner = ({ iconSpinner = 'mice', size = 'sm' }: Props) => {
+const IconSpinner = ({ iconSpinner = 'eclipse', size = 'sm' }: Props) => {
 	if (iconSpinner === 'mice') return <Mice size={size} />;
 
 	if (iconSpinner === 'dots') return <Dots size={size} />;

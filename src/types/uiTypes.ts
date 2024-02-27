@@ -39,7 +39,7 @@ export type Animation =
 
 export type SpinnerType = 'fleas' | 'squares' | 'eclipse' | 'mice' | 'dots';
 
-export type IconSpinnerSize =
+export type SpinnerSize =
 | 'sm'
 | 'md'
 | 'lg'

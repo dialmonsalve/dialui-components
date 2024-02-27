@@ -1,0 +1,16 @@
+{
+"es":{
+"p1":"Los icon spinner ayudarán cuando un pequeño componente esté haciendo una solicitud y espere por la respuesta",
+"defaultSpinner" :"spinner por default",
+"propSpin":"Define el tipo de spinner que necesitas.",
+"propSpinSize":"Define el tamaño de spinner que necesitas.",
+"h41":"algunos ejemplos"
+},
+"en":{
+  "p1":"",
+  "propSpin":"Define the type of spinner you need.",
+  "propSpinSize":"Define your size.",
+  "defaultSpinner" :"spinner por default",
+  "h41":"some examples"
+}
+}

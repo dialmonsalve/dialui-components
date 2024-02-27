@@ -16,18 +16,17 @@ function AlertPage() {
 		openAlert({
 			message: typeMessage,
 			type: 'info',
-			sideX: 'left',
 		});
 	};
 
 	return (
 		<section>
-			<h1 className='h1'>alert</h1>
+			<h1 >alert</h1>
 
-			<p className='p'>{language[lang].p1}</p>
+			<p>{language[lang].p1}</p>
 
-			<article className='article'>
-				<h3 className='h3'>default alert</h3>
+			<article >
+				<h3>default alert</h3>
 
 				<Button
 					onClick={handleClick}
@@ -58,12 +57,12 @@ return (
 			</article>
 
 			<article>
-				<h4 className='h3'>Default Props:</h4>
+				<h4>Default Props:</h4>
 				<ListItems items={alertPage.DEFAULT_PROPS_DOM} />
 			</article>
 
 			<article>
-				<h4 className='h3'>Props:</h4>
+				<h4>Props:</h4>
 				<ListItems items={alertPage.ALL_PROPS_DOM} />
 			</article>
 		</section>

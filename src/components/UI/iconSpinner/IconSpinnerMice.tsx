@@ -1,9 +1,9 @@
 import styles from '../../../styles/components/iconSpinner/mice.module.css';
 
-import { type IconSpinnerSize } from '../../../types';
+import { type SpinnerSize } from '../../../types';
 
 interface Props {
-	size?: IconSpinnerSize;
+	size?: SpinnerSize;
 }
 
 const IconSpinnerMice= ({ size = 'sm' }: Props) => {

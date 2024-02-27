@@ -13,7 +13,7 @@ function NotFoundPage() {
 				<Header />
 				<main className={`${theme} main`}>
 					<section className={`${styles['not-found']}`}>
-						<h1 className='h1'>
+						<h1>
 							{lang === 'en'
 								? '404️ Página no encontrada'
 								: '404 page not found'}

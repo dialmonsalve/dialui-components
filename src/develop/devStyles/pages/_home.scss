@@ -1,42 +1,10 @@
-@use "../abstract/mixins" as Gm;
-@use "../abstract/variables/globalVariables" as Gv;
+@use "../abstract/mixins/globalMixins" as Gm;
 
+.list {
 
-.p {
+  line-height: 2.2rem;
   font-size: 1.4rem;
-  line-height: 2rem;
-  @include Gm.responsive(tab-port) {
-    line-height: 2.5rem;
-  }
   @include Gm.responsive(tab-land) {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
-}
-
-.ul {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  & .list {
-    line-height: 2.2rem;
-    font-size: 1.4rem;
-    @include Gm.responsive(tab-land) {
-      font-size: 2rem;
-    }
-  }
-}
-
-.h3 {
-  font-size: 2rem;
-  display: inline-block;
-  text-transform: capitalize;
-  @include Gm.responsive(tab-port) {
-    font-size: 2.4rem;
-  }
-}
-
-.article {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
 }

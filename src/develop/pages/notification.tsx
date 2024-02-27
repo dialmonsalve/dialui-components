@@ -1,28 +1,22 @@
 import Notification from '../../components/UI/Notification';
-import Checkbox from '../../components/form/Checkbox';
+import { Skeleton } from '../components/Skeleton';
 
-import { useCheckbox } from '../../hooks';
 
-const form = {
-	respA: true,
-	respB: false,
-};
 
 function NotificationPage() {
-	const totalNotifications = 5;
-	const { handleCheckboxChange, checkboxState } = useCheckbox({
-		initialCheckbox: form,
-	});
+	
+	const totalNotifications = 100;
 
 	return (
 		<>
-			<Notification
+			{/* <Notification
 				hasNotification={totalNotifications > 0}
 				size='sm'
 				backgroundColor='blue-500'
 			>
 				{totalNotifications > 10 ? '+99' : totalNotifications.toString()}
 			</Notification>
+			<br />
 			<br />
 			<br />
 
@@ -38,26 +32,7 @@ function NotificationPage() {
 			>
 				{totalNotifications > 10 ? '+99' : totalNotifications.toString()}
 			</Notification>
-			<br />
-
-			<br />
-			<br />
-
-			<br />
-			<div style={{ width: '380px' }}>
-				<Checkbox
-					handleCheck={handleCheckboxChange}
-					name='respA'
-					checkboxFormState={checkboxState}
-				/>
-
-				<br />
-				<Checkbox
-					checkboxFormState={checkboxState}
-					handleCheck={handleCheckboxChange}
-					name='respB'
-				/>
-			</div>
+			<br /> */}
 		</>
 	);
 }

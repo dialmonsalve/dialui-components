@@ -1,9 +1,9 @@
 import styles from '../../../styles/components/iconSpinner/eclipse.module.css';
 
-import { type IconSpinnerSize } from '../../../types';
+import { type SpinnerSize } from '../../../types';
 
 interface Props {
-	size?: IconSpinnerSize;
+	size?: SpinnerSize;
 }
 
 const IconSpinnerEclipse = ({ size = 'sm' }: Props) => {

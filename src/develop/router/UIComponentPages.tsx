@@ -1,6 +1,7 @@
 import { Suspense, lazy } from 'react';
 
 import Home from '../pages/index';
+import { Skeleton } from '../components/Skeleton';
 
 const IconSpinner = lazy(() => import('../pages/iconSpinner'));
 const ButtonPage = lazy(() => import('../pages/button'));
@@ -19,7 +20,7 @@ export const UIComponentPages = [
   {
     path: 'icon-spinner',
     element: (
-      <Suspense fallback={<></>}>
+      <Suspense fallback={<Skeleton/>}>
         <IconSpinner />
       </Suspense>
     ),
@@ -27,7 +28,7 @@ export const UIComponentPages = [
   {
     path: 'buttons',
     element: (
-      <Suspense fallback={<></>}>
+      <Suspense fallback={<Skeleton/>}>
         <ButtonPage />
       </Suspense>
     ),
@@ -35,7 +36,7 @@ export const UIComponentPages = [
   {
     path: 'modal',
     element: (
-      <Suspense fallback={<></>}>
+      <Suspense fallback={<Skeleton/>}>
         <ModalPage />
       </Suspense>
     ),
@@ -43,7 +44,7 @@ export const UIComponentPages = [
   {
     path: 'alert',
     element: (
-      <Suspense fallback={<></>}>
+      <Suspense fallback={<Skeleton/>}>
         <AlertPage />
       </Suspense>
     ),
@@ -51,7 +52,7 @@ export const UIComponentPages = [
   {
     path: 'spinner',
     element: (
-      <Suspense fallback={<></>}>
+      <Suspense fallback={<Skeleton/>}>
         <SpinnerPage />
       </Suspense>
     ),
@@ -60,7 +61,7 @@ export const UIComponentPages = [
   {
     path: 'notification',
     element: (
-      <Suspense fallback={<></>}>
+      <Suspense fallback={<Skeleton/>}>
         <NotificationPage />
       </Suspense>
     ),
@@ -69,7 +70,7 @@ export const UIComponentPages = [
   {
     path: 'form',
     element: (
-      <Suspense fallback={<></>}>
+      <Suspense fallback={<Skeleton/>}>
         <FormPage />
       </Suspense>
     ),
@@ -77,7 +78,7 @@ export const UIComponentPages = [
   {
     path: 'table',
     element: (
-      <Suspense fallback={<></>}>
+      <Suspense fallback={<Skeleton/>}>
         <TablePage />
       </Suspense>
     ),

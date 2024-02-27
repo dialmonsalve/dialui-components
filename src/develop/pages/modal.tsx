@@ -21,27 +21,15 @@ function ModalPage() {
 
 	return (
 		<section>
-			<h1 className='h1'>modal</h1>
+			<h1>modal</h1>
 
-			<article className='article'>
-				<p className='p'>{language[lang].p1}</p>
+			<article >
+				<p>{language[lang].p1}</p>
 
-				<h3 style={{ fontSize: '24px' }}>DEMO</h3>
+				<h2>DEMO</h2>
 
-				<p className='p'>
-					Resp. :{' '}
-					<span
-						style={{
-							backgroundColor: 'red',
-							fontSize: '14px',
-							color: 'white',
-							padding: '0.5rem',
-							borderRadius: '5px',
-							fontWeight: 700,
-						}}
-					>
-						'{response}'
-					</span>
+				<p>
+					Resp. : <span className='resp'>'{response}'</span>
 				</p>
 
 				<div style={{ zIndex: 2, width: '18rem' }}>
@@ -70,7 +58,7 @@ function ModalPage() {
 				</Button>
 			</article>
 
-			<article className='article'>
+			<article >
 				<Highlighter>
 					{`import { openAlert } from "dialui-components"
 
@@ -92,35 +80,35 @@ return (
 			</article>
 
 			<article>
-				<h4 className='h3'>Default Props:</h4>
+				<h4>Default Props:</h4>
 				<ListItems items={modalPage.DEFAULT_PROPS_DOM} />
 			</article>
 
 			<article>
-				<h4 className='h3'>Props:</h4>
+				<h4>Props:</h4>
 				<ListItems items={modalPage.ALL_PROPS_DOM} />
 			</article>
 
 			<article>
-				<h4 className='h3'>MessageType:</h4>
-				<p className='p'>{language[lang].propMessageType}</p>
+				<h4>MessageType:</h4>
+				<p>{language[lang].propMessageType}</p>
 				<ListItems items={modalPage.MESSAGE_TYPE_DOM} />
 			</article>
 
 			<article>
-				<h4 className='h3'>Animation:</h4>
-				<p className='p'>{language[lang].propAnimation}</p>
+				<h4>Animation:</h4>
+				<p>{language[lang].propAnimation}</p>
 				<ListItems items={modalPage.ANIMATION_DOM} />
 			</article>
 
 			<article>
-				<h4 className='h3'>{language[lang].h41}</h4>
-				<p className='p'>{language[lang].p2}</p>
+				<h4>{language[lang].h41}</h4>
+				<p>{language[lang].p2}</p>
 			</article>
 
 			<article>
-				<h4 className='h3'>{language[lang].h42}</h4>
-				<p className='p'>{language[lang].localState}</p>
+				<h4>{language[lang].h42}</h4>
+				<p>{language[lang].localState}</p>
 				<Highlighter>
 					{`import { useState } from "react";
 import { openAlert } from "dialui-components";
@@ -148,8 +136,8 @@ return (
 			</article>
 
 			<article>
-				<h4 className='h3'>{language[lang].h43}</h4>
-				<p className='p'>{language[lang].globalState}</p>
+				<h4>{language[lang].h43}</h4>
+				<p>{language[lang].globalState}</p>
 				<Highlighter>
 					{` //main.tsx					
 import React from 'react';

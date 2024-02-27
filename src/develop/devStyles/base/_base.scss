@@ -47,3 +47,55 @@ section {
   gap: 3rem;
   width: 100%;
 }
+
+h1 {
+  font-size: 3.5rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 3.0rem;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 2rem;
+  display: inline-block;
+  text-transform: capitalize;
+  @include Gm.responsive(tab-port) {
+    font-size: 2.4rem;
+  }
+}
+
+h4 {
+  font-size: 1.8rem;
+  display: inline-block;
+  text-transform: capitalize;
+  @include Gm.responsive(tab-port) {
+    font-size: 2.2rem;
+  }
+}
+
+p, li {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  @include Gm.responsive(tab-port) {
+    line-height: 2.5rem;
+  }
+  @include Gm.responsive(tab-land) {
+    font-size: 1.8rem;
+  }
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}

@@ -1,4 +1,5 @@
 import { Suspense, lazy } from 'react';
+import { Skeleton } from '../components/Skeleton';
 
 const CheckboxPage = lazy(() => import('../pages/checkbox'));
 const InputPage = lazy(() => import('../pages/input'));
@@ -10,7 +11,7 @@ export const FormComponentPages = [
 	{
 		path: 'checkbox',
 		element: (
-			<Suspense fallback={<></>}>
+			<Suspense fallback={<Skeleton/>}>
 				<CheckboxPage />
 			</Suspense>
 		),
@@ -18,7 +19,7 @@ export const FormComponentPages = [
 	{
 		path: 'input',
 		element: (
-			<Suspense fallback={<></>}>
+			<Suspense fallback={<Skeleton/>}>
 				<InputPage />
 			</Suspense>
 		),
@@ -26,7 +27,7 @@ export const FormComponentPages = [
 	{
 		path: 'input-tags',
 		element: (
-			<Suspense fallback={<></>}>
+			<Suspense fallback={<Skeleton/>}>
 				<InputTagsPage />
 			</Suspense>
 		),
@@ -34,7 +35,7 @@ export const FormComponentPages = [
 	{
 		path: 'select',
 		element: (
-			<Suspense fallback={<></>}>
+			<Suspense  fallback={<Skeleton/>}>
 				<SelectPage />
 			</Suspense>
 		),
@@ -42,7 +43,7 @@ export const FormComponentPages = [
 	{
 		path: 'textarea',
 		element: (
-			<Suspense fallback={<></>}>
+			<Suspense  fallback={<Skeleton/>}>
 				<TextareaPage />
 			</Suspense>
 		),
