@@ -5,7 +5,7 @@ import EclipseIconSpinner from '../iconSpinner/IconSpinnerEclipse';
 import SquareIconsSpinner from '../iconSpinner/IconSpinnerSquares';
 
 import { ButtonProps } from './type';
-import type { IconSpinnerSize } from '../../../types';
+import type { SpinnerSize } from '../../../types';
 
 import styles from '../../../styles/components/buttons/button.module.css';
 
@@ -34,7 +34,7 @@ const ButtonNormal = ({
 	const isAnimated = hasInitialAnimation ? styles.animated : '';
 
 	const partialSize = [...size];
-	const ISize = (partialSize[0] + partialSize[1]) as IconSpinnerSize;
+	const ISize = (partialSize[0] + partialSize[1]) as SpinnerSize;
 
 	return (
 		<button

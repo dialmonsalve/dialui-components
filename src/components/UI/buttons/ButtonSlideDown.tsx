@@ -8,7 +8,7 @@ import styles from '../../../styles/components/buttons/button.module.css';
 import styleSlideDown from '../../../styles/components/buttons/buttonSlideDown.module.css';
 
 import { ButtonProps } from './type';
-import type { IconSpinnerSize } from '../../../types';
+import type { SpinnerSize } from '../../../types';
 
 const ButtonSlideDown = ({
 	backgroundColor = 'blue-200',
@@ -34,7 +34,7 @@ const ButtonSlideDown = ({
 	const isAnimated = hasInitialAnimation ? styles.animated : '';
 
 	const partialSize = [...size];
-	const ISize = (partialSize[0] + partialSize[1]) as IconSpinnerSize;
+	const ISize = (partialSize[0] + partialSize[1]) as SpinnerSize;
 
 	return (
 		<button

@@ -10,7 +10,7 @@ import styles from '../../../styles/components/buttons/button.module.css';
 import styleRipple from '../../../styles/components/buttons/buttonRipple.module.css';
 
 import { ButtonProps } from './type';
-import type { IconSpinnerSize } from '../../../types';
+import type { SpinnerSize } from '../../../types';
 
 const ButtonRipple = ({
 	backgroundColor = 'blue-200',
@@ -39,7 +39,7 @@ const ButtonRipple = ({
 	const isAnimated = hasInitialAnimation ? styles.animated : '';
 
 	const partialSize = [...size];
-	const ISize = (partialSize[0] + partialSize[1]) as IconSpinnerSize;
+	const ISize = (partialSize[0] + partialSize[1]) as SpinnerSize;
 
 	return (
 		<button

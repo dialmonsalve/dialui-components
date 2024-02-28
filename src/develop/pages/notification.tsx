@@ -1,6 +1,4 @@
 import Notification from '../../components/UI/Notification';
-import { Skeleton } from '../components/Skeleton';
-
 
 
 function NotificationPage() {
@@ -9,7 +7,7 @@ function NotificationPage() {
 
 	return (
 		<>
-			{/* <Notification
+			<Notification
 				hasNotification={totalNotifications > 0}
 				size='sm'
 				backgroundColor='blue-500'
@@ -32,7 +30,7 @@ function NotificationPage() {
 			>
 				{totalNotifications > 10 ? '+99' : totalNotifications.toString()}
 			</Notification>
-			<br /> */}
+			<br />
 		</>
 	);
 }

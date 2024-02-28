@@ -1,5 +1,3 @@
-import Button from '../../components/UI/buttons/Button';
-import openAlert from '../../components/UI/alert/openAlert';
 import Highlighter from '../components/Highlighter';
 import { ListItems } from '../components/ListItems';
 import useAppOptions from '../hooks/context/useAppOptions';
