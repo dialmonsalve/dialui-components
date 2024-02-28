@@ -5,7 +5,7 @@
 		"h31": "botón por defecto",
 		"h41":"demás",
 		"h42":"algunos ejemplos",
-    "propButton":"Define el tipo de botón que necesitas.",
+    "propButton":"Define el tipo animación al hacer hover que más te guste.",
 		"propColor": "El valor de la propiedad 'Colors' te permite cambiar el fondo del botón. Los colores varían desde el más tenue (100) hasta el más fuerte (600).",
 		"propSize": "Los tamaños del botón pueden variar según tus preferencias.",
 		"propRadius": "Ajusta el radio del borde del botón.",
@@ -17,28 +17,28 @@
 		"propHasInitialAnimation": "Agrega una pequeña animación al botón al entrar en la página.",
 
 		"propTransform": "Cambia el texto a minúsculas, mayúsculas o capitalizado.",
-		"note":"Las animaciones con hover están deshabilitadas en tablets y dispositivos móviles para los botones que las incluyen.",
+		"note":"Nota: Las animaciones con hover están deshabilitadas en tablets y dispositivos móviles para los botones que las incluyen.",
 		"pIconSpinner":"Botón con icono eclipse cargando."
 	},
 
 	"en":{
 		"h1": "Buttons",
-		"p1": "When we work with buttons, we generally invest a good time designing them until they are satisfied.In this section, we will show you how you can create a button in less than a minute.",
+		"p1": "When we work with buttons, we generally spend a good time designing them until we are satisfied.In this section, we will show you how you can create a button in less than a minute.",
 		"h31": "Default button",
 		"h41":"rest",
 		"h42":"some examples",
-    "propButton":"Define the type of button you need.",
+    "propButton":"Define the type of hover animation that you like.",
 		"propColor": "The value of the 'colors' property allows you to change the background color of the button.The colors vary from the most dim (100) to the strongest (600).",
 		"propSize": "Button sizes can vary according to your preferences.",
-		"propRadius": "Adjust the radius of the border of the button.",
+		"propRadius": "Adjust the radius of the button border.",
 		"propHasSpinner": "Sometimes, we want the button to show a mini load spinner while a request is made to avoid unnecessary clicks.This property allows you to define if you want to include a spinner.",
-		"propSpinnerType": "If you decide to use a load mini spinner, staff to give a unique design to your button.",
-		"propIsLoading": "When you perform a petition, configure the status of the button to disable it and display the spinner.",
+		"propSpinnerType": "If you decide to use a load mini spinner, customize it to give a unique design to your button.",
+		"propIsLoading": "When you make a petition, configure the status of the button to disable it and display the spinner.",
 		"styleProp": "If you do not like predetermined designs, you can add your own styles using the 'style' of React.",
 		"propDisabled": "Use the 'disabled' property to enable or disable the button.",
 		"propHasInitialAnimation": "Add a small animation to the button when you enter the page.",
 		"propTransform": "Change the text to lowercase, capitalized or capitalized.",
-		"note":"Hover animations are disabled on tablets and mobile devices for the buttons that include them.",
+		"note":"Note: Hover animations are disabled on tablets and mobile devices for the buttons that include them.",
 		"pIconSpinner":"Button with eclipse loading spin."
 	}
 }

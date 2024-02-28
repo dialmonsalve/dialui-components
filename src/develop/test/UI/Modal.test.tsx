@@ -8,13 +8,13 @@ import { act } from 'react-dom/test-utils';
 describe('Modal', () => {
 	test('Should set variable state to cancel', async () => {
 		const { result } = renderHook(() => {
-			const [respond, handleModalResponse] = useState('');
+			const [respond, handleModalAnswer] = useState('');
 			return {
 				respond,
-				handleModalResponse,
+				handleModalAnswer,
 			};
 		});
-		const { handleModalResponse } = result.current;
+		const { handleModalAnswer } = result.current;
 		render(
 			<>
 				<div>
@@ -23,14 +23,14 @@ describe('Modal', () => {
 						title='Test'
 						description='Test description'
 						type='error'
-						handleModalResponse={handleModalResponse}
+						handleModalAnswer={handleModalAnswer}
 					/>
 				</div>
 			</>,
 		);
 		const buttonClose = screen.getByText(/X/);
 
-		act(() => handleModalResponse('cancel'));
+		act(() => handleModalAnswer('cancel'));
 
 		fireEvent.click(buttonClose);
 
@@ -39,13 +39,13 @@ describe('Modal', () => {
 
 	test('Should set variable state to OK', async () => {
 		const { result } = renderHook(() => {
-			const [respond, handleModalResponse] = useState('');
+			const [respond, handleModalAnswer] = useState('');
 			return {
 				respond,
-				handleModalResponse,
+				handleModalAnswer,
 			};
 		});
-		const { handleModalResponse } = result.current;
+		const { handleModalAnswer } = result.current;
 		render(
 			<>
 				<div>
@@ -54,7 +54,7 @@ describe('Modal', () => {
 						title='Test'
 						description='Test description'
 						type='warning'
-						handleModalResponse={handleModalResponse}
+						handleModalAnswer={handleModalAnswer}
 					/>
 				</div>
 			</>,
@@ -62,12 +62,12 @@ describe('Modal', () => {
 		const buttonYes = screen.getByText(/yes/i);
 		const buttonNot = screen.getByText(/not/i);
 
-		act(() => handleModalResponse('yes'));
+		act(() => handleModalAnswer('yes'));
 		fireEvent.click(buttonYes);
 
 		expect(result.current.respond).toBe('yes');
 
-		act(() => handleModalResponse('no'));
+		act(() => handleModalAnswer('no'));
 		fireEvent.click(buttonNot);
 
 		expect(result.current.respond).toBe('no');
@@ -75,13 +75,13 @@ describe('Modal', () => {
 
 	test('Should set variable state to yes - no', async () => {
 		const { result } = renderHook(() => {
-			const [respond, handleModalResponse] = useState('');
+			const [respond, handleModalAnswer] = useState('');
 			return {
 				respond,
-				handleModalResponse,
+				handleModalAnswer,
 			};
 		});
-		const { handleModalResponse } = result.current;
+		const { handleModalAnswer } = result.current;
 		render(
 			<>
 				<div>
@@ -90,13 +90,13 @@ describe('Modal', () => {
 						title='Test'
 						description='Test description'
 						type='info'
-						handleModalResponse={handleModalResponse}
+						handleModalAnswer={handleModalAnswer}
 					/>
 				</div>
 			</>,
 		);
 		const buttonOk = screen.getByText(/ok/i);
-		act(() => handleModalResponse('ok'));
+		act(() => handleModalAnswer('ok'));
 		fireEvent.click(buttonOk);
 
 		expect(result.current.respond).toBe('ok');
@@ -108,7 +108,7 @@ describe('Modal', () => {
 				type='button'
 				onClick={() =>
 					openModal({
-						animation: 'fade-in-out',
+						animation: 'fadeInOut',
 						type: 'info',
 						description: 'description',
 						title: 'info',

@@ -12,20 +12,20 @@ interface Props {
 	animation?: Animation;
 	title: string;
 	type: MessageType;
-	handleModalResponse?: (res: 'yes' | 'no' | 'ok' | 'cancel') => void;
+	handleModalAnswer?: (answer: 'yes' | 'no' | 'ok' | 'cancel') => void;
 }
 
 const Modal = ({
 	description,
 	type,
 	title,
-	animation = 'fade-in-out',
-	handleModalResponse,
+	animation = 'fadeInOut',
+	handleModalAnswer,
 }: Props) => {
 	const ref = useRef<HTMLDivElement>(null);
 
-	const setModalResponse = (res: 'yes' | 'no' | 'ok' | 'cancel') => {
-		handleModalResponse ? handleModalResponse(res) : false;
+	const setModalResponse = (answer: 'yes' | 'no' | 'ok' | 'cancel') => {
+		handleModalAnswer ? handleModalAnswer(answer) : false;
 		closeModal();
 	};
 

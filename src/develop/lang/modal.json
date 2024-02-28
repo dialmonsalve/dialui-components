@@ -4,22 +4,22 @@
 		"propMessageType": "Existen 4 colores de fondo para mostrar según sea tu necesitada. success: (verde), error: (rojo), warning: (amarillo), info: (azul). Cada uno tiene un tipo diferente de respuestas que podrás ver a detalle más abajo.",
 		"propAnimation": "Esta propiedad te permite definir un tipo de animación, por default es fade-in-out.",
 		"p2": "Hay dos maneras para obtener la respuesta del usuario, mediante un estado local o global.",
-		"localState": "La variable de estado 'response'(useState) devolverá una respuesta cuando el usuario interactué con el modal. Si es de tipo info o success el modal retornará 'ok', si es de tipo error o warning dará dos opciones y retornará 'yes' o 'no'. Si por el contrario cierra el modal sin respuesta alguna retornará 'cancel'",
+		"localState": "La variable de estado 'modalAnswer'(useState) devolverá una respuesta cuando el usuario interactué con el modal. Si es de tipo info o success el modal retornará 'ok', si es de tipo error o warning dará dos opciones y retornará 'yes' o 'no'. Si por el contrario cierra el modal sin respuesta alguna retornará 'cancel'",
 
-		"globalState": "Para obtener la respuesta globalmente puedes envolver la aplicación con el proveedor: UIProvider, luego en tu componente con el hook useModal obtendrás la función que establece la respuesta y la variable de estado global. La función se envía como una prop a la función openModal. La variable de estado global 'modalResponse' te dará las respuestas descritas en el párrafo anterior en este componente o en cualquier otro que quiera obtener dicha respuesta",
-		"h41":"respuesta",
-		"h42":"estado local",
-		"h43":"estado global"
+		"globalState": "Para obtener la respuesta globalmente puedes envolver la aplicación con el proveedor: UIProvider, luego en tu componente con el hook useModal obtendrás la función handleModalAnswer que establece la respuesta y la variable de estado global. La función se envía como prop a la función openModal. La variable de estado global 'modalAnswers' te dará las respuestas descritas en el párrafo anterior en este componente o en cualquier otro que quiera obtener dicha respuesta",
+		"h41": "respuesta",
+		"h42": "estado local",
+		"h43": "estado global"
 	},
 	"en": {
 		"p1": "The modal will help you provide the user with confirmation of their action. This loads lazily",
 		"propMessageType": "There are 4 background colors to display based on your needs: success (green), error (red), warning (yellow), and info (blue). Each one has different type of responses that you can see in detail below.",
 		"propAnimation": "This property allows you to define a type of animation. By default, it is fade-in-out.",
-		"p2": "There are two ways to get the user's response, using a local or global state.",
-		"localState": "The state variable 'response'(useState) will return a response when the user interacts with the modal. If it is of type info or success the modal will return 'ok', if it is of type error or warning it will give two options and return 'yes' or 'no'. If, on the other hand, it closes the modal without any response, it will return 'cancel'",
-		"globalState": "To get the response globally you can wrap the application with the provider: UIProvider, then in your component with the useModal hook you will get the function that sets the response and the global state variable. The function is sent as a prop to the openModal function. The global state variable 'modalResponse' will give you the responses described in the previous paragraph in this component or in any other that wants to obtain said response",
-		"h41":"response",
-		"h42":"local state",
-		"h43":"global state"
+		"p2": "There are two ways to get the user's answer, using a local or global state.",
+		"localState": "The state variable 'modalAnswer'(useState) will return an answer when the user interacts with the modal. If it is of type info or success the modal will return 'ok', if it is of type error or warning it will give two options and return 'yes' or 'no'. If, on the other hand, it closes the modal without any answer, it will return 'cancel'",
+		"globalState": "To get the answer globally you can wrap the application with the provider: UIProvider, then in your component with the useModal hook you will get the function handleModalAnswer that sets this answer and the global state variable. The function is sent as a prop to the openModal function. The global state variable 'modalAnswer' will give you the answers described in the previous paragraph in this component or in any other that wants to obtain said answer",
+		"h41": "answer",
+		"h42": "local state",
+		"h43": "global state"
 	}
 }

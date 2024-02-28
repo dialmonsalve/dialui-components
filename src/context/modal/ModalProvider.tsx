@@ -5,26 +5,26 @@ export interface Props {
 	children: ReactNode;
 }
 
-type ModalResponse = 'ok' | 'yes' | 'no' | 'cancel';
+type ModalAnswer = 'ok' | 'yes' | 'no' | 'cancel';
 
 const ModalProvider = ({ children }: Props) => {
-	const [modalResponse, setModalResponse] = useState<ModalResponse>(
-		'' as ModalResponse,
+	const [modalAnswer, setModalAnswer] = useState<ModalAnswer>(
+		'' as ModalAnswer,
 	);
 
-	function handleModalResponse(res: ModalResponse) {
-		const validResponse =
-			res !== 'yes' && res !== 'no' && res !== 'ok' && res !== 'cancel';
+	function handleModalAnswer(answer: ModalAnswer) {
+		const validAnswer =
+			answer !== 'yes' && answer !== 'no' && answer !== 'ok' && answer !== 'cancel';
 
-		if (validResponse) {
-			throw new Error(`'${res}' is not a valid response`);
+		if (validAnswer) {
+			throw new Error(`'${answer}' is not a valid answerponse`);
 		}
-		setModalResponse(res);
+		setModalAnswer(answer);
 	}
 
 	const value = {
-		modalResponse,
-		handleModalResponse,
+		modalAnswer,
+		handleModalAnswer,
 	};
 
 	return (

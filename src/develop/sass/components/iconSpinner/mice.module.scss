@@ -6,6 +6,7 @@
   animation: mice 1s linear infinite;
   gap: 3px;
   width: fit-content;
+  flex-direction: row;
 
   &--1,
   &--2 {

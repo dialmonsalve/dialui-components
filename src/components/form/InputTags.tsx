@@ -38,40 +38,42 @@ const InputTags = ({ placeholder, onBlur, tags, setTags }: InputTagProps) => {
 
 	return (
 		<>
-			<input
-				className={inputStyle.input}
-				type='text'
-				name='tag'
-				value={value}
-				onChange={(e) => setValue(e.target.value)}
-				onKeyDown={(e) => {
-					e.key === 'Enter' && e.preventDefault();
-					handleAddTags(e);
-				}}
-				placeholder={placeholder}
-				onBlur={onBlur}
-			/>
-			<Button
-				disabled={value.length === 0}
-				type='button'
-				onClick={addToClick}
-				size='vw-100'
-				borderRadius='r-2'
-				backgroundColor='green-300'
-				textTransform='uppercase'
-			>
-				add tag
-			</Button>
+			<div className={styles.container}>
+				<input
+					className={inputStyle.input}
+					type='text'
+					name='tag'
+					value={value}
+					onChange={(e) => setValue(e.target.value)}
+					onKeyDown={(e) => {
+						e.key === 'Enter' && e.preventDefault();
+						handleAddTags(e);
+					}}
+					placeholder={placeholder}
+					onBlur={onBlur}
+				/>
+				<Button
+					disabled={value.length === 0}
+					type='button'
+					onClick={addToClick}
+					borderRadius='r-2'
+					backgroundColor='green-400'
+					textTransform='uppercase'
+					size='sm-100'
+				>
+					add
+				</Button>
+			</div>
+
 			<ul className={styles.tags}>
 				{tags.map((tag) => (
-					<li role='listitem' className={styles.tags__item} key={tag}>
-						<span
-							className={styles.tags__badge}
-							onClick={() => handleDeleteTags(tag)}
-						>
-							{tag.trim().toLocaleLowerCase()}
-							<span className={styles.tags__remove}>&times;</span>
-						</span>
+					<li
+						className={styles.tags__badge}
+						key={tag}
+						onClick={() => handleDeleteTags(tag)}
+					>
+						{tag.trim().toLocaleLowerCase()}
+						<span className={styles.tags__remove}>&times;</span>
 					</li>
 				))}
 			</ul>

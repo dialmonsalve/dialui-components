@@ -8,8 +8,8 @@ const useModal= ()=> {
 		throw new Error('Context is not used inside the parent components');
 
 	return {
-		modalResponse: context.modalResponse,
-		handleModalResponse: context.handleModalResponse,
+		modalResponse: context.modalAnswer,
+		handleModalResponse: context.handleModalAnswer,
 	};
 }
 

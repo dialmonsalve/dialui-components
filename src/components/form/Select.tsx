@@ -4,12 +4,14 @@ import styles from '../../styles/components/form/select.module.css';
 type SingleSelectProps = {
 	multiple?: false;
 	selectState?: string;
-	onChange: (selectState: string | undefined) => void;
+	onChange: (selectState: string) => void;
+	zIndex?:number
 };
 type MultipleSelectProps = {
 	multiple: true;
 	selectState: string[];
 	onChange: (value: string[]) => void;
+	zIndex?:number
 };
 type SelectProps = {
 	options: string[];
@@ -19,6 +21,7 @@ export const Select = ({
 	multiple,
 	selectState,
 	options,
+	zIndex=1,
 	onChange,
 }: SelectProps) => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -59,7 +62,7 @@ export const Select = ({
 							const scrollTop = ulElement.scrollTop;
 
 							const elementTop = element.offsetTop;
-							const elementHeight = element.clientHeight + 30;
+							const elementHeight = element.clientHeight + 60;
 							if (elementTop < scrollTop) {
 								ulElement.scrollTop = elementTop;
 							} else if (
@@ -89,7 +92,8 @@ export const Select = ({
 	}, [isOpen, highlightedIndex, options]);
 
 	const clearOptions = () => {
-		multiple ? onChange([]) : onChange(undefined);
+
+		multiple ? onChange([]) : onChange(undefined as any);
 	};
 
 	const selectOption = (option: string) => {
@@ -115,6 +119,7 @@ export const Select = ({
 			tabIndex={0}
 			className={styles['select']}
 			ref={containerRef}
+			style={{zIndex}}
 		>
 			<span className={styles['select__span']}>
 				{multiple

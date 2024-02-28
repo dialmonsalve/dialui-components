@@ -7,14 +7,12 @@ import Select from '../../components/form/Select';
 import Button from '../../components/UI/buttons/Button';
 import { SpinnerType } from '../../types';
 
-import language from "../lang/spinner.json"
+import language from '../lang/spinner.json';
 import useAppOptions from '../hooks/context/useAppOptions';
 
 function SpinnerPage() {
 	const [openSpinner, setOpenSpinner] = useState(false);
-	const [animation, setAnimation] = useState<string | undefined>(
-		'half-spinner',
-	);
+	const [animation, setAnimation] = useState('halfSpinner');
 	const { lang } = useAppOptions();
 
 	const handleSpinner = () => {
@@ -34,7 +32,7 @@ function SpinnerPage() {
 			<article>
 				<h2>DEMO</h2>
 
-				<div style={{ zIndex: 2, width: '25rem' }}>
+				<div style={{ width: '25rem' }}>
 					<Select
 						options={spinnerPage.OPTION_SPINNER}
 						onChange={setAnimation}
@@ -53,8 +51,6 @@ function SpinnerPage() {
 			</article>
 
 			<article>
-				<h3>default spinner</h3>
-
 				<Highlighter>
 					{`import { Spinner } from "dialui-components"
 

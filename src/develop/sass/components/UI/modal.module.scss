@@ -30,9 +30,10 @@
   width: 35px;
   height: 35px;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-
+  
   @include Gm.responsive(tab-port) {
     background-color: transparent;
     color: white;
@@ -65,8 +66,8 @@
     135deg,
     Gv.$color-yellow-200 0%,
     Gv.$color-yellow-300 100%
-  );
-  &--title {
+    );
+    &--title {
     background-image: linear-gradient(
       to right,
       Gv.$color-white-200,
@@ -155,6 +156,7 @@
   display: flex;
   width: 80%;
   height: 80%;
+  flex-direction: row;
 
   @include Gm.responsive(tab-port) {
     width: 90%;

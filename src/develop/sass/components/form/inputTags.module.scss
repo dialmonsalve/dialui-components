@@ -12,33 +12,29 @@
   display: flex;
   gap: 4px 8px;
   flex-wrap: wrap;
-
-  @include Gm.responsive(phone) {
-    padding: 4px 8px;
-    overflow: none;
-  }
-
+  flex-direction: row;
+  
   &__badge {
     background-color: Gv.$color-blue-400;
     border-radius: 10px;
-    border: 1px solid Gv.$color-blue-600;
     color: Gv.$color-white-200;
     display: flex;
+    flex-direction: row;
     font-size: 12px;
     font-weight: 700;
     gap: 4px;
-    padding: 2px 8px;
+    padding: 1px 8px;
 
     @include Gm.responsive(tab-land) {
       font-size: 14px;
       cursor: pointer;
-
+      
       &:hover,
       &:focus {
         background-color: Gv.$color-red-200;
         border-color: Gv.$color-red-300;
       }
-
+      
       &:hover,
       > .remove-btn,
       &:focus > .remove-btn {
@@ -46,8 +42,14 @@
       }
     }
   }
-
+  
   &__remove {
     color: Gv.$color-red-400;
   }
+}
+.container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-direction: row;
 }

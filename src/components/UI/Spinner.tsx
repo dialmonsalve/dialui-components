@@ -10,14 +10,14 @@ import { SpinnerType } from '../../types';
 import styles from '../../styles/components/UI/spinner.module.css';
 
 interface Props {
-	spinner?: SpinnerType | 'half-spinner' | 'lp';
+	spinner?: SpinnerType | 'halfSpinner' | 'lp';
 }
 
-const Spinner = ({ spinner = 'half-spinner' }: Props) => {
-	if (spinner === 'half-spinner') {
+const Spinner = ({ spinner = 'halfSpinner' }: Props) => {
+	if (spinner === 'halfSpinner') {
 		return (
 			<div className={styles.spinner}>
-				<HalfRounded className={styles['spinner__half-spinner']} />
+				<HalfRounded className={styles['spinner__halfSpinner']} />
 
 				<p className={styles['spinner__loading']}> Loading...</p>
 			</div>

@@ -8,7 +8,10 @@
 		"rules": {
 			"recommended": true,
 			"a11y": { "useKeyWithClickEvents": "off", "noAutofocus": "warn" },
-			"correctness": { "noUnusedVariables": "warn" }
+			"correctness": { "noUnusedVariables": "warn" },
+			"suspicious":{
+				"noExplicitAny":"off"
+			}
 		}
 	},
 	"javascript": {

@@ -22,17 +22,15 @@ const check = {
 	serieB: true,
 };
 
-const multiOptions = ['COMPRAS', 'VENTAS', 'LOGISTICA', 'CONTABILIDAD'];
+const multiOptions = ['COMPRAS', 'VENTAS', 'LOGISTICA', 'CONTABILIDAD','COMPRAS1', 'VENTAS1', 'LOGISTICA1', 'CONTABILIDAD1'];
 const simpleOptions = ['UNO', 'DOS', 'TRES', 'CUATRO'];
 
 const databaseTags: string[] = [];
 
 const FormControlPage = () => {
-	const [selectState, handleSelectChange] = useState<typeof multiOptions>([
-		'VENTAS',
-	]);
+	const [selectState, handleSelectChange] = useState(['VENTAS']);
 
-	const [simpleSelect, handleSimple] = useState<string | undefined>('');
+	const [simpleSelect, handleSimple] = useState('');
 
 	const { inputState, handleInputChange, resetInput } = useInput({
 		initialInput: form,
@@ -85,12 +83,13 @@ const FormControlPage = () => {
 				onChange={handleInputChange}
 			/>
 
-			<div style={{ zIndex: 1 }}>
+			<div>
 				<Select
 					multiple
 					options={multiOptions}
 					onChange={handleSelectChange}
 					selectState={selectState}
+					zIndex={2}
 				/>
 			</div>
 			<div>

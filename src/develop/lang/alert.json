@@ -6,7 +6,7 @@
   },
   "en":{
     "message":"User has been deleted",
-    "p1":"His component will allow you to give visual feedback to the end user when they complete an action. Alert loads lazily",
+    "p1":"This component will allow you to give visual feedback to the end user when they complete an action. Alert loads lazily",
     "button":"show me!"
   }
 }

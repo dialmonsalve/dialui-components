@@ -1,9 +1,9 @@
 
 const DEFAULT_PROPS_DOM = [
-	{ label: 'description: ', children: 'required' },
-	{ label: 'type= ', children: 'required' },
+	{ label: 'description= ', children: 'required' },
 	{ label: 'title= ', children: 'requerid' },
-	{ label: 'animation= ', children: "'fade-in-out'" },
+	{ label: 'type= ', children: "'info'" },
+	{ label: 'animation= ', children: "'fadeInOut'" },
 ];
 
 const ALL_PROPS_DOM = [
@@ -12,8 +12,8 @@ const ALL_PROPS_DOM = [
 	{ label: 'title: ', children: 'string' },
 	{ label: 'animation?: ', children: 'Animation' },
 	{
-		label: 'handleModalResponse?: ',
-		children: "(res: 'yes' | 'no' | 'ok' | 'cancel') => void",
+		label: 'handleModalAnswer?: ',
+		children: "(answer: 'yes' | 'no' | 'ok' | 'cancel') => void",
 	},
 ];
 
@@ -29,10 +29,10 @@ const ANIMATION_DOM = [
 		label: '',
 		children: "| 'jumpToLeft'	| 'jumpToRight'	| 'jumpToDown'	| 'jumpToUp'",
 	},
-	{ label: '', children: "| 'fade-in-out'" },
+	{ label: '', children: "| 'fadeInOut'" },
 ];
 
-const ANIMATIONS = [
+const ANIMATIONS  = [
 	'toUp',
 	'toRight',
 	'toDown',
@@ -41,10 +41,10 @@ const ANIMATIONS = [
 	'jumpToRight',
 	'jumpToDown',
 	'jumpToUp',
-	'fade-in-out',
+	'fadeInOut',
 ];
 
-const MODAL_TYPE = ['success', 'error', 'warning', 'info'];
+const MODAL_TYPE= ['success', 'error', 'warning', 'info'];
 export default {
 	DEFAULT_PROPS_DOM,
 	ALL_PROPS_DOM,

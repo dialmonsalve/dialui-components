@@ -2,33 +2,42 @@
 @use "../../abstract/mixins/globalMixins" as Gm;
 
 .select {
-  background-color: Gv.$color-white-100;
+  align-items: center;
+  background-color: Gv.$color-white-200;
+  border-radius: 12px;
   border: 1px solid Gv.$color-gray-200;
   color: Gv.$color-blue-600;
+  cursor: pointer;
   display: flex;
   font-size: 14px;
   font-weight: 900;
-  outline: none;
   gap: 4px;
-  align-items: center;
-  border-radius: 12px;
+  outline: none;
   padding: 1px 5px;
   position: sticky;
-  
+  z-index: 1;
+  min-width: fit-content;
+  flex-direction: row;
+
+  & > button{
+    background-color: Gv.$color-white-200;
+  }
+
   &:focus {
     border-color: Gv.$color-green-600;
   }
-  
+
   @include Gm.responsive(tab-land) {
-    padding: 1px 8px;
+    padding: 3px 8px;
   }
-  
+
   &__span {
     flex-grow: 1;
     display: flex;
     gap: 2px;
     flex-wrap: wrap;
-    
+    flex-direction: row;
+
     &--option-badge {
       align-items: center;
       background-color: Gv.$color-blue-400;
@@ -36,16 +45,17 @@
       border: 1px solid Gv.$color-blue-600;
       color: Gv.$color-white-200;
       display: flex;
+      flex-direction: row;
       font-size: 12px;
       gap: 6px;
       outline: none;
       padding: 2px 8px;
-      
+
       @include Gm.responsive(tab-port) {
         border-radius: 8px;
         font-size: 14px;
-        cursor: pointer;
-        
+        // cursor: pointer;
+
         &:hover,
         &:focus {
           background-color: Gv.$color-red-200;
@@ -54,20 +64,21 @@
       }
     }
   }
-  
+
   &__clear {
     color: Gv.$color-red-400;
     font-size: 28px;
     display: flex;
+    flex-direction: row;
     gap: 4px;
-    
+
     @include Gm.responsive(tab-land) {
       &:focus,
       &:hover {
         color: Gv.$color-red-600;
       }
     }
-    
+
     &::after {
       content: "";
       background-color: Gv.$color-black-300;
@@ -75,19 +86,19 @@
       height: 28px;
     }
   }
-  
+
   &__caret {
     border: 8px solid transparent;
     border-top-color: Gv.$color-red-500;
     translate: 0 25%;
     font-size: 24px;
-    
+
     @include Gm.responsive(tab-land) {
       cursor: pointer;
       font-size: 48px;
     }
   }
-  
+
   &__options {
     position: absolute;
     margin: 0;
@@ -118,7 +129,7 @@
         cursor: pointer;
       }
     }
-    
+
     &--selected {
       background-color: Gv.$color-red-300;
       border-radius: 6px;

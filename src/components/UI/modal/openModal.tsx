@@ -4,14 +4,14 @@ import { createRoot } from 'react-dom/client';
 
 interface Props {
 	animation?: Animation;
-	type: MessageType;
+	type?: MessageType;
 	description: string;
 	title: string;
-	handleModalResponse?: (res: 'yes' | 'no' | 'ok' | 'cancel') => void;
+	handleModalAnswer?: (answer: 'yes' | 'no' | 'ok' | 'cancel') => void;
 }
 
 function openModal(props: Props) {
-	const { animation, description, title, type, handleModalResponse } = props;
+	const { animation, description, title, type="info", handleModalAnswer } = props;
 	const Modal = lazy(() => import('./Modal'));
 	const modalDiv = document.createElement('div');
 	modalDiv.id = 'modal';
@@ -25,7 +25,7 @@ function openModal(props: Props) {
 				type={type}
 				description={description}
 				title={title}
-				handleModalResponse={handleModalResponse}
+				handleModalAnswer={handleModalAnswer}
 			/>
 		</Suspense>,
 	);

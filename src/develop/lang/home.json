@@ -14,15 +14,15 @@
 	},
 	"en": {
 		"h1": "Home","p0": "start",
-		"p1": "How many times have you started building a simple application in React and you wondered how to stile? ... Maybe a CSS framework? Maybe a super component library?, pure css? ...Multiply solutions right? ",
-		"p2": "Here you will find a solution for projects that do not require a large framework or a component super set. We seek to minimize the complexity in the CSS stake in your small or medium web applications.",
+		"p1": "How many times have you started building a simple application in React and you wondered how to style? ... Maybe a CSS framework? Maybe a super component library?, pure css? ...Multiply solutions right? ",
+		"p2": "Here you will find a solution for projects that do not require a large framework or a superset of components. We seek to minimize the complexity in the CSS stake in your small or medium web applications.",
 		"p3": "We will give you some answers because this mini set is suitable for this type of applications.",
-		"li1": "1. The components are 95% stylized when removed from the box with a range of colors, sizes and are even responsible to be used without the concern of stylus for other screens.",
-		"li2": "2. The components that you will find are the ones, therefore, they need more work to be stylish and of greater uses in applications such as: buttons, inputs, alerts, manners, among others.",
-		"li3": "3. For alerts and manners you should not worry about the lazy load since these are created once the user interacts with them, and after an answer they disappear from the DOM.",
-		"li4": "4. There are components that are complex to perform and require a lot of attention and logic such as multi selects, an input for labels, load spinners, among others.",
-		"li5": "5. A considerable gamma of styles and animations to choose in each component.",
+		"li1": "1. The components are 95% stylized when removed from the box with a range of colors, sizes and are even responsible to be used without the concern of styles for other screens.",
+		"li2": "2. The components you will find are those that generally need the most work to be elegant and most useful in applications such as: buttons, inputs, alerts, modals, among others.",
+		"li3": "3. For alerts and modals you should not worry about the lazy load since these are created once the user interacts with them, and after an answer they disappear from the DOM.",
+		"li4": "4. There are components that are complex to perform and require a lot of attention and logic, such as multi selects, inputs, load spinners, among others.",
+		"li5": "5. A considerable range of styles and animations to choose from for each component.",
 		"li6": "You can continue using CSS, your favorite CSS Framework, your style library and even the most advanced. This component mini set uses 100% css pure.",
-		"p4": "If you want to know more we invite you to explore our documentation. We hope it is useful and enjoy them as much as we did when creating them. It is attentive because we do not want to stop here and we will be creating more, but as long as we seeThat is a component that requires an additional complexity."
+		"p4": "If you want to know more, we invite you to explore our documentation. We hope it is useful and you enjoy them as much as we did creating them. Stay tuned because we don't want to stop here and we will create more, but as we see, that is a component that requires additional complexity."
 	}
 }

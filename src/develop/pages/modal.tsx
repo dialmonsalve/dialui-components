@@ -6,18 +6,18 @@ import { ListItems } from '../components/ListItems';
 
 import modalPage from '../const/modalPage';
 import language from '../lang/modal.json';
-import { useButtonPage } from '../hooks/useButtonPage';
+import { useModalPage } from '../hooks/useModalPage';
 
 function ModalPage() {
 	const {
 		animation,
 		lang,
-		response,
+		modalAnswer,
 		typeModal,
-		handleModal,
+		handleClickModal,
 		setAnimation,
 		setTypeModal,
-	} = useButtonPage();
+	} = useModalPage();
 
 	return (
 		<section>
@@ -29,30 +29,30 @@ function ModalPage() {
 				<h2>DEMO</h2>
 
 				<p>
-					Resp. : <span className='resp'>'{response}'</span>
+					Resp. : <span className='resp'>'{modalAnswer}'</span>
 				</p>
 
-				<div style={{ zIndex: 2, width: '18rem' }}>
+				<div style={{ width: '18rem' }}>
 					<Select
 						options={modalPage.ANIMATIONS}
 						onChange={setAnimation}
 						selectState={animation}
+						zIndex={2}
 					/>
 				</div>
 
-				<div style={{ zIndex: 1, width: '18rem' }}>
+				<div style={{ width: '18rem' }}>
 					<Select
 						options={modalPage.MODAL_TYPE}
 						onChange={setTypeModal}
 						selectState={typeModal}
 					/>
 				</div>
-
 				<Button
 					backgroundColor='pink-400'
 					borderRadius='r-4'
 					textTransform='uppercase'
-					onClick={handleModal}
+					onClick={handleClickModal}
 				>
 					click
 				</Button>
@@ -60,7 +60,7 @@ function ModalPage() {
 
 			<article >
 				<Highlighter>
-					{`import { openAlert } from "dialui-components"
+					{`import { openModal } from "dialui-components"
 
 function MyComponent(){
 
@@ -68,7 +68,6 @@ const handleClick = () => {
 	openModal({
 		description: 'Do you want to delete?',
 		title: 'Delete task',
-		type: 'warning',
 	});
 }
 
@@ -111,20 +110,18 @@ return (
 				<p>{language[lang].localState}</p>
 				<Highlighter>
 					{`import { useState } from "react";
-import { openAlert } from "dialui-components";
-
-type Response = | 'yes' | 'no' | 'ok' |'cancel'
+import { openModal } from "dialui-components";
 
 function MyComponent(){
 
-	const [response, handleResponse] = useState("" as Response);
+	const [ modalAnswer, setModalAnswer ] = useState("");
 
 const handleClick = () => {
 	openModal({
 		description: 'Do you want to delete?',
 		title: 'Delete task',
 		type: 'warning',
-		handleModalResponse:{handleResponse}
+		handleModalAnswer:{setModalAnswer}
 	});
 };
 
@@ -156,18 +153,18 @@ import { UIProvider } from 'dialui-components/dist/provider';
 
 				<Highlighter>
 					{`import { useModal } from "dialui-components/dist/hooks";
-import { openAlert } from "dialui-components";
+import { openModal } from "dialui-components";
 
 function MyComponent(){
 
-	const { modalResponse, handleModalResponse } = useModal();
+	const { modalAnswer, handleModalAnswer } = useModal();
 
 	const handleClick = () => {
 		openModal({
 			description: 'Do you want to delete?',
 			title: 'Delete task',
 			type: 'warning',
-			handleModalResponse:{handleModalResponse}
+			handleModalAnswer:{handleModalAnswer}
 		});
 	};
 
