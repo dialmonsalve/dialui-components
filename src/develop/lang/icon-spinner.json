@@ -7,7 +7,7 @@
 "h41":"algunos ejemplos"
 },
 "en":{
-  "p1":"",
+  "p1":"The Icon Spinner will help when a small component is making a request and wait for the answer",
   "propSpin":"Define the type of spinner you need.",
   "propSpinSize":"Define your size.",
   "defaultSpinner" :"spinner por default",
