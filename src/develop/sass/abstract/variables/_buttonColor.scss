@@ -214,6 +214,14 @@
     @include bm.btnColor(Gv.$color-black-300);
   }
 
+  &__black-400 {
+    @include bm.btnColor(Gv.$color-black-400);
+  }
+  &__white-100 {
+    @include bm.btnColor(Gv.$color-white-100);
+  }
+
+
   &__outline-red {
     @include bm.outlined(Gv.$color-red-500);
   }
@@ -247,6 +255,6 @@
   }
 
   &__outline-white {
-    @include bm.outlined(Gv.$color-white-200);
+    @include bm.outlined(Gv.$color-gray-200);
   }
 }

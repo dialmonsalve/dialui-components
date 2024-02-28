@@ -59,6 +59,7 @@ export const PalletColors = {
 	'outline-red': 'color-red',
 	'outline-white': 'color-white',
 	'outline-yellow': 'color-yellow',
+	'white-100':"color-white"
 } as const;
 
 export type BasicColors =

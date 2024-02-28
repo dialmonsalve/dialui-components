@@ -11,16 +11,15 @@
     position: fixed;
     bottom: 0;
     width: 100vw;
-    z-index: 3;
+    z-index: 4;
     transition: background-color 0.2s ease;
 
     @include Gm.responsive(tab-port) {
-      border-radius: 50%;
-      border-top: none;
-      height: .5rem;
-      right: 4rem;
+      border-top: 0;
+      height: 0;
+      right: 6rem;
       top: 12vh;
-      width: 5rem;
+      width: 0;
     }
     @include Gm.responsive(tab-land) {
       height: 10%;
@@ -120,9 +119,9 @@
 
       &::after {
         top: 0.7rem;
-        transform: rotate(-135deg) translate(5px, 4px);
+        transform: rotate(-135deg) translate(5px, 5px);
         @include Gm.responsive(tab-port) {
-          transform: rotate(-135deg) translate(5px, 5px);
+          transform: rotate(-135deg) translate(4px, 5px);
         }
       }
     }

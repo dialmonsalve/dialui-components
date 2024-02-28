@@ -11,7 +11,7 @@ function ButtonSlideDownPage() {
 
 	return (
 		<section>
-			<h1 >{language[lang].h1}</h1>
+			<h1>{language[lang].h1}</h1>
 
 			<p>{language[lang].p1}</p>
 
@@ -29,7 +29,6 @@ function MyComponent(){
 		)
 	}`}
 				</Highlighter>
-				
 			</article>
 			<article>
 				<h4>Default Props:</h4>
@@ -65,7 +64,7 @@ function MyComponent(){
 				<ListItems items={buttonsPage.RADIUS_DOM} />
 			</article>
 
-			<article >
+			<article>
 				<h4>spinnerType</h4>
 				<p> {language[lang].propSpinnerType}</p>
 				<ListItems items={buttonsPage.ICON_SPINNER_DOM} />
@@ -73,20 +72,18 @@ function MyComponent(){
 
 			<article>
 				<h4>{language[lang].h41} </h4>
-				<ul >
-					<li >- hasSpinner: {language[lang].propHasSpinner}</li>
-					<li >- isLoading: {language[lang].propIsLoading}</li>
-					<li >- disabled: {language[lang].propDisabled}</li>
-					<li >
-						- initialAnimation: {language[lang].propHasInitialAnimation}
-					</li>
-					<li >- textTransform: {language[lang].propTransform}</li>
-					<li >- style: {language[lang].styleProp}</li>
+				<ul>
+					<li>- hasSpinner: {language[lang].propHasSpinner}</li>
+					<li>- isLoading: {language[lang].propIsLoading}</li>
+					<li>- disabled: {language[lang].propDisabled}</li>
+					<li>- initialAnimation: {language[lang].propHasInitialAnimation}</li>
+					<li>- textTransform: {language[lang].propTransform}</li>
+					<li>- style: {language[lang].styleProp}</li>
 				</ul>
 			</article>
 			<p>{language[lang].note}</p>
 
-			<article >
+			<article>
 				<h4>{language[lang].h42}</h4>
 				<div>
 					<p>ripple Button:</p>
@@ -130,9 +127,7 @@ function MyComponent(){
 				</div>
 
 				<div>
-					<p>
-						{language[lang].pIconSpinner}
-					</p>
+					<p>{language[lang].pIconSpinner}</p>
 					<Button
 						borderRadius='r-3'
 						size='sm-100'

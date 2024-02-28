@@ -13,7 +13,7 @@ interface Props {
 	spinner?: SpinnerType | 'half-spinner' | 'lp';
 }
 
-const Spinner = ({ spinner }: Props) => {
+const Spinner = ({ spinner = 'half-spinner' }: Props) => {
 	if (spinner === 'half-spinner') {
 		return (
 			<div className={styles.spinner}>

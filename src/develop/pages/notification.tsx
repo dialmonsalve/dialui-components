@@ -1,37 +1,63 @@
 import Notification from '../../components/UI/Notification';
+import Highlighter from '../components/Highlighter';
+import { ListItems } from '../components/ListItems';
+import useAppOptions from '../hooks/context/useAppOptions';
+import notificationPage from '../const/notificationPage';
+import buttonsPage from '../const/buttonsPage';
 
+import language from '../lang/notification.json';
 
 function NotificationPage() {
-	
-	const totalNotifications = 100;
+	const { lang } = useAppOptions();
+
+	const totalNotifications = 1;
 
 	return (
-		<>
-			<Notification
-				hasNotification={totalNotifications > 0}
-				size='sm'
-				backgroundColor='blue-500'
-			>
-				{totalNotifications > 10 ? '+99' : totalNotifications.toString()}
-			</Notification>
-			<br />
-			<br />
-			<br />
+		<section>
+			<h1>{language[lang].h1}</h1>
+				<p>{language[lang].p1}</p>
 
-			<Notification hasNotification backgroundColor='outline-white' size='md'>
-				{totalNotifications > 10 ? '+99' : totalNotifications.toString()}
-			</Notification>
+			<article>
+				<h3>default alert</h3>
 
-			<br />
-			<Notification
-				hasNotification={totalNotifications > 0}
-				backgroundColor='red-600'
-				size='lg'
-			>
-				{totalNotifications > 10 ? '+99' : totalNotifications.toString()}
-			</Notification>
-			<br />
-		</>
+				<Notification hasNotification={totalNotifications > 0}>
+					{totalNotifications > 10 ? '+99' : totalNotifications.toString()}
+				</Notification>
+
+				<Highlighter>
+					{`import { Notification } from "dialui-components"
+
+function MyComponent(){
+
+const totalNotifications = 1;
+
+return (
+	<Notification 
+		hasNotification={totalNotifications > 0}
+	>
+		{totalNotifications > 10 ? '+99' : totalNotifications.toString()}
+	</Notification>
+	)
+}`}
+				</Highlighter>
+			</article>
+
+			<article>
+				<h4>Default Props:</h4>
+				<ListItems items={notificationPage.DEFAULT_PROPS_DOM} />
+			</article>
+
+			<article>
+				<h4>Props:</h4>
+				<ListItems items={notificationPage.ALL_PROPS_DOM} />
+			</article>
+
+						<article>
+				<h4>Colors:</h4>
+				<p>{language[lang].propColor}</p>
+				<ListItems items={buttonsPage.BACKGROUND_COLOR_DOM} />
+			</article>
+		</section>
 	);
 }
 

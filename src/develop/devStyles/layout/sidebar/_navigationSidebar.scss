@@ -45,6 +45,10 @@
   transform: translateY(0);
 }
 
+.navigation{
+  background-color: white;
+}
+
 .dark.navigation {
   .navigation__btn-menu {
     background-color: Gv.$color-dark;

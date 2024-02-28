@@ -5,7 +5,7 @@
 .modal {
   align-items: center;
   backdrop-filter: blur(3px);
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.9);
   display: flex;
   height: 100vh;
   flex-direction: column;
@@ -62,7 +62,7 @@
 
 .warning {
   background: linear-gradient(
-    to right,
+    135deg,
     Gv.$color-yellow-200 0%,
     Gv.$color-yellow-300 100%
   );
@@ -76,7 +76,7 @@
 }
 
 .error {
-  background: linear-gradient(to right, Gv.$color-red-200, Gv.$color-red-300);
+  background: linear-gradient(135deg, Gv.$color-red-200 20%, Gv.$color-red-600 50%);
   &--title {
     background-image: linear-gradient(
       to right,

@@ -28,7 +28,7 @@
 		"h41":"rest",
 		"h42":"some examples",
     "propButton":"Define the type of button you need.",
-		"propColor": "The value of the 'colors' property allows you to change the bottom of the button.The colors vary from the most dim (100) to the strongest (600).",
+		"propColor": "The value of the 'colors' property allows you to change the background color of the button.The colors vary from the most dim (100) to the strongest (600).",
 		"propSize": "Button sizes can vary according to your preferences.",
 		"propRadius": "Adjust the radius of the border of the button.",
 		"propHasSpinner": "Sometimes, we want the button to show a mini load spinner while a request is made to avoid unnecessary clicks.This property allows you to define if you want to include a spinner.",

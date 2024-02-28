@@ -7,16 +7,22 @@ import useAppOptions from '../hooks/context/useAppOptions';
 import language from '../lang/alert.json';
 
 import alertPage from '../const/alertPage';
+import { useState } from 'react';
 
 function AlertPage() {
 	const { lang } = useAppOptions();
+	const [clickAlert, setClickAlert] = useState(false)
 
 	const handleClick = () => {
+		setClickAlert(true)
 		const typeMessage = language[lang].message;
 		openAlert({
 			message: typeMessage,
 			type: 'info',
 		});
+		setTimeout(() => {
+			setClickAlert(false)
+		}, 2500);
 	};
 
 	return (
@@ -33,6 +39,7 @@ function AlertPage() {
 					backgroundColor='orange-500'
 					borderRadius='r-3'
 					button='ripple'
+					disabled={clickAlert}
 				>
 					{language[lang].button}
 				</Button>

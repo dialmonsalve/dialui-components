@@ -46,6 +46,7 @@ const BACKGROUND_COLOR_DOM = [
 	{ label: " | 'red-... = ", children: "100,200,300,400,500,600'" },
 	{ label: " | 'orange-... = ", children: " 100,200,300,400,500,600'" },
 	{ label: " | 'yellow-... = ", children: " 100,200,300,400,500,600'" },
+	{ label: " | 'white-100'", children: "" },
 	{
 		label: "| 'outline-... = ",
 		children: "black, blue, gray, green, pink, purple, red, white, yellow'",

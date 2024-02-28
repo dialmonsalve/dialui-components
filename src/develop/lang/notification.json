@@ -1,0 +1,12 @@
+{
+  "es":{
+"h1":"notificaciones",
+"p1":"La notificación informará al usuario cuando tenga una nueva",
+		"propColor": "El valor de la propiedad 'Colors' te permite cambiar el fondo de la notificación. Los colores varían desde el más tenue (100) hasta el más fuerte (600)."
+},
+"en":{
+  "h1":"notifications",
+  "p1":"The notification will inform the user when they have a new",
+  "propColor": "The value of the 'colors' property allows you to change the background color of the notification.The colors vary from the most dim (100) to the strongest (600)."
+  }
+}
