@@ -10,12 +10,12 @@ export const Layout = () => {
 
 	return (
 		<div className='container'>
+			<Sidebar />
 			<Header />
 
 			<main className={`main ${theme}`}>
 				<Outlet />
 			</main>
-			<Sidebar />
 		</div>
 	);
 };

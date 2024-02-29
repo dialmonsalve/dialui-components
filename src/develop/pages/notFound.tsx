@@ -7,11 +7,11 @@ import NotFound from '../components/icons/NotFound';
 function NotFoundPage() {
 	const { theme, lang } = useAppOptions();
 	return (
-		<>
+		<div className='container' >
 			<Sidebar />
-			<div className={`${theme} container`}>
+		
 				<Header />
-				<main className={`${theme} main`}>
+				<main className={`main ${theme}`}>
 					<section className={`${styles['not-found']}`}>
 						<h1>
 							{lang === 'en'
@@ -23,8 +23,7 @@ function NotFoundPage() {
 						</div>
 					</section>
 				</main>
-			</div>
-		</>
+		</div>
 	);
 }
 

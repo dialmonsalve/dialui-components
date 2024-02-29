@@ -3,7 +3,7 @@ import {
 	oneDark,
 	oneLight,
 } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import  openAlert  from '../../components/UI/alert/openAlert';
+import openAlert from '../../components/UI/alert/openAlert';
 import useTheme from '../hooks/context/useAppOptions';
 import Clipboard from './icons/Clipboard';
 

@@ -2,11 +2,12 @@
 @use "../abstract/variables/globalVariables" as Gv;
 
 .not-found {
+
+  min-height: 73vh;
   @include Gm.responsive(tab-port) {
     display: flex;
     flex-direction: column;
   }
-
 }
 .image {
   width: 30rem;
