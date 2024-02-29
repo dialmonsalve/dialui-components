@@ -32,19 +32,11 @@ html {
 
 body {
   margin: 0;
-  overflow: hidden;
   font-family: "Ubuntu", sans-serif;
   box-sizing: border-box;
-}
-
-#root {
-  display: flex;
-  flex-direction: column;
+  // position: fixed;
 
   @include Gm.responsive(tab-land) {
-    display: grid;
-    grid-template-areas:
-      "header header"
-      "navigation main";
+    overflow: hidden;
   }
 }

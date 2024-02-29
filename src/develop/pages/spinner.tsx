@@ -52,7 +52,7 @@ function SpinnerPage() {
 
 			<article>
 				<Highlighter>
-					{`import { Spinner } from "dialui-components"
+					{`import { Spinner } from "dialui-components";
 
 function MyComponent(){
 

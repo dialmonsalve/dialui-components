@@ -2,24 +2,22 @@
 @use "../../abstract/variables/globalVariables" as Gv;
 
 .main {
-  overflow: auto;
-  transition: background-color 0.2s ease;
-  padding: 3rem 1.5rem 7rem;
-  max-height: 80vh;
   grid-area: main;
+  padding: 4rem 1rem 3rem;
+  transition: background-color .2s ease;
+  width: 100vw;
   
-  
-  @include Gm.responsive(tab-port) {
-    padding: 3rem 10rem 5rem;
-    height: 95vh;
-    max-height: 95vh;
+  @include Gm.responsive(tab-port){
+    height: 90vh;
+    max-height: 90vh;
+    overflow: auto;
+    padding: 4rem 10rem 3rem;
   }
-  @include Gm.responsive(tab-land) {
+  @include Gm.responsive(tab-land){
+    border-left: 1px solid Gv.$primary-color;
+    max-height: 90vh;
+    padding: 4rem 15rem 3rem;
     width: 80vw;
-    padding: 3rem 10rem 5rem;
-    padding: 3rem 15rem 8rem;
-    height: 91.5vh;
-    max-height: 91.5vh;
   }
 }
 
@@ -40,15 +38,4 @@
   @include Gm.responsive(tab-land) {
     background-color: purple;
   }
-}
-
-
-.dark.main{
-  background-color:Gv.$color-dark;
-  color:white;
-}
-
-.light.main{
-  background-color:Gv.$color-white-200;
-  color: Gv.$color-blue-400;
 }

@@ -1,0 +1,25 @@
+@use "../../abstract/mixins/globalMixins" as Gm;
+@use "../../abstract/variables/globalVariables" as Gv;
+
+.container {
+  display: grid;
+  grid-template-areas:
+  "sidebar"
+  "header"
+    "main"
+    "btn-sidebar"
+    ;
+
+  
+  @include Gm.responsive(tab-port) {
+    grid-template-areas:
+      "header"
+      "sidebar btn-sidebar"
+      "main";
+  }
+  @include Gm.responsive(tab-land) {
+    grid-template-areas:
+      "header header"
+      "sidebar main";
+  }
+}

@@ -3,6 +3,7 @@ import useAppOptions from '../../hooks/context/useAppOptions';
 import { Moon } from '../icons/Moon';
 import { Sun } from '../icons/Sun';
 import Select from '../../../components/form/Select';
+import { Logo } from '../icons/Logo';
 
 const options = ['es', 'en'];
 
@@ -10,24 +11,18 @@ export const Header = () => {
 	const { theme, handleToggleTheme, lang, handleToggleLang } = useAppOptions();
 
 	return (
-		<header className={`${theme} header`}>
-			<div className='header__options'>
-				<Link
-					to='https://www.paypal.me/dialmonsalve'
-					target='_blank'
-					className='header__options--link'
-					style={{width:"130px"}}
-				>
-					{lang === "en" ? "Bug me a coffee ☕️" : "Invítame un café ☕"}
-				</Link>
-				<div style={{width:"80px"}} >
-				<Select
-					onChange={handleToggleLang}
-					options={options}
-					selectState={lang}
-				/>
-				</div>
-
+		<header className={`header ${theme}`}>
+			<div className='header__logo' >
+				<Logo/>
+			</div>
+			<div className='header__options' >
+			<Link
+				to='https://www.paypal.me/dialmonsalve'
+				target='_blank'
+				className='header__link'
+			>
+				{lang === 'en' ? 'Bug me a coffee ☕️' : 'Invítame un café ☕'}
+			</Link>
 				<button
 					className='header__options--theme-btn'
 					type='button'
@@ -35,6 +30,14 @@ export const Header = () => {
 				>
 					{theme === 'light' ? <Moon /> : <Sun />}
 				</button>
+
+				<div style={{ width: '80px' }}>
+					<Select
+						onChange={handleToggleLang}
+						options={options}
+						selectState={lang}
+					/>
+				</div>
 			</div>
 		</header>
 	);

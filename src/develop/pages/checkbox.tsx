@@ -39,7 +39,7 @@ import { Checkbox } from "dialui-components";
 const initialCheckbox = {
   checkA:false,
   checkB:true
-}
+};
 
 function MyComponent(){
 

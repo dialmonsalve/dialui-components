@@ -1,12 +1,12 @@
-const DEFAULT_PROPS_DOM = [{ label: 'spinner= ', children: 'halfSpinner' }];
+const DEFAULT_PROPS_DOM = [{ label: 'spinner= ', children: 'halfSpinner;' }];
 
 const ALL_PROPS_DOM = [
 	{ label: 'spinner:? ', children: '' },
 	{
 		label: '',
-		children: "| 'halfSpinner' | 'fleas' | 'squares'",
+		children: "| 'halfSpinner' | 'fleas' | 'squares';",
 	},
-	{ label: '', children: "| 'eclipse' | 'mice' | 'dots'| 'lp' " },
+	{ label: '', children: "| 'eclipse' | 'mice' | 'dots'| 'lp';" },
 ];
 
 const OPTION_SPINNER = [

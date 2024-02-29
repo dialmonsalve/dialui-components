@@ -25,7 +25,7 @@ function NotificationPage() {
 				</Notification>
 
 				<Highlighter>
-					{`import { Notification } from "dialui-components"
+					{`import { Notification } from "dialui-components";
 
 function MyComponent(){
 

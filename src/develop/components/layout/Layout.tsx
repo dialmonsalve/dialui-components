@@ -9,13 +9,13 @@ export const Layout = () => {
 	const { theme } = useAppOptions();
 
 	return (
-		<>
+		<div className='container'>
 			<Header />
 
-			<main className={`${theme} main`}>
+			<main className={`main ${theme}`}>
 				<Outlet />
 			</main>
-				<Sidebar />
-		</>
+			<Sidebar />
+		</div>
 	);
 };

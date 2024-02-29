@@ -45,7 +45,7 @@ function AlertPage() {
 				</Button>
 
 				<Highlighter>
-					{`import { openAlert } from "dialui-components"
+					{`import { openAlert } from "dialui-components";
 
 function MyComponent(){
 
@@ -54,7 +54,7 @@ const handleClick = () => {
 		message: "Share these components",
 		type: 'info',
 	})
-}
+};
 
 return (
 		<Button onClick={ handleClick } >	click </Button>

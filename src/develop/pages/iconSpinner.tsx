@@ -18,7 +18,7 @@ function IconSpinnerPage() {
 				<h3>{language[lang].defaultSpinner}</h3>
 				<IconSpinner iconSpinner='eclipse' size='sm' />
 				<Highlighter>
-					{`import { IconSpinner } from "dialui-components"
+					{`import { IconSpinner } from "dialui-components";
 
 function MyComponent(){
 

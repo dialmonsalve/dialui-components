@@ -2,45 +2,51 @@
 @use "../../abstract/variables/globalVariables" as Gv;
 
 .header {
-  display: flex;
-  padding: 1rem 2rem;
-  transition: background-color .2s ease;
-  grid-area: header;
+  align-items: center;
   border-bottom: 1px solid Gv.$primary-color;
-  z-index: 1;
+  display: flex;
+  grid-area: header;
+  height: 10vh;
+  justify-content: space-around;
+  padding: 0 2rem 0 ;
   position: sticky;
   top: 0;
+  width: 100vw;
+  z-index: 3;
+  transition: background-color 0.2s ease;
   
+  @include Gm.responsive(tab-port) {
+    justify-content: space-between;
+    padding: 0 2rem 0 9rem;
+    gap: 3rem;
+  }
+  @include Gm.responsive(tab-land) {
+    padding: 0 2rem 0 13rem;
+  }
+
+  &__logo{
+    display: none;
+    @include Gm.responsive(tab-port){
+      display: flex;
+    }
+  }
+
   &__options {
     display: flex;
+    gap: 3rem;
+    align-items: center ;
+  }
+
+  &__link {
+    padding: 1.5rem 1rem;
+    border-radius: 0.7rem;
+    font-size: 12px;
+    background-color: Gv.$primary-color;
+    font-weight: 700;
+    color: white;
+    width: 132px;
+    display: flex;
     justify-content: center;
-    align-items: center;
-    width: 100%;
-    gap: 2rem;
-    justify-content: space-around;
-    
-    @include Gm.responsive(tab-port) {
-      justify-content: flex-end;
-      gap: 4rem;
-    }
-    &--link {
-      order: 1;
-      background-color: Gv.$color-purple-600;
-      color: white;
-      padding: 1rem;
-      font-size: 12px;
-      border-radius: 4px;
-      width: fit-content;
-      @include Gm.responsive(tab-port) {
-        order: 0;
-        &:hover {
-          background-color: Gv.$color-purple-400;
-        }
-      }
-    }
-    &--theme-btn {
-      order: 0;
-    }
   }
 }
 .ico-theme {
@@ -48,12 +54,4 @@
   @include Gm.responsive(tab-port) {
     width: 4rem;
   }
-}
-
-.dark.header{
-  background-color:Gv.$color-dark;
-}
-
-.light.header{
-  background-color:Gv.$color-white-200;
 }

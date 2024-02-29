@@ -1,33 +1,18 @@
 import { useState } from 'react';
-import useAppOptions from '../../hooks/context/useAppOptions';
 
 import { NavigationLink } from '../NavigationLink';
 
 import language from '../../lang/itemNavigation.json';
+import useAppOptions from '../../hooks/context/useAppOptions';
 
 export const Sidebar = () => {
-	const { theme } = useAppOptions();
-
 	const [toggleMenu, setToggleMenu] = useState(false);
 
+	const { theme } = useAppOptions();
+
 	return (
-		<nav className={`${theme} navigation`}>
-			<div className={'navigation__btn-menu'}>
-				<button
-					type='button'
-					className='navigation__btn-menu--btn'
-					onClick={() => setToggleMenu(!toggleMenu)}
-				>
-					<span
-						className={`${
-							toggleMenu
-								? 'navigation__btn-menu__open'
-								: 'navigation__btn-menu__close'
-						}`}
-					/>
-				</button>
-			</div>
-			<nav className={`sidebar ${toggleMenu ? 'show-sidebar' : ''}`}>
+		<>
+			<nav className={`sidebar ${theme} ${toggleMenu ? 'show-sidebar' : ''}`}>
 				<ul className='sidebar__container'>
 					{language.map((link) => (
 						<NavigationLink
@@ -40,6 +25,20 @@ export const Sidebar = () => {
 					))}
 				</ul>
 			</nav>
-		</nav>
+			<div className={`${theme} btn-menu`}>
+				<div
+					className='btn-menu__btn'
+					onClick={() => setToggleMenu(!toggleMenu)}
+				>
+					<span
+						className={`${
+							toggleMenu
+								? 'btn-menu__open'
+								: 'btn-menu__close'
+						}`}
+					/>
+				</div>
+			</div>
+		</>
 	);
 };

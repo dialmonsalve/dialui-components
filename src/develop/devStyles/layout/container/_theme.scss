@@ -1,0 +1,89 @@
+@use "../../abstract/mixins/globalMixins" as Gm;
+@use "../../abstract/variables/globalVariables" as Gv;
+
+.main.dark {
+  background-color: Gv.$color-dark;
+  color: Gv.$color-white-200;
+}
+.main.light {
+  color: Gv.$color-blue-400;
+}
+
+.sidebar.light {
+  background-color: Gv.$color-white-200;
+  color: Gv.$color-blue-400;
+
+  @include Gm.responsive(tab-port) {
+    background-color: rgba($color: Gv.$color-white-200, $alpha: 0.95);
+    backdrop-filter: blur(3px);
+  }
+  @include Gm.responsive(tab-land) {
+    background-color: Gv.$color-white-200;
+  }
+  .sidebar__container--link {
+    color: Gv.$color-blue-400;
+    @include Gm.responsive(tab-land) {
+      &:hover {
+        color: white;
+      }
+    }
+  }
+  .sidebar__container--item {
+    @include Gm.responsive(tab-land) {
+      &:hover {
+        background-color: Gv.$color-blue-400;
+      }
+    }
+  }
+}
+
+.dark.sidebar {
+  color: Gv.$color-white-200;
+  background-color: Gv.$color-dark;
+  @include Gm.responsive(tab-port) {
+    background-color: rgba($color: Gv.$color-black-400, $alpha: 0.95);
+    backdrop-filter: blur(3px);
+  }
+  @include Gm.responsive(tab-land) {
+    background-color: Gv.$color-dark;
+  }
+  .sidebar__container--link {
+    color: rgb(204, 204, 204);
+    @include Gm.responsive(tab-land) {
+      &:hover {
+        color: white;
+      }
+    }
+  }
+  .sidebar__container--item {
+    @include Gm.responsive(tab-land) {
+      &:hover {
+        background-color: Gv.$primary-color;
+      }
+    }
+  }
+}
+
+.btn-menu.light {
+  background-color: Gv.$color-white-200;
+  color: Gv.$color-blue-400;
+}
+
+.btn-menu.dark {
+  background-color: Gv.$color-dark;
+  color: Gv.$color-white-200;
+}
+
+.header.light {
+  background-color: rgba($color: Gv.$color-white-200, $alpha: 0.95);
+  backdrop-filter: blur(3px);
+
+  color: Gv.$color-blue-400;
+}
+
+.header.dark {
+  background-color: rgba($color: Gv.$color-black-400, $alpha: 0.95);
+  backdrop-filter: blur(3px);
+  background-color: Gv.$color-dark;
+  color: Gv.$color-white-200;
+}

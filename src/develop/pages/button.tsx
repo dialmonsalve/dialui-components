@@ -21,7 +21,7 @@ function ButtonSlideDownPage() {
 				<Button>default</Button>
 
 				<Highlighter>
-					{`import { Button } from "dialui-components"
+					{`import { Button } from "dialui-components";
 
 function MyComponent(){
 	return (

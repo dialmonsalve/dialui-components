@@ -60,7 +60,7 @@ function ModalPage() {
 
 			<article >
 				<Highlighter>
-					{`import { openModal } from "dialui-components"
+					{`import { openModal } from "dialui-components";
 
 function MyComponent(){
 
