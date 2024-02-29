@@ -3,27 +3,19 @@
 
 .header {
   display: flex;
-  height: 10vh;
   padding: 1rem 2rem;
-  width: 100vw;
-  z-index: 1;
   transition: background-color .2s ease;
-  
-  @include Gm.responsive(tab-port) {
-    justify-content: flex-end;
-    padding: 0 4rem;
-  }
-  
-  @include Gm.responsive(tab-land) {
-    height: 10vh;
-    width: 80vw;
-  }
+  grid-area: header;
+  border-bottom: 1px solid Gv.$primary-color;
+  z-index: 1;
+  position: sticky;
+  top: 0;
   
   &__options {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     gap: 2rem;
     justify-content: space-around;
     
@@ -56,4 +48,12 @@
   @include Gm.responsive(tab-port) {
     width: 4rem;
   }
+}
+
+.dark.header{
+  background-color:Gv.$color-dark;
+}
+
+.light.header{
+  background-color:Gv.$color-white-200;
 }

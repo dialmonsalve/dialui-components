@@ -2,17 +2,18 @@
 @use "../../abstract/variables/globalVariables" as Gv;
 
 .navigation {
+  transition: background-color 0.2s ease;
   &__btn-menu {
-    align-items: center;
     border-top: 2px solid Gv.$primary-color;
     display: flex;
-    height: 10vh;
     justify-content: center;
-    position: fixed;
-    bottom: 0;
-    width: 100vw;
+
     z-index: 4;
-    transition: background-color 0.2s ease;
+    position: absolute;
+    height: 8%;
+    padding: 1rem 0;
+    width: 100%;
+    bottom: 0;
 
     @include Gm.responsive(tab-port) {
       border-top: 0;
@@ -21,14 +22,7 @@
       top: 12vh;
       width: 0;
     }
-    @include Gm.responsive(tab-land) {
-      height: 10%;
-      width: 100%;
-      border-radius: 0;
-      top: 0;
-      left: 0;
-      position: relative;
-    }
+
     &--btn {
       align-items: center;
       background-color: Gv.$primary-color;
@@ -51,6 +45,7 @@
         display: none;
       }
     }
+    
     &__close {
       background-color: Gv.$color-white-200;
       height: 2px;

@@ -1,0 +1,23 @@
+{
+	"es": {
+		"p1": "Este componente te permitirá crear etiquetas para los clientes que busquen posicionar su marca en internet",
+		"p2": "Manejas su estado con el useState.",
+		"p3": "Ventajas del componente:",
+		"li1": "No permite crear etiquetas en blanco y tampoco con excesos de espacios al inicio o fin.",
+		"li2": "Siempre se adicionan en minúsculas.",
+    "li3":"Lo anterior quiere decir que no es sensitivo a mayúsculas y minúsculas y no permite duplicados.",
+		"l4":"No es necesario adicionar las etiquetas con el botón. Puedes usar la tecla enter"
+	},
+	"en": {
+		"p1":
+		"This component allows you to create tags for clients who want to position their brand on the internet.",
+		"p2": "You handle its state using useState.",
+		"p3":"Advantages of the component:",
+		"li1": "It doesn't allow creating blank tags or tags with excessive spaces at the beginning or end.",
+		"li2": "Tags are always added in lowercase.",
+		"li3": "This means that it's case-insensitive and doesn't allow duplicates."
+
+	}
+}
+
+

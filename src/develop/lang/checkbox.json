@@ -1,0 +1,18 @@
+{
+	"es": {
+		"p1": "Este componente te permitirá crear multiples checkbox. Lo que debes hacer es crear un objeto con valores booleanos, luego extraer el hook useCheckbox (como se muestra a continuación).",
+		"p2": "Debes pasar dicho objeto como valor a la propiedad initialCheckbox, este hook retorna 1 variable (checkboxState) y dos funciones (handleCheckboxChange, resetCheckbox).",
+		"p3": " La variable de estado checkboxState contiene el estado de todos los checks, mientras la función handleCheckbox establece el estado de cada check. resetCheckbox lo reinicia a su estado inicial.",
+		"p4": "La prop 'name' es requerida para manejar los estados de manera correcta y se debe llamar exactamente igual a las propiedades del objeto",
+		"p5": "Si solo necesitas un checkbox obtendrás un error ya que este hook solo está preparado para recibir objetos. Si solo deseas controlar uno, más adelante encontraras como usar useState con dicho componente",
+    "p6":"Un solo checkbox:"
+	},
+	"en": {
+		"p1": "This component allows you to create multiple checkboxes. What you need to do is create an object with boolean values, and then extract the useCheckbox hook (as shown below).",
+		"p2": "You should pass this object as the value for the initialCheckbox property. This hook returns one variable (checkboxState) and two functions (handleCheckboxChange and resetCheckbox).",
+		"p3": "The checkboxState variable contains the state of all the checkboxes, while the handleCheckbox function sets the state for each checkbox. resetCheckbox resets it to its initial state.",
+		"p4": "The 'name' prop is required to handle all the states correctly and it must be called exactly the same as the properties of the object",
+		"p5": "If you only need a single checkbox, you'll encounter an error because this hook is designed to receive objects. If you want to control just one checkbox, you'll find how to use useState with that component later on.",
+    "p6":"A single checkbox:"
+	}
+}

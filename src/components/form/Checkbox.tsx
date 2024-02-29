@@ -1,8 +1,8 @@
-import type { HTMLAttributes, ChangeEvent } from 'react';
+import type { ChangeEvent } from 'react';
 
 import styles from '../../styles/components/form/checkbox.module.css';
 
-interface Props extends HTMLAttributes<HTMLDivElement> {
+interface Props  {
 	name: string;
 	checkboxFormState: Record<string, boolean> | boolean;
 	handleCheck: (e: ChangeEvent<HTMLInputElement>) => void;
@@ -12,7 +12,6 @@ const Checkbox = ({
 	checkboxFormState,
 	name,
 	handleCheck,
-	...props
 }: Props) => {
 	const checked =
 		typeof checkboxFormState === 'boolean'
@@ -25,7 +24,6 @@ const Checkbox = ({
 				checked ? `${styles['checkbox__active']}` : ''
 			}`}
 			data-testid={'container'}
-			{...props}
 		>
 			<label>
 				<input

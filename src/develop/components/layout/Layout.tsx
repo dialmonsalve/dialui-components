@@ -6,18 +6,16 @@ import { Sidebar } from './Sidebar';
 import useAppOptions from '../../hooks/context/useAppOptions';
 
 export const Layout = () => {
-	const { theme, } = useAppOptions();
+	const { theme } = useAppOptions();
 
 	return (
 		<>
-			<Sidebar />
-			<div className={`${theme} container`}>
-				<Header />
-				<main className='main' >
-				<Outlet />
+			<Header />
 
-				</main>
-			</div>
+			<main className={`${theme} main`}>
+				<Outlet />
+			</main>
+				<Sidebar />
 		</>
 	);
 };

@@ -1,12 +1,23 @@
 @use "../../abstract/mixins/globalMixins" as Gm;
 @use "../../abstract/variables/globalVariables" as Gv;
 
+.navigation {
+  grid-area: navigation;
+  transition: background-color 0.3s ease;
+  @include Gm.responsive(tab-land) {
+    width: 20vw;
+  }
+}
+
 .light.navigation {
   .navigation__btn-menu {
     background-color: Gv.$color-white-200;
   }
   .sidebar {
     background-color: rgba($color: #ffffff, $alpha: 0.85);
+    @include Gm.responsive(tab-land) {
+      background-color: Gv.$color-white-200;
+    }
     .sidebar__container--link {
       color: Gv.$color-blue-400;
       @include Gm.responsive(tab-land) {
@@ -19,6 +30,33 @@
       @include Gm.responsive(tab-land) {
         &:hover {
           background-color: Gv.$color-blue-400;
+        }
+      }
+    }
+  }
+}
+
+.dark.navigation {
+  .navigation__btn-menu {
+    background-color: Gv.$color-dark;
+  }
+  .sidebar {
+    background-color: rgba(Gv.$color-dark, 0.95);
+    @include Gm.responsive(tab-land) {
+      background-color: Gv.$color-dark;
+    }
+    .sidebar__container--link {
+      color: rgb(204, 204, 204);
+      @include Gm.responsive(tab-land) {
+        &:hover {
+          color: white;
+        }
+      }
+    }
+    .sidebar__container--item {
+      @include Gm.responsive(tab-land) {
+        &:hover {
+          background-color: Gv.$primary-color;
         }
       }
     }

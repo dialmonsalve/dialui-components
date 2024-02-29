@@ -6,18 +6,26 @@ import Table, {
 	Title,
 } from '../../components/UI/Table';
 import Button from '../../components/UI/buttons/ButtonNormal';
+import useAppOptions from '../hooks/context/useAppOptions';
+
+import language from "../lang/table.json"
 
 export default function TablePage() {
+
+	const { lang } = useAppOptions();
+
 	const backgroundColor = 'orange';
 	return (
-		<>
+		<section>
+			<h1>{language[lang].h1}</h1>
+			<p>{language[lang].p1}</p>
 			<div
 				style={{
-					// width: '400px',
+					width: '100%',
 					overflow: 'auto',
 					height: '80vh',
-					margin: '5rem auto',
-					maxWidth: '100vw',
+					// margin: '5rem auto',
+					// maxWidth: '100vw',
 				}}
 			>
 				<Table>
@@ -64,7 +72,7 @@ export default function TablePage() {
 					</TableBody>
 				</Table>
 			</div>
-		</>
+		</section>
 	);
 }
 

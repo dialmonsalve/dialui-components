@@ -10,7 +10,7 @@ export const Header = () => {
 	const { theme, handleToggleTheme, lang, handleToggleLang } = useAppOptions();
 
 	return (
-		<header className='header'>
+		<header className={`${theme} header`}>
 			<div className='header__options'>
 				<Link
 					to='https://www.paypal.me/dialmonsalve'
