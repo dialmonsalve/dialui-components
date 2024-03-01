@@ -6,32 +6,28 @@ import Table, {
 	Title,
 } from '../../components/UI/Table';
 import Button from '../../components/UI/buttons/ButtonNormal';
+import Highlighter from '../components/Highlighter';
 import useAppOptions from '../hooks/context/useAppOptions';
 
-import language from "../lang/table.json"
+import language from '../lang/table.json';
+
+import tablePage from '../const/tablePage';
+import { ListItems } from '../components/ListItems';
 
 export default function TablePage() {
-
 	const { lang } = useAppOptions();
 
 	const backgroundColor = 'orange';
 	return (
 		<section>
 			<h1>{language[lang].h1}</h1>
-			<p>{language[lang].p1}</p>
-			<div
-				style={{
-					width: '100%',
-					overflow: 'auto',
-					height: '80vh',
-					// margin: '5rem auto',
-					// maxWidth: '100vw',
-				}}
-			>
-				<Table>
+
+			<article>
+				<p>{language[lang].p1}</p>
+				<Table height='40vh' >
 					<TableHead>
-						<Row backgroundColor={"green"}>
-							<Title>id</Title>
+						<Row backgroundColor={backgroundColor}>
+							<Title>index</Title>
 							<Title>name</Title>
 							<Title>lastName</Title>
 							<Title>country</Title>
@@ -40,9 +36,9 @@ export default function TablePage() {
 						</Row>
 					</TableHead>
 					<TableBody>
-						{data.map((person) => (
+						{tablePage.DATA_TABLE.map((person, index) => (
 							<Row backgroundColor={backgroundColor} key={person.id}>
-								<Cell>{person.id}</Cell>
+								<Cell>{index + 1}</Cell>
 								<Cell>{person.name}</Cell>
 								<Cell>{person.lastName}</Cell>
 								<Cell>{person.country}</Cell>
@@ -71,150 +67,72 @@ export default function TablePage() {
 						))}
 					</TableBody>
 				</Table>
-			</div>
-		</section>
-	);
-}
+			</article>
+			<article>
+				<Highlighter>
+					{`import Table, { TableHead,	TableBody,	Cell,	Row,	Title,} from "dialui-components";
 
 const data = [
 	{
 		id: 1,
-		name: 'Camila',
-		lastName: 'Ramírez',
-		country: 'Colombia',
-		city: 'Bogotá',
+		name: 'John',
+		lastName: 'Doe',
+		country: 'United State',
+		city: 'Miami',
 	},
 	{
 		id: 2,
-		name: 'Omar',
-		lastName: 'González',
-		country: 'México',
-		city: 'Ciudad de México',
-	},
-	{
-		id: 3,
 		name: 'Sofía',
 		lastName: 'Pérez',
 		country: 'España',
 		city: 'Madrid',
 	},
-	{
-		id: 4,
-		name: 'Liam',
-		lastName: 'Anderson',
-		country: 'Reino Unido',
-		city: 'Londres',
-	},
-	{
-		id: 5,
-		name: 'Isabella',
-		lastName: 'Martínez',
-		country: 'Argentina',
-		city: 'Buenos Aires',
-	},
-	{
-		id: 6,
-		name: 'Matteo',
-		lastName: 'Díaz',
-		country: 'Chile',
-		city: 'Santiago',
-	},
-	{
-		id: 7,
-		name: 'Emma',
-		lastName: 'García',
-		country: 'Francia',
-		city: 'París',
-	},
-	{
-		id: 8,
-		name: 'Ava',
-		lastName: 'Flores',
-		country: 'Italia',
-		city: 'Roma',
-	},
-	{
-		id: 9,
-		name: 'John',
-		lastName: 'Doe',
-		country: 'Estados Unidos',
-		city: 'Colorado',
-	},
-	{
-		id: 10,
-		name: 'Noah',
-		lastName: 'Hernández',
-		country: 'Brasil',
-		city: 'São Paulo',
-	},
-	{
-		id: 11,
-		name: 'Mia',
-		lastName: 'López',
-		country: 'Alemania',
-		city: 'Berlín',
-	},
-	{
-		id: 12,
-		name: 'Alexander',
-		lastName: 'Rodríguez',
-		country: 'China',
-		city: 'Pekín',
-	},
-	{
-		id: 13,
-		name: 'Elijah',
-		lastName: 'Suárez',
-		country: 'Japón',
-		city: 'Tokio',
-	},
-	{
-		id: 14,
-		name: 'Olivia',
-		lastName: 'Sánchez',
-		country: 'India',
-		city: 'Nueva Delhi',
-	},
-	{
-		id: 15,
-		name: 'Muhammad',
-		lastName: 'Castro',
-		country: 'Rusia',
-		city: 'Moscú',
-	},
-	{
-		id: 16,
-		name: 'Jane',
-		lastName: 'Doe',
-		country: 'Canadá',
-		city: 'Ontario',
-	},
-	{
-		id: 17,
-		name: 'Aaliyah',
-		lastName: 'Gómez',
-		country: 'Australia',
-		city: 'Sídney',
-	},
-	{
-		id: 18,
-		name: 'Benjamin',
-		lastName: 'Torres',
-		country: 'Corea del Sur',
-		city: 'Seúl',
-	},
-	{
-		id: 19,
-		name: 'Abigail',
-		lastName: 'Blanco',
-		country: 'Sudáfrica',
-		city: 'Pretoria',
-	},
-	{
-		id: 20,
-		name: 'Diego',
-		lastName: 'Monsalve',
-		country: 'Australia',
-		city: 'Sidney',
-	},
 ];
+function MyComponent(){
+
+	return (
+		<Table height='40vh' >
+			<TableHead>
+				<Row backgroundColor="orange">
+					<Title>index</Title>
+					<Title>name</Title>
+					<Title>lastName</Title>
+					<Title>country</Title>
+					<Title>city</Title>
+				</Row>
+			</TableHead>
+			<TableBody>
+				{data.map((person, index) => (
+					<Row backgroundColor="orange" key={person.id}>
+						<Cell>{index + 1}</Cell>
+						<Cell>{person.name}</Cell>
+						<Cell>{person.lastName}</Cell>
+						<Cell>{person.country}</Cell>
+						<Cell>{person.city}</Cell>
+					</Row>
+				))}
+			</TableBody>
+		</Table>
+	)
+}`}
+				</Highlighter>
+				<p>{language[lang].p2}</p>
+			</article>
+
+			<article>
+				<h4>Row:</h4>
+				<h4>Default props</h4>
+				<ListItems items={tablePage.DEFAULT_PROPS_DOM} />
+			</article>
+			<article>
+				<h4>Props:</h4>
+				<ListItems items={tablePage.ALL_PROPS_DOM} />
+			</article>
+
+			<article>
+				<h4>BasicColors:</h4>
+				<ListItems items={tablePage.COLORS_DOM} />
+			</article>
+		</section>
+	);
+}

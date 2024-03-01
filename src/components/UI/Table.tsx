@@ -5,6 +5,8 @@ import { BasicColors } from '../../types';
 
 interface TableProps extends TableHTMLAttributes<HTMLTableElement> {
 	children: ReactNode;
+	width?:string
+	height?:string
 }
 
 interface THeadProps extends HTMLAttributes<HTMLTableSectionElement> {
@@ -18,14 +20,23 @@ interface TdProps extends HTMLAttributes<HTMLTableCellElement> {
 
 interface RowProps extends HTMLAttributes<HTMLTableRowElement> {
 	children: ReactNode;
-	backgroundColor: BasicColors | 'black';
+	backgroundColor?: BasicColors | 'black';
 }
 
-const Table = ({ children, ...props }: TableProps) => {
+const Table = ({ children, width="fit-contain", height, ...props }: TableProps) => {
 	return (
+		<div
+		style={{
+			width,
+			overflow: 'auto',
+			height,
+		}}
+		>
+
 		<table {...props} className={styles.table}>
 			{children}
 		</table>
+		</div>
 	);
 };
 
@@ -45,7 +56,7 @@ export const TableBody = ({ children, ...props }: THeadProps) => {
 	);
 };
 
-export const Row = ({ backgroundColor, children, ...props }: RowProps) => {
+export const Row = ({ backgroundColor= "white", children, ...props }: RowProps) => {
 	return (
 		<tr
 			{...props}

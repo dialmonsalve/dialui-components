@@ -1,10 +1,12 @@
 {
   "es":{
     "h1":"tablas",
-    "p1":"Las tablas te ayudarán a organizar mejor la información"
+    "p1":"Las tablas te ayudarán a organizar mejor la información",
+    "p2":"Las tablas toman las mismas propiedades que React ofrece, las únicas variaciones son 2 parámetros opcionales que toma el componente <Table /> que son width y height. Además <Row /> puede recibir como prop los  colores predefinidos"
   },
   "en":{
     "h1":"tables",
-    "p1":"Tables will help you to  organize better the information"
+    "p1":"Tables will help you to  organize better the information",
+    "p2":"Tables take the same properties that React offers, the only variations are 2 optional parameters that the <Table /> component takes, which are width and height. Additionally, <Row /> can receive predefined colors as props."
   }
 }
