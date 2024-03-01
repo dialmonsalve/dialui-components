@@ -1,0 +1,8 @@
+{
+	"es": {
+		"p1": "Puedes combinar con <Input />, la diferencia está en que <Textarea /> te permitirá informar al usuario cuantos caracteres puede escribir si así lo defines."
+	},
+	"en": {
+		"p1": "You can combine with <Input />, the difference is that <Textarea /> will allow you to inform the user how many characters they can write if you define it.."
+	}
+}

@@ -43,7 +43,9 @@ const initialCheckbox = {
 
 function MyComponent(){
 
-  const{checkboxState, handleCheckboxChange} = useCheckbox({initialCheckbox});
+  const { checkboxState, handleCheckboxChange } = useCheckbox({initialCheckbox});
+  //or
+  const { checkA, checkB, handleCheckboxChange } = useCheckbox({initialCheckbox});
 
   return (
     <Checkbox

@@ -28,7 +28,7 @@ const simpleOptions = ['UNO', 'DOS', 'TRES', 'CUATRO'];
 const databaseTags: string[] = [];
 
 const FormControlPage = () => {
-	const [selectState, handleSelectChange] = useState(['VENTAS']);
+	const [selectState, handleSelectChange] = useState(['']);
 
 	const [simpleSelect, handleSimple] = useState('');
 
@@ -102,7 +102,7 @@ const FormControlPage = () => {
 			<br />
 			<TextArea
 				name='description'
-				characterState={inputState.description}
+				value={inputState.description}
 				placeholder='Description'
 				onChange={handleInputChange}
 			/>

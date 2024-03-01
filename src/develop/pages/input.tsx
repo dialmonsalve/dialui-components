@@ -1,105 +1,117 @@
-// import Highlighter from "../components/Highlighter"
+import { useState } from 'react';
+import useAppOptions from '../hooks/context/useAppOptions';
 
-// import Checkbox from '../../components/form/Checkbox';
-// import { useState } from "react";
+import Highlighter from '../components/Highlighter';
+import Input from '../../components/form/Input';
 
-// import useAppOptions from '../hooks/context/useAppOptions';
-// import language from "../lang/checkbox.json"
-// import { ListItems } from "../components/ListItems";
+import { ListItems } from '../components/ListItems';
 
-// import checkboxPage from "../const/checkboxPage";
+import inputPage from '../const/inputPage';
+import language from '../lang/input.json';
 
-function InputPage  () {
+function InputPage() {
+	const { lang } = useAppOptions();
+	const [name, setName] = useState('');
 
-  	// const[checkboxState, handleCheckboxChange] = useState(false);
-    // const { lang } = useAppOptions();
+	return (
+		<section>
+			<h1>Input</h1>
 
-  return (
-    <section>
-      <h1>Input</h1>
+			<article>
+				<div
+					style={{
+						width: '250px',
+						display: 'flex',
+						flexDirection: 'column',
+						gap: '1rem',
+					}}
+				>
+					<Input
+						type='text'
+						value={name}
+						placeholder='Name'
+						name='name'
+						onChange={(e) => setName(e.target.value)}
+					/>
+				</div>
+			</article>
 
-      {/* <article >
+			<p>{language[lang].p1}</p>
+			<p>{language[lang].p2}</p>
+			<p>{language[lang].p3}</p>
+			<p>{language[lang].p4}</p>
+			<p>{language[lang].p5}</p>
 
-        <Checkbox
-					checkboxFormState={checkboxState}
-					handleCheck={()=>handleCheckboxChange(!checkboxState)}
-					name='checkA'
-				/>
-
-        <p>{language[lang].p1}</p>
-        <p>{language[lang].p2}</p>
-        <p>{language[lang].p3}</p>
-        <p>{language[lang].p4}</p>
-        <p>{language[lang].p5}</p>
-				
-				<Highlighter>
-					{`import { useCheckbox } from "dialui-components/dist/hooks";
-import { Checkbox } from "dialui-components";
-
-const initialCheckbox = {
-  checkA:false,
-  checkB:true
-}
-
+			<Highlighter>
+				{`import { useInput } from "dialui-components/dist/hooks";
+import { Input } from "dialui-components";
+      
+  const initialForm = {
+	name: '',
+	phone: 0,
+};
+      
 function MyComponent(){
-
-  const{checkboxState, handleCheckboxChange} = useCheckbox({initialCheckbox});
-
+      
+  const { inputState, handleInputChange } = useInput({ initialInput: initialForm });
+  //or
+  const { name, phone , handleInputChange } = useInput({ initialInput: initialForm });
+      
   return (
-    <Checkbox
-      checkboxFormState={checkboxState}
-      handleCheck={handleCheckboxChange}
-      name='checkA'
+    <Input
+      type='text'
+      value={inputState.name} or {name}
+      placeholder='Name'
+      name='name'
+      onChange={handleInputChange}
     />
-    <Checkbox
-      checkboxFormState={checkboxState}
-      handleCheck={handleCheckboxChange}
-      name='checkB'
+    <Input
+      type='phone'
+      value={inputState.phone} or {phone}
+      placeholder='Phone'
+      name='phone'
+      onChange={handleInputChange}
     />
   )
 }`}
-				</Highlighter>
-			</article>
-
+			</Highlighter>
 
 			<article>
 				<h4>Default Props:</h4>
-				<ListItems items={checkboxPage.DEFAULT_PROPS_DOM} />
+				<ListItems items={inputPage.DEFAULT_PROPS_DOM} />
 			</article>
-
 
 			<article>
 				<h4>Props:</h4>
-				<ListItems items={checkboxPage.ALL_PROPS_DOM} />
+				<ListItems items={inputPage.ALL_PROPS_DOM} />
+      <p>{language[lang].p6}</p>
 			</article>
 
-
       <article >
-        <p>{language[lang].p6}</p>
+        <p>{language[lang].p7}</p>
 				
 				<Highlighter>
 					{`import { useState } from "react";
-import { Checkbox } from "dialui-components";
+import { Input } from "dialui-components";
 
 function MyComponent(){
 
-  const [ checkboxState, handleCheckboxChange ] = useState(false);
+  const [ name, setName ] = useState('');
 
   return (
-    <Checkbox
-      checkboxFormState={checkboxState}
-      handleCheck={()=>handleCheckboxChange(!checkboxState)}
-      name='check'
+    <Input
+      type='text'
+      value={name}
+      placeholder='Name'
+      name='name'
+      onChange={(e) => setName(e.target.value)}
     />
   )
 }`}
 				</Highlighter>
-			</article> */}
-
-    </section>
-
-
-  )
+			</article>
+		</section>
+	);
 }
 
-export default InputPage
+export default InputPage;

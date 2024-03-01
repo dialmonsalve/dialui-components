@@ -38,6 +38,7 @@ const useCheckbox = <T>({ initialCheckbox }: { initialCheckbox: T }) => {
 	};
 
 	return {
+		...checkboxState,
 		checkboxState,
 		handleCheckboxChange,
 		resetCheckbox,

@@ -39,12 +39,7 @@
 		"to": "/table",
 		"label": "table"
 	},
-	{
-		"id": 8,
-		"to": "/form",
-		"label": "form"
-	},
-
+	
 	{
 		"id": 10,
 		"to": "/checkbox",
@@ -63,11 +58,16 @@
 	{
 		"id": 11,
 		"to": "/select",
-		"label": "select"
+		"label": "select - multiselect"
 	},
 	{
 		"id": 14,
 		"to": "/textarea",
 		"label": "textarea"
+	},
+	{
+		"id": 8,
+		"to": "/form",
+		"label": "demo - form"
 	}
 ]

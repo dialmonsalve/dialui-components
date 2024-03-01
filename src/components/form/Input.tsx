@@ -1,20 +1,15 @@
-import type {
-	FocusEvent,
-	ChangeEvent,
-	InputHTMLAttributes,
-	HTMLInputTypeAttribute,
-} from 'react';
+import type { FocusEvent, ChangeEvent, HTMLInputTypeAttribute } from 'react';
 
 import styles from '../../styles/components/form/input.module.css';
 
-interface Props extends InputHTMLAttributes<HTMLInputElement> {
+interface Props {
 	type: HTMLInputTypeAttribute;
 	name: string;
-	value: string | number | readonly string[] | undefined;
+	value: string | number;
 	disabled?: boolean;
 	placeholder?: string;
 	autoComplete?: 'on' | 'off';
-	ontBlur?: (e: FocusEvent<HTMLInputElement>) => void;
+	onBlur?: (e: FocusEvent<HTMLInputElement>) => void;
 	onChange?: (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => void;
 }
 
@@ -27,7 +22,6 @@ const Input = ({
 	onBlur,
 	onChange,
 	disabled = false,
-	...props
 }: Props) => {
 	return (
 		<input
@@ -42,7 +36,6 @@ const Input = ({
 			onChange={onChange}
 			onBlur={onBlur}
 			autoComplete={type === 'password' ? 'off' : autoComplete}
-			{...props}
 		/>
 	);
 };

@@ -1,40 +1,40 @@
-import { type ChangeEvent, type TextareaHTMLAttributes } from 'react';
+import type { ChangeEvent, FocusEvent } from 'react';
 
 import styles from '../../styles/components/form/textarea.module.css';
 
-interface Props extends TextareaHTMLAttributes<HTMLTextAreaElement> {
-	onChange?: (e: ChangeEvent<HTMLTextAreaElement>) => void;
-	className?: string;
-	totalCharacter?: number;
+interface Props {
 	name: string;
-	characterState: string;
+	disabled?: boolean;
+	onChange?: (e: ChangeEvent<HTMLTextAreaElement>) => void;
 	placeholder?: string;
+	totalChars?: number;
+	value: string;
+	onBlur?: (event: FocusEvent<HTMLTextAreaElement>) => void;
 }
 
 const TextArea = ({
-	characterState,
+	value,
 	name,
 	placeholder,
+	disabled,
+	totalChars = 0,
 	onChange,
-	totalCharacter = 0,
-	...props
+	onBlur,
 }: Props) => {
-	const total =
-		totalCharacter > 0
-			? totalCharacter - characterState?.length
-			: characterState?.length;
+	const total = totalChars > 0 ? totalChars - value?.length : value?.length;
 
-	const isTotal = totalCharacter > 0 && total < 0 ? 0 : total;
+	const isTotal = totalChars > 0 && total < 0 ? 0 : total;
 
 	return (
 		<>
 			<textarea
 				onChange={onChange}
-				value={characterState}
+				onBlur={onBlur}
+				value={value}
 				name={name}
 				className={styles['text-area']}
 				placeholder={placeholder}
-				{...props}
+				disabled={disabled}
 			/>
 			<span
 				className={`${styles['text-area__value']} ${

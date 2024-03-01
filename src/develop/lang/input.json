@@ -1,0 +1,20 @@
+{
+	"es": {
+		"p1": "Este componente te permitirá crear un formulario con multiples inputs. Lo que debes hacer es crear un objeto con valores como strings, números; entre otros, luego extraer el hook useInput (como se muestra a continuación).",
+		"p2": "Debes pasar dicho objeto como valor a la propiedad initialInput, este hook retorna 1 variable (inputState) y dos funciones (handleInputChange, resetInput).",
+		"p3": "La variable de estado inputState contiene el estado de todos los inputs y se accede a cada valor como inputState.name, etc o también se pueden extraer directamente todas las propiedades sin necesidad de la variable de estado. La función handleInputChange establece el estado de cada input. resetInput lo reinicia a su estado inicial.",
+		"p4": "La prop 'name' es requerida para manejar los estados de manera correcta y se debe llamar exactamente igual a las propiedades del objeto",
+		"p5": "Si solo necesitas un input obtendrás un error ya que este hook solo está preparado para recibir objetos. Si solo deseas controlar uno, más adelante encontraras como usar useState con dicho componente",
+		"p6":"Nota: Cuando el input es de tipo 'password' automáticamente el autoComplete es 'off'",
+    "p7":"Un solo input:"
+	},
+	"en": {
+		"p1": "This component will allow you to create a form with multiple inputs. What you should do is create an object with values such as strings, numbers; among others, then extract the useInput hook (as shown below).",
+		"p2": "You must pass this object as a value to the initialInput property, this hook returns 1 variable (inputState) and two functions (handleInputChange, resetInput).",
+		"p3": "The inputState state variable contains the state of all the inputs and each value is accessed as inputState.name, etc. or you can also directly extract all the properties without the need for the state variable. The handleInputChange function sets the state of each input. resetInput resets it to its initial state.",
+		"p4": "The 'name' prop is required to handle all the states correctly and it must be called exactly the same as the properties of the object",
+		"p5": "If you only need a single input, you'll encounter an error because this hook is designed to receive objects. If you want to control just one input, you'll find how to use useState with that component later on.",
+		"p6":"Note: When the input is type 'password' automatically the autoComplete es 'off'",
+    "p7":"A single input:"
+	}
+}

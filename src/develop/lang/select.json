@@ -1,0 +1,20 @@
+{
+	"es": {
+		"p1": "El select te permitirá controlar estados de manera sencilla. La variable de estado que definas será la encargada de capturar la opción en forma de string",
+		"p2": "Cada posición dentro del arreglo deben ser VALORES ÚNICOS, valores duplicados dará el error de react como key duplicada",
+		"p3": "Puedes usar las teclas de desplazamiento arriba y abajo, además puedes seleccionar o deseleccionar con la barra espaciadora, la 'x' limpia el select o multiselect",
+		"p4": "Si requieres utilizar varios de estos componentes uno debajo del otro, debes definir a cada uno un 'zIndex'. El primer select llevará un 'zIndex' mayor del que esté justo debajo y asi sucesivamente.",
+		"p5": "Para cambiar de select a multi select, solo debes definir como prop 'multiselect', el estado inicial debe ser un arreglo, ya sea vacío o con algún valor inicial. Para typescript  debes definir string[] como valor genérico en: 'useState<string[]>()'. ",
+		"p6": "La variable de estado que definas será la encargada de capturar las opciones en forma de arreglo de strings. Ej: ['opc1', 'opc2']. Cuando defines opciones.",
+		"p7": "Para desseleccionar opciones ya definidas, pulsando la x en cada una se eliminará del listado, para limpiar el multiselect toca la 'x' junto al caret"
+	},
+	"en": {
+		"p1": "Select allows you to easily control states. The state variable you define will capture the option as a string.",
+		"p2": "Each position within the array must contain unique values. Duplicates will result in a React error due to duplicate keys.",
+		"p3": "You can use the up and down arrow keys for navigation. Space bar allows you to select or deselect options. The 'x' clears the select or multiselect.",
+		"p4": "If you need to use multiple of these components stacked vertically, assign a 'zIndex' to each one. The first select should have a higher 'zIndex' than the one directly below it, and so on.",
+		"p5": "To switch from a select to a multiselect, simply define the 'multiselect' prop. The initial state should be an array, either empty or with an initial value. In typeScript use string[] as the generic value in useState<string[]>().",
+		"p6": "The state variable you define will capture the options as an array of strings. For example: ['option1', 'option2'].",
+		"p7": " To deselect previously chosen options, click the 'x' next to each one to remove it from the list. To clear the multiselect, click the 'x' next to the caret."
+	}
+}
