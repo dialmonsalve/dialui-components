@@ -42,7 +42,7 @@ const Alert = ({
 	} ${styles[`show-alert-${sideX}`]}`;
 
 	return (
-		<div className={className} ref={ref}>
+		<div data-testid='alert' className={className} ref={ref}>
 			<p className={`${styles.message}`}>{message}</p>
 		</div>
 	);

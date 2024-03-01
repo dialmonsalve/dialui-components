@@ -37,6 +37,7 @@ describe('Modal', () => {
 		expect(result.current.respond).toBe('cancel');
 	});
 
+	
 	test('Should set variable state to OK', async () => {
 		const { result } = renderHook(() => {
 			const [respond, handleModalAnswer] = useState('');

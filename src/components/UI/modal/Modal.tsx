@@ -48,6 +48,7 @@ const Modal = ({
 			onClick={() => setModalResponse('cancel')}
 			className={`${styles.modal} ${styles[`modal-show-${animation}`]}`}
 			ref={ref}
+			data-testId = 'modal'
 		>
 			<div
 				onClick={handleContentClick}
