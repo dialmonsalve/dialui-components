@@ -8,7 +8,7 @@ const Clipboard = () => {
 			stroke='currentColor'
 			className='w-6 h-6'
 		>
-			<title>clipboard</title>
+			<title>copy</title>
 			<path
 				strokeLinecap='round'
 				strokeLinejoin='round'

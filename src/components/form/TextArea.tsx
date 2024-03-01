@@ -26,7 +26,7 @@ const TextArea = ({
 	const isTotal = totalChars > 0 && total < 0 ? 0 : total;
 
 	return (
-		<>
+		<div className={styles.container} >
 			<textarea
 				onChange={onChange}
 				onBlur={onBlur}
@@ -43,7 +43,7 @@ const TextArea = ({
 			>
 				{isTotal}
 			</span>
-		</>
+		</div>
 	);
 };
 

@@ -18,7 +18,8 @@
 
 		"propTransform": "Cambia el texto a minúsculas, mayúsculas o capitalizado.",
 		"note":"Nota: Las animaciones con hover están deshabilitadas en tablets y dispositivos móviles para los botones que las incluyen.",
-		"pIconSpinner":"Botón con icono eclipse cargando."
+		"pIconSpinner":"Botón con icono eclipse cargando.",
+		"summary":"En conclusión, si necesitas un botón con un spinner mientras hace una petición, define las siguientes props: hasSpinner, isLoading, iconSpinner: opcional ya que hay uno predefinido"
 	},
 
 	"en":{
@@ -39,6 +40,7 @@
 		"propHasInitialAnimation": "Add a small animation to the button when you enter the page.",
 		"propTransform": "Change the text to lowercase, capitalized or capitalized.",
 		"note":"Note: Hover animations are disabled on tablets and mobile devices for the buttons that include them.",
-		"pIconSpinner":"Button with eclipse loading spin."
+		"pIconSpinner":"Button with eclipse loading spin.",
+		"summary":"In conclusion, if you need a button with a spinner while making a request, define the following props: hasSpinner, isLoading, iconSpinner: optional because there is one predefined"
 	}
 }

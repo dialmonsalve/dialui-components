@@ -12,9 +12,9 @@ export const Header = () => {
 
 	return (
 		<header className={`header ${theme}`}>
-			<div className='header__logo'>
+			<Link to="/" className='header__logo'>
 				<Logo />
-			</div>
+			</Link>
 			<div className='header__options'>
 				<Link
 					to='https://www.paypal.me/dialmonsalve'

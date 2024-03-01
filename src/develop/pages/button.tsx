@@ -82,6 +82,7 @@ function MyComponent(){
 				</ul>
 			</article>
 			<p>{language[lang].note}</p>
+			<p>{language[lang].summary}</p>
 
 			<article>
 				<h4>{language[lang].h42}</h4>

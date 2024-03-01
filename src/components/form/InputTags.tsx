@@ -37,8 +37,8 @@ const InputTags = ({ placeholder, onBlur, tags, setTags }: InputTagProps) => {
 	};
 
 	return (
-		<>
-			<div className={styles.container}>
+		<div className={styles.container}>
+			<div className={styles["container-input"]}>
 				<input
 					className={inputStyle.input}
 					type='text'
@@ -77,7 +77,7 @@ const InputTags = ({ placeholder, onBlur, tags, setTags }: InputTagProps) => {
 					</li>
 				))}
 			</ul>
-		</>
+		</div>
 	);
 };
 

@@ -1,0 +1,32 @@
+@use "../abstract/variables/globalVariables" as Gv;
+@use "../abstract/mixins/globalMixins" as Gm;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: auto auto;
+  width: 38rem;
+  padding: 4rem;
+  border-radius: 1rem;
+  align-items: center;
+  
+  @include Gm.responsive(tab-port){
+    width: 45rem;
+  }
+
+
+
+  background: linear-gradient(
+    to right,
+    Gv.$color-white-200,
+    Gv.$color-purple-200
+  );
+}
+
+.checks {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  justify-content: space-around;
+}

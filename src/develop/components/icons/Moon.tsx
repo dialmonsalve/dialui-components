@@ -8,7 +8,7 @@ export const Moon = () => {
 			stroke='currentColor'
 			className='ico-theme'
 		>
-			<title>moon</title>
+			<title>Dark</title>
 			<path
 				strokeLinecap='round'
 				strokeLinejoin='round'

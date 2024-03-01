@@ -7,7 +7,7 @@ export const Logo = () => {
 			fill='none'
 			xmlns='http://www.w3.org/2000/svg'
 		>
-      <title>diegoMonsalve</title>
+      <title>Diego Monsalve</title>
 			<path
 				d='M502.728 65L771.629 398.75H233.827L502.728 65Z'
 				fill='#2262C3'
