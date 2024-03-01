@@ -5,7 +5,7 @@
 .modal {
   align-items: center;
   backdrop-filter: blur(3px);
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.60);
   display: flex;
   height: 100vh;
   flex-direction: column;
@@ -56,8 +56,8 @@
   &--title {
     background-image: linear-gradient(
       to right,
+      Gv.$color-green-200,
       Gv.$color-white-200,
-      Gv.$color-green-200
     );
   }
 }
@@ -71,8 +71,8 @@
     &--title {
     background-image: linear-gradient(
       to right,
+      Gv.$color-yellow-200,
       Gv.$color-white-200,
-      Gv.$color-yellow-200
     );
   }
 }
@@ -82,8 +82,8 @@
   &--title {
     background-image: linear-gradient(
       to right,
+      Gv.$color-red-400,
       Gv.$color-white-200,
-      Gv.$color-red-400
     );
   }
 }
@@ -97,8 +97,8 @@
   &--title {
     background-image: linear-gradient(
       to right,
-      Gv.$color-white-200,
-      Gv.$color-blue-200
+      Gv.$color-blue-200,
+      Gv.$color-white-200
       );
     }
   }
