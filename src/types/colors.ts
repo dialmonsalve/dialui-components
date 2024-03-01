@@ -4,6 +4,7 @@ export const PalletColors = {
 	'black-100': 'color-black-100',
 	'black-200': 'color-black-200',
 	'black-300': 'color-black-300',
+	'black-400': 'color-black-400',
 	'blue-100': 'color-blue-100',
 	'blue-200': 'color-blue-200',
 	'blue-300': 'color-blue-300',

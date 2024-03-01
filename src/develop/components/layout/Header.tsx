@@ -12,17 +12,18 @@ export const Header = () => {
 
 	return (
 		<header className={`header ${theme}`}>
-			<div className='header__logo' >
-				<Logo/>
+			<div className='header__logo'>
+				<Logo />
 			</div>
-			<div className='header__options' >
-			<Link
-				to='https://www.paypal.me/dialmonsalve'
-				target='_blank'
-				className='header__link'
-			>
-				{lang === 'en' ? 'Bug me a coffee ☕️' : 'Invítame un café ☕'}
-			</Link>
+			<div className='header__options'>
+				<Link
+					to='https://www.paypal.me/dialmonsalve'
+					target='_blank'
+					rel='noreferrer'
+					className='header__link'
+				>
+					{lang === 'en' ? 'Bug me a coffee ☕️' : 'Invítame un café ☕'}
+				</Link>
 				<button
 					className='header__options--theme-btn'
 					type='button'

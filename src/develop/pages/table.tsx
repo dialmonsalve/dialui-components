@@ -30,7 +30,7 @@ export default function TablePage() {
 			>
 				<Table>
 					<TableHead>
-						<Row backgroundColor={backgroundColor}>
+						<Row backgroundColor={"green"}>
 							<Title>id</Title>
 							<Title>name</Title>
 							<Title>lastName</Title>

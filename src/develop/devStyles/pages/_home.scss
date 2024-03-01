@@ -1,4 +1,5 @@
 @use "../abstract/mixins/globalMixins" as Gm;
+@use "../abstract/variables/globalVariables" as Gv;
 
 .list {
 
@@ -6,5 +7,23 @@
   font-size: 1.4rem;
   @include Gm.responsive(tab-land) {
     font-size: 2rem;
+  }
+}
+
+.npm {
+  border: 1px solid Gv.$color-white-200;
+  width: fit-content;
+  padding:.8rem;
+  font-size: 16px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  background-color: Gv.$color-purple-600;
+  color: white;
+  border-radius: 7px;
+  
+  @include Gm.responsive(tab-land){
+    &:hover {
+      background-color: Gv.$color-purple-200;
+
+    }
   }
 }

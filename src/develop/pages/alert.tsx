@@ -39,7 +39,9 @@ function AlertPage() {
 					backgroundColor='orange-500'
 					borderRadius='r-3'
 					button='ripple'
-					disabled={clickAlert}
+					isLoading={clickAlert}
+					hasSpinner
+					iconSpinner='mice'
 				>
 					{language[lang].button}
 				</Button>

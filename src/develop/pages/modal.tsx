@@ -23,16 +23,13 @@ function ModalPage() {
 		<section>
 			<h1>modal</h1>
 
-			<article >
+			<article>
 				<p>{language[lang].p1}</p>
 
 				<h2>DEMO</h2>
 
-				<p>
-					Resp. : <span className='resp'>'{modalAnswer}'</span>
-				</p>
-
 				<div style={{ width: '18rem' }}>
+					<p>animation</p>
 					<Select
 						options={modalPage.ANIMATIONS}
 						onChange={setAnimation}
@@ -42,6 +39,7 @@ function ModalPage() {
 				</div>
 
 				<div style={{ width: '18rem' }}>
+					<p>type</p>
 					<Select
 						options={modalPage.MODAL_TYPE}
 						onChange={setTypeModal}
@@ -56,9 +54,13 @@ function ModalPage() {
 				>
 					click
 				</Button>
+
+				<p>
+					Resp. : <span className='resp'>'{modalAnswer}'</span>
+				</p>
 			</article>
 
-			<article >
+			<article>
 				<Highlighter>
 					{`import { openModal } from "dialui-components";
 

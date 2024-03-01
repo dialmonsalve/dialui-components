@@ -52,6 +52,15 @@ h1 {
   font-size: 3.5rem;
   text-align: center;
   text-transform: uppercase;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
+  background-image: linear-gradient(
+    to right,
+    Gv.$color-white-200,
+    Gv.$color-purple-600
+  );
 }
 
 h2 {
