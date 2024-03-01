@@ -20,6 +20,7 @@
 .close {
   align-self: flex-end;
   background-color: white;
+  box-sizing: border-box;
   color: Gv.$color-red-600;
   padding: 4px;
   border: 1px solid white;
@@ -51,7 +52,7 @@
     135deg,
     Gv.$color-green-200 0%,
     Gv.$color-green-300 100%
-  );
+    );
   &--title {
     background-image: linear-gradient(
       to right,
@@ -98,11 +99,11 @@
       to right,
       Gv.$color-white-200,
       Gv.$color-blue-200
-    );
+      );
+    }
   }
-}
-
-.container {
+  
+  .container {
   position: relative;
   padding: 12px;
   border-radius: 5px;
@@ -110,12 +111,12 @@
   flex-direction: column;
   gap: 5px;
   min-width: 90%;
-
+  
   @include Gm.responsive(tab-port) {
     border-radius: 12px;
     min-width: 80%;
   }
-
+  
   @include Gm.responsive(tab-land) {
     min-width: 50%;
   }
@@ -134,15 +135,15 @@
   padding: 10px;
   align-items: center;
   border: 1px solid inherit;
-
+  
   @include Gm.responsive(tab-port) {
     border-radius: 12px;
     padding: 20px;
   }
-
+  
   > *:not(:nth-child(1)) {
     margin-bottom: 10px;
-
+    
     @include Gm.responsive(tab-port) {
       margin-bottom: 20px;
     }
@@ -157,13 +158,14 @@
   width: 80%;
   height: 80%;
   flex-direction: row;
-
+  
   @include Gm.responsive(tab-port) {
     width: 90%;
     height: 90%;
   }
 }
 .title {
+  margin: 0;
   text-transform: uppercase;
   font-size: 14px;
   text-transform: uppercase;
@@ -173,13 +175,14 @@
   background-clip: text;
   color: transparent;
   letter-spacing: 2px;
-
+  
   @include Gm.responsive(tab-port) {
     font-size: 28px;
   }
 }
 
 .description {
+  margin: 0;
   color: Gv.$color-white-100;
   font-size: 12px;
 

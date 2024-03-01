@@ -3,16 +3,17 @@
 
 .tags {
   background-color: Gv.$color-white-100;
-  border: 1px solid Gv.$color-gray-200;
   border-radius: 6px;
-  padding: 5px 4px 5px;
-  overflow: auto;
-  min-height: 34px;
-  flex-grow: 0;
+  border: 1px solid Gv.$color-gray-200;
   display: flex;
-  gap: 4px 8px;
-  flex-wrap: wrap;
   flex-direction: row;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  gap: 2px;
+  overflow: auto;
+  padding: 5px 4px 5px;
+  min-height: 36px;
+  box-sizing: border-box;
   
   &__badge {
     background-color: Gv.$color-blue-400;
@@ -23,7 +24,7 @@
     font-size: 12px;
     font-weight: 700;
     gap: 4px;
-    padding: 1px 8px;
+    padding: 2px 8px;
 
     @include Gm.responsive(tab-land) {
       font-size: 14px;

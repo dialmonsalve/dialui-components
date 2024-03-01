@@ -70,7 +70,7 @@ export default function TablePage() {
 			</article>
 			<article>
 				<Highlighter>
-					{`import Table, { TableHead,	TableBody,	Cell,	Row,	Title,} from "dialui-components";
+					{`import  { Table, TableHead,	TableBody,	Cell,	Row,	Title } from "dialui-components";
 
 const data = [
 	{
