@@ -17,13 +17,13 @@
   padding:.8rem;
   font-size: 12px;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
-  background-color: Gv.$color-purple-600;
+  background-color: Gv.$color-purple-500;
   color: white;
   border-radius: 7px;
   
   @include Gm.responsive(tab-land){
     &:hover {
-      background-color: Gv.$color-purple-200;
+      background-color: Gv.$color-purple-600;
 
     }
   }
