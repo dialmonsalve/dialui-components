@@ -56,7 +56,8 @@
 		"clean": "rimraf dist/",
 		"clean:prod": "rimraf dist/main.d.ts dist/main.js dist/develop dist/styles/abstract",
 		"push:npm": "np",
-		"test": "vitest --coverage --ui"
+		"test": "vitest --coverage --ui",
+		"postbuild": "purgecss --css dist/assets/*.css --content dist/index.html dist/assets/*.js --output dist/assets"
 	},
 	"devDependencies": {
 		"@testing-library/jest-dom": "^6.4.2",
