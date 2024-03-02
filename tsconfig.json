@@ -1,13 +1,9 @@
 {
   "compilerOptions": {
-    "baseUrl": "/home/dialmonsalve/Documents/Programacion/Javascript/React/MyComponents",
-        "paths": {
-      "@/*": [
-        "src/*",
-      ],
-      "@/utils/*":[
-        "src/utils/*"
-      ]
+    "paths": {
+      "@/*":["./src/*"],
+      "@utils/*":["./src/utils/*"],
+      "@/prodStyles/*":["./src/styles/components/*"],
     },
     "target": "ES2020",
     "useDefineForClassFields": true,

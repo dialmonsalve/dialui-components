@@ -1,4 +1,4 @@
-import { HASH } from '@/utils/hash';
+import { HASH } from '@utils/hash';
 import type { BasicColors } from '../../types';
 
 interface Props {
