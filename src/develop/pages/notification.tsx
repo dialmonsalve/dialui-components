@@ -10,7 +10,7 @@ import language from '../lang/notification.json';
 function NotificationPage() {
 	const { lang } = useAppOptions();
 
-	const totalNotifications = 1;
+	const totalNotifications = 3;
 
 	return (
 		<section>
@@ -20,7 +20,7 @@ function NotificationPage() {
 			<article>
 				<h3>default alert</h3>
 
-				<Notification hasNotification={totalNotifications > 0}>
+				<Notification backgroundColor='blue' hasNotification={totalNotifications > 0}>
 					{totalNotifications > 10 ? '+99' : totalNotifications.toString()}
 				</Notification>
 

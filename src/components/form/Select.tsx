@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import styles from '../../styles/components/form/select.module.css';
+import styles from '@/prodStyles/form/select.module.css'
 
 type SingleSelectProps = {
 	multiple?: false;

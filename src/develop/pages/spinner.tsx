@@ -42,7 +42,7 @@ function SpinnerPage() {
 				</div>
 
 				<Button
-					backgroundColor='yellow-400'
+					backgroundColor='yellow-200'
 					borderRadius='r-4'
 					textTransform='uppercase'
 					onClick={handleSpinner}

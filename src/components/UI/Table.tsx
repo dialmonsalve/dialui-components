@@ -1,7 +1,7 @@
 import { HTMLAttributes, ReactNode, TableHTMLAttributes } from 'react';
 
 import { BasicColors } from '../../types';
-import styles from '../../styles/components/UI/table.module.css';
+import styles from '@/prodStyles//UI/table.module.css';
 
 interface TableProps extends TableHTMLAttributes<HTMLTableElement> {
 	children: ReactNode;
@@ -60,7 +60,7 @@ export const Row = ({ backgroundColor= "white", children, ...props }: RowProps) 
 	return (
 		<tr
 			{...props}
-			className={`${styles.tr} ${styles[`tr-${backgroundColor}`]}`}
+			className={`${styles.tr} ${styles[backgroundColor]}`}
 		>
 			{children}
 		</tr>

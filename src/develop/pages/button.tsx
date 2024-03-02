@@ -18,7 +18,7 @@ function ButtonSlideDownPage() {
 			<article>
 				<h3>{language[lang].h31}</h3>
 
-				<Button>default</Button>
+				<Button backgroundColor='blue-300' >default</Button>
 
 				<Highlighter>
 					{`import { Button } from "dialui-components";
@@ -92,7 +92,7 @@ export const MyComponent=()=> {
 					<Button
 						button='ripple'
 						borderRadius='r-3'
-						backgroundColor='purple-500'
+						backgroundColor='purple-300'
 						size='sm-200'
 						textTransform='uppercase'
 						hasInitialAnimation
@@ -105,7 +105,7 @@ export const MyComponent=()=> {
 					<Button
 						button='squares'
 						borderRadius='r-3'
-						backgroundColor='red-500'
+						backgroundColor='red-300'
 						size='sm-200'
 						textTransform='uppercase'
 						hasInitialAnimation
@@ -119,7 +119,7 @@ export const MyComponent=()=> {
 					<Button
 						button='beat'
 						borderRadius='r-3'
-						backgroundColor='green-500'
+						backgroundColor='green-300'
 						size='sm-300'
 						textTransform='uppercase'
 						hasInitialAnimation

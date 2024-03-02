@@ -46,7 +46,7 @@ function ModalPage() {
 					/>
 				</div>
 				<Button
-					backgroundColor='pink-400'
+					backgroundColor='pink-200'
 					borderRadius='r-4'
 					textTransform='uppercase'
 					onClick={handleClickModal}

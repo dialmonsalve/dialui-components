@@ -6,9 +6,9 @@ import SquareIconsSpinner from '../iconSpinner/IconSpinnerSquares';
 
 import { ButtonProps } from './type';
 import type { SpinnerSize } from '../../../types';
+import { HASH } from '@utils/hash';
 
-import styles from '../../../styles/components/buttons/button.module.css';
-import styleBeat from '../../../styles/components/buttons/buttonBeat.module.css';
+import '@/prodStyles/buttons/buttonBeat.css';
 
 const ButtonBeat = ({
 	backgroundColor = 'blue-200',
@@ -25,14 +25,14 @@ const ButtonBeat = ({
 	onClick,
 	textTransform = 'lowercase',
 }: ButtonProps) => {
-	const mainClasses = `${styles.btn} ${styles[borderRadius]} ${styles[size]} ${styles[textTransform]}`;
+	const mainClasses = `btn${HASH} ${borderRadius}${HASH} ${size}${HASH} btn${HASH}__${textTransform}}`;
 
 	const isDisabled =
 		disabled || isLoading
-			? styles.disabled
-			: `${styles[`btn__${backgroundColor}`]} ${styleBeat.beat}`;
+			? `btn${HASH}__disabled`
+			: `btn${HASH}__${backgroundColor} beat${HASH}`;
 
-	const isAnimated = hasInitialAnimation ? styles.animated : '';
+	const isAnimated = hasInitialAnimation ? `btn${HASH}__animated` : '';
 
 	const partialSize = [...size];
 	const ISize = (partialSize[0] + partialSize[1]) as SpinnerSize;
@@ -47,7 +47,7 @@ const ButtonBeat = ({
 		>
 			{children}
 			{hasSpinner && isLoading ? (
-				<span className={styles.ico}>
+				<span className={`btn${HASH}__ico`}>
 					{iconSpinner === 'mice' && <MiceIconsSpinner size={ISize} />}
 					{iconSpinner === 'fleas' && <FleaIconsSpinner size={ISize} />}
 					{iconSpinner === 'dots' && <DotIconsSpinner size={ISize} />}

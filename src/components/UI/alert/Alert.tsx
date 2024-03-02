@@ -1,7 +1,9 @@
 import { useEffect, useRef } from 'react';
 
 import type { MessageType } from '../../../types';
-import styles from '../../../styles/components/UI/alert.module.css';
+import { HASH } from '@/utils/hash';
+
+import '@/prodStyles/UI/alert.css';
 
 interface Props {
 	message: string;
@@ -21,7 +23,7 @@ const Alert = ({
 
 	useEffect(() => {
 		const hideAlert =
-			sideX === 'left' ? styles['hide-alert-left'] : styles['hide-alert-right'];
+			sideX === 'left' ? `hide-alert-left${HASH}` : `hide-alert-right${HASH}`;
 		function callback() {
 			document.querySelector('#alert')?.remove();
 			ref.current?.removeEventListener('animationend', callback);
@@ -37,13 +39,12 @@ const Alert = ({
 		}, duration);
 	}, [duration]);
 
-	const className = `${styles.alert} ${styles[type]} ${styles[sideY]} ${
-		styles[sideX]
-	} ${styles[`show-alert-${sideX}`]}`;
+	const className = `alert${HASH} alert${HASH}__${type} alert${HASH}__${sideY} alert${HASH}__${sideX}
+	} ${`show-alert-${sideX}${HASH}`}`;
 
 	return (
 		<div data-testid='alert' className={className} ref={ref}>
-			<p className={`${styles.message}`}>{message}</p>
+			<p className={`alert${HASH}${message}`}>{message}</p>
 		</div>
 	);
 };

@@ -2,7 +2,7 @@
 //@dialmonsalve
 @mixin responsive($breakpoint) {
   @if $breakpoint == phone {
-    @media (max-width:600px) {
+    @media (max-width: 600px) {
       @content;
     } // 600px
   }
@@ -23,5 +23,22 @@
     @media (min-width: 1800px) {
       @content;
     } // 1800px en adelante
+  }
+}
+
+@mixin color($background, $color: Gv.$color-gray-400) {
+  background-color: $background;
+  color: $color;
+  &:hover {
+    @include responsive(tab-port) {
+      color: Gv.$color-white-200;
+      @if (
+        $background == Gv.$color-white-100 or $background == Gv.$color-white-200
+      ) {
+        background-color: Gv.$color-gray-300;
+      } @else {
+        background-color: rgba($color: $background, $alpha: 1);
+      }
+    }
   }
 }

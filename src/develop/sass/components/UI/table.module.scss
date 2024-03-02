@@ -32,7 +32,7 @@
   z-index: 1;
 }
 
-.tbody .tr {
+.tr {
   &:active {
     outline: 2px solid Gv.$color-white-100;
   }
@@ -48,217 +48,128 @@
   padding: 14px 8px;
 }
 
-@mixin colorTable($background, $color: Gv.$color-gray-400) {
-  background-color: $background;
-  color: $color;
-}
-
-// yellow
-.tr-yellow:nth-child(even) {
-  @include colorTable(Gv.$color-yellow-100, Gv.$color-gray-300);
-}
-
-.tr-yellow:nth-child(odd) {
-  @include colorTable(Gv.$color-yellow-200, Gv.$color-gray-300);
-}
-
-.tbody .tr-yellow {
-  &:hover {
-    @include Gm.responsive(tab-port) {
-      @include colorTable(Gv.$color-yellow-600, Gv.$color-white-100);
-    }
+.yellow {
+  &:nth-child(even) {
+    @include Gm.color(Gv.$color-yellow-100, Gv.$color-gray-400);
+  }
+  &:nth-child(odd) {
+    @include Gm.color(Gv.$color-yellow-200, Gv.$color-gray-400);
   }
 }
 
-.thead .tr-yellow {
-  @include colorTable(Gv.$color-yellow-600, Gv.$color-white-100);
+.thead .yellow {
+  @include Gm.color(Gv.$color-yellow-600, Gv.$color-white-100);
 }
 
-// blue
-.tr-blue:nth-child(even) {
-  @include colorTable(Gv.$color-blue-100);
-}
-
-.tr-blue:nth-child(odd) {
-  @include colorTable(Gv.$color-blue-200);
-}
-
-.tbody .tr-blue {
-  &:hover {
-    @include Gm.responsive(tab-port) {
-      @include colorTable(Gv.$color-blue-500, Gv.$color-white-100);
-    }
+.blue {
+  &:nth-child(even) {
+    @include Gm.color(Gv.$color-blue-100);
+  }
+  &:nth-child(odd) {
+    @include Gm.color(Gv.$color-blue-200);
   }
 }
 
-.thead .tr-blue {
-  @include colorTable(Gv.$color-blue-600, Gv.$color-white-100);
+.thead .blue {
+  @include Gm.color(Gv.$color-blue-600, Gv.$color-white-100);
 }
 
-// red
-.tr-red:nth-child(even) {
-  @include colorTable(Gv.$color-red-300);
-}
-
-.tr-red:nth-child(odd) {
-  @include colorTable(Gv.$color-red-200);
-}
-
-.tbody .tr-red {
-  &:hover {
-    @include Gm.responsive(tab-port) {
-      @include colorTable(Gv.$color-red-500, Gv.$color-white-100);
-    }
+.red {
+  &:nth-child(even) {
+    @include Gm.color(Gv.$color-red-300);
+  }
+  &:nth-child(odd) {
+    @include Gm.color(Gv.$color-red-200);
   }
 }
 
-.thead .tr-red {
-  @include colorTable(Gv.$color-red-600, Gv.$color-white-100);
+.thead .red {
+  @include Gm.color(Gv.$color-red-600, Gv.$color-white-100);
 }
 
-// green
-.tr-green:nth-child(even) {
-  @include colorTable(Gv.$color-green-100);
-}
-
-.tr-green:nth-child(odd) {
-  @include colorTable(Gv.$color-green-200);
-}
-
-.tbody .tr-green {
-  &:hover {
-    @include Gm.responsive(tab-port) {
-      @include colorTable(Gv.$color-green-500, Gv.$color-white-100);
-    }
+.green {
+  &:nth-child(even) {
+    @include Gm.color(Gv.$color-green-100);
+  }
+  &:nth-child(odd) {
+    @include Gm.color(Gv.$color-green-200);
   }
 }
 
-.thead .tr-green {
-  @include colorTable(Gv.$color-green-600, Gv.$color-white-100);
+.thead .green {
+  @include Gm.color(Gv.$color-green-600, Gv.$color-white-100);
 }
 
-// purple
-.tr-purple:nth-child(even) {
-  @include colorTable(Gv.$color-purple-100);
-}
-
-.tr-purple:nth-child(odd) {
-  @include colorTable(Gv.$color-purple-200);
-}
-
-.tbody .tr-purple {
-  &:hover {
-    @include Gm.responsive(tab-port) {
-      @include colorTable(Gv.$color-purple-500, Gv.$color-white-100);
-    }
+.purple {
+  &:nth-child(even) {
+    @include Gm.color(Gv.$color-purple-100);
+  }
+  &:nth-child(odd) {
+    @include Gm.color(Gv.$color-purple-200);
   }
 }
 
-.thead .tr-purple {
-  @include colorTable(Gv.$color-purple-500, Gv.$color-white-100);
+.thead .purple {
+  @include Gm.color(Gv.$color-purple-500, Gv.$color-white-100);
 }
 
-// pink
-.tr-pink:nth-child(even) {
-  @include colorTable(Gv.$color-pink-100);
-}
-
-.tr-pink:nth-child(odd) {
-  @include colorTable(Gv.$color-pink-200);
-}
-
-.tbody .tr-pink {
-  &:hover {
-    @include Gm.responsive(tab-port) {
-      @include colorTable(Gv.$color-pink-400, Gv.$color-white-100);
-    }
+.pink {
+  &:nth-child(even) {
+    @include Gm.color(Gv.$color-pink-100);
+  }
+  &:nth-child(odd) {
+    @include Gm.color(Gv.$color-pink-200);
   }
 }
 
-.thead .tr-pink {
-  @include colorTable(Gv.$color-pink-400, Gv.$color-white-100);
+.thead .pink {
+  @include Gm.color(Gv.$color-pink-400, Gv.$color-white-100);
 }
 
-// orange
-.tr-orange:nth-child(even) {
-  @include colorTable(Gv.$color-orange-400, Gv.$color-white-100);
-}
-
-.tr-orange:nth-child(odd) {
-  @include colorTable(Gv.$color-orange-300, Gv.$color-white-100);
-}
-
-.tbody .tr-orange {
-  &:hover {
-    @include Gm.responsive(tab-port) {
-      @include colorTable(Gv.$color-orange-500, Gv.$color-white-100);
-    }
+.orange {
+  &:nth-child(even) {
+    @include Gm.color(Gv.$color-orange-100);
+  }
+  &:nth-child(odd) {
+    @include Gm.color(Gv.$color-orange-200);
   }
 }
 
-.thead .tr-orange {
-  @include colorTable(Gv.$color-orange-400, Gv.$color-white-100);
+.thead .orange {
+  @include Gm.color(Gv.$color-orange-400, Gv.$color-white-100);
 }
 
-//gray
-.tr-gray:nth-child(even) {
-  @include colorTable(Gv.$color-gray-100);
-}
-
-.tr-gray:nth-child(odd) {
-  @include colorTable(Gv.$color-gray-200);
-}
-
-.tbody .tr-gray {
-  &:hover {
-    @include Gm.responsive(tab-port) {
-      @include colorTable(Gv.$color-gray-400, Gv.$color-white-100);
-    }
+.gray {
+  &:nth-child(even) {
+    @include Gm.color(Gv.$color-gray-100);
+  }
+  &:nth-child(odd) {
+    @include Gm.color(Gv.$color-gray-200);
   }
 }
 
-.thead .tr-gray {
-  @include colorTable(Gv.$color-gray-400, Gv.$color-white-100);
+.thead .gray {
+  @include Gm.color(Gv.$color-gray-400, Gv.$color-white-100);
 }
 
-//black
-.tr-black:nth-child(even) {
-  @include colorTable(Gv.$color-black-300, Gv.$color-white-100);
-}
-
-.tr-black:nth-child(odd) {
-  @include colorTable(Gv.$color-black-200, Gv.$color-white-100);
-}
-
-.tbody .tr-black {
-  &:hover {
-    @include Gm.responsive(tab-port) {
-      @include colorTable(Gv.$color-black-400, Gv.$color-white-100);
-    }
+.black {
+  &:nth-child(even) {
+    @include Gm.color(Gv.$color-black-300, Gv.$color-white-100);
+  }
+  &:nth-child(odd) {
+    @include Gm.color(Gv.$color-black-200, Gv.$color-white-100);
   }
 }
 
-.thead .tr-black {
-  @include colorTable(Gv.$color-black-400, Gv.$color-white-100);
+.thead .black {
+  @include Gm.color(Gv.$color-black-400, Gv.$color-white-100);
 }
 
-//white
-.tr-white:nth-child(even) {
-  @include colorTable(Gv.$color-white-100, Gv.$color-gray-300);
-}
-
-.tr-white:nth-child(odd) {
-  @include colorTable(Gv.$color-white-200, Gv.$color-gray-300);
-}
-
-.tbody .tr-white {
-  &:hover {
-    @include Gm.responsive(tab-port) {
-      @include colorTable(Gv.$color-black-200, Gv.$color-white-100);
-    }
+.white {
+  &:nth-child(even) {
+    @include Gm.color(Gv.$color-white-100);
   }
-
-  &:active {
-    outline: 2px solid Gv.$color-red-400;
+  &:nth-child(odd) {
+    @include Gm.color(Gv.$color-white-200);
   }
 }

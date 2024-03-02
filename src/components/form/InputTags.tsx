@@ -2,8 +2,8 @@ import { useState, KeyboardEvent, type FocusEvent } from 'react';
 
 import Button from '../UI/buttons/ButtonNormal';
 
-import styles from '../../styles/components/form/inputTags.module.css';
-import inputStyle from '../../styles/components/form/input.module.css';
+import styles from '@/prodStyles/form/inputTags.module.css';
+import inputStyle from '@/prodStyles/form/input.module.css';
 
 interface InputTagProps {
 	placeholder?: string;
@@ -58,7 +58,7 @@ const InputTags = ({ placeholder, onBlur, tags, setTags }: InputTagProps) => {
 					type='button'
 					onClick={addToClick}
 					borderRadius='r-2'
-					backgroundColor='green-400'
+					backgroundColor='green-200'
 					textTransform='uppercase'
 					size='sm-100'
 				>

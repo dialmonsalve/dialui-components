@@ -96,7 +96,7 @@ const Modal = ({
 									YES
 								</ButtonNormal>
 								<ButtonNormal
-									backgroundColor='green-400'
+									backgroundColor='green-200'
 									borderRadius='r-2'
 									size='vw-100'
 									onClick={() => setModalResponse('no')}

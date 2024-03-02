@@ -36,7 +36,7 @@ function AlertPage() {
 
 				<Button
 					onClick={handleClick}
-					backgroundColor='orange-500'
+					backgroundColor='orange-200'
 					borderRadius='r-3'
 					button='ripple'
 					isLoading={clickAlert}

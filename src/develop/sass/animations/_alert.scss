@@ -1,28 +1,28 @@
 @use "../abstract/mixins/globalMixins" as Gm;
 
 //@dialmonsalve
-.show-alert-left {
+.show-alert-left_lui_31032024_DIA_ {
   animation: showToRight 0.2s ease;
   @include Gm.responsive(tab-port) {
     animation: showToRight 0.3s ease;
   }
 }
 
-.show-alert-right {
+.show-alert-right_lui_31032024_DIA_ {
   animation: showToLeft 0.2s ease;
   @include Gm.responsive(tab-land) {
     animation: showToLeft 0.3s ease;
   }
 }
 
-.hide-alert-right {
+.hide-alert-right_lui_31032024_DIA_ {
   animation: hideRight 0.2s ease-out;
   @include Gm.responsive(tab-port) {
     animation: hideRight 0.3s ease-out;
   }
 }
 
-.hide-alert-left {
+.hide-alert-left_lui_31032024_DIA_ {
   animation: hideToLeft 0.2s ease-out;
   @include Gm.responsive(tab-port) {
     animation: hideToLeft 0.3s ease-out;

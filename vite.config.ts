@@ -8,6 +8,7 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 // https://vitejs.dev/config/
 export default defineConfig({
 	plugins: [react(), tsconfigPaths()],
+
 	test: {
 		environment: 'happy-dom',
 		globals: true,
@@ -34,4 +35,15 @@ export default defineConfig({
 			},
 		},
 	},
+	resolve:{
+		alias: {
+			'@/prodStyles': '/src/styles/components',
+			'@/prodComponents': '/src/components',
+			'@/prodHooks': '/src/hooks',
+			'@/devComponents': '/src/develop/components',
+			'@/devHooks': '/src/develop/hooks',
+			'@/lang': '/src/develop/lang',
+			'@/':"/src"
+		}
+	}
 });

@@ -10,7 +10,6 @@
   &:active {
     box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.3) inset;
   }
-
   &,
   &:link,
   &:visited {
@@ -39,7 +38,7 @@
 @mixin hoverAnimations($color) {
   @include Gm.responsive(tab-land) {
     &:hover {
-      background-color: rgba($color: $color, $alpha: 0.55);
+      background-color: rgba($color: $color, $alpha: 1);
       color: Gv.$color-white-200;
       border: 1px solid $color;
 
@@ -54,4 +53,8 @@
   padding: $pad;
   font-size: $fs;
   width: fit-content;
+}
+
+.ñoñoño {
+  background-color: red;
 }

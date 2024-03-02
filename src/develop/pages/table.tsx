@@ -16,7 +16,7 @@ import tablePage from '../const/tablePage';
 export default function TablePage() {
 	const { lang } = useAppOptions();
 
-	const backgroundColor = 'orange';
+	const backgroundColor = 'yellow';
 	return (
 		<section>
 			<h1>{language[lang].h1}</h1>
@@ -36,7 +36,7 @@ export default function TablePage() {
 					</TableHead>
 					<TableBody>
 						{tablePage.DATA_TABLE.map((person, index) => (
-							<Row backgroundColor={backgroundColor} key={person.id}>
+							<Row backgroundColor={"yellow"} key={person.id}>
 								<Cell>{index + 1}</Cell>
 								<Cell>{person.name}</Cell>
 								<Cell>{person.lastName}</Cell>
@@ -44,7 +44,7 @@ export default function TablePage() {
 								<Cell>{person.city}</Cell>
 								<Cell>
 									<Button
-										backgroundColor='blue-600'
+										backgroundColor='blue-300'
 										size='sm-100'
 										borderRadius='r-3'
 										textTransform='uppercase'
@@ -54,7 +54,7 @@ export default function TablePage() {
 								</Cell>
 								<Cell>
 									<Button
-										backgroundColor='red-600'
+										backgroundColor='red-300'
 										size='sm-100'
 										borderRadius='r-3'
 										textTransform='uppercase'

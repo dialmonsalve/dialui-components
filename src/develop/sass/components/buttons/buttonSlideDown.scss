@@ -1,6 +1,6 @@
 @use "../../abstract/mixins/globalMixins" as Gm;
 //@dialmonsalve
-.slide-down {
+.slide-down_lui_31032024_DIA_ {
   @include Gm.responsive(tab-port) {
     z-index: 0;
     overflow: hidden;

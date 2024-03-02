@@ -1,10 +1,9 @@
-import type { Colors } from '../../types';
-
-import styles from '../../styles/components/UI/notification.module.css';
+import { HASH } from '@utils/hash';
+import type { BasicColors } from '../../types';
 
 interface Props {
 	children?: string;
-	backgroundColor?: Colors;
+	backgroundColor?: BasicColors;
 	size?: 'sm' | 'md' | 'lg';
 	hasNotification: boolean;
 }
@@ -12,19 +11,19 @@ interface Props {
 const Notification = ({
 	children,
 	hasNotification,
-	backgroundColor = 'red-600',
+	backgroundColor = 'red',
 	size = 'md',
 }: Props) => {
 	const animation = hasNotification
-		? `${styles['notification-animation']} ${
-				styles[`notification__${backgroundColor}`]
+		? `notification-animation${HASH} ${
+				`notification${HASH}${backgroundColor}`
 		  }`
-		: styles['notification__gray-200'];
+		: `notification${HASH}__disabled`;
 
 	return (
 		<span
-			className={`${styles.notification} ${
-				styles[`notification__${size}`]
+			className={`notification${HASH} ${
+				[`notification${HASH}__${size}`]
 			} ${animation}`}
 		>
 			<p>{children}</p>

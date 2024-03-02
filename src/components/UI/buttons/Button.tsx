@@ -5,6 +5,7 @@ import ButtonSlideDown from './ButtonSlideDown';
 import ButtonSquares from './ButtonSquares';
 
 import { ButtonProps } from './type';
+import '@/prodStyles/buttons/button.css';
 
 type ButtonType = |'normal' | 'squares' | 'beat' | 'ripple' | 'slideDown'
 

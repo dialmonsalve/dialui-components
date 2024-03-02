@@ -1,6 +1,6 @@
 import type { ChangeEvent } from 'react';
 
-import styles from '../../styles/components/form/checkbox.module.css';
+import styles from '@/prodStyles/form/checkbox.module.css';
 
 interface Props  {
 	name: string;

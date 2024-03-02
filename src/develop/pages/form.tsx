@@ -105,7 +105,7 @@ const FormControlPage = () => {
 				<Button
 					type='submit'
 					borderRadius='r-4'
-					backgroundColor='purple-400'
+					backgroundColor='purple-200'
 					size='sm-200'
 					iconSpinner='fleas'
 					textTransform='uppercase'
