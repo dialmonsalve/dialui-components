@@ -49,7 +49,7 @@
 	},
 	"scripts": {
 		"dev": "vite",
-		"build": "tsc && vite build && npm run purge",
+		"build": "tsc && vite build",
 		"dialui": "npm run clean && tsc && npm run styles:prod && npm run clean:prod",
 		"sass": "sass --watch --no-source-map src/develop/sass:src/styles",
 		"styles:prod": "sass --no-source-map --style=compressed src/develop/sass/index.scss:dist/styles/index.css",
@@ -57,7 +57,7 @@
 		"clean:prod": "rimraf dist/main.d.ts dist/main.js dist/develop dist/styles/abstract",
 		"push:npm": "np",
 		"test": "vitest --coverage --ui",
-		"purge": "purgecss --css dist/assets/*.css --content dist/index.html dist/assets/*.js --output dist/assets"
+		"postbuild": "purgecss --css dist/assets/*.css --content dist/index.html dist/assets/*.js --output dist/assets"
 	},
 	"devDependencies": {
 		"@testing-library/jest-dom": "^6.4.2",
