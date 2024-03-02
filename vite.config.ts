@@ -41,7 +41,7 @@ export default defineConfig({
 			'@/prodComponents': '/src/components',
 			'@/prodHooks': '/src/hooks',
 			'@/devComponents': '/src/develop/components',
-			'@utils': '/src/utils',
+			'@/utils': '/src/utils',
 			'@/devHooks': '/src/develop/hooks',
 			'@/lang': '/src/develop/lang',
 			'@/':"/src"
