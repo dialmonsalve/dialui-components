@@ -6,9 +6,9 @@ import SquareIconsSpinner from '../iconSpinner/IconSpinnerSquares';
 
 import { ButtonProps } from './type';
 import type { SpinnerSize } from '../../../types';
-import { HASH } from '@utils/hash';
+import { HASH } from '../../../utils/hash';
 
-import "@/develop/sass/components/buttons/buttonBeat.scss"
+import "../../../styles/components/buttons/buttonBeat.css"
 
 const ButtonBeat = ({
 	backgroundColor = 'blue-200',

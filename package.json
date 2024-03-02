@@ -52,7 +52,7 @@
 		"build": "tsc && vite build",
 		"dialui": "npm run clean && tsc && npm run styles:prod && npm run clean:prod",
 		"sass": "sass --watch --no-source-map src/develop/sass:src/styles",
-		"styles:prod": "sass --no-source-map --style=compressed src/develop/sass/index.scss:dist/styles/index.css",
+		"styles:prod": "sass --no-source-map --style=compressed src/develop/sass:dist/styles",
 		"clean": "rimraf dist/",
 		"clean:prod": "rimraf dist/main.d.ts dist/main.js dist/develop dist/styles/abstract",
 		"push:npm": "np",

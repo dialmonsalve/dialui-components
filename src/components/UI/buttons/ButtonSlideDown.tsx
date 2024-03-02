@@ -6,9 +6,11 @@ import SquareIconsSpinner from '../iconSpinner/IconSpinnerSquares';
 
 import { ButtonProps } from './type';
 import type { SpinnerSize } from '../../../types';
-import { HASH } from '@utils/hash';
 
-import "@/develop/sass/components/buttons/buttonSlideDown.scss"
+import { HASH } from '../../../utils/hash';
+
+import '../../../styles/components/buttons/buttonSlideDown.css';
+
 const ButtonSlideDown = ({
 	backgroundColor = 'blue-200',
 	children,
@@ -24,7 +26,6 @@ const ButtonSlideDown = ({
 	textTransform = 'lowercase',
 	style,
 }: ButtonProps) => {
-
 	const mainClasses = `btn${HASH} ${borderRadius}${HASH} ${size}${HASH} btn${HASH}__${textTransform}}`;
 
 	const isDisabled =
@@ -47,7 +48,7 @@ const ButtonSlideDown = ({
 		>
 			{children}
 			{hasSpinner && isLoading ? (
-					<span className={`btn${HASH}__ico`}>
+				<span className={`btn${HASH}__ico`}>
 					{iconSpinner === 'mice' && <MiceIconsSpinner size={ISize} />}
 					{iconSpinner === 'fleas' && <FleaIconsSpinner size={ISize} />}
 					{iconSpinner === 'dots' && <DotIconsSpinner size={ISize} />}

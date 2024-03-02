@@ -9,9 +9,8 @@ import SquareIconsSpinner from '../iconSpinner/IconSpinnerSquares';
 import { ButtonProps } from './type';
 import type { SpinnerSize } from '../../../types';
 
-import { HASH } from '@utils/hash';
-
-import "@/develop/sass/components/buttons/buttonRipple.scss"
+import { HASH } from '../../../utils/hash';
+import "../../../styles/components/buttons/buttonRipple.css"
 
 const ButtonRipple = ({
 	backgroundColor = 'blue-200',
