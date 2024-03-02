@@ -2,7 +2,6 @@
 @use "../abstract/variables/globalVariables" as Gv;
 
 .not-found {
-
   min-height: 74vh;
   @include Gm.responsive(tab-port) {
     display: flex;

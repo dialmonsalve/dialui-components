@@ -6,11 +6,11 @@ import DotIconsSpinner from '../iconSpinner/IconSpinnerDots';
 import EclipseIconSpinner from '../iconSpinner/IconSpinnerEclipse';
 import SquareIconsSpinner from '../iconSpinner/IconSpinnerSquares';
 
-import styles from '../../../styles/components/buttons/button.module.css';
-import styleRipple from '../../../styles/components/buttons/buttonRipple.module.css';
-
 import { ButtonProps } from './type';
 import type { SpinnerSize } from '../../../types';
+
+import styles from '../../../styles/components/buttons/button.module.css';
+import styleRipple from '../../../styles/components/buttons/buttonRipple.module.css';
 
 const ButtonRipple = ({
 	backgroundColor = 'blue-200',

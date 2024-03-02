@@ -1,17 +1,18 @@
 @use "../../abstract/mixins/globalMixins" as Gm;
 @use "../../abstract/variables/globalVariables" as Gv;
 
+//@dialmonsalve
 .text-area {
   padding: 10px;
   border: 1px solid Gv.$color-gray-200;
   border-radius: 5px;
   resize: vertical;
   outline: none;
-  
+
   &:focus {
     outline: 1px solid Gv.$color-green-400;
   }
-  
+
   &__value {
     width: 30px;
     padding: 8px;

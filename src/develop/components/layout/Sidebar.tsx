@@ -2,8 +2,8 @@ import { useState } from 'react';
 
 import { NavigationLink } from '../NavigationLink';
 
-import language from '../../lang/itemNavigation.json';
 import useAppOptions from '../../hooks/context/useAppOptions';
+import language from '../../lang/itemNavigation.json';
 
 export const Sidebar = () => {
 	const [toggleMenu, setToggleMenu] = useState(false);

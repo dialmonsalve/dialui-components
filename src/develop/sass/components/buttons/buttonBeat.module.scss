@@ -1,6 +1,7 @@
 @use "../../abstract/variables/globalVariables" as Gv;
 @use "../../abstract/mixins/globalMixins" as Gm;
 
+//@dialmonsalve
 //! Button beat
 .beat {
   @include Gm.responsive(tab-land) {

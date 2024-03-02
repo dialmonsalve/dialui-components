@@ -4,11 +4,11 @@ import DotIconsSpinner from '../iconSpinner/IconSpinnerDots';
 import EclipseIconSpinner from '../iconSpinner/IconSpinnerEclipse';
 import SquareIconsSpinner from '../iconSpinner/IconSpinnerSquares';
 
-import styles from '../../../styles/components/buttons/button.module.css';
-import styleSlideDown from '../../../styles/components/buttons/buttonSlideDown.module.css';
-
 import { ButtonProps } from './type';
 import type { SpinnerSize } from '../../../types';
+
+import styles from '../../../styles/components/buttons/button.module.css';
+import styleSlideDown from '../../../styles/components/buttons/buttonSlideDown.module.css';
 
 const ButtonSlideDown = ({
 	backgroundColor = 'blue-200',

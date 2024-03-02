@@ -17,7 +17,7 @@ import Checkbox from './components/form/Checkbox';
 import Input from './components/form/Input';
 import InputTags from './components/form/InputTags';
 import Select from './components/form/Select';
-import TextArea from './components/form/TextArea'
+import Textarea from './components/form/Textarea'
 import Spinner from './components/UI/Spinner';
 
 
@@ -37,6 +37,6 @@ export {
 	Table,
 	TableBody,
 	TableHead,
-	TextArea,
+	Textarea,
 	Title,
 };

@@ -1,12 +1,11 @@
+import { useModalPage } from '../hooks/useModalPage';
 import Button from '../../components/UI/buttons/Button';
 import Select from '../../components/form/Select';
-
 import Highlighter from '../components/Highlighter';
 import { ListItems } from '../components/ListItems';
 
 import modalPage from '../const/modalPage';
 import language from '../lang/modal.json';
-import { useModalPage } from '../hooks/useModalPage';
 
 function ModalPage() {
 	const {
@@ -62,21 +61,20 @@ function ModalPage() {
 
 			<article>
 				<Highlighter>
-					{`import { openModal } from "dialui-components";
+					{`import { Button, openModal } from "dialui-components";
 
-function MyComponent(){
+export const MyComponent = () => {
+  const handleClick = () => {
+    openModal({
+      description: "Do you want to delete?",
+      title: "Delete task",
+    });
+  };
 
-const handleClick = () => {
-	openModal({
-		description: 'Do you want to delete?',
-		title: 'Delete task',
-	});
-}
-
-return (
-		<Button onClick={ handleClick } >	click </Button>
-	)
-}`}
+  return (
+    <Button onClick={handleClick}> click </Button>
+  );
+};`}
 				</Highlighter>
 			</article>
 
@@ -112,25 +110,23 @@ return (
 				<p>{language[lang].localState}</p>
 				<Highlighter>
 					{`import { useState } from "react";
-import { openModal } from "dialui-components";
+import { openModal, Button } from "dialui-components";
 
-function MyComponent(){
+export const MyComponent = () => {
+  const [ modalAnswer, setModalAnswer ] = useState("");
 
-	const [ modalAnswer, setModalAnswer ] = useState("");
-
-const handleClick = () => {
-	openModal({
-		description: 'Do you want to delete?',
-		title: 'Delete task',
-		type: 'warning',
-		handleModalAnswer:{setModalAnswer}
-	});
-};
-
-return (
+  const handleClick = () => {
+    openModal({
+      description: "Do you want to delete?",
+      title: "Delete task",
+      type: "warning",
+      handleModalAnswer: setModalAnswer,
+    });
+  };
+    return (
 		<Button onClick={ handleClick } >	click </Button>
 	)
-}`}
+};`}
 				</Highlighter>
 			</article>
 
@@ -139,41 +135,39 @@ return (
 				<p>{language[lang].globalState}</p>
 				<Highlighter>
 					{` //main.tsx					
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { UIProvider } from 'dialui-components/dist/provider';
-...
-	ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-		<React.StrictMode>
-			<UIProvider>
-				<App/>
-			</UIProvider>
-		</React.StrictMode>,
-	);
-}`}
+ import React from 'react';
+ import ReactDOM from 'react-dom/client';
+ import { UIProvider } from 'dialui-components/dist/providers';
+ 
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+  <React.StrictMode>
+    <UIProvider>
+      <App/>
+    </UIProvider>
+  </React.StrictMode>,
+);`}
 				</Highlighter>
 
 				<Highlighter>
 					{`import { useModal } from "dialui-components/dist/hooks";
-import { openModal } from "dialui-components";
+import { openModal, Button } from "dialui-components";
 
-function MyComponent(){
+export const MyComponent = () => {
+  const { modalAnswer, handleModalAnswer } = useModal();
 
-	const { modalAnswer, handleModalAnswer } = useModal();
+  const handleClick = () => {
+    openModal({
+      description: "Do you want to delete?",
+      title: "Delete task",
+      type: "warning",
+      handleModalAnswer: handleModalAnswer ,
+    });
+  };
 
-	const handleClick = () => {
-		openModal({
-			description: 'Do you want to delete?',
-			title: 'Delete task',
-			type: 'warning',
-			handleModalAnswer:{handleModalAnswer}
-		});
-	};
-
-return (
+  return (
 		<Button onClick={ handleClick } >	click </Button>
 	)
-}`}
+};`}
 				</Highlighter>
 			</article>
 		</section>

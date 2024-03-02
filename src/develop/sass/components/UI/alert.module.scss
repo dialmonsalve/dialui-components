@@ -2,6 +2,7 @@
 @use "../../abstract/variables/globalVariables" as Gv;
 @forward "../../animations/alert";
 
+//@dialmonsalve
 .alert {
   color: Gv.$color-white-100;
   padding: 8px;
@@ -15,14 +16,14 @@
 
 .left {
   left: 5%;
-  @include Gm.responsive(tab-port){
+  @include Gm.responsive(tab-port) {
     left: 2%;
   }
 }
 
 .right {
   right: 4%;
-  @include Gm.responsive(tab-port){
+  @include Gm.responsive(tab-port) {
     right: 2%;
   }
 }

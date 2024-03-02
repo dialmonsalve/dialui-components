@@ -1,6 +1,7 @@
 @use "../variables/globalVariables" as Gv;
 @use "../mixins/button.scss" as bm;
 
+//@dialmonsalve
 // ! Button Colors
 .btn,
 .notification {
@@ -220,7 +221,6 @@
   &__white-100 {
     @include bm.btnColor(Gv.$color-white-100);
   }
-
 
   &__outline-red {
     @include bm.outlined(Gv.$color-red-500);

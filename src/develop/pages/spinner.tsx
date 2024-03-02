@@ -1,14 +1,15 @@
 import { useState } from 'react';
+
+import useAppOptions from '../hooks/context/useAppOptions';
 import Spinner from '../../components/UI/Spinner';
 import Highlighter from '../components/Highlighter';
 import { ListItems } from '../components/ListItems';
-import spinnerPage from '../const/spinnerPage';
 import Select from '../../components/form/Select';
 import Button from '../../components/UI/buttons/Button';
-import { SpinnerType } from '../../types';
 
+import spinnerPage from '../const/spinnerPage';
 import language from '../lang/spinner.json';
-import useAppOptions from '../hooks/context/useAppOptions';
+import { SpinnerType } from '../../types';
 
 function SpinnerPage() {
 	const [openSpinner, setOpenSpinner] = useState(false);
@@ -54,7 +55,7 @@ function SpinnerPage() {
 				<Highlighter>
 					{`import { Spinner } from "dialui-components";
 
-function MyComponent(){
+export const  MyComponent = () => {
 
 return (
 	<Spinner />

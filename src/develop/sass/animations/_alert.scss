@@ -1,5 +1,6 @@
 @use "../abstract/mixins/globalMixins" as Gm;
 
+//@dialmonsalve
 .show-alert-left {
   animation: showToRight 0.2s ease;
   @include Gm.responsive(tab-port) {

@@ -1,6 +1,7 @@
 import type { Colors } from '../../types';
 
 import styles from '../../styles/components/UI/notification.module.css';
+
 interface Props {
 	children?: string;
 	backgroundColor?: Colors;

@@ -1,12 +1,13 @@
 // @use "../../abstract/mixins/spinner" as s;
 @use "../../abstract/variables/globalVariables" as Gv;
 
+//@dialmonsalve
 .squares {
   display: flex;
   gap: 3px;
   width: fit-content;
   flex-direction: row;
-  
+
   &--1 {
     background: linear-gradient(
       45deg,
@@ -17,7 +18,7 @@
     animation: rect-right 1s linear infinite;
     transform: translateY(6px);
   }
-  
+
   &--2 {
     background: linear-gradient(
       135deg,
@@ -60,7 +61,6 @@
   75% {
     transform: translate(0px, 0px);
   }
-
 }
 
 @keyframes rect-right {
@@ -75,5 +75,4 @@
   75% {
     transform: translate(0px, 0px);
   }
-
 }

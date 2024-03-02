@@ -8,13 +8,13 @@
   grid-area: header;
   height: 10vh;
   justify-content: space-around;
-  padding: 0 2rem 0 ;
+  padding: 0 2rem 0;
   position: sticky;
   top: 0;
   width: 100vw;
   z-index: 3;
   transition: background-color 0.2s ease;
-  
+
   @include Gm.responsive(tab-port) {
     justify-content: space-between;
     padding: 0 2rem 0 9rem;
@@ -24,9 +24,9 @@
     padding: 0 2rem 0 13rem;
   }
 
-  &__logo{
+  &__logo {
     display: none;
-    @include Gm.responsive(tab-port){
+    @include Gm.responsive(tab-port) {
       display: flex;
     }
   }
@@ -34,7 +34,7 @@
   &__options {
     display: flex;
     gap: 3rem;
-    align-items: center ;
+    align-items: center;
   }
 
   &__link {

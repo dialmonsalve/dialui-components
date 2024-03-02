@@ -1,10 +1,10 @@
 import useAppOptions from '../hooks/context/useAppOptions';
 import Button from '../../components/UI/buttons/Button';
-
-import language from '../lang/buttons.json';
 import Highlighter from '../components/Highlighter';
 import { ListItems } from '../components/ListItems';
+
 import buttonsPage from '../const/buttonsPage';
+import language from '../lang/buttons.json';
 
 function ButtonSlideDownPage() {
 	const { lang } = useAppOptions();
@@ -23,11 +23,12 @@ function ButtonSlideDownPage() {
 				<Highlighter>
 					{`import { Button } from "dialui-components";
 
-function MyComponent(){
-	return (
-		<Button >	default </Button>
-		)
-	}`}
+export const MyComponent=()=> {
+  return (
+    <Button> default </Button>
+  );
+}
+`}
 				</Highlighter>
 			</article>
 			<article>

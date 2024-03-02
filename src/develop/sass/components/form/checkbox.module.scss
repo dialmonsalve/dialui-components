@@ -1,6 +1,7 @@
 @use "../../abstract/variables/globalVariables" as Gv;
 @use "../../abstract//mixins/globalMixins" as Gm;
 
+//@dialmonsalve
 .checkbox {
   min-width: 40px;
   height: 16px;
@@ -9,7 +10,6 @@
   border-radius: 20px;
   position: relative;
   box-shadow: 4px 1px 5px Gv.$color-black-200;
-  
 
   &::before {
     content: "";

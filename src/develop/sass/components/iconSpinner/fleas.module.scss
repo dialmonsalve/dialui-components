@@ -1,11 +1,12 @@
 @use "../../abstract/mixins/spinner" as s;
 
+//@dialmonsalve
 .fleas {
   display: flex;
   gap: 1px;
   width: fit-content;
   flex-direction: row;
-  
+
   &--1,
   &--2,
   &--3,
@@ -17,7 +18,7 @@
 
   &--1 {
     transform: translateY(6px);
-    animation: fleas .5s linear infinite;
+    animation: fleas 0.5s linear infinite;
   }
 
   &--2 {

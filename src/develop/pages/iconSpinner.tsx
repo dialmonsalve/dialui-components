@@ -1,11 +1,10 @@
+import useAppOptions from '../hooks/context/useAppOptions';
 import Highlighter from '../components/Highlighter';
 import { ListItems } from '../components/ListItems';
-import useAppOptions from '../hooks/context/useAppOptions';
-
-import language from '../lang/icon-spinner.json';
+import IconSpinner from '../../components/UI/iconSpinner/IconSpinner';
 
 import iconPage from '../const/iconSpinnerPage';
-import IconSpinner from '../../components/UI/iconSpinner/IconSpinner';
+import language from '../lang/icon-spinner.json';
 
 function IconSpinnerPage() {
 	const { lang } = useAppOptions();
@@ -20,12 +19,11 @@ function IconSpinnerPage() {
 				<Highlighter>
 					{`import { IconSpinner } from "dialui-components";
 
-function MyComponent(){
-
-return (
+export const MyComponent = () => {
+  return (
 		<IconSpinner/>
 	)
-}`}
+};`}
 				</Highlighter>
 			</article>
 

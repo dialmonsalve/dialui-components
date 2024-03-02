@@ -1,6 +1,6 @@
 @use "../variables/globalVariables" as Gv;
 
-
+//@dialmonsalve
 @mixin spinner() {
   background-color: transparent;
   position: absolute;
@@ -25,7 +25,6 @@
     white 100%
   );
 }
-
 
 @mixin fleas() {
   border-radius: 50%;
@@ -61,7 +60,3 @@
     transform: translateY(20%);
   }
 }
-
-
-
-

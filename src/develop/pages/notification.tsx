@@ -1,10 +1,10 @@
+import useAppOptions from '../hooks/context/useAppOptions';
 import Notification from '../../components/UI/Notification';
 import Highlighter from '../components/Highlighter';
 import { ListItems } from '../components/ListItems';
-import useAppOptions from '../hooks/context/useAppOptions';
-import notificationPage from '../const/notificationPage';
-import buttonsPage from '../const/buttonsPage';
 
+import buttonsPage from '../const/buttonsPage';
+import notificationPage from '../const/notificationPage';
 import language from '../lang/notification.json';
 
 function NotificationPage() {
@@ -15,7 +15,7 @@ function NotificationPage() {
 	return (
 		<section>
 			<h1>{language[lang].h1}</h1>
-				<p>{language[lang].p1}</p>
+			<p>{language[lang].p1}</p>
 
 			<article>
 				<h3>default alert</h3>
@@ -27,18 +27,15 @@ function NotificationPage() {
 				<Highlighter>
 					{`import { Notification } from "dialui-components";
 
-function MyComponent(){
+export const MyComponent = () => {
+  const totalNotifications = 1;
 
-const totalNotifications = 1;
-
-return (
-	<Notification 
-		hasNotification={totalNotifications > 0}
-	>
-		{totalNotifications > 10 ? '+99' : totalNotifications.toString()}
-	</Notification>
-	)
-}`}
+  return (
+    <Notification hasNotification={totalNotifications > 0}>
+      {totalNotifications > 10 ? "+99" : totalNotifications.toString()}
+    </Notification>
+  );
+};`}
 				</Highlighter>
 			</article>
 
@@ -52,7 +49,7 @@ return (
 				<ListItems items={notificationPage.ALL_PROPS_DOM} />
 			</article>
 
-						<article>
+			<article>
 				<h4>Colors:</h4>
 				<p>{language[lang].propColor}</p>
 				<ListItems items={buttonsPage.BACKGROUND_COLOR_DOM} />

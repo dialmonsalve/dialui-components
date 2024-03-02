@@ -1,8 +1,9 @@
+import useAppOptions from '../hooks/context/useAppOptions';
 import { Header } from '../components/layout/Header';
 import { Sidebar } from '../components/layout/Sidebar';
-import useAppOptions from '../hooks/context/useAppOptions';
-import styles from '../devStyles/pages/notFound.module.scss';
 import NotFound from '../components/icons/NotFound';
+
+import styles from '../devStyles/pages/notFound.module.scss';
 
 function NotFoundPage() {
 	const { theme, lang } = useAppOptions();

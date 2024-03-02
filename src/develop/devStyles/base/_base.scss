@@ -64,7 +64,7 @@ h1 {
 }
 
 h2 {
-  font-size: 3.0rem;
+  font-size: 3rem;
   text-transform: uppercase;
 }
 
@@ -86,7 +86,8 @@ h4 {
   }
 }
 
-p, li {
+p,
+li {
   font-size: 1.4rem;
   line-height: 2rem;
   @include Gm.responsive(tab-port) {

@@ -13,7 +13,7 @@
   border-top: 1px solid Gv.$primary-color;
   z-index: 5;
 
-  @include Gm.responsive(tab-port){
+  @include Gm.responsive(tab-port) {
     width: 40px;
     height: 40px;
     bottom: 84%;
@@ -21,11 +21,11 @@
     left: 90%;
   }
 
-  @include Gm.responsive(tab-land){
+  @include Gm.responsive(tab-land) {
     display: none;
     visibility: hidden;
   }
-  
+
   &__btn {
     background-color: Gv.$primary-color;
     width: 40px;
@@ -36,19 +36,17 @@
     border-radius: 50%;
     justify-content: center;
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
-    
   }
 
-  &__open,&__close{
+  &__open,
+  &__close {
     position: relative;
     width: 25px;
     height: 2px;
     background-color: white;
-
   }
 
   &__close {
-
     &::before,
     &::after {
       content: "";

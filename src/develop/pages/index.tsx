@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+
 import Highlighter from '../components/Highlighter';
 import useAppOptions from '../hooks/context/useAppOptions';
 

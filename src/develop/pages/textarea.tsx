@@ -1,9 +1,8 @@
 import { useState } from 'react';
+
 import useAppOptions from '../hooks/context/useAppOptions';
-
 import Highlighter from '../components/Highlighter';
-import Textarea from '../../components/form/TextArea';
-
+import Textarea from '../../components/form/Textarea';
 import { ListItems } from '../components/ListItems';
 
 import textareaPage from '../const/textareaPage';
@@ -39,21 +38,20 @@ function TextareaPage() {
 			<Highlighter>
 				{`import { useState } from "react";
 import { Textarea } from "dialui-components";
-      
-function MyComponent(){
-      
-  const [ value, setValue } = useState("");
-      
+
+export const MyComponent = () => {
+  const [ value, setValue ] = useState("");
+
   return (
-		<Textarea
-		 value={value}
-		 placeholder='Description'
-		 name='description'
-		 onChange={(e) => setValue(e.target.value)}
-		 totalChars={50}
-	/>
-  )
-}`}
+    <Textarea
+      value={value}
+      placeholder="Description"
+      name="description"
+      onChange={(e) => setValue(e.target.value)}
+      totalChars={50}
+    />
+  );
+};`}
 			</Highlighter>
 
 			<article>
@@ -65,7 +63,6 @@ function MyComponent(){
 				<h4>Props:</h4>
 				<ListItems items={textareaPage.ALL_PROPS_DOM} />
 			</article>
-
 		</section>
 	);
 }

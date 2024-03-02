@@ -3,6 +3,7 @@ import ButtonBeat from './ButtonBeat';
 import ButtonRipple from './ButtonRipple';
 import ButtonSlideDown from './ButtonSlideDown';
 import ButtonSquares from './ButtonSquares';
+
 import { ButtonProps } from './type';
 
 type ButtonType = |'normal' | 'squares' | 'beat' | 'ripple' | 'slideDown'

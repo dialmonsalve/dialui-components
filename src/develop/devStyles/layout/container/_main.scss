@@ -4,16 +4,16 @@
 .main {
   grid-area: main;
   padding: 4rem 1rem 3rem;
-  transition: background-color .2s ease;
+  transition: background-color 0.2s ease;
   width: 100vw;
-  
-  @include Gm.responsive(tab-port){
+
+  @include Gm.responsive(tab-port) {
     height: 90vh;
     max-height: 90vh;
     overflow: auto;
     padding: 4rem 10rem 3rem;
   }
-  @include Gm.responsive(tab-land){
+  @include Gm.responsive(tab-land) {
     border-left: 1px solid Gv.$primary-color;
     max-height: 90vh;
     padding: 4rem 15rem 3rem;

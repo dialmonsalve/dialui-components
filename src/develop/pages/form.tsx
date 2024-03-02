@@ -1,14 +1,11 @@
-import Checkbox from '../../components/form/Checkbox';
-import openAlert from '../../components/UI/alert/openAlert';
-
-import Input from '../../components/form/Input';
-import InputTags from '../../components/form/InputTags';
-
-import Select from '../../components/form/Select';
-import TextArea from '../../components/form/TextArea';
-
-import Button from '../../components/UI/buttons/ButtonNormal';
 import { useFormPage } from '../hooks/useFormPage';
+import Checkbox from '../../components/form/Checkbox';
+import Input from '../../components/form/Input';
+import Select from '../../components/form/Select';
+import InputTags from '../../components/form/InputTags';
+import TextArea from '../../components/form/Textarea';
+import openAlert from '../../components/UI/alert/openAlert';
+import Button from '../../components/UI/buttons/ButtonNormal';
 
 const FormControlPage = () => {
 	const {
@@ -26,7 +23,7 @@ const FormControlPage = () => {
 		handleInputTagsChange,
 		handleSelectChange,
 		handleSimple,
-		handleLoading
+		handleLoading,
 	} = useFormPage();
 	return (
 		<section>
@@ -37,10 +34,10 @@ const FormControlPage = () => {
 				onSubmit={(e) => {
 					e.preventDefault();
 					openAlert({
-						message:"testing...",
-						type:"info"
-					})
-					handleLoading()
+						message: 'testing...',
+						type: 'info',
+					});
+					handleLoading();
 				}}
 			>
 				<Input

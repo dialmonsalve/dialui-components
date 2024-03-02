@@ -1,6 +1,7 @@
 @use "../../abstract/variables/globalVariables" as Gv;
 @use "../../abstract/mixins/globalMixins" as Gm;
 
+//@dialmonsalve
 .spinner {
   align-items: center;
   backdrop-filter: blur(4px);
@@ -16,7 +17,7 @@
   transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
   width: 100%;
   z-index: 999999;
-  
+
   &__halfSpinner {
     box-sizing: border-box;
     padding: 35px;
@@ -31,7 +32,6 @@
     color: Gv.$color-white-200;
     color: white;
     font-size: 20px;
-
   }
 
   @keyframes left-right {
@@ -60,7 +60,6 @@
     right: 3%;
     z-index: 1;
   }
-
 }
 
 @keyframes lp {

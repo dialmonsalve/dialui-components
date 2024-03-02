@@ -12,7 +12,7 @@ interface Props {
 	onBlur?: (event: FocusEvent<HTMLTextAreaElement>) => void;
 }
 
-const TextArea = ({
+const Textarea = ({
 	value,
 	name,
 	placeholder,
@@ -47,4 +47,4 @@ const TextArea = ({
 	);
 };
 
-export default TextArea;
+export default Textarea;

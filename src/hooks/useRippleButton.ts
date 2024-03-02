@@ -1,4 +1,5 @@
-import { useRef, useEffect, MouseEvent } from "react";
+import { useRef, useEffect, MouseEvent } from 'react';
+
 export const useRippleButton = () => {
 	const buttonRef = useRef<HTMLButtonElement>(null);
 
@@ -7,17 +8,15 @@ export const useRippleButton = () => {
 
 		const ripple = (e: MouseEvent<HTMLButtonElement>) => {
 			if (buttonRef.current) {
-
-				if(e.target === btnElement){
-
+				if (e.target === btnElement) {
 					const rect = buttonRef.current.getBoundingClientRect();
 					const x = e.clientX - rect.left;
 					const y = e.clientY - rect.top;
-	
-					const ripples = document.createElement("thisIsAFakeTag");
+
+					const ripples = document.createElement('thisIsAFakeTag');
 					ripples.style.left = `${x}px`;
 					ripples.style.top = `${y}px`;
-	
+
 					buttonRef.current.appendChild(ripples);
 					setTimeout(() => {
 						ripples.remove();
@@ -25,11 +24,11 @@ export const useRippleButton = () => {
 				}
 			}
 		};
-		btnElement?.addEventListener("click", ripple as unknown as EventListener);
+		btnElement?.addEventListener('click', ripple as unknown as EventListener);
 
 		return () => {
 			btnElement?.removeEventListener(
-				"click",
+				'click',
 				ripple as unknown as EventListener,
 			);
 		};

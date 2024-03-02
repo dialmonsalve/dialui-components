@@ -1,11 +1,11 @@
 import { useRef } from 'react';
 
+import ButtonNormal from '../buttons/ButtonNormal';
 import { Info, Danger, Success, Warning } from '../../icons';
 
-import styles from '../../../styles/components/UI/modal.module.css';
-
 import type { Animation, MessageType } from '../../../types';
-import ButtonNormal from '../buttons/ButtonNormal';
+
+import styles from '../../../styles/components/UI/modal.module.css';
 
 interface Props {
 	description: string;
@@ -48,7 +48,7 @@ const Modal = ({
 			onClick={() => setModalResponse('cancel')}
 			className={`${styles.modal} ${styles[`modal-show-${animation}`]}`}
 			ref={ref}
-			data-testId = 'modal'
+			data-testId='modal'
 		>
 			<div
 				onClick={handleContentClick}
@@ -68,9 +68,7 @@ const Modal = ({
 						{type === 'warning' && <Warning className={styles['img']} />}
 					</div>
 
-					<h4
-						className={`${styles['title']} ${styles[`${type}--title`]}`}
-					>
+					<h4 className={`${styles['title']} ${styles[`${type}--title`]}`}>
 						{title}
 					</h4>
 

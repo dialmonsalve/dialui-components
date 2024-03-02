@@ -1,9 +1,8 @@
 import { useState } from 'react';
-import useAppOptions from '../hooks/context/useAppOptions';
 
+import useAppOptions from '../hooks/context/useAppOptions';
 import Highlighter from '../components/Highlighter';
 import Input from '../../components/form/Input';
-
 import { ListItems } from '../components/ListItems';
 
 import inputPage from '../const/inputPage';
@@ -45,35 +44,36 @@ function InputPage() {
 			<Highlighter>
 				{`import { useInput } from "dialui-components/dist/hooks";
 import { Input } from "dialui-components";
-      
-  const initialForm = {
-	name: '',
-	phone: 0,
+
+const initialForm = {
+  name: "",
+  phone: 0,
 };
-      
-function MyComponent(){
-      
+
+export const MyComponent = () => {
   const { inputState, handleInputChange } = useInput({ initialInput: initialForm });
-  //or
-  const { name, phone , handleInputChange } = useInput({ initialInput: initialForm });
-      
+  // Alternative :
+  // const { name, phone , handleInputChange } = useInput({ initialInput: initialForm });
+
   return (
-    <Input
-      type='text'
-      value={inputState.name} or {name}
-      placeholder='Name'
-      name='name'
-      onChange={handleInputChange}
-    />
-    <Input
-      type='phone'
-      value={inputState.phone} or {phone}
-      placeholder='Phone'
-      name='phone'
-      onChange={handleInputChange}
-    />
-  )
-}`}
+    <>
+      <Input
+        type="text"
+        value={inputState.name} /*or {name}*/
+        placeholder="Name"
+        name="name"
+        onChange={handleInputChange}
+      />
+      <Input
+        type="phone"
+        value={inputState.phone} /*or {phone}*/
+        placeholder="Phone"
+        name="phone"
+        onChange={handleInputChange}
+      />
+    </>
+  );
+};`}
 			</Highlighter>
 
 			<article>
@@ -84,30 +84,29 @@ function MyComponent(){
 			<article>
 				<h4>Props:</h4>
 				<ListItems items={inputPage.ALL_PROPS_DOM} />
-      <p>{language[lang].p6}</p>
+				<p>{language[lang].p6}</p>
 			</article>
 
-      <article >
-        <p>{language[lang].p7}</p>
-				
+			<article>
+				<p>{language[lang].p7}</p>
+
 				<Highlighter>
 					{`import { useState } from "react";
 import { Input } from "dialui-components";
 
-function MyComponent(){
-
-  const [ name, setName ] = useState('');
+export const MyComponent = () => {
+  const [ name, setName ] = useState("");
 
   return (
     <Input
-      type='text'
+      type="text"
       value={name}
-      placeholder='Name'
-      name='name'
+      placeholder="Name"
+      name="name"
       onChange={(e) => setName(e.target.value)}
     />
-  )
-}`}
+  );
+};`}
 				</Highlighter>
 			</article>
 		</section>

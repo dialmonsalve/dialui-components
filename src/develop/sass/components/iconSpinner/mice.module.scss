@@ -1,5 +1,6 @@
 @use "../../abstract/variables/globalVariables" as Gv;
 
+//@dialmonsalve
 .mice {
   display: flex;
   justify-content: space-between;
@@ -56,5 +57,3 @@
     transform: rotate(360deg);
   }
 }
-
-

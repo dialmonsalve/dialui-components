@@ -4,13 +4,11 @@
 .container {
   display: grid;
   grid-template-areas:
-  "sidebar"
-  "header"
+    "sidebar"
+    "header"
     "main"
-    "btn-sidebar"
-    ;
+    "btn-sidebar";
 
-  
   @include Gm.responsive(tab-port) {
     grid-template-areas:
       "header"

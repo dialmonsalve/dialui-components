@@ -45,4 +45,4 @@ const useCheckbox = <T>({ initialCheckbox }: { initialCheckbox: T }) => {
 	};
 };
 
-export default useCheckbox
+export default useCheckbox;

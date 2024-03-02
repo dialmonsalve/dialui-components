@@ -64,5 +64,4 @@ type ReactFocusEvent = React.FocusEvent<Elements>;
 
 type Elements = HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement;
 
-
-export default useInput
+export default useInput;

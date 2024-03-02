@@ -1,5 +1,6 @@
 @use "../../abstract/variables/globalVariables" as Gv;
 
+//@dialmonsalve
 .input {
   border: none;
   padding: 10px;
@@ -8,13 +9,12 @@
   border: 1px solid Gv.$color-gray-300;
   width: 100%;
 
-
   &:focus {
     outline: 2px solid Gv.$color-green-400;
   }
 
   &-disabled {
-   cursor: not-allowed;
-   background-color: Gv.$color-gray-100;
+    cursor: not-allowed;
+    background-color: Gv.$color-gray-100;
   }
 }

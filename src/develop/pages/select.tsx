@@ -1,12 +1,12 @@
 import { useState } from 'react';
+
 import useAppOptions from '../hooks/context/useAppOptions';
 import { Select } from '../../components/form/Select';
 import Highlighter from '../components/Highlighter';
-
 import { ListItems } from '../components/ListItems';
 
-import language from "../lang/select.json"
 import selectPage from '../const/selectPage';
+import language from '../lang/select.json';
 
 const simpleOptions = [
 	'Helen Palmer Geisel',
@@ -27,17 +27,17 @@ const multiOptions = [
 function SelectPage() {
 	const [simpleSelect, handleSimple] = useState('');
 	const [multiSelect, handleMultiSelect] = useState<string[]>([]);
-  	const { lang } = useAppOptions();
+	const { lang } = useAppOptions();
 	return (
 		<section>
 			<h1>select - multiselect</h1>
 
 			<article>
 				<h2>Select</h2>
-        <p>{language[lang].p1}</p>
-        <p>{language[lang].p2}</p>
-        <p>{language[lang].p3}</p>
-        <p>{language[lang].p4}</p>
+				<p>{language[lang].p1}</p>
+				<p>{language[lang].p2}</p>
+				<p>{language[lang].p3}</p>
+				<p>{language[lang].p4}</p>
 
 				<div style={{ width: '250px' }}>
 					<Select
@@ -52,9 +52,8 @@ import { useState } from "react";
 
 const options = ['Helen Palmer Geisel', 'Patricia Neal', 'Dr Seuss', 'Roald Dahl'];
 
-function MyComponent(){
-
-  const [ select, setSelect ] = useState('');
+export const MyComponent = () => {
+  const [ select, setSelect ] = useState("");
 
   return (
     <Select
@@ -63,25 +62,25 @@ function MyComponent(){
       onChange={setSelect}
     />
   )
-}`}
+};`}
 				</Highlighter>
 			</article>
 
-      <article>
+			<article>
 				<h4>Default Props:</h4>
 				<ListItems items={selectPage.SELECT_DEFAULT_PROPS_DOM} />
 			</article>
 
-      <article>
+			<article>
 				<h4>Props:</h4>
 				<ListItems items={selectPage.SELECT_ALL_PROPS_DOM} />
 			</article>
 
 			<article>
 				<h2>MultiSelect</h2>
-<p>{language[lang].p5}</p>
-<p>{language[lang].p6}</p>
-<p>{language[lang].p7}</p>
+				<p>{language[lang].p5}</p>
+				<p>{language[lang].p6}</p>
+				<p>{language[lang].p7}</p>
 
 				<div style={{ width: '280px' }}>
 					<Select
@@ -106,20 +105,20 @@ function MyComponent(){
     <Select
       multiple
       options={options}
-      selectState={multiSelect}
       onChange={setMultiSelect}
+      selectState={multiSelect}
     />
   )
 }`}
 				</Highlighter>
 			</article>
 
-            <article>
+			<article>
 				<h4>Default Props:</h4>
 				<ListItems items={selectPage.MULTI_SELECT_DEFAULT_PROPS_DOM} />
 			</article>
 
-      <article>
+			<article>
 				<h4>Props:</h4>
 				<ListItems items={selectPage.MULTI_SELECT_ALL_PROPS_DOM} />
 			</article>

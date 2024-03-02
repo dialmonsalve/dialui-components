@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
+
 import useAppOptions from '../../hooks/context/useAppOptions';
-import { Moon } from '../icons/Moon';
-import { Sun } from '../icons/Sun';
 import Select from '../../../components/form/Select';
-import { Logo } from '../icons/Logo';
+
+import { Moon, Sun, Logo } from '../icons/';
 
 const options = ['es', 'en'];
 
@@ -12,7 +12,7 @@ export const Header = () => {
 
 	return (
 		<header className={`header ${theme}`}>
-			<Link to="/" className='header__logo'>
+			<Link to='/' className='header__logo'>
 				<Logo />
 			</Link>
 			<div className='header__options'>

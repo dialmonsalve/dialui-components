@@ -1,14 +1,15 @@
 import { useState, KeyboardEvent, type FocusEvent } from 'react';
 
+import Button from '../UI/buttons/ButtonNormal';
+
 import styles from '../../styles/components/form/inputTags.module.css';
 import inputStyle from '../../styles/components/form/input.module.css';
-import Button from '../UI/buttons/ButtonNormal';
 
 interface InputTagProps {
 	placeholder?: string;
-	tags: string[];
+	tags: string[] ;
 	onBlur?: (e: FocusEvent<HTMLInputElement>) => void;
-	setTags: (value: string[]) => void;
+	setTags: (value: any[] ) => void;
 }
 
 const InputTags = ({ placeholder, onBlur, tags, setTags }: InputTagProps) => {
@@ -28,12 +29,12 @@ const InputTags = ({ placeholder, onBlur, tags, setTags }: InputTagProps) => {
 		const valueLowercase = value.trim().toLocaleLowerCase();
 		if (valueLowercase === '') return;
 		if (tags.includes(valueLowercase)) return;
-		setTags([...tags, valueLowercase]);
+		setTags([...tags, valueLowercase] );
 		setValue('');
 	};
 
 	const handleDeleteTags = (compareTag: string) => {
-		setTags(tags.filter((oldTag) => oldTag !== compareTag));
+		setTags(tags.filter((oldTag) => oldTag !== compareTag) );
 	};
 
 	return (

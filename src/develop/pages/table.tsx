@@ -1,3 +1,4 @@
+import useAppOptions from '../hooks/context/useAppOptions';
 import Table, {
 	TableHead,
 	TableBody,
@@ -5,14 +6,12 @@ import Table, {
 	Row,
 	Title,
 } from '../../components/UI/Table';
+import { ListItems } from '../components/ListItems';
 import Button from '../../components/UI/buttons/ButtonNormal';
 import Highlighter from '../components/Highlighter';
-import useAppOptions from '../hooks/context/useAppOptions';
 
 import language from '../lang/table.json';
-
 import tablePage from '../const/tablePage';
-import { ListItems } from '../components/ListItems';
 
 export default function TablePage() {
 	const { lang } = useAppOptions();
@@ -24,7 +23,7 @@ export default function TablePage() {
 
 			<article>
 				<p>{language[lang].p1}</p>
-				<Table height='40vh' >
+				<Table height='40vh'>
 					<TableHead>
 						<Row backgroundColor={backgroundColor}>
 							<Title>index</Title>
@@ -70,51 +69,50 @@ export default function TablePage() {
 			</article>
 			<article>
 				<Highlighter>
-					{`import  { Table, TableHead,	TableBody,	Cell,	Row,	Title } from "dialui-components";
+					{`import { Table, TableHead, TableBody, Cell, Row, Title } from "dialui-components";
 
 const data = [
-	{
-		id: 1,
-		name: 'John',
-		lastName: 'Doe',
-		country: 'United State',
-		city: 'Miami',
-	},
-	{
-		id: 2,
-		name: 'Sofía',
-		lastName: 'Pérez',
-		country: 'España',
-		city: 'Madrid',
-	},
+  {
+    id: 1,
+    name: "John",
+    lastName: "Doe",
+    country: "United State",
+    city: "Miami",
+  },
+  {
+    id: 2,
+    name: "Sofía",
+    lastName: "Pérez",
+    country: "España",
+    city: "Madrid",
+  },
 ];
-function MyComponent(){
-
-	return (
-		<Table height='40vh' >
-			<TableHead>
-				<Row backgroundColor="orange">
-					<Title>index</Title>
-					<Title>name</Title>
-					<Title>lastName</Title>
-					<Title>country</Title>
-					<Title>city</Title>
-				</Row>
-			</TableHead>
-			<TableBody>
-				{data.map((person, index) => (
-					<Row backgroundColor="orange" key={person.id}>
-						<Cell>{index + 1}</Cell>
-						<Cell>{person.name}</Cell>
-						<Cell>{person.lastName}</Cell>
-						<Cell>{person.country}</Cell>
-						<Cell>{person.city}</Cell>
-					</Row>
-				))}
-			</TableBody>
-		</Table>
-	)
-}`}
+export const MyComponent = () => {
+  return (
+    <Table height="40vh">
+      <TableHead>
+        <Row backgroundColor="orange">
+          <Title>index</Title>
+          <Title>name</Title>
+          <Title>lastName</Title>
+          <Title>country</Title>
+          <Title>city</Title>
+        </Row>
+      </TableHead>
+      <TableBody>
+        {data.map((person, index) => (
+          <Row backgroundColor="orange" key={person.id}>
+            <Cell>{index + 1}</Cell>
+            <Cell>{person.name}</Cell>
+            <Cell>{person.lastName}</Cell>
+            <Cell>{person.country}</Cell>
+            <Cell>{person.city}</Cell>
+          </Row>
+        ))}
+      </TableBody>
+    </Table>
+  );
+};`}
 				</Highlighter>
 				<p>{language[lang].p2}</p>
 			</article>

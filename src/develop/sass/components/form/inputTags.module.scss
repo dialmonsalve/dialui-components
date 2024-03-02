@@ -1,6 +1,7 @@
 @use "../../abstract/variables/globalVariables" as Gv;
 @use "../../abstract/mixins/globalMixins" as Gm;
 
+//@dialmonsalve
 .tags {
   background-color: Gv.$color-white-100;
   border-radius: 6px;
@@ -15,7 +16,7 @@
   min-height: 36px;
   box-sizing: border-box;
   min-width: 100%;
-  
+
   &__badge {
     align-items: center;
     background-color: Gv.$color-blue-400;
@@ -31,13 +32,13 @@
     @include Gm.responsive(tab-land) {
       font-size: 14px;
       cursor: pointer;
-      
+
       &:hover,
       &:focus {
         background-color: Gv.$color-red-200;
         border-color: Gv.$color-red-300;
       }
-      
+
       &:hover,
       > .remove-btn,
       &:focus > .remove-btn {
@@ -45,7 +46,7 @@
       }
     }
   }
-  
+
   &__remove {
     color: Gv.$color-red-400;
     font-weight: 700;

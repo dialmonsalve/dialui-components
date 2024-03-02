@@ -1,6 +1,6 @@
-import styles from '../../../styles/components/iconSpinner/eclipse.module.css';
-
 import { type SpinnerSize } from '../../../types';
+
+import styles from '../../../styles/components/iconSpinner/eclipse.module.css';
 
 interface Props {
 	size?: SpinnerSize;

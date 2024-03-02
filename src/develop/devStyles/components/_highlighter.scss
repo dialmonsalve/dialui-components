@@ -1,10 +1,10 @@
 @use "../abstract/variables/globalVariables" as Gv;
 @use "../abstract/mixins/globalMixins" as Gm;
 
-.code-highlighter{
+.code-highlighter {
   position: relative;
 
-  @include Gm.responsive(tab-port){
+  @include Gm.responsive(tab-port) {
     margin: 0 auto;
     width: 100%;
   }
@@ -14,8 +14,8 @@
     top: 15px;
     right: 10px;
     color: white;
-    width:15px;
-    @include Gm.responsive(tab-port){
+    width: 15px;
+    @include Gm.responsive(tab-port) {
       width: 20px;
     }
   }

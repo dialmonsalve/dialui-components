@@ -1,6 +1,6 @@
 @use "../variables/globalVariables" as Gv;
 @use "../mixins/globalMixins" as Gm;
-
+//@dialmonsalve
 //! Button with background
 @mixin btnColor($color) {
   color: Gv.$color-white-100;
@@ -29,7 +29,7 @@
   background-color: transparent;
   border: 1px solid $color;
   color: $color;
-  @if($color == Gv.$color-gray-200){
+  @if ($color == Gv.$color-gray-200) {
     color: inherit;
   }
   @include hoverAnimations($color);
@@ -50,7 +50,7 @@
   }
 }
 
-@mixin btnSize($pad, $fs, ){
+@mixin btnSize($pad, $fs) {
   padding: $pad;
   font-size: $fs;
   width: fit-content;
