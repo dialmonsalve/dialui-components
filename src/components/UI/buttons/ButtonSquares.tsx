@@ -8,7 +8,7 @@ import { ButtonProps } from './type';
 import type { SpinnerSize } from '../../../types';
 import { HASH } from '@utils/hash';
 
-import '@/prodStyles/buttons/buttonSquares.css';
+import "@/develop/sass/components/buttons/buttonSquares.scss"
 
 const ButtonSquares = ({
 	backgroundColor = 'blue-200',

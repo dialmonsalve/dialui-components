@@ -1,6 +1,6 @@
 import type { FocusEvent, ChangeEvent, HTMLInputTypeAttribute } from 'react';
 
-import styles from '@/prodStyles/form/input.module.css';
+import styles from '@prodStyles/form/input.module.css';
 
 interface Props {
 	type: HTMLInputTypeAttribute;

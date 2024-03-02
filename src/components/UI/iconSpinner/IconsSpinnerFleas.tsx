@@ -1,6 +1,6 @@
 import { type SpinnerSize } from '../../../types';
 
-import styles from '@/prodStyles/iconSpinner/fleas.module.css';
+import styles from '@prodStyles/iconSpinner/fleas.module.css';
 
 interface Props {
 	size?: SpinnerSize;

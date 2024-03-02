@@ -8,8 +8,7 @@ import { ButtonProps } from './type';
 import type { SpinnerSize } from '../../../types';
 import { HASH } from '@utils/hash';
 
-import '@/prodStyles/buttons/buttonSlideDown.css';
-
+import "@/develop/sass/components/buttons/buttonSlideDown.scss"
 const ButtonSlideDown = ({
 	backgroundColor = 'blue-200',
 	children,

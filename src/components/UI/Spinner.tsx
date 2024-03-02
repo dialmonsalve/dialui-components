@@ -7,7 +7,7 @@ import IconSpinnerMice from './iconSpinner/IconSpinnerMice';
 import { HalfRounded, Needle, LP } from '../icons/';
 
 import { SpinnerType } from '../../types';
-import styles from '@/prodStyles/UI/spinner.module.css';
+import styles from '@prodStyles/UI/spinner.module.css';
 
 interface Props {
 	spinner?: SpinnerType | 'halfSpinner' | 'lp';

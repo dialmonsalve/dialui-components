@@ -11,6 +11,8 @@ import type { SpinnerSize } from '../../../types';
 
 import { HASH } from '@utils/hash';
 
+import "@/develop/sass/components/buttons/buttonRipple.scss"
+
 const ButtonRipple = ({
 	backgroundColor = 'blue-200',
 	children,

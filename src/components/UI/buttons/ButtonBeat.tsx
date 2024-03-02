@@ -8,7 +8,7 @@ import { ButtonProps } from './type';
 import type { SpinnerSize } from '../../../types';
 import { HASH } from '@utils/hash';
 
-import '@/prodStyles/buttons/buttonBeat.css';
+import "@/develop/sass/components/buttons/buttonBeat.scss"
 
 const ButtonBeat = ({
 	backgroundColor = 'blue-200',
