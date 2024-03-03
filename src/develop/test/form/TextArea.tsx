@@ -1,6 +1,6 @@
 import {  useState, type ChangeEvent, type TextareaHTMLAttributes } from 'react';
 
-import styles from '../../../components/textarea.module.css';
+import styles from '../../../components/textarea.module.scss';
 
 
 

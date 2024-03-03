@@ -1,8 +1,8 @@
 import { useState, KeyboardEvent, type FocusEvent } from 'react';
 import Button from '../../../components/button/ButtonNormal';
 
-import styles from '../../../components/inputTags.module.css';
-import inputStyle from '../../../components/input.module.css';
+import styles from '../../../components/inputTags.module.scss';
+import inputStyle from '../../../components/input.module.scss';
 
 interface InputTagTest {
 	placeholder?: string;
