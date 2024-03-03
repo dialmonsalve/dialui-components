@@ -3,8 +3,7 @@
 
 //@dialmonsalve
 // ! Button Colors
-.btn_lui_31032024_DIA_,
-.notification {
+.btn {
   //! Blue
   &__blue-100 {
     @include bm.btnColor(Gv.$color-blue-200);

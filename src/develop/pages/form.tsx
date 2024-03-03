@@ -1,12 +1,12 @@
 import { useFormPage } from '../hooks/useFormPage';
-import Checkbox from '../../components/form/Checkbox';
-import Input from '../../components/form/Input';
-import Select from '../../components/form/Select';
-import InputTags from '../../components/form/InputTags';
-import TextArea from '../../components/form/Textarea';
-import openAlert from '../../components/UI/alert/openAlert';
+import Checkbox from '../../components/Checkbox';
+import Input from '../../components/Input';
+import Select from '../../components/Select';
+import InputTags from '../../components/InputTags';
+import TextArea from '../../components/Textarea';
+import openAlert from '../../components/alert/openAlert';
 
-import Button from '../../components/UI/buttons/Button';
+import Button from '../../components/button/Button';
 
 const FormControlPage = () => {
 	const {

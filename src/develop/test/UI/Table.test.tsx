@@ -4,7 +4,7 @@ import Table, {
 	TableBody,
 	TableHead,
 	Title,
-} from '../../../components/UI/Table';
+} from '../../../components/Table';
 import { render } from '@testing-library/react';
 
 const data = [

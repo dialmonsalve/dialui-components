@@ -1,0 +1,156 @@
+@use "../abstract/variables/globalVariables" as Gv;
+@use "../abstract/mixins/globalMixins" as Gm;
+
+//@dialmonsalve
+.select {
+  align-items: center;
+  background-color: Gv.$color-white-200;
+  border-radius: 12px;
+  border: 1px solid Gv.$color-gray-200;
+  color: Gv.$color-blue-600;
+  cursor: pointer;
+  display: flex;
+  font-size: 14px;
+  font-weight: 900;
+  gap: 4px;
+  outline: none;
+  padding: 1px 5px;
+  position: sticky;
+  z-index: 1;
+  min-width: 100%;
+  flex-direction: row;
+
+  & > button {
+    background-color: Gv.$color-white-200;
+  }
+
+  &:focus {
+    border-color: Gv.$color-green-600;
+  }
+
+  @include Gm.responsive(tab-land) {
+    padding: 3px 8px;
+  }
+
+  &__span {
+    flex-grow: 1;
+    display: flex;
+    gap: 2px;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    &--option-badge {
+      align-items: center;
+      background-color: Gv.$color-blue-400;
+      border-radius: 12px;
+      border: 1px solid Gv.$color-blue-600;
+      color: Gv.$color-white-200;
+      display: flex;
+      flex-direction: row;
+      font-size: 12px;
+      gap: 6px;
+      outline: none;
+      padding: 2px 8px;
+
+      @include Gm.responsive(tab-port) {
+        border-radius: 8px;
+        font-size: 14px;
+        // cursor: pointer;
+
+        &:hover,
+        &:focus {
+          background-color: Gv.$color-red-200;
+          border-color: Gv.$color-red-300;
+        }
+      }
+    }
+  }
+
+  &__clear {
+    background: none;
+    border: none;
+    color: Gv.$color-red-400;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    font-size: 28px;
+    gap: 4px;
+    outline: none;
+
+    @include Gm.responsive(tab-land) {
+      &:focus,
+      &:hover {
+        color: Gv.$color-red-600;
+      }
+    }
+
+    &::after {
+      content: "";
+      background-color: Gv.$color-black-300;
+      width: 1px;
+      height: 28px;
+    }
+  }
+
+  &__caret {
+    border: 8px solid transparent;
+    border-top-color: Gv.$color-red-500;
+    translate: 0 25%;
+    font-size: 24px;
+
+    @include Gm.responsive(tab-land) {
+      cursor: pointer;
+      font-size: 48px;
+    }
+  }
+
+  &__options {
+    position: absolute;
+    margin: 0;
+    padding: 10px 8px;
+    display: none;
+    max-height: 140px;
+    overflow-y: auto;
+    border-radius: 5px;
+    width: 100%;
+    left: 0;
+    top: calc(100% + 4px);
+    background-color: Gv.$color-white-100;
+    font-size: 14px;
+    color: Gv.$color-blue-400;
+    z-index: 999;
+    font-weight: 300;
+
+    @include Gm.responsive(tab-port) {
+      font-size: 14px;
+      max-height: 140px;
+    }
+
+    &--option {
+      padding: 4px 4px;
+      margin-bottom: 2px;
+
+      @include Gm.responsive(tab-land) {
+        cursor: pointer;
+      }
+    }
+
+    &--selected {
+      background-color: Gv.$color-red-300;
+      border-radius: 6px;
+      color: Gv.$color-white-100;
+    }
+
+    &--highlighted {
+      background-color: Gv.$color-blue-400;
+      color: Gv.$color-white-100;
+      border: 1px solid Gv.$color-blue-100;
+      border-radius: 6px;
+      box-shadow: 1px 1px 5px Gv.$color-black-300;
+    }
+  }
+
+  &__show {
+    display: block;
+  }
+}

@@ -1,7 +1,8 @@
 import { useState, KeyboardEvent, type FocusEvent } from 'react';
-import Button from '../../../components/UI/buttons/Button';
-import styles from '../../../styles/components/form/inputTags.module.css';
-import { HASH } from '../../../utils/hash';
+import Button from '../../../components/button/Button';
+
+import styles from '../../../components/inputTags.module.css';
+import inputStyle from '../../../components/input.module.css';
 
 interface InputTagTest {
 	placeholder?: string;
@@ -40,7 +41,7 @@ const InputTags = ({ placeholder, onBlur, initialInputTags }: InputTagTest) => {
 		<div className={styles.container}>
 			<div className={styles["container-input"]}>
 				<input
-					className={`input${HASH}`}
+					className={inputStyle.input}
 					type='text'
 					name='tag'
 					value={value}

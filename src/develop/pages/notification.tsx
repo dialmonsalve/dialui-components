@@ -1,5 +1,5 @@
 import useAppOptions from '../hooks/context/useAppOptions';
-import Notification from '../../components/UI/Notification';
+import Notification from '../../components/Notification';
 import Highlighter from '../components/Highlighter';
 import { ListItems } from '../components/ListItems';
 

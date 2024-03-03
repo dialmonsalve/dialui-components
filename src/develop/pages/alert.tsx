@@ -1,8 +1,8 @@
 import { useState } from 'react';
 
 import useAppOptions from '../hooks/context/useAppOptions';
-import Button from '../../components/UI/buttons/Button';
-import openAlert from '../../components/UI/alert/openAlert';
+import Button from '../../components/button/Button';
+import openAlert from '../../components/alert/openAlert';
 import Highlighter from '../components/Highlighter';
 import { ListItems } from '../components/ListItems';
 

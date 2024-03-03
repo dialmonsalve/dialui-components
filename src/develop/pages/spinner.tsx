@@ -1,11 +1,11 @@
 import { useState } from 'react';
 
 import useAppOptions from '../hooks/context/useAppOptions';
-import Spinner from '../../components/UI/Spinner';
+import Spinner from '../../components/Spinner';
 import Highlighter from '../components/Highlighter';
 import { ListItems } from '../components/ListItems';
-import Select from '../../components/form/Select';
-import Button from '../../components/UI/buttons/Button';
+import Select from '../../components/Select';
+import Button from '../../components/button/Button';
 
 import spinnerPage from '../const/spinnerPage';
 import language from '../lang/spinner.json';

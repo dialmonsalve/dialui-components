@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import useAppOptions from './context/useAppOptions';
-import openModal from '../../components/UI/modal/openModal';
+import openModal from '../../components/modal/openModal';
 import { MessageType, Animation } from '../../types';
 
 import modalPage from '../const/modalPage';

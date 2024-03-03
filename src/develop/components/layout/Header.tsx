@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 import useAppOptions from '../../hooks/context/useAppOptions';
-import Select from '../../../components/form/Select';
+import Select from '../../../components/Select';
 
 import { Moon, Sun, Logo } from '../icons/';
 

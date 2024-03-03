@@ -1,4 +1,4 @@
-import Notification from '../../../components/UI/Notification';
+import Notification from '../../../components/Notification';
 import { render } from '@testing-library/react';
 
 describe('Button', () => {

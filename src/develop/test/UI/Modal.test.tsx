@@ -1,5 +1,5 @@
-import  Modal  from '../../../components/UI/modal/Modal';
-import openModal from '../../../components/UI/modal/openModal';
+import  Modal  from '../../../components/modal/Modal';
+import openModal from '../../../components/modal/openModal';
 import { fireEvent, render, renderHook, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { useState } from 'react';

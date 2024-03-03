@@ -1,6 +1,6 @@
 import { useModalPage } from '../hooks/useModalPage';
-import Button from '../../components/UI/buttons/Button';
-import Select from '../../components/form/Select';
+import Button from '../../components/button/Button';
+import Select from '../../components/Select';
 import Highlighter from '../components/Highlighter';
 import { ListItems } from '../components/ListItems';
 

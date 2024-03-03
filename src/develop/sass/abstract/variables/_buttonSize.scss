@@ -2,61 +2,61 @@
 @use "../mixins/globalMixins" as Gm;
 
 //@dialmonsalve
-.sm-100_lui_31032024_DIA_ {
+.sm-100 {
   @include bm.btnSize(6px 20px, 10px);
 }
 
-.sm-200_lui_31032024_DIA_ {
+.sm-200 {
   @include bm.btnSize(6px 20px, 14px);
 }
 
-.sm-300_lui_31032024_DIA_ {
+.sm-300 {
   @include bm.btnSize(6px 20px, 20px);
 }
 
-.md-100_lui_31032024_DIA_ {
+.md-100 {
   @include bm.btnSize(6px 30px, 20px);
 }
 
-.md-200_lui_31032024_DIA_ {
+.md-200 {
   @include bm.btnSize(6px 35px, 24px);
 }
 
-.md-300_lui_31032024_DIA_ {
+.md-300 {
   @include bm.btnSize(6px 40px, 28px);
 }
 
-.lg-100_lui_31032024_DIA_ {
+.lg-100 {
   @include bm.btnSize(6px 45px, 32px);
 }
 
-.lg-200_lui_31032024_DIA_ {
+.lg-200 {
   @include bm.btnSize(6px 50px, 34px);
 }
 
-.lg-300_lui_31032024_DIA_ {
+.lg-300 {
   @include bm.btnSize(6px 55px, 36px);
 }
 
-.btn.vw-25_lui_31032024_DIA_ {
+.btn.vw-25 {
   width: 25%;
   padding: 6px 20px;
   font-size: 16px;
 }
 
-.vw-50_lui_31032024_DIA_ {
+.vw-50 {
   padding: 6px 20px;
   font-size: 16px;
   width: 50%;
 }
 
-.vw-75_lui_31032024_DIA_ {
+.vw-75 {
   padding: 6px 20px;
   font-size: 16px;
   width: 75%;
 }
 
-.vw-100_lui_31032024_DIA_ {
+.vw-100 {
   padding: 6px 20px;
   font-size: 16px;
   width: 100%;

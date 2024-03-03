@@ -5,9 +5,9 @@ import Table, {
 	Cell,
 	Row,
 	Title,
-} from '../../components/UI/Table';
+} from '../../components/Table';
 import { ListItems } from '../components/ListItems';
-import Button from '../../components/UI/buttons/Button';
+import Button from '../../components/button/Button';
 import Highlighter from '../components/Highlighter';
 
 import language from '../lang/table.json';

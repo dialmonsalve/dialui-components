@@ -3,7 +3,7 @@ import { render, screen, renderHook, cleanup } from '@testing-library/react';
 import user from '@testing-library/user-event';
 import { act } from 'react-dom/test-utils';
 
-import  Checkbox  from '../../../components/form/Checkbox';
+import  Checkbox  from '../../../components/Checkbox';
 import { useCheckbox } from '../../../hooks';
 
 import { ERROR_CHECK_MESSAGE } from '../helpers/const';

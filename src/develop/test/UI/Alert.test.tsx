@@ -1,5 +1,5 @@
-import Alert from '../../../components/UI/alert/Alert';
-import openAlert from '../../../components/UI/alert/openAlert';
+import Alert from '../../../components/alert/Alert';
+import openAlert from '../../../components/alert/openAlert';
 import { cleanup, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 

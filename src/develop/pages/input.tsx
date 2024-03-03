@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import useAppOptions from '../hooks/context/useAppOptions';
 import Highlighter from '../components/Highlighter';
-import Input from '../../components/form/Input';
+import Input from '../../components/Input';
 import { ListItems } from '../components/ListItems';
 
 import inputPage from '../const/inputPage';

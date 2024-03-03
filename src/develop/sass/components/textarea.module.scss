@@ -1,0 +1,36 @@
+@use "../abstract/mixins/globalMixins" as Gm;
+@use "../abstract/variables/globalVariables" as Gv;
+
+//@dialmonsalve
+.text-area {
+  padding: 10px;
+  border: 1px solid Gv.$color-gray-200;
+  border-radius: 5px;
+  resize: vertical;
+  outline: none;
+
+  &:focus {
+    outline: 1px solid Gv.$color-green-400;
+  }
+}
+
+.value {
+  width: 30px;
+  padding: 8px;
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.green {
+  color: Gv.$color-green-600;
+}
+
+.red {
+  color: Gv.$color-red-600;
+}
+
+.container {
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+}

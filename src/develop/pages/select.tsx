@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import useAppOptions from '../hooks/context/useAppOptions';
-import { Select } from '../../components/form/Select';
+import { Select } from '../../components/Select';
 import Highlighter from '../components/Highlighter';
 import { ListItems } from '../components/ListItems';
 
