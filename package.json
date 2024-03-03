@@ -1,7 +1,7 @@
 {
 	"name": "dialui-components",
 	"private": false,
-	"version": "0.2.7",
+	"version": "0.2.8",
 	"type": "module",
 	"main": "dist/index.js",
 	"typings": "dist/index.d.ts",
@@ -57,7 +57,7 @@
 		"push:npm": "np",
 		"test": "vitest --coverage --ui",
 		"postcss": "postcss dist/components/**/*.css --replace --no-map",
-		"sass":"sass -w --no-source-map --style=compressed src/develop/sass/components:src/components"
+		"sass": "sass -w --no-source-map --style=compressed src/develop/sass/components:src/components"
 	},
 	"devDependencies": {
 		"@fullhuman/postcss-purgecss": "^5.0.0",
