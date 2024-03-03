@@ -1,4 +1,4 @@
-import { useRippleButton } from '../../hooks/useRippleButton';
+import { useRippleButton } from '../../hooksApp/useRippleButton';
 
 import MiceIconsSpinner from '../iconSpinner/IconSpinnerMice';
 import FleaIconsSpinner from '../iconSpinner/IconSpinnerFleas';

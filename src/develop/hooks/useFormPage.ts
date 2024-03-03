@@ -1,6 +1,6 @@
 import { useState } from "react";
-import useInput from "../../hooks/form/useInput";
-import useCheckbox from "../../hooks/form/useCheckbox";
+import useInput from "../../hooksApp/form/useInput";
+import useCheckbox from "../../hooksApp/form/useCheckbox";
 import useAppOptions from "./context/useAppOptions";
 
 const form = {
