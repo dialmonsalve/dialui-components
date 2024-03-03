@@ -1,6 +1,7 @@
 import type { FocusEvent, ChangeEvent, HTMLInputTypeAttribute } from 'react';
 
-import styles from '@prodStyles/form/input.module.css';
+import '../../styles/components/form/input.css';
+import { HASH } from '../../utils/hash';
 
 interface Props {
 	type: HTMLInputTypeAttribute;
@@ -25,8 +26,8 @@ const Input = ({
 }: Props) => {
 	return (
 		<input
-			className={`${styles.input} ${
-				disabled ? `${styles['input-disabled']}` : ''
+			className={`input${HASH} ${
+				disabled ? `input${HASH}__disabled}` : ''
 			}`}
 			type={type}
 			name={name}

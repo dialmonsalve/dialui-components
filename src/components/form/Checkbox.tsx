@@ -1,6 +1,7 @@
 import type { ChangeEvent } from 'react';
 
-import styles from '@prodStyles/form/checkbox.module.css';
+import '../../styles/components/form/checkbox.css';
+import { HASH } from '../../utils/hash';
 
 interface Props  {
 	name: string;
@@ -20,14 +21,14 @@ const Checkbox = ({
 
 	return (
 		<div
-			className={`${styles['checkbox']} ${
-				checked ? `${styles['checkbox__active']}` : ''
+			className={`checkbox${HASH} ${
+				checked ? `checkbox${HASH}__active` : ''
 			}`}
 			data-testid={'container'}
 		>
 			<label>
 				<input
-					className={styles['checkbox__pulse']}
+					className={`checkbox${HASH}__pulse`}
 					onChange={handleCheck}
 					type='checkbox'
 					name={name}

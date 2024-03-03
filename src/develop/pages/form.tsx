@@ -5,7 +5,8 @@ import Select from '../../components/form/Select';
 import InputTags from '../../components/form/InputTags';
 import TextArea from '../../components/form/Textarea';
 import openAlert from '../../components/UI/alert/openAlert';
-import Button from '../../components/UI/buttons/ButtonNormal';
+
+import Button from '../../components/UI/buttons/Button';
 
 const FormControlPage = () => {
 	const {

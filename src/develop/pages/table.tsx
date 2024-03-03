@@ -7,7 +7,7 @@ import Table, {
 	Title,
 } from '../../components/UI/Table';
 import { ListItems } from '../components/ListItems';
-import Button from '../../components/UI/buttons/ButtonNormal';
+import Button from '../../components/UI/buttons/Button';
 import Highlighter from '../components/Highlighter';
 
 import language from '../lang/table.json';
@@ -52,7 +52,7 @@ export default function TablePage() {
 										edit
 									</Button>
 								</Cell>
-								<Cell>
+								<Cell  >
 									<Button
 										backgroundColor='red-300'
 										size='sm-100'

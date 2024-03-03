@@ -6,7 +6,6 @@ import { ListItems } from '../components/ListItems';
 import buttonsPage from '../const/buttonsPage';
 import language from '../lang/buttons.json';
 
-
 function ButtonSlideDownPage() {
 	const { lang } = useAppOptions();
 

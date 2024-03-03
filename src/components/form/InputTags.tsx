@@ -1,9 +1,9 @@
 import { useState, KeyboardEvent, type FocusEvent } from 'react';
 
-import Button from '../UI/buttons/ButtonNormal';
+import Button from '../UI/buttons/Button';
 
 import styles from '@prodStyles/form/inputTags.module.css';
-import inputStyle from '@prodStyles/form/input.module.css';
+import { HASH } from '../../utils/hash';
 
 interface InputTagProps {
 	placeholder?: string;
@@ -41,7 +41,7 @@ const InputTags = ({ placeholder, onBlur, tags, setTags }: InputTagProps) => {
 		<div className={styles.container}>
 			<div className={styles["container-input"]}>
 				<input
-					className={inputStyle.input}
+					className={`input${HASH}`}
 					type='text'
 					name='tag'
 					value={value}
