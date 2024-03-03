@@ -1,9 +1,9 @@
 import { useEffect, useRef } from 'react';
 
 import type { MessageType } from '../../../types';
-import { HASH } from '@/utils/hash';
+import { HASH } from '../../../utils/hash';
 
-import '@prodStyles/UI/alert.css';
+import '../../../styles/components/UI/alert.css';
 
 interface Props {
 	message: string;
