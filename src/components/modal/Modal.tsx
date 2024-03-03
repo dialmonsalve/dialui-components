@@ -4,8 +4,8 @@ import { Info, Danger, Success, Warning } from '../../icons';
 
 import type { Animation, MessageType } from '../../types';
 
-import styles from './modal.module.scss';
-import buttons from './buttons.module.scss';
+import styles from './modal.module.css';
+import buttons from './buttons.module.css';
 
 interface Props {
 	description: string;
@@ -48,7 +48,7 @@ const Modal = ({
 			onClick={() => setModalResponse('cancel')}
 			className={`${styles.modal} ${styles[`modal-show-${animation}`]}`}
 			ref={ref}
-			data-testId='modal'
+			data-testid='modal'
 		>
 			<div
 				onClick={handleContentClick}

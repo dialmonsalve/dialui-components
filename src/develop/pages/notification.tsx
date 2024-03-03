@@ -3,7 +3,6 @@ import Notification from '../../components/Notification';
 import Highlighter from '../components/Highlighter';
 import { ListItems } from '../components/ListItems';
 
-import buttonsPage from '../const/buttonsPage';
 import notificationPage from '../const/notificationPage';
 import language from '../lang/notification.json';
 
@@ -20,7 +19,7 @@ function NotificationPage() {
 			<article>
 				<h3>default alert</h3>
 
-				<Notification backgroundColor='blue' hasNotification={totalNotifications > 0}>
+				<Notification hasNotification={totalNotifications > 0}>
 					{totalNotifications > 10 ? '+99' : totalNotifications.toString()}
 				</Notification>
 
@@ -52,7 +51,7 @@ export const MyComponent = () => {
 			<article>
 				<h4>Colors:</h4>
 				<p>{language[lang].propColor}</p>
-				<ListItems items={buttonsPage.BACKGROUND_COLOR_DOM} />
+				<ListItems items={notificationPage.COLORS_DOM} />
 			</article>
 		</section>
 	);

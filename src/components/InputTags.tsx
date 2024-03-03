@@ -1,7 +1,7 @@
 import { useState, KeyboardEvent, type FocusEvent } from 'react';
 
-import styles from './inputTags.module.scss';
-import inputStyle from './input.module.scss';
+import styles from './inputTags.module.css';
+import inputStyle from './input.module.css';
 
 interface InputTagProps {
 	placeholder?: string;

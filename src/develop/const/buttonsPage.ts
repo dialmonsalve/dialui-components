@@ -1,5 +1,4 @@
 const DEFAULT_PROPS_DOM = [
-	{ label: 'button= ', children: "'normal';" },
 	{ label: 'backgroundColor = ', children: "'blue-200';" },
 	{ label: 'disabled = ', children: 'false;' },
 	{ label: 'hasInitialAnimation = ', children: 'false;' },
@@ -13,10 +12,6 @@ const DEFAULT_PROPS_DOM = [
 ];
 
 const ALL_PROPS_DOM = [
-	{
-		label: 'button?: ',
-		children: "ButtonType",
-	},
 	{ label: 'backgroundColor?: ', children: 'Colors;' },
 	{ label: 'borderRadius?: ', children: 'Radius;' },
 	{ label: 'children?: ', children: 'ReactNode;' },
@@ -32,21 +27,24 @@ const ALL_PROPS_DOM = [
 		label: 'textTransform?: ',
 		children: " 'capitalize' | 'lowercase' | 'uppercase;'",
 	},
-	{ label: 'onClick?: ', children: 'React.MouseEventHandler<HTMLButtonElement>;' },
+	{
+		label: 'onClick?: ',
+		children: 'React.MouseEventHandler<HTMLButtonElement>;',
+	},
 ];
 
 const BACKGROUND_COLOR_DOM = [
 	{ label: 'Colors?:', children: '' },
-	{ label: " | 'black-...= ", children: " 100,200,300,400';" },
-	{ label: " | 'gray-... = ", children: " 100,200,300,400';" },
-	{ label: " | 'blue-... = ", children: "100,200,300,400,500,600';" },
-	{ label: " | 'green-...= ", children: " 100,200,300,400,500,600';" },
-	{ label: " | 'pink-... = ", children: "100,200,300,400,500,600';" },
-	{ label: " | 'purple-... = ", children: " 100,200,300,400,500,600';" },
-	{ label: " | 'red-... = ", children: "100,200,300,400,500,600';" },
-	{ label: " | 'orange-... = ", children: " 100,200,300,400,500,600';" },
-	{ label: " | 'yellow-... = ", children: " 100,200,300,400,500,600';" },
-	{ label: " | 'white-100';", children: "" },
+	{ label: " | 'black-...= ", children: " 100,200,300';" },
+	{ label: " | 'gray-... = ", children: " 100,200,300';" },
+	{ label: " | 'blue-... = ", children: "100,200,300';" },
+	{ label: " | 'green-...= ", children: " 100,200,300';" },
+	{ label: " | 'pink-... = ", children: "100,200,300';" },
+	{ label: " | 'purple-... = ", children: " 100,200,300';" },
+	{ label: " | 'red-... = ", children: "100,200,300';" },
+	{ label: " | 'orange-... = ", children: " 100,200,300';" },
+	{ label: " | 'yellow-... = ", children: " 100,200,300';" },
+	{ label: " | 'white-100';", children: '' },
 	{
 		label: "| 'outline-... = ",
 		children: "black, blue, gray, green, pink, purple, red, white, yellow';",
@@ -62,10 +60,26 @@ const SIZE_DOM = [
 ];
 
 const BUTTON_DOM = [
-	{ label: 'ButtonType?: ', children: '' },
+	{ label: 'Button types: ', children: '' },
 	{
-		label: '',
-		children: "'normal' | 'squares' | 'beat' | 'ripple' | 'slideDown';",
+		label: '<Button> </Button>',
+		children: ';',
+	},
+	{
+		label: '<ButtonRipple> </ButtonRipple>',
+		children: ';',
+	},
+	{
+		label: '<ButtonSquares> </ButtonSquares>',
+		children: ';',
+	},
+	{
+		label: '<ButtonBeat> </ButtonBeat>',
+		children: ';',
+	},
+	{
+		label: '<ButtonSlideDown> </ButtonSlideDown>',
+		children: ';',
 	},
 ];
 
@@ -79,7 +93,10 @@ const RADIUS_DOM = [
 
 const ICON_SPINNER_DOM = [
 	{ label: 'SpinnerType?: ', children: '' },
-	{ label: '', children: "|'fleas' | 'squares' | 'eclipse' | 'mice' | 'dots';" },
+	{
+		label: '',
+		children: "|'fleas' | 'squares' | 'eclipse' | 'mice' | 'dots';",
+	},
 ];
 
 export default {

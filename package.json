@@ -56,7 +56,8 @@
 		"clean:prod": "rimraf dist/main.d.ts dist/main.js dist/develop dist/styles/abstract",
 		"push:npm": "np",
 		"test": "vitest --coverage --ui",
-		"postcss": "postcss dist/components/**/*.css --replace --no-map"
+		"postcss": "postcss dist/components/**/*.css --replace --no-map",
+		"sass":"sass -w --no-source-map --style=compressed src/develop/sass/components:src/components"
 	},
 	"devDependencies": {
 		"@fullhuman/postcss-purgecss": "^5.0.0",

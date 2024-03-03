@@ -1,6 +1,6 @@
-@use "../develop/sass/abstract/variables/globalVariables" as Gv;
-@use "../develop/sass/abstract/mixins/globalMixins" as Gm;
-@use "../develop/sass/abstract/mixins/button" as bm;
+@use "../abstract/variables/globalVariables" as Gv;
+@use "../abstract/mixins/globalMixins" as Gm;
+@use "../abstract/mixins/button" as bm;
 //@dialmonsalve
 .tags {
   background-color: Gv.$color-white-100;

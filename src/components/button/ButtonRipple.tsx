@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { useRippleButton } from '../../hooksApp/useRippleButton';
 
 import MiceIconsSpinner from '../iconSpinner/IconSpinnerMice';
@@ -9,9 +10,9 @@ import SquareIconsSpinner from '../iconSpinner/IconSpinnerSquares';
 import { ButtonProps } from '../../types/type';
 import type { SpinnerSize } from '../../types';
 
-import styles from "./buttonNormal.module.scss"
+import styles from './buttonNormal.module.css';
 
-import ripple from "./buttonRipple.module.scss"
+import ripple from './buttonRipple.module.css';
 
 const ButtonRipple = ({
 	backgroundColor = 'blue-200',
@@ -30,7 +31,7 @@ const ButtonRipple = ({
 }: ButtonProps) => {
 	const { buttonRef } = useRippleButton();
 
-		const mainClasses = `${styles.btn} ${styles[borderRadius]} ${styles[size]} ${styles[textTransform]}`;
+	const mainClasses = `${styles.btn} ${styles[borderRadius]} ${styles[size]} ${styles[textTransform]}`;
 
 	const isDisabled =
 		disabled || isLoading
@@ -43,27 +44,29 @@ const ButtonRipple = ({
 	const ISize = (partialSize[0] + partialSize[1]) as SpinnerSize;
 
 	return (
-		<button
-			className={`${mainClasses} ${isDisabled} ${isAnimated}`}
-			type={type}
-			disabled={disabled || isLoading}
-			onClick={onClick}
-			ref={buttonRef}
-			style={style}
-		>
-			{children}
-			{hasSpinner && isLoading ? (
-				<span className={styles.ico}>
-					{iconSpinner === 'mice' && <MiceIconsSpinner size={ISize} />}
-					{iconSpinner === 'fleas' && <FleaIconsSpinner size={ISize} />}
-					{iconSpinner === 'dots' && <DotIconsSpinner size={ISize} />}
-					{iconSpinner === 'eclipse' && <EclipseIconSpinner size={ISize} />}
-					{iconSpinner === 'squares' && <SquareIconsSpinner size={ISize} />}
-				</span>
-			) : (
-				<></>
-			)}
-		</button>
+		<Suspense>
+			<button
+				className={`${mainClasses} ${isDisabled} ${isAnimated}`}
+				type={type}
+				disabled={disabled || isLoading}
+				onClick={onClick}
+				ref={buttonRef}
+				style={style}
+			>
+				{children}
+				{hasSpinner && isLoading ? (
+					<span className={styles.ico}>
+						{iconSpinner === 'mice' && <MiceIconsSpinner size={ISize} />}
+						{iconSpinner === 'fleas' && <FleaIconsSpinner size={ISize} />}
+						{iconSpinner === 'dots' && <DotIconsSpinner size={ISize} />}
+						{iconSpinner === 'eclipse' && <EclipseIconSpinner size={ISize} />}
+						{iconSpinner === 'squares' && <SquareIconsSpinner size={ISize} />}
+					</span>
+				) : (
+					<></>
+				)}
+			</button>
+		</Suspense>
 	);
 };
 

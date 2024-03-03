@@ -21,7 +21,7 @@ function ButtonSlideDownPage() {
 				<Button backgroundColor='blue-300'>default</Button>
 
 				<Highlighter>
-					{`import { Button } from "dialui-components";
+					{`import { Button, ButtonBeat, ButtonRipple, ButtonSquares } from "dialui-components";
 
 export const MyComponent=()=> {
   return (
@@ -42,7 +42,7 @@ export const MyComponent=()=> {
 			</article>
 
 			<article>
-				<h4>buttonType:</h4>
+				<h4>{lang === "es" ? "tipos de botones" : "type of buttons"}</h4>
 				<p>{language[lang].propButton}</p>
 				<ListItems items={buttonsPage.BUTTON_DOM} />
 			</article>

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import useAppOptions from '../hooks/context/useAppOptions';
-import { ButtonRipple} from '../../';
+import { ButtonBeat} from '../../';
 import openAlert from '../../components/alert/openAlert';
 import Highlighter from '../components/Highlighter';
 import { ListItems } from '../components/ListItems';
@@ -34,7 +34,7 @@ function AlertPage() {
 			<article>
 				<h3>default alert</h3>
 
-				<ButtonRipple
+				<ButtonBeat
 					onClick={handleClick}
 					backgroundColor='orange-200'
 					borderRadius='r-3'
@@ -43,7 +43,7 @@ function AlertPage() {
 					iconSpinner='mice'
 				>
 					{language[lang].button}
-				</ButtonRipple>
+				</ButtonBeat>
 
 				<Highlighter>
 					{`import { openAlert, Button } from "dialui-components";

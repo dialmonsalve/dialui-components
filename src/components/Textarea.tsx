@@ -1,6 +1,6 @@
 import type { ChangeEvent, FocusEvent } from 'react';
 
-import styles from './textarea.module.scss';
+import styles from './textarea.module.css';
 
 interface Props {
 	name: string;

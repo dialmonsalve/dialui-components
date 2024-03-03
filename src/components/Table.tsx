@@ -1,7 +1,7 @@
 import { HTMLAttributes, ReactNode, TableHTMLAttributes } from 'react';
 
 import { BasicColors } from '../types';
-import styles from './table.module.scss';
+import styles from './table.module.css';
 
 interface TableProps extends TableHTMLAttributes<HTMLTableElement> {
 	children: ReactNode;
