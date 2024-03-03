@@ -1,7 +1,7 @@
 import { useState, KeyboardEvent, type FocusEvent } from 'react';
-
+import Button from '../../../components/UI/buttons/Button';
 import styles from '../../../styles/components/form/inputTags.module.css';
-import inputStyle from '../../../styles/components/form/input.module.css';
+import { HASH } from '../../../utils/hash';
 
 interface InputTagTest {
 	placeholder?: string;
@@ -37,37 +37,47 @@ const InputTags = ({ placeholder, onBlur, initialInputTags }: InputTagTest) => {
 	};
 
 	return (
-		<>
-			<input
-				className={inputStyle.input}
-				type='text'
-				name='tag'
-				value={value}
-				onChange={(e) => setValue(e.target.value)}
-				onKeyDown={(e) => {
-					e.key === 'Enter' && e.preventDefault();
-					handleAddTags(e);
-				}}
-				placeholder={placeholder}
-				onBlur={onBlur}
-			/>
-			<button type='button' onClick={addToClick}>
-				add
-			</button>
+		<div className={styles.container}>
+			<div className={styles["container-input"]}>
+				<input
+					className={`input${HASH}`}
+					type='text'
+					name='tag'
+					value={value}
+					onChange={(e) => setValue(e.target.value)}
+					onKeyDown={(e) => {
+						e.key === 'Enter' && e.preventDefault();
+						handleAddTags(e);
+					}}
+					placeholder={placeholder}
+					onBlur={onBlur}
+				/>
+				<Button
+					disabled={value.length === 0}
+					type='button'
+					onClick={addToClick}
+					borderRadius='r-2'
+					backgroundColor='green-200'
+					textTransform='uppercase'
+					size='sm-100'
+				>
+					add
+				</Button>
+			</div>
+
 			<ul className={styles.tags}>
 				{tags.map((tag) => (
-					<li role='listitem' className={styles.tags__item} key={tag}>
-						<span
-							className={styles.tags__badge}
-							onClick={() => handleDeleteTags(tag)}
-						>
-							{tag.trim().toLocaleLowerCase()}
-							<span className={styles.tags__remove}>&times;</span>
-						</span>
+					<li
+						className={styles.tags__badge}
+						key={tag}
+						onClick={() => handleDeleteTags(tag)}
+					>
+						{tag.trim().toLocaleLowerCase()}
+						<span className={styles.tags__remove}>&times;</span>
 					</li>
 				))}
 			</ul>
-		</>
+		</div>
 	);
 };
 
