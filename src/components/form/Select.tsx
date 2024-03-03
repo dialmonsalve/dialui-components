@@ -1,17 +1,18 @@
 import { useEffect, useRef, useState } from 'react';
-import styles from '@prodStyles/form/select.module.css'
+
+import styles from '../../styles/components/form/select.module.css';
 
 type SingleSelectProps = {
 	multiple?: false;
 	selectState?: string;
 	onChange: (selectState: string) => void;
-	zIndex?:number
+	zIndex?: number;
 };
 type MultipleSelectProps = {
 	multiple: true;
 	selectState: string[];
 	onChange: (value: string[]) => void;
-	zIndex?:number
+	zIndex?: number;
 };
 type SelectProps = {
 	options: string[];
@@ -21,7 +22,7 @@ export const Select = ({
 	multiple,
 	selectState,
 	options,
-	zIndex=1,
+	zIndex = 1,
 	onChange,
 }: SelectProps) => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -92,7 +93,6 @@ export const Select = ({
 	}, [isOpen, highlightedIndex, options]);
 
 	const clearOptions = () => {
-
 		multiple ? onChange([]) : onChange(undefined as any);
 	};
 
@@ -119,7 +119,7 @@ export const Select = ({
 			tabIndex={0}
 			className={styles['select']}
 			ref={containerRef}
-			style={{zIndex}}
+			style={{ zIndex }}
 		>
 			<span className={styles['select__span']}>
 				{multiple
