@@ -1,7 +1,7 @@
-@use "../../abstract/variables/globalVariables" as Gv;
-@forward "../../abstract/variables/buttonColor";
-@forward "../../abstract/variables/buttonRadial";
-@forward "../../abstract/variables/buttonSize";
+@use "../../develop/sass/abstract/variables/globalVariables" as Gv;
+@forward "../../develop/sass/abstract/variables/buttonColor";
+@forward "../../develop/sass/abstract/variables/buttonRadial";
+@forward "../../develop/sass/abstract/variables/buttonSize";
 
 //@dialmonsalve
 .btn {
@@ -13,6 +13,7 @@
   box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.3);
   font-weight: 700;
   flex-direction: row;
+  cursor: pointer;
 }
 .animated {
   animation: moveInBottom 0.2s ease-out 0.5s backwards;

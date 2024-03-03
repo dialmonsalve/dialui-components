@@ -7,7 +7,7 @@ import Table, {
 	Title,
 } from '../../components/Table';
 import { ListItems } from '../components/ListItems';
-import Button from '../../components/button/Button';
+import {Button} from '../../';
 import Highlighter from '../components/Highlighter';
 
 import language from '../lang/table.json';

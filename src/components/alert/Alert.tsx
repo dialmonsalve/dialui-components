@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 
 import type { MessageType } from '../../types';
 
-import styles from './alert.module.css';
+import styles from './alert.module.scss';
 
 interface Props {
 	message: string;

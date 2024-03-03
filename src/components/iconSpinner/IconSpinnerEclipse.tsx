@@ -1,7 +1,7 @@
 import { type SpinnerSize } from '../../types';
 
 
-import styles from './iconSpinnerEclipse.module.css';
+import styles from './iconSpinnerEclipse.module.scss';
 
 interface Props {
 	size?: SpinnerSize;

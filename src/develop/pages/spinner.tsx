@@ -5,7 +5,7 @@ import Spinner from '../../components/Spinner';
 import Highlighter from '../components/Highlighter';
 import { ListItems } from '../components/ListItems';
 import Select from '../../components/Select';
-import Button from '../../components/button/Button';
+import {Button} from '../../';
 
 import spinnerPage from '../const/spinnerPage';
 import language from '../lang/spinner.json';

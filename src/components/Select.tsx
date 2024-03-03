@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 
-import styles from './select.module.css';
+import styles from './select.module.scss';
 
 type SingleSelectProps = {
 	multiple?: false;

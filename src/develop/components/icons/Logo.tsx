@@ -11,32 +11,32 @@ export const Logo = () => {
 			<path
 				d='M502.728 65L771.629 398.75H233.827L502.728 65Z'
 				fill='#2262C3'
-				fill-opacity='0.8'
+				fillOpacity='0.8'
 			/>
 			<path
 				d='M502.728 732L233.827 398.25L771.629 398.25L502.728 732Z'
 				fill='#2262C3'
-				fill-opacity='0.8'
+				fillOpacity='0.8'
 			/>
 			<path
 				d='M710.928 96.9285L862.205 497.942L351.279 330.057L710.928 96.9285Z'
 				fill='#2262C3'
-				fill-opacity='0.8'
+				fillOpacity='0.8'
 			/>
 			<path
 				d='M502.711 730.596L351.435 329.582L862.361 497.467L502.711 730.596Z'
 				fill='#2262C3'
-				fill-opacity='0.8'
+				fillOpacity='0.8'
 			/>
 			<path
 				d='M294.985 98.2917L654.631 331.426L143.702 499.303L294.985 98.2917Z'
 				fill='#2262C3'
-				fill-opacity='0.8'
+				fillOpacity='0.8'
 			/>
 			<path
 				d='M503.192 731.963L143.546 498.828L654.474 330.951L503.192 731.963Z'
 				fill='#2262C3'
-				fill-opacity='0.8'
+				fillOpacity='0.8'
 			/>
 			<path
 				d='M505.5 242L652 343.5L505.5 741L352.5 343.5L505.5 242Z'

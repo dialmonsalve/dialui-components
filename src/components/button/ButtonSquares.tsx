@@ -7,8 +7,8 @@ import SquareIconsSpinner from '../iconSpinner/IconSpinnerSquares';
 import { ButtonProps } from '../../types/type';
 import type { SpinnerSize } from '../../types';
 
-import styles from "./buttonNormal.module.css"
-import squares from "./buttonSquares.module.css"
+import styles from "./buttonNormal.module.scss"
+import squares from "./buttonSquares.module.scss"
 
 const ButtonSquares = ({
 	backgroundColor = 'blue-200',

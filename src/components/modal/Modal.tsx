@@ -5,7 +5,7 @@ import { Info, Danger, Success, Warning } from '../../icons';
 
 import type { Animation, MessageType } from '../../types';
 
-import styles from './modal.module.css';
+import styles from './modal.module.scss';
 
 interface Props {
 	description: string;

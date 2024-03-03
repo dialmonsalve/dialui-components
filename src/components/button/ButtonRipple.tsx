@@ -9,9 +9,9 @@ import SquareIconsSpinner from '../iconSpinner/IconSpinnerSquares';
 import { ButtonProps } from '../../types/type';
 import type { SpinnerSize } from '../../types';
 
-import styles from "./buttonNormal.module.css"
+import styles from "./buttonNormal.module.scss"
 
-import ripple from "./buttonRipple.module.css"
+import ripple from "./buttonRipple.module.scss"
 
 const ButtonRipple = ({
 	backgroundColor = 'blue-200',

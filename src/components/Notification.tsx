@@ -1,6 +1,6 @@
 import type { BasicColors } from '../types';
 
-import styles from './notification.module.css';
+import styles from './notification.module.scss';
 
 interface Props {
 	children?: string;

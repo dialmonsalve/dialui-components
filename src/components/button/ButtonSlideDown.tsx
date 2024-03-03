@@ -7,8 +7,8 @@ import SquareIconsSpinner from '../iconSpinner/IconSpinnerSquares';
 import { ButtonProps } from '../../types/type';
 import type { SpinnerSize } from '../../types';
 
-import styles from "./buttonNormal.module.css"
-import slideDown from "./buttonSlideDown.module.css"
+import styles from "./buttonNormal.module.scss"
+import slideDown from "./buttonSlideDown.module.scss"
 
 const ButtonSlideDown = ({
 	backgroundColor = 'blue-200',

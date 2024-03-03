@@ -1,7 +1,7 @@
 import useAppOptions from '../hooks/context/useAppOptions';
-import Button from '../../components/button/Button';
 import Highlighter from '../components/Highlighter';
 import { ListItems } from '../components/ListItems';
+import { Button, ButtonBeat, ButtonRipple, ButtonSquares } from '../../';
 
 import buttonsPage from '../const/buttonsPage';
 import language from '../lang/buttons.json';
@@ -18,7 +18,7 @@ function ButtonSlideDownPage() {
 			<article>
 				<h3>{language[lang].h31}</h3>
 
-				<Button backgroundColor='blue-300' >default</Button>
+				<Button backgroundColor='blue-300'>default</Button>
 
 				<Highlighter>
 					{`import { Button } from "dialui-components";
@@ -89,8 +89,7 @@ export const MyComponent=()=> {
 				<h4>{language[lang].h42}</h4>
 				<div>
 					<p>ripple Button:</p>
-					<Button
-						button='ripple'
+					<ButtonRipple
 						borderRadius='r-3'
 						backgroundColor='purple-300'
 						size='sm-200'
@@ -98,12 +97,11 @@ export const MyComponent=()=> {
 						hasInitialAnimation
 					>
 						click
-					</Button>
+					</ButtonRipple>
 				</div>
 				<div>
 					<p>Squares Button:</p>
-					<Button
-						button='squares'
+					<ButtonSquares
 						borderRadius='r-3'
 						backgroundColor='red-300'
 						size='sm-200'
@@ -111,13 +109,12 @@ export const MyComponent=()=> {
 						hasInitialAnimation
 					>
 						click
-					</Button>
+					</ButtonSquares>
 				</div>
 
 				<div>
 					<p>beat Button:</p>
-					<Button
-						button='beat'
+					<ButtonBeat
 						borderRadius='r-3'
 						backgroundColor='green-300'
 						size='sm-300'
@@ -125,7 +122,7 @@ export const MyComponent=()=> {
 						hasInitialAnimation
 					>
 						click
-					</Button>
+					</ButtonBeat>
 				</div>
 
 				<div>

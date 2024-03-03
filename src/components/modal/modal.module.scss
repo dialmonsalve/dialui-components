@@ -1,6 +1,7 @@
-@use "../../abstract/mixins/globalMixins" as Gm;
-@use "../../abstract/variables/globalVariables" as Gv;
-@forward "../../animations/modal";
+@use "../../develop/sass/abstract/variables/globalVariables" as Gv;
+@use "../../develop/sass/abstract/mixins/globalMixins" as Gm;
+
+@forward "../../develop/sass/animations/modal";
 
 //@dialmonsalve
 .modal {

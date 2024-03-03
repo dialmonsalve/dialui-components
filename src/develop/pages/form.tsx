@@ -6,7 +6,7 @@ import InputTags from '../../components/InputTags';
 import TextArea from '../../components/Textarea';
 import openAlert from '../../components/alert/openAlert';
 
-import Button from '../../components/button/Button';
+import {Button} from '../../';
 
 const FormControlPage = () => {
 	const {

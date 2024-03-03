@@ -40,6 +40,7 @@ function HomePage() {
 			>
 				Visit npm
 			</Link>
+
 		</section>
 	);
 }

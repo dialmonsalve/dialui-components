@@ -1,9 +1,3 @@
-import Button from    './components/button/ButtonNormal';
-import ButtonBeat from './components/button/ButtonBeat';
-import ButtonRipple from    './components/button/ButtonRipple';
-import ButtonSlideDown from './components/button/ButtonSlideDown';
-import ButtonSquares from   './components/button/ButtonSquares';
-
 import IconSpinnerDots from './components/iconSpinner/IconSpinnerDots';
 import IconSpinnerEclipse from './components/iconSpinner/IconSpinnerEclipse';
 import IconSpinnerFleas from './components/iconSpinner/IconSpinnerFleas';
@@ -28,7 +22,13 @@ import InputTags from './components/InputTags';
 import Select from './components/Select';
 import Textarea from './components/Textarea'
 import Spinner from './components/Spinner';
+import { lazy } from 'react';
 
+const Button = lazy(()=>import('./components/button/ButtonNormal'))
+const ButtonBeat = lazy(()=>import('./components/button/ButtonBeat'))
+const ButtonRipple = lazy(()=>import('./components/button/ButtonRipple'))
+const ButtonSlideDown = lazy(()=>import('./components/button/ButtonSlideDown'))
+const ButtonSquares = lazy(()=>import('./components/button/ButtonSquares'))
 
 export {
 	Button,
