@@ -1,15 +1,13 @@
 import { useState, KeyboardEvent, type FocusEvent } from 'react';
 
-import Button from './button/ButtonNormal';
-
 import styles from './inputTags.module.scss';
-import inputStyle from "./input.module.scss"
+import inputStyle from './input.module.scss';
 
 interface InputTagProps {
 	placeholder?: string;
-	tags: string[] ;
+	tags: string[];
 	onBlur?: (e: FocusEvent<HTMLInputElement>) => void;
-	setTags: (value: any[] ) => void;
+	setTags: (value: any[]) => void;
 }
 
 const InputTags = ({ placeholder, onBlur, tags, setTags }: InputTagProps) => {
@@ -29,17 +27,19 @@ const InputTags = ({ placeholder, onBlur, tags, setTags }: InputTagProps) => {
 		const valueLowercase = value.trim().toLocaleLowerCase();
 		if (valueLowercase === '') return;
 		if (tags.includes(valueLowercase)) return;
-		setTags([...tags, valueLowercase] );
+		setTags([...tags, valueLowercase]);
 		setValue('');
 	};
 
 	const handleDeleteTags = (compareTag: string) => {
-		setTags(tags.filter((oldTag) => oldTag !== compareTag) );
+		setTags(tags.filter((oldTag) => oldTag !== compareTag));
 	};
+
+	const disabled = value.length > 0 ? styles.background : styles['disabled'];
 
 	return (
 		<div className={styles.container}>
-			<div className={styles["container-input"]}>
+			<div className={styles['container-input']}>
 				<input
 					className={inputStyle.input}
 					type='text'
@@ -53,17 +53,14 @@ const InputTags = ({ placeholder, onBlur, tags, setTags }: InputTagProps) => {
 					placeholder={placeholder}
 					onBlur={onBlur}
 				/>
-				<Button
-					disabled={value.length === 0}
+				<button
 					type='button'
+					disabled={value.length === 0}
+					className={`${styles.btn} ${disabled}`}
 					onClick={addToClick}
-					borderRadius='r-2'
-					backgroundColor='green-200'
-					textTransform='uppercase'
-					size='sm-100'
 				>
-					add
-				</Button>
+					Add
+				</button>
 			</div>
 
 			<ul className={styles.tags}>

@@ -1,11 +1,11 @@
 import { useRef } from 'react';
 
-import ButtonNormal from '../button/ButtonNormal';
 import { Info, Danger, Success, Warning } from '../../icons';
 
 import type { Animation, MessageType } from '../../types';
 
 import styles from './modal.module.scss';
+import buttons from './buttons.module.scss';
 
 interface Props {
 	description: string;
@@ -75,35 +75,31 @@ const Modal = ({
 					<p className={styles['description']}>{description}</p>
 					<div className={styles.buttons}>
 						{type === 'success' || type === 'info' ? (
-							<ButtonNormal
-								backgroundColor='outline-green'
-								borderRadius='r-2'
-								size='vw-100'
-								onClick={() => setModalResponse('ok')}
-								textTransform='uppercase'
-							>
-								OK
-							</ButtonNormal>
+							<>
+								<button
+									type='button'
+									className={`${buttons.btn} ${buttons['outline-green']}`}
+									onClick={() => setModalResponse('ok')}
+								>
+									OK
+								</button>
+							</>
 						) : (
 							<>
-								<ButtonNormal
-									backgroundColor='white-100'
-									borderRadius='r-2'
-									size='vw-100'
+								<button
+									type='button'
+									className={`${buttons.btn} ${buttons.white}`}
 									onClick={() => setModalResponse('yes')}
-									textTransform='uppercase'
 								>
 									YES
-								</ButtonNormal>
-								<ButtonNormal
-									backgroundColor='green-200'
-									borderRadius='r-2'
-									size='vw-100'
+								</button>
+								<button
+									type='button'
+									className={`${buttons.btn} ${buttons.green}`}
 									onClick={() => setModalResponse('no')}
-									textTransform='uppercase'
 								>
-									NOT
-								</ButtonNormal>
+									not
+								</button>
 							</>
 						)}
 					</div>

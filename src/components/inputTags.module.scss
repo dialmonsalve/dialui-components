@@ -1,5 +1,6 @@
 @use "../develop/sass/abstract/variables/globalVariables" as Gv;
 @use "../develop/sass/abstract/mixins/globalMixins" as Gm;
+@use "../develop/sass/abstract/mixins/button" as bm;
 //@dialmonsalve
 .tags {
   background-color: Gv.$color-white-100;
@@ -63,4 +64,35 @@
   flex-direction: column;
   min-width: 100%;
   gap: 4px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.1s ease-in-out;
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.3);
+  font-weight: 700;
+  flex-direction: row;
+  cursor: pointer;
+  border-radius: 6px;
+  text-transform: uppercase;
+  @include bm.btnSize(6px 20px, 10px);
+}
+
+.background{
+  @include bm.btnColor(Gv.$color-green-400);
+}
+
+.disabled {
+  background-color: Gv.$color-gray-100;
+  color: inherit;
+  cursor: not-allowed;
+  border: 1px solid Gv.$color-gray-200;
+  &,
+  &:link,
+  &:visited {
+    letter-spacing: 0.5px;
+  }
 }

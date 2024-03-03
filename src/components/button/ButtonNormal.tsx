@@ -25,7 +25,7 @@ const ButtonNormal = ({
 	onClick,
 }: ButtonProps) => {
 
-		const mainClasses = `${styles.btn} ${styles[borderRadius]} ${styles[size]} ${styles[textTransform]}}`;
+		const mainClasses = `${styles.btn} ${styles[borderRadius]} ${styles[size]} ${styles[textTransform]}`;
 
 	const isDisabled =
 		disabled || isLoading

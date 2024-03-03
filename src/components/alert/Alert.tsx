@@ -38,10 +38,7 @@ const Alert = ({
 		}, duration);
 	}, [duration]);
 
-	const className = `${styles.alert} ${styles[type]} ${styles[sideY]} ${
-		styles[sideX]
-	}
-	} ${styles[`show-alert-${sideX}`]}`;
+	const className = `${styles.alert} ${styles[type]} ${styles[sideY]} ${styles[sideX]} ${styles[`show-alert-${sideX}`]}`;
 
 	return (
 		<div data-testid='alert' className={className} ref={ref}>
