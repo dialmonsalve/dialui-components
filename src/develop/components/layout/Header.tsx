@@ -22,7 +22,7 @@ export const Header = () => {
 					rel='noreferrer'
 					className='header__link'
 				>
-					{lang === 'en' ? 'Bug me a coffee ☕️' : 'Invítame un café ☕'}
+					{lang === 'en' ? 'Buy me a coffee ☕️' : 'Invítame un café ☕'}
 				</Link>
 				<button
 					className='header__options--theme-btn'
