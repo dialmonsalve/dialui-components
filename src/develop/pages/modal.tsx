@@ -137,7 +137,7 @@ export const MyComponent = () => {
 					{` //main.tsx					
  import React from 'react';
  import ReactDOM from 'react-dom/client';
- import { UIProvider } from 'dialui-components/dist/providers';
+ import { UIProvider } from 'dialui-components/dist/provider';
  
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
