@@ -1,6 +1,6 @@
-import useCheckbox from '../hooksApp/form/useCheckbox';
-import useInput from '../hooksApp/form/useInput';
-import useModal from '../hooksApp/context/useModal';
+import useCheckbox from '../app/hooks/form/useCheckbox';
+import useInput from '../app/hooks/form/useInput';
+import useModal from '../app/hooks/context/useModal';
 
 export {
 	useModal,

@@ -1,15 +1,13 @@
 import { useState } from 'react';
+import Highlighter from '../components/Highlighter';
+import { Button, Select, Spinner } from '../../';
 
 import useAppOptions from '../hooks/context/useAppOptions';
-import Spinner from '../../components/Spinner';
-import Highlighter from '../components/Highlighter';
 import { ListItems } from '../components/ListItems';
-import Select from '../../components/Select';
-import {Button} from '../../';
 
 import spinnerPage from '../const/spinnerPage';
 import language from '../lang/spinner.json';
-import { SpinnerType } from '../../types';
+import { SpinnerType } from '../../app/types';
 
 function SpinnerPage() {
 	const [openSpinner, setOpenSpinner] = useState(false);

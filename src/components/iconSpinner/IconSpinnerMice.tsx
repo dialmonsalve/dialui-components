@@ -1,4 +1,4 @@
-import { type SpinnerSize } from '../../types';
+import { type SpinnerSize } from '../../app/types';
 
 import styles from './iconSpinnerMice.module.css';
 

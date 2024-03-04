@@ -1,8 +1,8 @@
 import { useRef } from 'react';
 
-import { Info, Danger, Success, Warning } from '../../icons';
+import { Info, Danger, Success, Warning } from '../../app/icons';
 
-import type { Animation, MessageType } from '../../types';
+import type { Animation, MessageType } from '../../app/types';
 
 import styles from './modal.module.css';
 import buttons from './buttons.module.css';

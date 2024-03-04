@@ -1,7 +1,8 @@
-import useAppOptions from '../hooks/context/useAppOptions';
 import Highlighter from '../components/Highlighter';
+import { IconSpinner } from '../../';
+
+import useAppOptions from '../hooks/context/useAppOptions';
 import { ListItems } from '../components/ListItems';
-import IconSpinner from '../../components/IconSpinner';
 
 import iconPage from '../const/iconSpinnerPage';
 import language from '../lang/icon-spinner.json';

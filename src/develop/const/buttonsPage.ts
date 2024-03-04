@@ -1,4 +1,5 @@
 const DEFAULT_PROPS_DOM = [
+	{ label: 'button= ', children: "'normal';" },
 	{ label: 'backgroundColor = ', children: "'blue-200';" },
 	{ label: 'disabled = ', children: 'false;' },
 	{ label: 'hasInitialAnimation = ', children: 'false;' },
@@ -12,6 +13,7 @@ const DEFAULT_PROPS_DOM = [
 ];
 
 const ALL_PROPS_DOM = [
+	{ label: 'button?: ', children: 'ButtonType;' },
 	{ label: 'backgroundColor?: ', children: 'Colors;' },
 	{ label: 'borderRadius?: ', children: 'Radius;' },
 	{ label: 'children?: ', children: 'ReactNode;' },
@@ -60,26 +62,10 @@ const SIZE_DOM = [
 ];
 
 const BUTTON_DOM = [
-	{ label: 'Button types: ', children: '' },
+	{ label: 'ButtonType?: ', children: '' },
 	{
-		label: '<Button> </Button>',
-		children: ';',
-	},
-	{
-		label: '<ButtonRipple> </ButtonRipple>',
-		children: ';',
-	},
-	{
-		label: '<ButtonSquares> </ButtonSquares>',
-		children: ';',
-	},
-	{
-		label: '<ButtonBeat> </ButtonBeat>',
-		children: ';',
-	},
-	{
-		label: '<ButtonSlideDown> </ButtonSlideDown>',
-		children: ';',
+		label: '',
+		children: "| 'normal' | 'ripple' |  'squares' | 'beat' | 'slideDown' ",
 	},
 ];
 

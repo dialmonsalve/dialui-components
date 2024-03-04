@@ -1,6 +1,6 @@
 import {Eclipse, Dots, Fleas, Mice, Squares} from './iconSpinner';
 
-import type { SpinnerSize, SpinnerType } from '../types';
+import type { SpinnerSize, SpinnerType } from '../app/types';
 
 interface Props {
 	iconSpinner?: SpinnerType;

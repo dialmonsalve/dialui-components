@@ -1,7 +1,8 @@
-import useAppOptions from '../hooks/context/useAppOptions';
 import Highlighter from '../components/Highlighter';
+import { Button } from '../../';
+
+import useAppOptions from '../hooks/context/useAppOptions';
 import { ListItems } from '../components/ListItems';
-import { Button, ButtonBeat, ButtonRipple, ButtonSquares } from '../../';
 
 import buttonsPage from '../const/buttonsPage';
 import language from '../lang/buttons.json';
@@ -42,7 +43,7 @@ export const MyComponent=()=> {
 			</article>
 
 			<article>
-				<h4>{lang === "es" ? "tipos de botones" : "type of buttons"}</h4>
+				<h4>ButtonType</h4>
 				<p>{language[lang].propButton}</p>
 				<ListItems items={buttonsPage.BUTTON_DOM} />
 			</article>
@@ -89,7 +90,8 @@ export const MyComponent=()=> {
 				<h4>{language[lang].h42}</h4>
 				<div>
 					<p>ripple Button:</p>
-					<ButtonRipple
+					<Button
+						button='ripple'
 						borderRadius='r-3'
 						backgroundColor='purple-300'
 						size='sm-200'
@@ -97,11 +99,12 @@ export const MyComponent=()=> {
 						hasInitialAnimation
 					>
 						click
-					</ButtonRipple>
+					</Button>
 				</div>
 				<div>
 					<p>Squares Button:</p>
-					<ButtonSquares
+					<Button
+						button='squares'
 						borderRadius='r-3'
 						backgroundColor='red-300'
 						size='sm-200'
@@ -109,12 +112,13 @@ export const MyComponent=()=> {
 						hasInitialAnimation
 					>
 						click
-					</ButtonSquares>
+					</Button>
 				</div>
 
 				<div>
 					<p>beat Button:</p>
-					<ButtonBeat
+					<Button
+						button='beat'
 						borderRadius='r-3'
 						backgroundColor='green-300'
 						size='sm-300'
@@ -122,7 +126,7 @@ export const MyComponent=()=> {
 						hasInitialAnimation
 					>
 						click
-					</ButtonBeat>
+					</Button>
 				</div>
 
 				<div>

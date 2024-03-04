@@ -1,8 +1,8 @@
 import { useState } from 'react';
+import Highlighter from '../components/Highlighter';
+import { Textarea } from '../../';
 
 import useAppOptions from '../hooks/context/useAppOptions';
-import Highlighter from '../components/Highlighter';
-import Textarea from '../../components/Textarea';
 import { ListItems } from '../components/ListItems';
 
 import textareaPage from '../const/textareaPage';

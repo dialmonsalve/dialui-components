@@ -1,8 +1,8 @@
 import { useState } from 'react';
+import Highlighter from '../components/Highlighter';
+import {Checkbox} from '../../';
 
 import useAppOptions from '../hooks/context/useAppOptions';
-import Highlighter from '../components/Highlighter';
-import Checkbox from '../../components/Checkbox';
 import { ListItems } from '../components/ListItems';
 
 import checkboxPage from '../const/checkboxPage';

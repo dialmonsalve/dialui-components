@@ -1,12 +1,14 @@
 import { useFormPage } from '../hooks/useFormPage';
-import Checkbox from '../../components/Checkbox';
-import Input from '../../components/Input';
-import Select from '../../components/Select';
-import InputTags from '../../components/InputTags';
-import TextArea from '../../components/Textarea';
-import openAlert from '../../components/alert/openAlert';
 
-import {Button} from '../../';
+import {
+	Button,
+	Checkbox,
+	Input,
+	Select,
+	InputTags,
+	Textarea,
+	openAlert,
+} from '../../';
 
 const FormControlPage = () => {
 	const {
@@ -96,7 +98,7 @@ const FormControlPage = () => {
 					setTags={handleInputTagsChange}
 				/>
 
-				<TextArea
+				<Textarea
 					name='description'
 					value={inputState.description}
 					placeholder='Description'

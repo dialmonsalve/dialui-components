@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 
-import type { MessageType } from '../../types';
+import type { MessageType } from '../../app/types';
 
 import styles from './alert.module.css';
 

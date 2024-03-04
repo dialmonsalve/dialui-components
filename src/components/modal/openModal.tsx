@@ -1,7 +1,7 @@
 import { Suspense, lazy } from 'react';
 import { createRoot } from 'react-dom/client';
 
-import { Animation, MessageType } from '../../types';
+import { Animation, MessageType } from '../../app/types';
 
 interface Props {
 	animation?: Animation;

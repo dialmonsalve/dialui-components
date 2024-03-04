@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 
 import { router } from './develop/router/App';
 import { RouterProvider } from 'react-router-dom';
-import { UIProvider } from './providers';
+import { UIProvider } from './provider';
 import { AppOptionsProvider } from './develop/hooks/context/appOptions/AppOptionsProvider';
 
 import './develop/devStyles/index.scss';

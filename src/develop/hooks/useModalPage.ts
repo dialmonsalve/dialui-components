@@ -1,15 +1,16 @@
 import { useState } from 'react';
+import { openModal } from '../../';
+
 import useAppOptions from './context/useAppOptions';
-import openModal from '../../components/modal/openModal';
-import { MessageType, Animation } from '../../types';
 
 import modalPage from '../const/modalPage';
+import { MessageType, Animation } from '../../app/types';
 
 export const useModalPage = () => {
 	const [modalAnswer, setModalAnswer] = useState('');
 	const [animation, setAnimation] = useState(modalPage.ANIMATIONS[8]);
 	const [typeModal, setTypeModal] = useState('info');
-	const { lang } = useAppOptions();
+	const { lang } = useAppOptions()
 
 	const title = lang === 'es' ? 'borrar tarea' : 'delete task';
 	const description =

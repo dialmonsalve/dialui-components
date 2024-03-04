@@ -4,9 +4,9 @@ import IconSpinnerEclipse from './iconSpinner/IconSpinnerEclipse';
 import IconsSpinnerFleas from './iconSpinner/IconSpinnerFleas';
 import IconSpinnerMice from './iconSpinner/IconSpinnerMice';
 
-import { HalfRounded, Needle, LP } from '../icons';
+import { HalfRounded, Needle, LP } from '../app/icons';
 
-import { SpinnerType } from '../types';
+import { SpinnerType } from '../app/types';
 import styles from './spinner.module.css';
 
 interface Props {

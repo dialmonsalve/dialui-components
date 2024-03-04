@@ -1,9 +1,9 @@
 import { useState } from 'react';
+import Highlighter from '../components/Highlighter';
+import { InputTags } from '../../';
 
 import useAppOptions from '../hooks/context/useAppOptions';
 
-import Highlighter from '../components/Highlighter';
-import InputTags from '../../components/InputTags';
 import { ListItems } from '../components/ListItems';
 
 import inputTagsPage from '../const/inputTagsPage';

@@ -1,12 +1,11 @@
-import { Suspense } from 'react';
 import MiceIconsSpinner from '../iconSpinner/IconSpinnerMice';
 import FleaIconsSpinner from '../iconSpinner/IconSpinnerFleas';
 import DotIconsSpinner from '../iconSpinner/IconSpinnerDots';
 import EclipseIconSpinner from '../iconSpinner/IconSpinnerEclipse';
 import SquareIconsSpinner from '../iconSpinner/IconSpinnerSquares';
 
-import { ButtonProps } from '../../types/type';
-import type { SpinnerSize } from '../../types';
+import { ButtonProps } from '../../app/types/type';
+import type { SpinnerSize } from '../../app/types';
 
 import styles from './buttonNormal.module.css';
 import squares from './buttonSquares.module.css';
@@ -39,31 +38,29 @@ const ButtonSquares = ({
 	const ISize = (partialSize[0] + partialSize[1]) as SpinnerSize;
 
 	return (
-		<Suspense>
-			<button
-				className={`${mainClasses} ${isDisabled} ${isAnimated}`}
-				type={type}
-				disabled={disabled || isLoading}
-				onClick={onClick}
-				style={style}
-			>
-				<span />
-				<span />
+		<button
+			className={`${mainClasses} ${isDisabled} ${isAnimated}`}
+			type={type}
+			disabled={disabled || isLoading}
+			onClick={onClick}
+			style={style}
+		>
+			<span />
+			<span />
 
-				{children}
-				{hasSpinner && isLoading ? (
-					<span className={styles.ico}>
-						{iconSpinner === 'mice' && <MiceIconsSpinner size={ISize} />}
-						{iconSpinner === 'fleas' && <FleaIconsSpinner size={ISize} />}
-						{iconSpinner === 'dots' && <DotIconsSpinner size={ISize} />}
-						{iconSpinner === 'eclipse' && <EclipseIconSpinner size={ISize} />}
-						{iconSpinner === 'squares' && <SquareIconsSpinner size={ISize} />}
-					</span>
-				) : (
-					<></>
-				)}
-			</button>
-		</Suspense>
+			{children}
+			{hasSpinner && isLoading ? (
+				<span className={styles.ico}>
+					{iconSpinner === 'mice' && <MiceIconsSpinner size={ISize} />}
+					{iconSpinner === 'fleas' && <FleaIconsSpinner size={ISize} />}
+					{iconSpinner === 'dots' && <DotIconsSpinner size={ISize} />}
+					{iconSpinner === 'eclipse' && <EclipseIconSpinner size={ISize} />}
+					{iconSpinner === 'squares' && <SquareIconsSpinner size={ISize} />}
+				</span>
+			) : (
+				<></>
+			)}
+		</button>
 	);
 };
 

@@ -1,7 +1,7 @@
 import { useModalPage } from '../hooks/useModalPage';
-import {Button} from '../../';
-import Select from '../../components/Select';
 import Highlighter from '../components/Highlighter';
+import { Button, Select } from '../../';
+
 import { ListItems } from '../components/ListItems';
 
 import modalPage from '../const/modalPage';

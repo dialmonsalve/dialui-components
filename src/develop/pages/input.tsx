@@ -1,8 +1,8 @@
 import { useState } from 'react';
+import Highlighter from '../components/Highlighter';
+import {Input} from '../../';
 
 import useAppOptions from '../hooks/context/useAppOptions';
-import Highlighter from '../components/Highlighter';
-import Input from '../../components/Input';
 import { ListItems } from '../components/ListItems';
 
 import inputPage from '../const/inputPage';

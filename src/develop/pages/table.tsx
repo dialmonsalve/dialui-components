@@ -1,14 +1,8 @@
-import useAppOptions from '../hooks/context/useAppOptions';
-import Table, {
-	TableHead,
-	TableBody,
-	Cell,
-	Row,
-	Title,
-} from '../../components/Table';
-import { ListItems } from '../components/ListItems';
-import {Button} from '../../';
 import Highlighter from '../components/Highlighter';
+import { Table, TableHead, TableBody, Cell, Row, Title, Button } from '../../';
+
+import useAppOptions from '../hooks/context/useAppOptions';
+import { ListItems } from '../components/ListItems';
 
 import language from '../lang/table.json';
 import tablePage from '../const/tablePage';
@@ -36,7 +30,7 @@ export default function TablePage() {
 					</TableHead>
 					<TableBody>
 						{tablePage.DATA_TABLE.map((person, index) => (
-							<Row backgroundColor={"yellow"} key={person.id}>
+							<Row backgroundColor={'yellow'} key={person.id}>
 								<Cell>{index + 1}</Cell>
 								<Cell>{person.name}</Cell>
 								<Cell>{person.lastName}</Cell>
@@ -52,7 +46,7 @@ export default function TablePage() {
 										edit
 									</Button>
 								</Cell>
-								<Cell  >
+								<Cell>
 									<Button
 										backgroundColor='red-300'
 										size='sm-100'

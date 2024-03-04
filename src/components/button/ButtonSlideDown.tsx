@@ -5,8 +5,8 @@ import DotIconsSpinner from '../iconSpinner/IconSpinnerDots';
 import EclipseIconSpinner from '../iconSpinner/IconSpinnerEclipse';
 import SquareIconsSpinner from '../iconSpinner/IconSpinnerSquares';
 
-import { ButtonProps } from '../../types/type';
-import type { SpinnerSize } from '../../types';
+import { ButtonProps } from '../../app/types/type';
+import type { SpinnerSize } from '../../app/types';
 
 import styles from './buttonNormal.module.css';
 import slideDown from './buttonSlideDown.module.css';

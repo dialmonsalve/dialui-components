@@ -1,7 +1,7 @@
-import { useState } from "react";
-import useInput from "../../hooksApp/form/useInput";
-import useCheckbox from "../../hooksApp/form/useCheckbox";
-import useAppOptions from "./context/useAppOptions";
+import { useState } from 'react';
+import { useCheckbox, useInput } from '../../hooks';
+
+import useAppOptions from './context/useAppOptions';
 
 const form = {
 	name: '',
@@ -15,15 +15,17 @@ const check = {
 	serieB: true,
 };
 
-const multiOptions = [
-'PINEAPPLE', 'APPLE', 'GRAPES', 'LEMONS', 'PEACH'
+const multiOptions = ['PINEAPPLE', 'APPLE', 'GRAPES', 'LEMONS', 'PEACH'];
+const simpleOptions = [
+	'ONE OPTION',
+	'SECOND OPTION',
+	'THIRD OPTION',
+	'FOURTH OPTION',
 ];
-const simpleOptions = ['ONE OPTION', 'SECOND OPTION', 'THIRD OPTION', 'FOURTH OPTION'];
 
 const databaseTags: string[] = [];
 export const useFormPage = () => {
-
-  const { lang } = useAppOptions();
+	const { lang } = useAppOptions();
 
 	const [selectState, handleSelectChange] = useState<string[]>([]);
 
@@ -39,31 +41,31 @@ export const useFormPage = () => {
 
 	const [tagsState, handleInputTagsChange] = useState(databaseTags);
 
-  const [loading, setLoading] = useState(false)
+	const [loading, setLoading] = useState(false);
 
-  const handleLoading = ()=>{
-    setLoading(true)
+	const handleLoading = () => {
+		setLoading(true);
 
-    setTimeout(() => {
-      setLoading(false)
-    }, 2500);
-  }
+		setTimeout(() => {
+			setLoading(false);
+		}, 2500);
+	};
 
-  return {
-    lang,
-    selectState,
-    simpleOptions,
-    inputState,
-    simpleSelect,
-    tagsState,
-    checkboxState,
-    multiOptions,
-    loading,
-    handleCheckboxChange,
-    handleSelectChange,
-    handleSimple,
-    handleInputChange,
-    handleInputTagsChange,
-    handleLoading
-  }
-}
+	return {
+		lang,
+		selectState,
+		simpleOptions,
+		inputState,
+		simpleSelect,
+		tagsState,
+		checkboxState,
+		multiOptions,
+		loading,
+		handleCheckboxChange,
+		handleSelectChange,
+		handleSimple,
+		handleInputChange,
+		handleInputTagsChange,
+		handleLoading,
+	};
+};

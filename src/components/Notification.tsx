@@ -1,4 +1,4 @@
-import type { BasicColors } from '../types';
+import type { BasicColors } from '../app/types';
 
 import styles from './notification.module.css';
 
