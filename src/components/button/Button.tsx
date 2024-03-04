@@ -1,10 +1,8 @@
-import {
-	ButtonBeat,
-	ButtonNormal,
-	ButtonRipple,
-	ButtonSlideDown,
-	ButtonSquares,
-} from './button';
+import Normal from './ButtonNormal';
+import SlideDown from './ButtonSlideDown';
+import Ripple from './ButtonRipple';
+import Squares from './ButtonSquares';
+import Beat from './ButtonBeat';
 
 import { ButtonProps } from '@/app/types/type';
 
@@ -31,7 +29,7 @@ const Button = ({
 	switch (button) {
 		case 'normal':
 			return (
-				<ButtonNormal
+				<Normal
 					backgroundColor={backgroundColor}
 					borderRadius={borderRadius}
 					disabled={disabled}
@@ -46,11 +44,11 @@ const Button = ({
 					type={type}
 				>
 					{children}
-				</ButtonNormal>
+				</Normal>
 			);
 		case 'ripple':
 			return (
-				<ButtonRipple
+				<Ripple
 					backgroundColor={backgroundColor}
 					borderRadius={borderRadius}
 					disabled={disabled}
@@ -65,11 +63,11 @@ const Button = ({
 					type={type}
 				>
 					{children}
-				</ButtonRipple>
+				</Ripple>
 			);
 		case 'squares':
 			return (
-				<ButtonSquares
+				<Squares
 					backgroundColor={backgroundColor}
 					borderRadius={borderRadius}
 					disabled={disabled}
@@ -84,11 +82,11 @@ const Button = ({
 					type={type}
 				>
 					{children}
-				</ButtonSquares>
+				</Squares>
 			);
 		case 'beat':
 			return (
-				<ButtonBeat
+				<Beat
 					backgroundColor={backgroundColor}
 					borderRadius={borderRadius}
 					disabled={disabled}
@@ -103,11 +101,11 @@ const Button = ({
 					type={type}
 				>
 					{children}
-				</ButtonBeat>
+				</Beat>
 			);
 		case 'slideDown':
 			return (
-				<ButtonSlideDown
+				<SlideDown
 					backgroundColor={backgroundColor}
 					borderRadius={borderRadius}
 					disabled={disabled}
@@ -122,7 +120,7 @@ const Button = ({
 					type={type}
 				>
 					{children}
-				</ButtonSlideDown>
+				</SlideDown>
 			);
 	}
 };

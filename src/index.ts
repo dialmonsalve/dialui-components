@@ -1,5 +1,5 @@
-import IconSpinner from './components/IconSpinner';
-import Button from './components/Button';
+import IconSpinner from './components/iconSpinner/IconSpinner';
+import Button from './components/button/Button';
 
 import openAlert from './components/alert/openAlert';
 import openModal from './components/modal/openModal';
