@@ -4,124 +4,128 @@ import Ripple from './ButtonRipple';
 import Squares from './ButtonSquares';
 import Beat from './ButtonBeat';
 
-import { ButtonProps } from '@/app/types/type';
+import { ButtonProps } from '../../app/types/type';
 
 interface Props extends ButtonProps {
 	button?: 'normal' | 'beat' | 'slideDown' | 'squares' | 'ripple';
 }
 
 const Button = ({
-	backgroundColor,
-	borderRadius,
+	backgroundColor = 'blue-100',
+	borderRadius = 'r-2',
 	children,
 	hasInitialAnimation,
 	disabled,
 	hasSpinner,
 	iconSpinner,
 	isLoading,
-	size,
+	size = 'sm-100',
 	style,
-	textTransform,
-	type,
+	textTransform = 'lowercase',
+	type = 'button',
 	button = 'normal',
 	onClick,
 }: Props) => {
-	switch (button) {
-		case 'normal':
-			return (
-				<Normal
-					backgroundColor={backgroundColor}
-					borderRadius={borderRadius}
-					disabled={disabled}
-					hasInitialAnimation={hasInitialAnimation}
-					hasSpinner={hasSpinner}
-					iconSpinner={iconSpinner}
-					isLoading={isLoading}
-					onClick={onClick}
-					size={size}
-					style={style}
-					textTransform={textTransform}
-					type={type}
-				>
-					{children}
-				</Normal>
-			);
-		case 'ripple':
-			return (
-				<Ripple
-					backgroundColor={backgroundColor}
-					borderRadius={borderRadius}
-					disabled={disabled}
-					hasInitialAnimation={hasInitialAnimation}
-					hasSpinner={hasSpinner}
-					iconSpinner={iconSpinner}
-					isLoading={isLoading}
-					onClick={onClick}
-					size={size}
-					style={style}
-					textTransform={textTransform}
-					type={type}
-				>
-					{children}
-				</Ripple>
-			);
-		case 'squares':
-			return (
-				<Squares
-					backgroundColor={backgroundColor}
-					borderRadius={borderRadius}
-					disabled={disabled}
-					hasInitialAnimation={hasInitialAnimation}
-					hasSpinner={hasSpinner}
-					iconSpinner={iconSpinner}
-					isLoading={isLoading}
-					onClick={onClick}
-					size={size}
-					style={style}
-					textTransform={textTransform}
-					type={type}
-				>
-					{children}
-				</Squares>
-			);
-		case 'beat':
-			return (
-				<Beat
-					backgroundColor={backgroundColor}
-					borderRadius={borderRadius}
-					disabled={disabled}
-					hasInitialAnimation={hasInitialAnimation}
-					hasSpinner={hasSpinner}
-					iconSpinner={iconSpinner}
-					isLoading={isLoading}
-					onClick={onClick}
-					size={size}
-					style={style}
-					textTransform={textTransform}
-					type={type}
-				>
-					{children}
-				</Beat>
-			);
-		case 'slideDown':
-			return (
-				<SlideDown
-					backgroundColor={backgroundColor}
-					borderRadius={borderRadius}
-					disabled={disabled}
-					hasInitialAnimation={hasInitialAnimation}
-					hasSpinner={hasSpinner}
-					iconSpinner={iconSpinner}
-					isLoading={isLoading}
-					onClick={onClick}
-					size={size}
-					style={style}
-					textTransform={textTransform}
-					type={type}
-				>
-					{children}
-				</SlideDown>
-			);
+	if (button === 'normal') {
+		return (
+			<Normal
+				backgroundColor={backgroundColor}
+				borderRadius={borderRadius}
+				disabled={disabled}
+				hasInitialAnimation={hasInitialAnimation}
+				hasSpinner={hasSpinner}
+				iconSpinner={iconSpinner}
+				isLoading={isLoading}
+				onClick={onClick}
+				size={size}
+				style={style}
+				textTransform={textTransform}
+				type={type}
+			>
+				{children}
+			</Normal>
+		);
+	}
+
+	if (button === 'ripple') {
+		return (
+			<Ripple
+				backgroundColor={backgroundColor}
+				borderRadius={borderRadius}
+				disabled={disabled}
+				hasInitialAnimation={hasInitialAnimation}
+				hasSpinner={hasSpinner}
+				iconSpinner={iconSpinner}
+				isLoading={isLoading}
+				onClick={onClick}
+				size={size}
+				style={style}
+				textTransform={textTransform}
+				type={type}
+			>
+				{children}
+			</Ripple>
+		);
+	}
+	if (button === 'squares') {
+		return (
+			<Squares
+				backgroundColor={backgroundColor}
+				borderRadius={borderRadius}
+				disabled={disabled}
+				hasInitialAnimation={hasInitialAnimation}
+				hasSpinner={hasSpinner}
+				iconSpinner={iconSpinner}
+				isLoading={isLoading}
+				onClick={onClick}
+				size={size}
+				style={style}
+				textTransform={textTransform}
+				type={type}
+			>
+				{children}
+			</Squares>
+		);
+	}
+	if (button === 'beat') {
+		return (
+			<Beat
+				backgroundColor={backgroundColor}
+				borderRadius={borderRadius}
+				disabled={disabled}
+				hasInitialAnimation={hasInitialAnimation}
+				hasSpinner={hasSpinner}
+				iconSpinner={iconSpinner}
+				isLoading={isLoading}
+				onClick={onClick}
+				size={size}
+				style={style}
+				textTransform={textTransform}
+				type={type}
+			>
+				{children}
+			</Beat>
+		);
+	}
+	if (button === 'slideDown') {
+		return (
+			<SlideDown
+				backgroundColor={backgroundColor}
+				borderRadius={borderRadius}
+				disabled={disabled}
+				hasInitialAnimation={hasInitialAnimation}
+				hasSpinner={hasSpinner}
+				iconSpinner={iconSpinner}
+				isLoading={isLoading}
+				onClick={onClick}
+				size={size}
+				style={style}
+				textTransform={textTransform}
+				type={type}
+			>
+				{children}
+			</SlideDown>
+		);
 	}
 };
 
