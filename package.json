@@ -1,7 +1,7 @@
 {
 	"name": "dialui-components",
 	"private": false,
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"type": "module",
 	"main": "dist/index.js",
 	"typings": "dist/index.d.ts",
