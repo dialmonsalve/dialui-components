@@ -12,6 +12,7 @@ import type { SpinnerSize } from '../../app/types';
 import styles from './buttonNormal.module.css';
 
 import ripple from './buttonRipple.module.css';
+import { useCallback } from 'react';
 
 const ButtonRipple = ({
 	backgroundColor = 'blue-200',
@@ -30,21 +31,27 @@ const ButtonRipple = ({
 }: ButtonProps) => {
 	const { buttonRef } = useRippleButton();
 
+	const isDisabled = useCallback(
+		() => disabled || isLoading,
+		[disabled, isLoading],
+	);
+
+	const isAnimated = useCallback(
+		() => hasInitialAnimation,
+		[hasInitialAnimation],
+	);
+
 	const mainClasses = `${styles.btn} ${styles[borderRadius]} ${styles[size]} ${styles[textTransform]}`;
-
-	const isDisabled =
-		disabled || isLoading
-			? `${styles.disabled}`
-			: `${styles[`btn__${backgroundColor}`]} ${ripple.ripple}`;
-
-	const isAnimated = hasInitialAnimation ? `${styles.animated}` : '';
+	const background = `${styles[`btn__${backgroundColor}`]} ${ripple.ripple}`;
 
 	const partialSize = [...size];
 	const ISize = (partialSize[0] + partialSize[1]) as SpinnerSize;
 
 	return (
 		<button
-			className={`${mainClasses} ${isDisabled} ${isAnimated}`}
+			className={`${mainClasses} 
+			${isDisabled() ? styles.disabled : background}
+			${isAnimated() ? `${styles.animated}` : ''}`}
 			type={type}
 			disabled={disabled || isLoading}
 			onClick={onClick}

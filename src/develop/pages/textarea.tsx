@@ -5,7 +5,7 @@ import { Textarea } from '../../';
 import useAppOptions from '../hooks/context/useAppOptions';
 import { ListItems } from '../components/ListItems';
 
-import textareaPage from '../const/textareaPage';
+import textareaPage from '../constants/textareaPage';
 import language from '../lang/textarea.json';
 
 function TextareaPage() {

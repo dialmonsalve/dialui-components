@@ -4,7 +4,7 @@ import { IconSpinner } from '../../';
 import useAppOptions from '../hooks/context/useAppOptions';
 import { ListItems } from '../components/ListItems';
 
-import iconPage from '../const/iconSpinnerPage';
+import iconPage from '../constants/iconSpinnerPage';
 import language from '../lang/icon-spinner.json';
 
 function IconSpinnerPage() {

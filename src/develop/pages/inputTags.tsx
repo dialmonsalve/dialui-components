@@ -6,7 +6,7 @@ import useAppOptions from '../hooks/context/useAppOptions';
 
 import { ListItems } from '../components/ListItems';
 
-import inputTagsPage from '../const/inputTagsPage';
+import inputTagsPage from '../constants/inputTagsPage';
 import language from '../lang/input-tags.json';
 
 const hola = ['hello', 'world'];

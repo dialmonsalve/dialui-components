@@ -5,7 +5,7 @@
 @mixin btnColor($color) {
   color: Gv.$color-white-100;
   background-color: $color;
-  border: 1px solid $color;
+  border: 1px solid transparent;
 
   &:active {
     box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.3) inset;
@@ -38,11 +38,11 @@
 @mixin hoverAnimations($color) {
   @include Gm.responsive(tab-land) {
     &:hover {
-      background-color: rgba($color: $color, $alpha: 1);
+      background-color: rgba($color: $color, $alpha: 0.8);
       color: Gv.$color-white-200;
       border: 1px solid $color;
 
-      @if ($color ==Gv.$color-white-100) {
+      @if ($color ==Gv.$color-white-200) {
         color: Gv.$color-black-300;
       }
     }

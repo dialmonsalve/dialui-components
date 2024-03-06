@@ -5,7 +5,7 @@ import useAppOptions from '../hooks/context/useAppOptions';
 import { ListItems } from '../components/ListItems';
 
 import language from '../lang/table.json';
-import tablePage from '../const/tablePage';
+import tablePage from '../constants/tablePage';
 
 export default function TablePage() {
 	const { lang } = useAppOptions();

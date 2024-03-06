@@ -4,7 +4,6 @@ import NotFoundPage from '../pages/notFound';
 import { FormComponentPages } from './FormComponentPages';
 import { UIComponentPages } from './UIComponentPages';
 
-
 const routes: RouteObject[] = [
 	{
 		path: '/',

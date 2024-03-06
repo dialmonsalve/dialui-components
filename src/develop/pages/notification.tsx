@@ -4,7 +4,7 @@ import {Notification} from '../../';
 
 import { ListItems } from '../components/ListItems';
 
-import notificationPage from '../const/notificationPage';
+import notificationPage from '../constants/notificationPage';
 import language from '../lang/notification.json';
 
 function NotificationPage() {

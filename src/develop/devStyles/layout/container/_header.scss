@@ -44,10 +44,13 @@
     background-color: Gv.$primary-color;
     font-weight: 700;
     color: white;
-    width: 170px;
+    width: 150px;
     display: flex;
     justify-content: center;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
   }
 }
 .ico-theme {

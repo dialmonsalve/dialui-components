@@ -9,6 +9,7 @@ import type { SpinnerSize } from '../../app/types';
 
 import styles from './buttonNormal.module.css';
 import squares from './buttonSquares.module.css';
+import { useCallback } from 'react';
 
 const ButtonSquares = ({
 	backgroundColor = 'blue-200',
@@ -25,21 +26,27 @@ const ButtonSquares = ({
 	type = 'button',
 	textTransform = 'lowercase',
 }: ButtonProps) => {
+	const isDisabled = useCallback(
+		() => disabled || isLoading,
+		[disabled, isLoading],
+	);
+
+	const isAnimated = useCallback(
+		() => hasInitialAnimation,
+		[hasInitialAnimation],
+	);
+
 	const mainClasses = `${styles.btn} ${styles[borderRadius]} ${styles[size]} ${styles[textTransform]}`;
-
-	const isDisabled =
-		disabled || isLoading
-			? `${styles.disabled}`
-			: `${styles[`btn__${backgroundColor}`]} ${squares.squares}`;
-
-	const isAnimated = hasInitialAnimation ? `${styles.animated}` : '';
+	const background = `${styles[`btn__${backgroundColor}`]} ${squares.squares}`;
 
 	const partialSize = [...size];
 	const ISize = (partialSize[0] + partialSize[1]) as SpinnerSize;
 
 	return (
 		<button
-			className={`${mainClasses} ${isDisabled} ${isAnimated}`}
+			className={`${mainClasses} 
+			${isDisabled() ? styles.disabled : background} 
+			${isAnimated() ? styles.animated : ''}`}
 			type={type}
 			disabled={disabled || isLoading}
 			onClick={onClick}

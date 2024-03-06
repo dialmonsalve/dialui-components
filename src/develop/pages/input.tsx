@@ -5,7 +5,7 @@ import {Input} from '../../';
 import useAppOptions from '../hooks/context/useAppOptions';
 import { ListItems } from '../components/ListItems';
 
-import inputPage from '../const/inputPage';
+import inputPage from '../constants/inputPage';
 import language from '../lang/input.json';
 
 function InputPage() {

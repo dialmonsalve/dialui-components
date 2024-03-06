@@ -1,6 +1,7 @@
 @use "../../abstract/variables/globalVariables" as Gv;
 @use "../../abstract/mixins/globalMixins" as Gm;
 @forward "../../animations/alert";
+@forward "../../abstract/variables/colors";
 
 //@dialmonsalve
 .alert {
@@ -61,3 +62,4 @@
     font-size: 12px;
   }
 }
+

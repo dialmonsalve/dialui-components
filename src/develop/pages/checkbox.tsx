@@ -5,7 +5,7 @@ import {Checkbox} from '../../';
 import useAppOptions from '../hooks/context/useAppOptions';
 import { ListItems } from '../components/ListItems';
 
-import checkboxPage from '../const/checkboxPage';
+import checkboxPage from '../constants/checkboxPage';
 import language from '../lang/checkbox.json';
 
 function CheckboxPage() {

@@ -6,7 +6,7 @@ import { Select } from '../../';
 import useAppOptions from '../hooks/context/useAppOptions';
 import { ListItems } from '../components/ListItems';
 
-import selectPage from '../const/selectPage';
+import selectPage from '../constants/selectPage';
 import language from '../lang/select.json';
 
 const simpleOptions = [

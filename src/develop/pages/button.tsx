@@ -4,7 +4,7 @@ import { Button } from '../../';
 import useAppOptions from '../hooks/context/useAppOptions';
 import { ListItems } from '../components/ListItems';
 
-import buttonsPage from '../const/buttonsPage';
+import buttonsPage from '../constants/buttonsPage';
 import language from '../lang/buttons.json';
 
 function ButtonSlideDownPage() {
@@ -106,7 +106,7 @@ export const MyComponent=()=> {
 					<Button
 						button='squares'
 						borderRadius='r-3'
-						backgroundColor='red-300'
+						backgroundColor='outline-red'
 						size='sm-200'
 						textTransform='uppercase'
 						hasInitialAnimation

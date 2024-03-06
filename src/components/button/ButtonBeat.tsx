@@ -9,6 +9,7 @@ import type { SpinnerSize } from '../../app/types';
 
 import styles from './buttonNormal.module.css';
 import beat from './buttonBeat.module.css';
+import { useCallback } from 'react';
 
 const ButtonBeat = ({
 	backgroundColor = 'blue-200',
@@ -25,39 +26,45 @@ const ButtonBeat = ({
 	onClick,
 	textTransform = 'lowercase',
 }: ButtonProps) => {
+	const isDisabled = useCallback(
+		() => disabled || isLoading,
+		[disabled, isLoading],
+	);
+
+	const isAnimated = useCallback(
+		() => hasInitialAnimation,
+		[hasInitialAnimation],
+	);
+
 	const mainClasses = `${styles.btn} ${styles[borderRadius]} ${styles[size]} ${styles[textTransform]}`;
-
-	const isDisabled =
-		disabled || isLoading
-			? `${styles.disabled}`
-			: `${styles[`btn__${backgroundColor}`]} ${beat.beat}`;
-
-	const isAnimated = hasInitialAnimation ? `${styles.animated}` : '';
+	const background = `${styles[`btn__${backgroundColor}`]} ${beat.beat}`;
 
 	const partialSize = [...size];
 	const ISize = (partialSize[0] + partialSize[1]) as SpinnerSize;
 
 	return (
-			<button
-				className={`${mainClasses} ${isDisabled} ${isAnimated}`}
-				type={type}
-				disabled={disabled || isLoading}
-				onClick={onClick}
-				style={style}
-			>
-				{children}
-				{hasSpinner && isLoading ? (
-					<span className={styles.ico}>
-						{iconSpinner === 'mice' && <MiceIconsSpinner size={ISize} />}
-						{iconSpinner === 'fleas' && <FleaIconsSpinner size={ISize} />}
-						{iconSpinner === 'dots' && <DotIconsSpinner size={ISize} />}
-						{iconSpinner === 'eclipse' && <EclipseIconSpinner size={ISize} />}
-						{iconSpinner === 'squares' && <SquareIconsSpinner size={ISize} />}
-					</span>
-				) : (
-					<></>
-				)}
-			</button>
+		<button
+			className={`${mainClasses} 
+			${isDisabled() ? styles.disabled : background}
+			${isAnimated() ? `${styles.animated}` : ''}`}
+			type={type}
+			disabled={disabled || isLoading}
+			onClick={onClick}
+			style={style}
+		>
+			{children}
+			{hasSpinner && isLoading ? (
+				<span className={styles.ico}>
+					{iconSpinner === 'mice' && <MiceIconsSpinner size={ISize} />}
+					{iconSpinner === 'fleas' && <FleaIconsSpinner size={ISize} />}
+					{iconSpinner === 'dots' && <DotIconsSpinner size={ISize} />}
+					{iconSpinner === 'eclipse' && <EclipseIconSpinner size={ISize} />}
+					{iconSpinner === 'squares' && <SquareIconsSpinner size={ISize} />}
+				</span>
+			) : (
+				<></>
+			)}
+		</button>
 	);
 };
 

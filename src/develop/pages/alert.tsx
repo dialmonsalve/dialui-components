@@ -6,7 +6,7 @@ import useAppOptions from '../hooks/context/useAppOptions';
 import { ListItems } from '../components/ListItems';
 
 import language from '../lang/alert.json';
-import alertPage from '../const/alertPage';
+import alertPage from '../constants/alertPage';
 
 function AlertPage() {
 	const { lang } = useAppOptions();

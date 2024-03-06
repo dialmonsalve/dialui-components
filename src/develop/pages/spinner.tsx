@@ -5,7 +5,7 @@ import { Button, Select, Spinner } from '../../';
 import useAppOptions from '../hooks/context/useAppOptions';
 import { ListItems } from '../components/ListItems';
 
-import spinnerPage from '../const/spinnerPage';
+import spinnerPage from '../constants/spinnerPage';
 import language from '../lang/spinner.json';
 import { SpinnerType } from '../../app/types';
 

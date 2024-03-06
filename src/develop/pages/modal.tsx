@@ -4,7 +4,7 @@ import { Button, Select } from '../../';
 
 import { ListItems } from '../components/ListItems';
 
-import modalPage from '../const/modalPage';
+import modalPage from '../constants/modalPage';
 import language from '../lang/modal.json';
 
 function ModalPage() {
