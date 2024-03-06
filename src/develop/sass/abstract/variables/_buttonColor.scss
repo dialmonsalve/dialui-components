@@ -15,10 +15,6 @@ $colors: (
 );
 
 @each $key, $val in $colors {
-  .btn__#{$key} {
-    color: $val;
-  }
-
   @for $i from 1 through 3 {
     .btn__#{$key}-#{$i}00 {
       @include bm.btnColor(mix(rgba(0, 0, 0), $val, $i * 15%));
