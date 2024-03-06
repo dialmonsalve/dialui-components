@@ -3,7 +3,7 @@ import { openModal } from '../../';
 
 import useAppOptions from './context/useAppOptions';
 
-import modalPage from '../const/modalPage';
+import modalPage from '../constants/modalPage';
 import { MessageType, Animation } from '../../app/types';
 
 export const useModalPage = () => {
